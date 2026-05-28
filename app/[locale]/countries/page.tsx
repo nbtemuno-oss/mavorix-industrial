@@ -8,7 +8,7 @@ import { seo } from "@/lib/seo";
 
 export const metadata: Metadata = seo({
   title: "China Industrial Sourcing for Global Buyers | MAVORIX INDUSTRIAL",
-  description: "MAVORIX INDUSTRIAL supports industrial buyers from Algeria, Peru, Russia, Saudi Arabia, Mexico, Egypt, UAE, Colombia, Chile, Nigeria, South Africa, and Morocco with China sourcing and procurement support.",
+  description: "MAVORIX INDUSTRIAL supports industrial buyers from Algeria, Peru, Russia, Saudi Arabia, Mexico, Egypt, UAE, Colombia, Chile, Nigeria, South Africa, Serbia, Romania, Bulgaria, and Morocco with China sourcing and procurement support.",
   path: "/en/countries/"
 });
 

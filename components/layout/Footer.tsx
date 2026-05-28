@@ -19,7 +19,7 @@ export function Footer({ locale }: { locale: string }) {
         </div>
         <FooterColumn title={copy.footerColumns.services} items={locale === "en" ? services.slice(0, 6).map((s) => ({ label: s.shortTitle, href: `${prefix}/services/${s.slug}/` })) : [{ label: copy.nav.industrial, href: `${prefix}/industrial-sourcing/` }]} />
         <FooterColumn title={copy.footerColumns.industries} items={locale === "en" ? industries.slice(0, 6).map((s) => ({ label: s.title, href: `${prefix}/industries/${s.slug}/` })) : [{ label: copy.nav.home, href: `${prefix}/` }]} />
-        <FooterColumn title={copy.footerColumns.countries} items={locale === "en" ? countries.slice(0, 6).map((s) => ({ label: s.title, href: `${prefix}/countries/${s.slug}/` })) : [{ label: copy.nav.contact, href: `${prefix}/contact/` }]} />
+        <FooterColumn title={copy.footerColumns.countries} items={locale === "en" ? countries.map((s) => ({ label: s.title, href: `${prefix}/countries/${s.slug}/` })) : [{ label: copy.nav.contact, href: `${prefix}/contact/` }]} />
         <div>
           <h3 className="font-black">{copy.footerColumns.contact}</h3>
           <div className="mt-4 space-y-3 text-sm text-slate-300">
