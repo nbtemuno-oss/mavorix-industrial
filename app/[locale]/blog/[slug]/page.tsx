@@ -10,8 +10,10 @@ import { getBlogPost, getBlogSlugs, markdownToHtml } from "@/lib/mdx";
 import { seo } from "@/lib/seo";
 
 export function generateStaticParams() {
-  return site.locales.flatMap((locale) => getBlogSlugs().map((slug) => ({ locale, slug })));
+  return getBlogSlugs().map((slug) => ({ locale: "en", slug }));
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mavorixindustrial.com"),
+  metadataBase: new URL("https://www.mavorixindustrial.com"),
   title: {
     default: "MAVORIX INDUSTRIAL | Industrial Sourcing Partner in China",
     template: "%s | MAVORIX INDUSTRIAL"

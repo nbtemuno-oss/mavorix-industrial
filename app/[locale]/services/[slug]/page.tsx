@@ -13,8 +13,10 @@ import { faqSchema, JsonLd, serviceSchema } from "@/lib/schema";
 import { seo } from "@/lib/seo";
 
 export function generateStaticParams() {
-  return site.locales.flatMap((locale) => services.map((service) => ({ locale, slug: service.slug })));
+  return services.map((service) => ({ locale: "en", slug: service.slug }));
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
