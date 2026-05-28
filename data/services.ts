@@ -66,7 +66,7 @@ export const services: Service[] = [
     shortTitle: "Export Support",
     description: "China export coordination for industrial orders, documentation communication, shipment follow-up, and supplier-side execution.",
     keywords: ["export support China", "China export coordination", "industrial export support"],
-    image: "/images/contact-global-sourcing.webp",
+    image: "/images/service-export-support.webp",
     support: ["Export document coordination", "Shipment scheduling", "Packing communication", "Supplier-side follow-up"],
     problems: ["Fragmented supplier updates", "Document delays", "Packing mismatch", "Poor shipment visibility"]
   },
@@ -76,7 +76,7 @@ export const services: Service[] = [
     shortTitle: "Container Consolidation",
     description: "Container consolidation coordination in China for buyers purchasing from several industrial suppliers.",
     keywords: ["container consolidation China", "consolidate shipments from China", "China supplier consolidation"],
-    image: "/images/contact-global-sourcing.webp",
+    image: "/images/service-container-consolidation.webp",
     support: ["Supplier shipment coordination", "Mixed order tracking", "Warehouse communication", "Loading follow-up"],
     problems: ["Multiple factory shipments", "LCL/FCL planning confusion", "Late supplier delivery", "Poor packing coordination"]
   },
@@ -86,7 +86,7 @@ export const services: Service[] = [
     shortTitle: "Spare Parts Sourcing",
     description: "Industrial spare parts sourcing from China for machinery, production lines, factory maintenance, and replacement needs.",
     keywords: ["industrial spare parts China", "machinery spare parts sourcing China", "factory spare parts supplier China"],
-    image: "/images/service-mro-sourcing.webp",
+    image: "/images/service-spare-parts-sourcing.webp",
     support: ["Part identification support", "Supplier matching", "Alternative sourcing", "Repeat order tracking"],
     problems: ["Missing part numbers", "Obsolete components", "Small quantity orders", "Supplier compatibility uncertainty"]
   }

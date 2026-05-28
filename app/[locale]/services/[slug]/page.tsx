@@ -6,6 +6,7 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { PageHero } from "@/components/sections/PageHero";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { Container } from "@/components/ui/Container";
+import { IndustrialImage } from "@/components/ui/IndustrialImage";
 import { site } from "@/data/site";
 import { services } from "@/data/services";
 import { faqSchema, JsonLd, serviceSchema } from "@/lib/schema";
@@ -33,6 +34,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       <Container className="py-16">
         <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
           <article className="space-y-10">
+            <IndustrialImage src={service.image} alt={`${service.title} from China`} className="min-h-[360px]" />
             <Block title={`What is ${service.title}?`} text={`${service.title} is a practical sourcing service for overseas industrial buyers who need supplier screening, technical clarification, quotation comparison, quality coordination, and export follow-up from China.`} />
             <ListBlock title="Who This Service Is For" items={["Overseas industrial buyers purchasing from China", "Importers comparing several Chinese suppliers", "Factories needing spare parts, MRO items, or OEM parts", "Procurement teams that need risk reduction before payment"]} />
             <ListBlock title="Common Buyer Problems" items={service.problems} />
@@ -45,6 +47,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </div>
           </article>
           <aside className="h-fit rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+            <IndustrialImage src={service.image} alt={`${service.title} procurement support visual`} className="mb-6 h-44" />
             <h2 className="font-black text-navy">Related Links</h2>
             <div className="mt-4 space-y-3 text-sm font-semibold text-slate-600">
               <Link href={`/${locale}/industries/`} className="block hover:text-signal">Industries We Support</Link>

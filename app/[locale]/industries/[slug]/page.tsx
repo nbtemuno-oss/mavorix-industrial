@@ -5,6 +5,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { PageHero } from "@/components/sections/PageHero";
 import { Container } from "@/components/ui/Container";
+import { IndustrialImage } from "@/components/ui/IndustrialImage";
 import { industries } from "@/data/industries";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
@@ -32,6 +33,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
       <PageHero badge="Industry" title={`${industry.title} Sourcing from China`} description={industry.description} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Industries", href: `/${locale}/industries/` }, { label: industry.title, href: `/${locale}/industries/${industry.slug}/` }]} />
       <Container className="grid gap-8 py-16 lg:grid-cols-[1fr_320px]">
         <article className="space-y-10">
+          <IndustrialImage src={industry.image} alt={`${industry.title} sourcing from China`} className="min-h-[360px]" />
           <Block title="Industry-Focused Introduction" text={`MAVORIX INDUSTRIAL helps overseas buyers source, verify, and coordinate Chinese suppliers for ${industry.title.toLowerCase()} products. We do not claim to manufacture every item; our role is procurement support and supplier coordination.`} />
           <ListBlock title="Common Sourcing Needs" items={industry.products} />
           <ListBlock title="Common Buyer Problems" items={["Unclear supplier capability", "Difficulty confirming technical specifications", "Quality variation before shipment", "Fragmented communication across multiple factories", "Export packing and document coordination"]} />
@@ -40,6 +42,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
           <Block title="Export and Logistics Support" text="We support supplier-side export communication, packing follow-up, shipping coordination, and consolidation planning when buyers purchase from several suppliers." />
         </article>
         <aside className="h-fit rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+          <IndustrialImage src={industry.image} alt={`${industry.title} industrial sourcing visual`} className="mb-6 h-44" />
           <h2 className="font-black text-navy">Related Services</h2>
           <div className="mt-4 space-y-3 text-sm font-semibold text-slate-600">
             {services.slice(0, 6).map((item) => <Link key={item.slug} href={`/${locale}/services/${item.slug}/`} className="block hover:text-signal">{item.title}</Link>)}

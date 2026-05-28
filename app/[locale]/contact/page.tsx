@@ -4,6 +4,7 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { PageHero } from "@/components/sections/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { IndustrialImage } from "@/components/ui/IndustrialImage";
 import { site } from "@/data/site";
 import { faqSchema, JsonLd } from "@/lib/schema";
 import { seo } from "@/lib/seo";
@@ -40,16 +41,19 @@ export default function ContactPage() {
             <Button href={site.whatsappUrl} variant="dark"><MessageCircle className="mr-2" size={17} /> Contact on WhatsApp</Button>
           </div>
         </form>
-        <aside className="rounded-lg bg-navy p-7 text-white">
-          <h2 className="text-2xl font-black">Inquiry checklist</h2>
-          <ul className="mt-5 space-y-3 text-sm leading-7 text-slate-300">
-            <li>Product name, photos, drawings, or sample details</li>
-            <li>Quantity and expected repeat demand</li>
-            <li>Material, size, technical standard, or application</li>
-            <li>Destination country and target market</li>
-            <li>Preferred delivery time and packing needs</li>
-          </ul>
-          <div className="mt-7 rounded-md bg-white/10 p-4 text-sm">Email: {site.email}</div>
+        <aside className="overflow-hidden rounded-lg bg-navy text-white">
+          <IndustrialImage src="/images/contact-global-sourcing.webp" alt="Contact MAVORIX INDUSTRIAL for China sourcing support" className="h-72 rounded-none" />
+          <div className="p-7">
+            <h2 className="text-2xl font-black">Inquiry checklist</h2>
+            <ul className="mt-5 space-y-3 text-sm leading-7 text-slate-300">
+              <li>Product name, photos, drawings, or sample details</li>
+              <li>Quantity and expected repeat demand</li>
+              <li>Material, size, technical standard, or application</li>
+              <li>Destination country and target market</li>
+              <li>Preferred delivery time and packing needs</li>
+            </ul>
+            <div className="mt-7 rounded-md bg-white/10 p-4 text-sm">Email: {site.email}</div>
+          </div>
         </aside>
       </Container>
       <FAQSection faqs={faqs} />
