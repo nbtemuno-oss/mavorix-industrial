@@ -27,13 +27,6 @@ a {
   color: white;
 }
 
-.industrial-grid {
-  background-image:
-    linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
-  background-size: 34px 34px;
-}
-
 .prose-industrial h2 {
   margin-top: 2rem;
   font-size: 1.75rem;

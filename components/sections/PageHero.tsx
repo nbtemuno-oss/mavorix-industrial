@@ -17,7 +17,7 @@ export function PageHero({
   cta?: boolean;
 }) {
   return (
-    <section className="bg-navy text-white industrial-grid">
+    <section className="bg-navy text-white">
       <Container className="py-14 lg:py-20">
         {breadcrumbs ? <div className="mb-8 text-slate-300"><Breadcrumbs items={breadcrumbs} /></div> : null}
         <Badge>{badge}</Badge>

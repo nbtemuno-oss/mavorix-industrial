@@ -42,7 +42,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
           <Block title="Export and Logistics Support" text="We support supplier-side export communication, packing follow-up, shipping coordination, and consolidation planning when buyers purchase from several suppliers." />
         </article>
         <aside className="h-fit rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-          <IndustrialImage src={industry.image} alt={`${industry.title} industrial sourcing visual`} className="mb-6 h-44" />
+          <IndustrialImage src={industry.image} alt={`${industry.title} sourcing products from China`} className="mb-6 h-44" />
           <h2 className="font-black text-navy">Related Services</h2>
           <div className="mt-4 space-y-3 text-sm font-semibold text-slate-600">
             {services.slice(0, 6).map((item) => <Link key={item.slug} href={`/${locale}/services/${item.slug}/`} className="block hover:text-signal">{item.title}</Link>)}

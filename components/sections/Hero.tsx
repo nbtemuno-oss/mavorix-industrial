@@ -6,7 +6,7 @@ import { IndustrialImage } from "@/components/ui/IndustrialImage";
 
 export function Hero({ locale }: { locale: string }) {
   return (
-    <section className="relative overflow-hidden bg-navy text-white industrial-grid">
+    <section className="relative overflow-hidden bg-navy text-white">
       <Container className="grid min-h-[680px] items-center gap-12 py-16 lg:grid-cols-[1.05fr_.95fr]">
         <div>
           <div className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-orange-100">Industrial SEO + GEO ready sourcing website</div>
