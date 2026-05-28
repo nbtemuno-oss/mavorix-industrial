@@ -56,7 +56,7 @@ export function ProcessSteps({ steps = sourcingProcess, locale = "en" }: { steps
         <div key={step} className="rounded-lg border border-slate-200 bg-white p-5">
           <div className="flex h-10 w-10 items-center justify-center rounded-md bg-navy text-sm font-black text-white">{index + 1}</div>
           <h3 className="mt-4 font-black text-slate-900">{localized[index]?.title || step}</h3>
-          <p className="mt-2 text-sm leading-6 text-slate-600">{localized[index]?.text || localizedSteps.en[index]?.text}</p>
+          <p className="mt-2 text-sm leading-6 text-slate-600">{localized[index]?.text || localizedSteps.en[index]?.text || "We keep each sourcing step documented, practical, and aligned with buyer requirements."}</p>
         </div>
       ))}
     </div>

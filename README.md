@@ -76,7 +76,7 @@ Create a Markdown file in `content/en/blog/`:
 ---
 title: "Article Title"
 description: "SEO meta description."
-date: "2026-05-28"
+date: "2025-05-28"
 ---
 
 ## Main section
