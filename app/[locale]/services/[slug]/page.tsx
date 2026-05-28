@@ -13,10 +13,8 @@ import { faqSchema, JsonLd, serviceSchema } from "@/lib/schema";
 import { seo } from "@/lib/seo";
 
 export function generateStaticParams() {
-  return services.map((service) => ({ locale: "en", slug: service.slug }));
+  return site.locales.flatMap((locale) => services.map((service) => ({ locale, slug: service.slug })));
 }
-
-export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
@@ -34,6 +32,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     <>
       <PageHero badge="Service" title={service.title} description={`${service.description} Keywords: ${service.keywords.join(", ")}.`} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Services", href: `/${locale}/services/` }, { label: service.title, href: `/${locale}/services/${service.slug}/` }]} />
       <Container className="py-16">
+        {locale !== "en" ? <EnglishVersionNotice locale={locale} /> : null}
         <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
           <article className="space-y-10">
             <IndustrialImage src={service.image} alt={`${service.title} from China`} className="min-h-[360px]" />
@@ -66,6 +65,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       <JsonLd data={[faqSchema(faqs), serviceSchema(service.title, service.description, `${site.url}/${locale}/services/${service.slug}/`)]} />
     </>
   );
+}
+
+function EnglishVersionNotice({ locale }: { locale: string }) {
+  return <div className="mb-8 rounded-lg border border-orange-200 bg-orange-50 p-4 text-sm font-semibold text-orange-900">English version: this detailed service page has not been fully translated into {locale.toUpperCase()} yet.</div>;
 }
 
 function Block({ title, text }: { title: string; text: string }) {

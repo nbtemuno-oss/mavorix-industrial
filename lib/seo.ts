@@ -11,7 +11,15 @@ type SeoInput = {
 
 export function seo({ title, description, path, locale = "en", type = "website" }: SeoInput): Metadata {
   const canonical = `${site.url}${path}`;
-  const languages = Object.fromEntries(site.locales.map((code) => [code, `${site.url}/${code}${path.replace(/^\/[a-z]{2}/, "")}`]));
+  const suffix = path.replace(/^\/[a-z]{2}/, "") || "/";
+  const translatedPaths = new Set(["/", "/industrial-sourcing/", "/contact/"]);
+  const normalizedSuffix = suffix.endsWith("/") ? suffix : `${suffix}/`;
+  const languages = translatedPaths.has(normalizedSuffix)
+    ? {
+        ...Object.fromEntries(site.locales.map((code) => [code, `${site.url}/${code}${normalizedSuffix === "/" ? "" : normalizedSuffix}`])),
+        "x-default": `${site.url}/en${normalizedSuffix === "/" ? "" : normalizedSuffix}`
+      }
+    : { en: `${site.url}/en${normalizedSuffix === "/" ? "" : normalizedSuffix}` };
 
   return {
     title,

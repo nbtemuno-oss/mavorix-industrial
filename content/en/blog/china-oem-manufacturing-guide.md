@@ -1,7 +1,7 @@
 ---
 title: "China OEM Manufacturing Guide for Overseas Industrial Buyers"
 description: "A practical guide to OEM manufacturing support in China for overseas buyers of industrial parts and custom products."
-date: "2026-05-28"
+date: "2025-01-15"
 ---
 
 ## Prepare technical information

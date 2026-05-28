@@ -55,7 +55,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">{countries.map((country) => <CountryCard key={country.slug} country={country} locale={locale} />)}</div>
       </Section> : null}
       <Section title={copy.home.processTitle} text={copy.home.processText}>
-        <ProcessSteps />
+        <ProcessSteps locale={locale} />
       </Section>
       {locale === "en" ? <Section title="Featured Blog Guides" text="Practical guides for overseas industrial buyers sourcing from China.">
         <div className="grid gap-5 md:grid-cols-3">{posts.map((post) => <BlogCard key={post.slug} post={post} locale={locale} />)}</div>

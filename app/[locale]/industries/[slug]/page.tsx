@@ -13,10 +13,8 @@ import { faqSchema, JsonLd, serviceSchema } from "@/lib/schema";
 import { seo } from "@/lib/seo";
 
 export function generateStaticParams() {
-  return industries.map((industry) => ({ locale: "en", slug: industry.slug }));
+  return site.locales.flatMap((locale) => industries.map((industry) => ({ locale, slug: industry.slug })));
 }
-
-export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
@@ -35,6 +33,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
       <PageHero badge="Industry" title={`${industry.title} Sourcing from China`} description={industry.description} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Industries", href: `/${locale}/industries/` }, { label: industry.title, href: `/${locale}/industries/${industry.slug}/` }]} />
       <Container className="grid gap-8 py-16 lg:grid-cols-[1fr_320px]">
         <article className="space-y-10">
+          {locale !== "en" ? <EnglishVersionNotice locale={locale} /> : null}
           <IndustrialImage src={industry.image} alt={`${industry.title} sourcing from China`} className="min-h-[360px]" />
           <Block title="Industry-Focused Introduction" text={`MAVORIX INDUSTRIAL helps overseas buyers source, verify, and coordinate Chinese suppliers for ${industry.title.toLowerCase()} products. We do not claim to manufacture every item; our role is procurement support and supplier coordination.`} />
           <ListBlock title="Common Sourcing Needs" items={industry.products} />
@@ -57,6 +56,9 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
       <JsonLd data={[faqSchema(faqs), serviceSchema(`${industry.title} Sourcing`, industry.description, `${site.url}/${locale}/industries/${industry.slug}/`)]} />
     </>
   );
+}
+function EnglishVersionNotice({ locale }: { locale: string }) {
+  return <div className="rounded-lg border border-orange-200 bg-orange-50 p-4 text-sm font-semibold text-orange-900">English version: this detailed industry page has not been fully translated into {locale.toUpperCase()} yet.</div>;
 }
 
 function Block({ title, text }: { title: string; text: string }) {

@@ -1,7 +1,7 @@
 ---
 title: "MRO Sourcing from China: A Practical Guide for Overseas Industrial Buyers"
 description: "A practical guide to sourcing maintenance, repair, and operation supplies from China for factories and industrial buyers."
-date: "2026-05-28"
+date: "2025-02-18"
 ---
 
 ## Why MRO sourcing is different

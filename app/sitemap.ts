@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   const enUrls = [...staticPaths, ...detailPaths].map((path) => ({
       url: `${site.url}/en/${path}`.replace(/\/$/, "") + "/",
-      lastModified: new Date("2026-05-28"),
+      lastModified: new Date("2025-01-15"),
       changeFrequency: path.includes("blog/") ? "monthly" as const : "weekly" as const,
       priority: path === "" ? 1 : path.includes("/") ? 0.72 : 0.82
     }));
@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .flatMap((locale) =>
       translatedPaths.map((path) => ({
         url: `${site.url}/${locale}/${path}`.replace(/\/$/, "") + "/",
-        lastModified: new Date("2026-05-28"),
+        lastModified: new Date("2025-01-15"),
         changeFrequency: "weekly" as const,
         priority: path === "" ? 0.95 : 0.82
       }))

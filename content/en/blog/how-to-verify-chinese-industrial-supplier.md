@@ -1,7 +1,7 @@
 ---
 title: "How to Verify a Chinese Industrial Supplier Before Placing an Order"
 description: "Learn practical steps for verifying a Chinese industrial supplier before payment, sampling, production, or shipment."
-date: "2026-05-28"
+date: "2025-02-05"
 ---
 
 ## Check whether the supplier matches the product

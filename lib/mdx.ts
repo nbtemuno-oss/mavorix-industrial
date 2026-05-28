@@ -36,7 +36,7 @@ export function getBlogPost(slug: string): BlogPost {
     slug,
     title: meta.title,
     description: meta.description,
-    date: meta.date || "2026-05-28",
+    date: meta.date || "2025-01-15",
     body,
     faqs: faqMatches.map((match) => ({ q: match[1].trim(), a: match[2].trim().replace(/\n+/g, " ") }))
   };

@@ -13,10 +13,8 @@ import { faqSchema, JsonLd, serviceSchema } from "@/lib/schema";
 import { seo } from "@/lib/seo";
 
 export function generateStaticParams() {
-  return countries.map((country) => ({ locale: "en", slug: country.slug }));
+  return site.locales.flatMap((locale) => countries.map((country) => ({ locale, slug: country.slug })));
 }
-
-export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
@@ -39,6 +37,7 @@ export default async function CountryDetailPage({ params }: { params: Promise<{ 
       <PageHero badge="Country" title={`China Industrial Sourcing for ${country.title} Buyers`} description={`We support buyers from ${country.title} with China sourcing coordination, supplier communication, quality control, and export support.`} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Countries", href: `/${locale}/countries/` }, { label: country.title, href: `/${locale}/countries/${country.slug}/` }]} />
       <Container className="grid gap-8 py-16 lg:grid-cols-[1fr_320px]">
         <article className="space-y-10">
+          {locale !== "en" ? <EnglishVersionNotice locale={locale} /> : null}
           <Block title={`China Industrial Sourcing Introduction for ${country.title}`} text={`Industrial buyers in ${country.title} often need reliable China sourcing support for machinery, spare parts, OEM products, and MRO supplies. MAVORIX INDUSTRIAL helps coordinate supplier search, technical communication, quality checks, and export-side execution from China.`} />
           <ListBlock title="Common Sourcing Needs from China" items={country.needs} />
           <ListBlock title="Product Categories We Can Support" items={["Industrial machinery and equipment", "OEM industrial parts", "MRO supplies", "Factory spare parts", "Agricultural equipment parts", "Packaging and metal parts"]} />
@@ -61,6 +60,9 @@ export default async function CountryDetailPage({ params }: { params: Promise<{ 
       <JsonLd data={[faqSchema(faqs), serviceSchema(`China Industrial Sourcing for ${country.title}`, `China sourcing support for buyers from ${country.title}.`, `${site.url}/${locale}/countries/${country.slug}/`)]} />
     </>
   );
+}
+function EnglishVersionNotice({ locale }: { locale: string }) {
+  return <div className="rounded-lg border border-orange-200 bg-orange-50 p-4 text-sm font-semibold text-orange-900">English version: this detailed country page has not been fully translated into {locale.toUpperCase()} yet.</div>;
 }
 
 function Block({ title, text }: { title: string; text: string }) {

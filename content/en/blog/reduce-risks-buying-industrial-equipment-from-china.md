@@ -1,7 +1,7 @@
 ---
 title: "How to Reduce Risks When Buying Industrial Equipment from China"
 description: "Practical risk reduction steps for overseas buyers purchasing industrial equipment, machinery, and factory products from China."
-date: "2026-05-28"
+date: "2025-03-04"
 ---
 
 ## Define the equipment requirement before supplier search

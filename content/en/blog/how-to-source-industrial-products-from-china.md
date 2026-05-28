@@ -1,7 +1,7 @@
 ---
 title: "How to Source Industrial Products from China: A Practical Guide for Overseas Buyers"
 description: "A practical guide for overseas buyers sourcing machinery, OEM products, MRO supplies, spare parts, and industrial equipment from China."
-date: "2026-05-28"
+date: "2025-01-22"
 ---
 
 ## Start with a clear industrial requirement

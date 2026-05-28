@@ -31,7 +31,7 @@ export default async function IndustrialSourcingPage({ params }: { params: Promi
         <FeatureGrid items={copy.features} />
         <div className="mt-14">
           <h2 className="text-3xl font-black text-navy">{copy.processTitle}</h2>
-          <div className="mt-8"><ProcessSteps /></div>
+          <div className="mt-8"><ProcessSteps locale={locale} /></div>
         </div>
       </Container>
       <FAQSection faqs={copy.faqs} />

@@ -10,10 +10,8 @@ import { getBlogPost, getBlogSlugs, markdownToHtml } from "@/lib/mdx";
 import { seo } from "@/lib/seo";
 
 export function generateStaticParams() {
-  return getBlogSlugs().map((slug) => ({ locale: "en", slug }));
+  return site.locales.flatMap((locale) => getBlogSlugs().map((slug) => ({ locale, slug })));
 }
-
-export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
@@ -38,7 +36,10 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
     <>
       <PageHero badge="Guide" title={post.title} description={post.description} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Blog", href: `/${locale}/blog/` }, { label: post.title, href: `/${locale}/blog/${post.slug}/` }]} />
       <Container className="grid gap-8 py-16 lg:grid-cols-[1fr_300px]">
-        <article className="prose-industrial rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10" dangerouslySetInnerHTML={{ __html: html }} />
+        <article className="prose-industrial rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10">
+          {locale !== "en" ? <div className="mb-8 rounded-lg border border-orange-200 bg-orange-50 p-4 text-sm font-semibold text-orange-900">English version: this blog guide has not been fully translated into {locale.toUpperCase()} yet.</div> : null}
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </article>
         <aside className="h-fit rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="font-black text-navy">Next Steps</h2>
           <div className="mt-4 space-y-3 text-sm font-semibold text-slate-600">
