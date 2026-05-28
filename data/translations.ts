@@ -229,7 +229,7 @@ export const coreCopy: Record<Locale, {
 };
 
 coreCopy.es = {
-  ...coreCopy.fr,
+  ...coreCopy.en,
   dir: "ltr",
   nav: { home: "Inicio", industrial: "Sourcing industrial", services: "Servicios", industries: "Industrias", countries: "Paises", blog: "Blog", contact: "Contacto", whatsapp: "WhatsApp" },
   footerIntro: "Su socio de sourcing industrial en China. Sourcing industrial, OEM, MRO, verificacion de proveedores, coordinacion de calidad y soporte de exportacion.",
@@ -244,12 +244,20 @@ coreCopy.es = {
     trust: ["Verificacion de proveedores", "Coordinacion tecnica", "Soporte de exportacion"]
   },
   home: {
-    ...coreCopy.fr.home,
+    ...coreCopy.en.home,
     metaTitle: "MAVORIX INDUSTRIAL | Socio de sourcing industrial en China",
     metaDescription: "MAVORIX INDUSTRIAL ayuda a compradores industriales a abastecer maquinaria, OEM, MRO, repuestos y equipos desde China.",
     strip: ["Verificacion de proveedores", "Control de calidad", "Coordinacion OEM", "Sourcing MRO", "Soporte exportacion"],
     sourceTitle: "Que podemos abastecer",
     sourceText: "Soporte de sourcing industrial enfocado en necesidades B2B reales.",
+    sourceItems: [
+      { title: "Maquinaria y equipos", text: "Coordinacion de compra para equipos de produccion, maquinaria general y componentes relacionados." },
+      { title: "Piezas industriales OEM", text: "Piezas personalizadas, planos, muestras, comparacion de proveedores y seguimiento de produccion." },
+      { title: "Suministros MRO", text: "Articulos de mantenimiento, reparacion y operacion, consumibles, repuestos y pedidos mixtos." },
+      { title: "Repuestos industriales", text: "Repuestos mecanicos, electricos, piezas de mantenimiento de fabrica y sourcing urgente." },
+      { title: "Piezas para equipos agricolas", text: "Piezas para tractores, motocultores, cosechadoras, riego e implementos agricolas." },
+      { title: "Embalaje y suministros de fabrica", text: "Piezas de maquinaria de embalaje, transportadores, sellado, llenado y consumibles industriales." }
+    ],
     moreTitle: "Mas que encontrar proveedores",
     moreText: "Google, IA y marketplaces ayudan a encontrar nombres. La compra industrial necesita verificacion, comunicacion tecnica, comparacion, muestras, inspeccion, documentos y seguimiento.",
     servicesTitle: "Servicios principales",
@@ -268,16 +276,29 @@ coreCopy.es = {
   },
   cta: { title: "Necesita soporte de sourcing industrial desde China?", text: "Envie detalles del producto, cantidad, fotos, planos o enlaces de proveedores. Revisaremos los siguientes pasos.", button: "Enviar requisito", whatsapp: "WhatsApp" },
   industrial: {
-    ...coreCopy.fr.industrial,
+    ...coreCopy.en.industrial,
     metaTitle: "Servicios de sourcing industrial en China | MAVORIX INDUSTRIAL",
     metaDescription: "Sourcing industrial en China para maquinaria, OEM, MRO, repuestos, verificacion de proveedores, calidad y exportacion.",
     badge: "Sourcing industrial",
     title: "Servicios de sourcing industrial en China",
     description: "Soporte estructurado para compradores internacionales de maquinaria, OEM, MRO, repuestos y equipos industriales.",
-    processTitle: "Proceso de sourcing"
+    features: [
+      { title: "Que es el sourcing industrial?", text: "Busqueda, verificacion, aclaracion tecnica, comparacion de cotizaciones, coordinacion de calidad y seguimiento de exportacion." },
+      { title: "Por que necesita un socio en China?", text: "Los compradores necesitan filtrar proveedores, controlar especificaciones y coordinar la ejecucion de forma practica." },
+      { title: "Que podemos abastecer", text: "Maquinaria, piezas OEM, suministros MRO, repuestos, piezas agricolas, embalaje, metal y suministros de fabrica." },
+      { title: "Verificacion de proveedores", text: "Revisamos identidad, senales de capacidad, calidad de comunicacion, claridad de cotizacion y riesgos de ejecucion." },
+      { title: "Control de calidad", text: "Coordinamos requisitos de inspeccion, fotos, reportes, revision de embalaje y seguimiento de problemas." },
+      { title: "Soporte de exportacion", text: "Apoyamos comunicacion de documentos, preparacion de envio, embalaje y planificacion de consolidacion." }
+    ],
+    processTitle: "Proceso de sourcing",
+    faqs: [
+      { q: "Que es el sourcing industrial?", a: "Es el proceso de encontrar, verificar, comparar y coordinar proveedores para maquinaria, piezas, MRO, OEM y equipos industriales." },
+      { q: "Por que usar un socio de sourcing en China?", a: "Ayuda a reducir riesgos mediante verificacion de proveedores, comunicacion tecnica, comparacion de cotizaciones, control de calidad y exportacion." },
+      { q: "Pueden apoyar piezas industriales personalizadas?", a: "Si. Podemos apoyar proyectos OEM y piezas a medida cuando el comprador entrega planos, muestras, fotos o especificaciones." }
+    ]
   },
   contact: {
-    ...coreCopy.fr.contact,
+    ...coreCopy.en.contact,
     metaTitle: "Contacto MAVORIX INDUSTRIAL | Consulta de sourcing en China",
     metaDescription: "Contacte a MAVORIX INDUSTRIAL para sourcing industrial, OEM, MRO, verificacion de proveedores, inspeccion y exportacion desde China.",
     badge: "Contacto",
@@ -288,7 +309,13 @@ coreCopy.es = {
     message: "Mensaje",
     submit: "Enviar consulta",
     whatsapp: "Contactar por WhatsApp",
-    checklistTitle: "Lista para la consulta"
+    checklistTitle: "Lista para la consulta",
+    checklist: ["Nombre del producto, fotos, planos o detalles de muestra", "Cantidad y demanda repetida esperada", "Material, tamano, norma tecnica o aplicacion", "Pais de destino y mercado objetivo", "Plazo preferido y requisitos de embalaje"],
+    faqs: [
+      { q: "Que informacion debo enviar?", a: "Envie producto, fotos, planos, cantidad, pais de destino, uso previsto, requisitos de calidad y enlaces de proveedores si existen." },
+      { q: "Puedo contactar por WhatsApp?", a: "Si. Contactenos al +86-13967842747 o use el boton de WhatsApp." },
+      { q: "Ofrecen cotizaciones instantaneas?", a: "Las cotizaciones industriales suelen requerir verificacion de proveedor y aclaracion tecnica, por eso evitamos precios instantaneos poco fiables." }
+    ]
   }
 };
 
@@ -297,11 +324,11 @@ coreCopy.ru = {
   dir: "ltr",
   nav: { home: "Главная", industrial: "Промышленный сорсинг", services: "Услуги", industries: "Отрасли", countries: "Страны", blog: "Блог", contact: "Контакты", whatsapp: "WhatsApp" },
   footerIntro: "Ваш партнер по промышленному сорсингу в Китае: поставщики, OEM, MRO, контроль качества и экспортная координация.",
-  footerColumns: { services: "Услуги", industries: "Отрасли", countries: "Страны", contact: "Контакты", whatsapp: "Запрос WhatsApp", contactPage: "Страница контактов" },
+  footerColumns: { services: "Услуги", industries: "Отрасли", countries: "Страны", contact: "Контакты", whatsapp: "Запрос в WhatsApp", contactPage: "Страница контактов" },
   hero: {
     eyebrow: "Промышленный сорсинг из Китая",
     h1: "Ваш партнер по промышленному сорсингу в Китае",
-    subtitle: "MAVORIX INDUSTRIAL помогает зарубежным промышленным покупателям закупать оборудование, OEM изделия, MRO материалы, запасные части и промышленную технику из Китая с проверкой поставщиков, контролем качества и экспортной поддержкой.",
+    subtitle: "MAVORIX INDUSTRIAL помогает зарубежным промышленным покупателям закупать оборудование, OEM детали, MRO материалы, запасные части и промышленную технику из Китая с проверкой поставщиков, координацией качества и экспортной поддержкой.",
     primary: "Отправить запрос",
     whatsapp: "Связаться в WhatsApp",
     services: "Посмотреть услуги",
@@ -310,49 +337,76 @@ coreCopy.ru = {
   home: {
     ...coreCopy.en.home,
     metaTitle: "MAVORIX INDUSTRIAL | Партнер по промышленному сорсингу в Китае",
-    metaDescription: "Промышленный сорсинг из Китая: оборудование, OEM, MRO, запасные части, проверка поставщиков, качество и экспорт.",
-    strip: ["Проверка поставщиков", "Контроль качества", "OEM координация", "MRO сорсинг", "Экспорт"],
+    metaDescription: "Промышленный сорсинг из Китая: оборудование, OEM, MRO, запасные части, проверка поставщиков, качество и экспортная поддержка.",
+    strip: ["Проверка поставщиков", "Контроль качества", "OEM координация", "MRO сорсинг", "Экспортная поддержка"],
     sourceTitle: "Что мы помогаем закупать",
-    sourceText: "Практичная поддержка для B2B промышленной закупки из Китая.",
+    sourceText: "Практичная поддержка B2B закупок из Китая для промышленных товаров, без обещания закупать все подряд.",
+    sourceItems: [
+      { title: "Машины и оборудование", text: "Координация закупок производственного оборудования, общей техники и связанных компонентов." },
+      { title: "Промышленные OEM детали", text: "Индивидуальные детали, чертежи, образцы, сравнение поставщиков и сопровождение производства." },
+      { title: "MRO материалы", text: "Материалы для обслуживания, ремонта и эксплуатации, расходники, замены и смешанные заказы." },
+      { title: "Промышленные запасные части", text: "Механические и электрические запчасти, детали для обслуживания завода и срочный поиск замен." },
+      { title: "Детали сельхозтехники", text: "Детали тракторов, мотоблоков, уборочной техники, орошения и сельскохозяйственных агрегатов." },
+      { title: "Упаковка и заводские материалы", text: "Детали упаковочных машин, конвейеры, узлы запайки, розлива и промышленные расходники." }
+    ],
     moreTitle: "Больше, чем поиск поставщиков",
-    moreText: "Поиск дает названия поставщиков. Промышленная закупка требует проверки, технической коммуникации, сравнения, образцов, инспекции, документов и долгосрочного контроля.",
+    moreText: "Поиск, ИИ и торговые площадки дают названия поставщиков. Промышленная закупка требует проверки, технической коммуникации, сравнения предложений, образцов, инспекции, экспортных документов и долгосрочного сопровождения.",
     servicesTitle: "Основные услуги",
-    servicesText: "Услуги для снижения рисков закупки и улучшения исполнения в Китае.",
-    industriesTitle: "Отрасли",
-    industriesText: "Мы помогаем искать, проверять и координировать промышленных поставщиков в Китае.",
+    servicesText: "Услуги помогают снизить риски закупки и улучшить исполнение заказов со стороны Китая.",
+    industriesTitle: "Отрасли, которые мы поддерживаем",
+    industriesText: "Мы помогаем покупателям искать, проверять и координировать промышленных поставщиков в Китае.",
     processTitle: "Почему MAVORIX INDUSTRIAL",
-    processText: "Опыт в промышленном оборудовании и экспортных операциях помогает лучше понимать технические требования.",
-    faqTitle: "FAQ",
+    processText: "Опыт в промышленном оборудовании и экспортных операциях помогает нам лучше понимать технические требования закупки.",
+    faqTitle: "Вопросы и ответы",
     faqs: [
-      { q: "Вы торговая компания или агент по сорсингу?", a: "MAVORIX INDUSTRIAL — партнер по промышленному сорсингу в Китае для проверки, координации и сопровождения поставщиков." },
-      { q: "Какие продукты вы помогаете закупать?", a: "Оборудование, OEM детали, MRO материалы, запасные части, сельхоздетали, упаковочное оборудование, металл и заводские расходники." },
-      { q: "Можете проверить китайского поставщика?", a: "Да, мы проверяем идентичность, возможности, коммуникацию, ясность предложения и риски исполнения." },
+      { q: "Вы торговая компания или агент по сорсингу?", a: "MAVORIX INDUSTRIAL - партнер по промышленному сорсингу в Китае для проверки, координации и сопровождения поставщиков." },
+      { q: "Какие товары вы помогаете закупать?", a: "Оборудование, OEM детали, MRO материалы, промышленные запчасти, детали сельхозтехники, упаковочное оборудование, металл и заводские расходники." },
+      { q: "Можете проверить китайского поставщика?", a: "Да. Мы помогаем проверить идентичность, сигналы возможностей, качество коммуникации, ясность предложения и риски исполнения." },
       { q: "Как отправить запрос?", a: "Через форму, email mavorixindustrial@163.com или WhatsApp +86-13967842747." }
     ]
   },
-  cta: { title: "Нужна поддержка промышленного сорсинга из Китая?", text: "Отправьте детали продукта, количество, фото, чертежи или ссылки поставщиков. Мы оценим следующие шаги.", button: "Отправить требование", whatsapp: "WhatsApp" },
+  cta: { title: "Нужна поддержка промышленного сорсинга из Китая?", text: "Отправьте детали продукта, количество, фотографии, чертежи или ссылки на поставщиков. Мы оценим путь закупки и следующие шаги.", button: "Отправить требование", whatsapp: "WhatsApp" },
   industrial: {
     ...coreCopy.en.industrial,
-    metaTitle: "Промышленный сорсинг в Китае | MAVORIX INDUSTRIAL",
+    metaTitle: "Услуги промышленного сорсинга в Китае | MAVORIX INDUSTRIAL",
     metaDescription: "Сорсинг оборудования, OEM, MRO, запасных частей, проверка поставщиков, качество и экспортная координация из Китая.",
     badge: "Промышленный сорсинг",
     title: "Услуги промышленного сорсинга в Китае",
-    description: "Структурированная поддержка для зарубежных покупателей оборудования, OEM изделий, MRO материалов и запасных частей.",
-    processTitle: "Процесс сорсинга"
+    description: "Структурированная поддержка зарубежных покупателей оборудования, OEM изделий, MRO материалов, запасных частей и промышленной техники.",
+    features: [
+      { title: "Что такое промышленный сорсинг?", text: "Поиск поставщиков, проверка, техническое уточнение, сравнение предложений, координация качества и экспортное сопровождение." },
+      { title: "Почему нужен партнер в Китае?", text: "Покупателям нужны фильтрация поставщиков, контроль спецификаций и практическая координация исполнения." },
+      { title: "Что мы можем закупать", text: "Оборудование, OEM детали, MRO материалы, запасные части, сельхоздетали, упаковка, металл и заводские материалы." },
+      { title: "Проверка поставщиков", text: "Проверяем идентичность, признаки производственных возможностей, коммуникацию, ясность предложений и риски исполнения." },
+      { title: "Контроль качества", text: "Координируем требования инспекции, фотоотчеты, проверку упаковки и работу с замечаниями перед отгрузкой." },
+      { title: "Экспортная поддержка", text: "Поддерживаем коммуникацию по документам, подготовке отгрузки, упаковке и консолидации." }
+    ],
+    processTitle: "Процесс сорсинга",
+    faqs: [
+      { q: "Что такое промышленный сорсинг?", a: "Это поиск, проверка, сравнение и координация поставщиков для оборудования, деталей, MRO, OEM и промышленной техники." },
+      { q: "Зачем нужен партнер по сорсингу в Китае?", a: "Он помогает снизить риски благодаря проверке поставщиков, технической коммуникации, сравнению предложений, контролю качества и экспортной координации." },
+      { q: "Можете поддержать индивидуальные детали?", a: "Да, если покупатель предоставляет чертежи, образцы, фотографии, спецификации или информацию о применении." }
+    ]
   },
   contact: {
     ...coreCopy.en.contact,
     metaTitle: "Контакты MAVORIX INDUSTRIAL | Запрос на сорсинг в Китае",
-    metaDescription: "Свяжитесь с MAVORIX INDUSTRIAL по вопросам промышленного сорсинга, OEM, MRO, проверки поставщиков, инспекции и экспорта.",
+    metaDescription: "Свяжитесь с MAVORIX INDUSTRIAL по промышленному сорсингу, OEM, MRO, проверке поставщиков, инспекции качества и экспорту из Китая.",
     badge: "Контакты",
     title: "Отправьте запрос на промышленный сорсинг в Китае",
-    description: "Укажите продукт, количество, рынок, чертежи, фото или ссылки поставщиков. Мы оценим путь закупки.",
+    description: "Укажите продукт, количество, целевой рынок, чертежи, фотографии или ссылки на поставщиков. Мы оценим путь закупки.",
     fields: ["Имя", "Компания", "Страна", "Email", "WhatsApp", "Количество", "Целевой рынок"],
-    requirement: "Продукт или требование",
+    requirement: "Продукт или требование к сорсингу",
     message: "Сообщение",
     submit: "Отправить запрос",
     whatsapp: "Связаться в WhatsApp",
-    checklistTitle: "Что указать в запросе"
+    checklistTitle: "Что указать в запросе",
+    checklist: ["Название продукта, фотографии, чертежи или данные образца", "Количество и ожидаемый повторный спрос", "Материал, размер, стандарт или применение", "Страна назначения и целевой рынок", "Желаемый срок поставки и требования к упаковке"],
+    faqs: [
+      { q: "Какие данные отправить?", a: "Название товара, фото, чертежи, количество, страну назначения, применение, требования к качеству и ссылки на поставщиков, если есть." },
+      { q: "Можно связаться через WhatsApp?", a: "Да. Напишите на +86-13967842747 или используйте кнопку WhatsApp." },
+      { q: "Вы даете мгновенные цены?", a: "Промышленные предложения обычно требуют проверки поставщика и технического уточнения, поэтому мы избегаем ненадежных мгновенных цен." }
+    ]
   }
 };
 
@@ -360,12 +414,12 @@ coreCopy.ar = {
   ...coreCopy.en,
   dir: "rtl",
   nav: { home: "الرئيسية", industrial: "التوريد الصناعي", services: "الخدمات", industries: "القطاعات", countries: "الدول", blog: "المدونة", contact: "اتصل بنا", whatsapp: "واتساب" },
-  footerIntro: "شريكك في التوريد الصناعي من الصين: موردون، OEM، MRO، فحص الجودة، ودعم التصدير.",
+  footerIntro: "شريكك في التوريد الصناعي من الصين: موردون، OEM، MRO، تنسيق الجودة، ودعم التصدير.",
   footerColumns: { services: "الخدمات", industries: "القطاعات", countries: "الدول", contact: "اتصل بنا", whatsapp: "استفسار واتساب", contactPage: "صفحة الاتصال" },
   hero: {
     eyebrow: "توريد صناعي من الصين",
     h1: "شريكك في التوريد الصناعي من الصين",
-    subtitle: "تساعد MAVORIX INDUSTRIAL المشترين الصناعيين في الخارج على توريد المعدات وقطع OEM ومستلزمات MRO وقطع الغيار من الصين مع التحقق من الموردين وتنسيق الجودة ودعم التصدير.",
+    subtitle: "تساعد MAVORIX INDUSTRIAL المشترين الصناعيين خارج الصين في توريد المعدات وقطع OEM ومستلزمات MRO وقطع الغيار من الصين مع التحقق من الموردين وتنسيق الجودة ودعم التصدير.",
     primary: "إرسال استفسار",
     whatsapp: "تواصل عبر واتساب",
     services: "استكشف الخدمات",
@@ -373,15 +427,23 @@ coreCopy.ar = {
   },
   home: {
     ...coreCopy.en.home,
-    metaTitle: "MAVORIX INDUSTRIAL | شريك التوريد الصناعي في الصين",
+    metaTitle: "MAVORIX INDUSTRIAL | شريك التوريد الصناعي من الصين",
     metaDescription: "دعم التوريد الصناعي من الصين للمعدات وقطع OEM ومستلزمات MRO وقطع الغيار مع التحقق من الموردين والجودة والتصدير.",
     strip: ["التحقق من الموردين", "فحص الجودة", "تنسيق OEM", "توريد MRO", "دعم التصدير"],
     sourceTitle: "ما الذي نساعد في توريده",
-    sourceText: "دعم توريد صناعي موجه لاحتياجات B2B العملية من الصين.",
+    sourceText: "دعم توريد صناعي موجه لاحتياجات B2B العملية من الصين، بدون الادعاء بتوريد كل شيء.",
+    sourceItems: [
+      { title: "الآلات والمعدات", text: "تنسيق شراء معدات الإنتاج والآلات العامة والمكونات المرتبطة بها." },
+      { title: "قطع صناعية OEM", text: "قطع مخصصة ورسومات وعينات ومقارنة موردين ومتابعة الإنتاج." },
+      { title: "مستلزمات MRO", text: "مواد الصيانة والإصلاح والتشغيل والمستهلكات وقطع الاستبدال والطلبات المختلطة." },
+      { title: "قطع غيار صناعية", text: "قطع ميكانيكية وكهربائية وقطع صيانة للمصانع وتوريد عاجل للبدائل." },
+      { title: "قطع معدات زراعية", text: "قطع جرارات ومعدات حرث وحصاد وري ومستلزمات زراعية." },
+      { title: "التعبئة ومستلزمات المصانع", text: "قطع آلات التعبئة والسيور وأجزاء الختم والتعبئة والمستهلكات الصناعية." }
+    ],
     moreTitle: "أكثر من مجرد العثور على موردين",
-    moreText: "البحث يعطي أسماء الموردين، لكن الشراء الصناعي يحتاج إلى تحقق وتواصل فني ومقارنة عروض وعينات وفحص ومستندات وتنسيق طويل الأجل.",
+    moreText: "محركات البحث والذكاء الاصطناعي والمنصات تعطي أسماء الموردين. أما الشراء الصناعي فيحتاج إلى تحقق وتواصل فني ومقارنة عروض وعينات وفحص ومستندات تصدير ومتابعة طويلة الأجل.",
     servicesTitle: "الخدمات الرئيسية",
-    servicesText: "خدمات تقلل مخاطر الشراء وتساعد على تنفيذ التوريد من الصين.",
+    servicesText: "خدمات تقلل مخاطر الشراء وتساعد على تنفيذ التوريد من الصين بشكل منظم.",
     industriesTitle: "القطاعات التي ندعمها",
     industriesText: "نساعد المشترين على البحث والتحقق والتنسيق مع الموردين الصناعيين في الصين.",
     processTitle: "لماذا MAVORIX INDUSTRIAL",
@@ -389,34 +451,53 @@ coreCopy.ar = {
     faqTitle: "الأسئلة الشائعة",
     faqs: [
       { q: "هل أنتم شركة تجارية أم شريك توريد؟", a: "MAVORIX INDUSTRIAL شريك توريد صناعي في الصين يساعد في التحقق والتنسيق والمتابعة مع الموردين." },
-      { q: "ما المنتجات التي يمكنكم المساعدة في توريدها؟", a: "المعدات، قطع OEM، مستلزمات MRO، قطع الغيار، قطع المعدات الزراعية، التغليف، المعادن ومستلزمات المصانع." },
-      { q: "هل يمكنكم التحقق من الموردين الصينيين؟", a: "نعم، نساعد في مراجعة هوية المورد وقدرته وجودة التواصل ومخاطر التنفيذ." },
+      { q: "ما المنتجات التي يمكنكم المساعدة في توريدها؟", a: "المعدات، قطع OEM، مستلزمات MRO، قطع الغيار، قطع المعدات الزراعية، آلات التعبئة، المعادن ومستلزمات المصانع." },
+      { q: "هل يمكنكم التحقق من الموردين الصينيين؟", a: "نعم، نساعد في مراجعة هوية المورد وقدرته وجودة التواصل ووضوح العرض ومخاطر التنفيذ." },
       { q: "كيف أرسل استفسارا؟", a: "عبر النموذج أو البريد mavorixindustrial@163.com أو واتساب +86-13967842747." }
     ]
   },
-  cta: { title: "هل تحتاج إلى دعم توريد صناعي من الصين؟", text: "أرسل تفاصيل المنتج والكمية والصور والرسومات أو روابط الموردين. سنراجع الخطوات المناسبة.", button: "أرسل متطلباتك", whatsapp: "واتساب" },
+  cta: { title: "هل تحتاج إلى دعم توريد صناعي من الصين؟", text: "أرسل تفاصيل المنتج والكمية والصور والرسومات أو روابط الموردين. سنراجع مسار التوريد والخطوات التالية.", button: "أرسل متطلباتك", whatsapp: "واتساب" },
   industrial: {
     ...coreCopy.en.industrial,
     metaTitle: "خدمات التوريد الصناعي من الصين | MAVORIX INDUSTRIAL",
-    metaDescription: "توريد صناعي من الصين للمعدات و OEM و MRO وقطع الغيار والتحقق من الموردين والجودة والتصدير.",
+    metaDescription: "توريد صناعي من الصين للمعدات وOEM وMRO وقطع الغيار مع التحقق من الموردين والجودة ودعم التصدير.",
     badge: "التوريد الصناعي",
     title: "خدمات التوريد الصناعي من الصين",
-    description: "دعم منظم للمشترين الدوليين للمعدات وقطع OEM ومستلزمات MRO وقطع الغيار الصناعية.",
-    processTitle: "عملية التوريد"
+    description: "دعم منظم للمشترين الدوليين في شراء المعدات وقطع OEM ومستلزمات MRO وقطع الغيار الصناعية من الصين.",
+    features: [
+      { title: "ما هو التوريد الصناعي؟", text: "البحث عن الموردين والتحقق منهم وتوضيح المتطلبات الفنية ومقارنة العروض وتنسيق الجودة ومتابعة التصدير." },
+      { title: "لماذا تحتاج إلى شريك في الصين؟", text: "المشتري يحتاج إلى فرز الموردين وضبط المواصفات وتنسيق التنفيذ بشكل عملي." },
+      { title: "ما الذي يمكننا توريده", text: "معدات، قطع OEM، مستلزمات MRO، قطع غيار، قطع زراعية، تعبئة، معادن ومستلزمات مصانع." },
+      { title: "التحقق من الموردين", text: "نراجع هوية المورد وإشارات القدرة وجودة التواصل ووضوح العرض ومخاطر التنفيذ." },
+      { title: "تنسيق الجودة", text: "ننسق متطلبات الفحص والصور والتقارير ومراجعة التغليف ومتابعة الملاحظات قبل الشحن." },
+      { title: "دعم التصدير", text: "ندعم التواصل حول المستندات وتجهيز الشحنة والتغليف وخطط التجميع." }
+    ],
+    processTitle: "عملية التوريد",
+    faqs: [
+      { q: "ما هو التوريد الصناعي؟", a: "هو عملية البحث والتحقق والمقارنة والتنسيق مع الموردين للمعدات والقطع وMRO وOEM والمنتجات الصناعية." },
+      { q: "لماذا أستخدم شريك توريد في الصين؟", a: "يساعد على تقليل المخاطر من خلال التحقق من الموردين والتواصل الفني ومقارنة العروض وفحص الجودة وتنسيق التصدير." },
+      { q: "هل تدعمون القطع الصناعية المخصصة؟", a: "نعم، عندما يقدم المشتري رسومات أو عينات أو صورا أو مواصفات أو معلومات عن الاستخدام." }
+    ]
   },
   contact: {
     ...coreCopy.en.contact,
-    metaTitle: "اتصل بـ MAVORIX INDUSTRIAL | استفسار توريد من الصين",
-    metaDescription: "تواصل مع MAVORIX INDUSTRIAL للتوريد الصناعي و OEM و MRO والتحقق من الموردين وفحص الجودة ودعم التصدير.",
+    metaTitle: "اتصل ب MAVORIX INDUSTRIAL | استفسار توريد من الصين",
+    metaDescription: "تواصل مع MAVORIX INDUSTRIAL للتوريد الصناعي وOEM وMRO والتحقق من الموردين وفحص الجودة ودعم التصدير من الصين.",
     badge: "اتصل بنا",
     title: "أرسل استفسار التوريد الصناعي من الصين",
-    description: "شارك متطلبات المنتج والكمية والسوق والرسومات والصور أو روابط الموردين. سنراجع مسار التوريد.",
+    description: "شارك متطلبات المنتج والكمية والسوق المستهدف والرسومات والصور أو روابط الموردين. سنراجع مسار التوريد.",
     fields: ["الاسم", "الشركة", "الدولة", "البريد الإلكتروني", "واتساب", "الكمية", "السوق المستهدف"],
     requirement: "المنتج أو متطلبات التوريد",
     message: "الرسالة",
     submit: "إرسال الاستفسار",
     whatsapp: "تواصل عبر واتساب",
-    checklistTitle: "قائمة معلومات الاستفسار"
+    checklistTitle: "قائمة معلومات الاستفسار",
+    checklist: ["اسم المنتج والصور والرسومات أو تفاصيل العينة", "الكمية والطلب المتكرر المتوقع", "المادة والحجم والمعيار الفني أو الاستخدام", "بلد الوجهة والسوق المستهدف", "وقت التسليم المطلوب واحتياجات التغليف"],
+    faqs: [
+      { q: "ما المعلومات التي يجب إرسالها؟", a: "اسم المنتج والصور والرسومات والكمية وبلد الوجهة والاستخدام ومتطلبات الجودة وروابط الموردين إن وجدت." },
+      { q: "هل يمكنني التواصل عبر واتساب؟", a: "نعم. تواصل معنا على +86-13967842747 أو استخدم زر واتساب." },
+      { q: "هل تقدمون أسعارا فورية؟", a: "العروض الصناعية تحتاج غالبا إلى تحقق من المورد وتوضيح فني، لذلك نتجنب الأسعار الفورية غير الموثوقة." }
+    ]
   }
 };
 
