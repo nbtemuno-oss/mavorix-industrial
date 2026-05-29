@@ -1,9 +1,65 @@
 import type { MetadataRoute } from "next";
+import { execFileSync } from "node:child_process";
+import { existsSync, statSync } from "node:fs";
 import { countries } from "@/data/countries";
 import { industries } from "@/data/industries";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
 import { getBlogSlugs } from "@/lib/mdx";
+
+function getLastModified(files: string[]): Date {
+  const existingFiles = files.filter((file) => existsSync(file));
+
+  try {
+    const output = execFileSync("git", ["log", "-1", "--format=%cI", "--", ...files], {
+      cwd: process.cwd(),
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"]
+    }).trim();
+
+    if (output) return new Date(output);
+  } catch {
+    // Vercel and local builds normally have git metadata. File mtimes are a safe fallback.
+  }
+
+  const latestMtime = existingFiles.reduce((latest, file) => {
+    const mtime = statSync(file).mtime.getTime();
+    return Math.max(latest, mtime);
+  }, 0);
+
+  return latestMtime ? new Date(latestMtime) : new Date();
+}
+
+function sourceFilesFor(locale: string, path: string): string[] {
+  const common = ["app/layout.tsx", "app/[locale]/layout.tsx", "data/site.ts", "data/translations.ts"];
+
+  if (path === "") return [...common, "app/[locale]/page.tsx"];
+  if (path === "about") return [...common, "app/[locale]/about/page.tsx"];
+  if (path === "industrial-sourcing") return [...common, "app/[locale]/industrial-sourcing/page.tsx", "data/services.ts"];
+  if (path === "services") return [...common, "app/[locale]/services/page.tsx", "data/services.ts"];
+  if (path === "industries") return [...common, "app/[locale]/industries/page.tsx", "data/industries.ts"];
+  if (path === "countries") return [...common, "app/[locale]/countries/page.tsx", "data/countries.ts"];
+  if (path === "blog") return [...common, "app/[locale]/blog/page.tsx", "content/en/blog"];
+  if (path === "contact") return [...common, "app/[locale]/contact/page.tsx"];
+  if (path.startsWith("services/")) return [...common, "app/[locale]/services/[slug]/page.tsx", "data/services.ts"];
+  if (path.startsWith("industries/")) return [...common, "app/[locale]/industries/[slug]/page.tsx", "data/industries.ts"];
+  if (path.startsWith("countries/")) return [...common, "app/[locale]/countries/[slug]/page.tsx", "data/countries.ts"];
+  if (path.startsWith("blog/")) {
+    const slug = path.replace("blog/", "");
+    return [...common, "app/[locale]/blog/[slug]/page.tsx", `content/en/blog/${slug}.md`];
+  }
+
+  return common;
+}
+
+function sitemapEntry(locale: string, path: string, priority: number, changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]) {
+  return {
+    url: `${site.url}/${locale}/${path}`.replace(/\/$/, "") + "/",
+    lastModified: getLastModified(sourceFilesFor(locale, path)),
+    changeFrequency,
+    priority
+  };
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = ["", "about", "industrial-sourcing", "services", "industries", "countries", "blog", "contact"];
@@ -14,22 +70,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...countries.map((item) => `countries/${item.slug}`),
     ...getBlogSlugs().map((slug) => `blog/${slug}`)
   ];
-  const enUrls = [...staticPaths, ...detailPaths].map((path) => ({
-      url: `${site.url}/en/${path}`.replace(/\/$/, "") + "/",
-      lastModified: new Date("2025-01-15"),
-      changeFrequency: path.includes("blog/") ? "monthly" as const : "weekly" as const,
-      priority: path === "" ? 1 : path.includes("/") ? 0.72 : 0.82
-    }));
+  const enUrls = [...staticPaths, ...detailPaths].map((path) =>
+    sitemapEntry("en", path, path === "" ? 1 : path.includes("/") ? 0.72 : 0.82, path.includes("blog/") ? "monthly" : "weekly")
+  );
 
   const localeUrls = site.locales
     .filter((locale) => locale !== "en")
     .flatMap((locale) =>
-      translatedPaths.map((path) => ({
-        url: `${site.url}/${locale}/${path}`.replace(/\/$/, "") + "/",
-        lastModified: new Date("2025-01-15"),
-        changeFrequency: "weekly" as const,
-        priority: path === "" ? 0.95 : 0.82
-      }))
+      translatedPaths.map((path) =>
+        sitemapEntry(locale, path, path === "" ? 0.95 : 0.82, "weekly")
+      )
   );
 
   return [...enUrls, ...localeUrls];
