@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { countries } from "@/data/countries";
 import { industries } from "@/data/industries";
 import { services } from "@/data/services";
@@ -14,7 +15,15 @@ export function Footer({ locale }: { locale: string }) {
     <footer className="bg-navy text-white">
       <Container className="grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-1">
-          <div className="text-xl font-black">{site.name}</div>
+          <Link href={`/${locale}/`} className="inline-flex" aria-label={site.name}>
+            <Image
+              src="/images/logo/mavorix-logo-transparent.webp"
+              alt="MAVORIX INDUSTRIAL"
+              width={260}
+              height={120}
+              className="h-14 w-auto object-contain"
+            />
+          </Link>
           <p className="mt-3 text-sm leading-7 text-slate-300">{copy.footerIntro}</p>
         </div>
         <FooterColumn title={copy.footerColumns.services} items={locale === "en" ? services.slice(0, 6).map((s) => ({ label: s.shortTitle, href: `${prefix}/services/${s.slug}/` })) : [{ label: copy.nav.industrial, href: `${prefix}/industrial-sourcing/` }]} />
