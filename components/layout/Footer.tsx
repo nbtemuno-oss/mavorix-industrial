@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { countries } from "@/data/countries";
 import { industries } from "@/data/industries";
 import { services } from "@/data/services";
@@ -38,7 +38,7 @@ export function Footer({ locale }: { locale: string }) {
           </div>
         </div>
       </Container>
-      <div className="border-t border-white/10 py-5 text-center text-sm text-slate-400">© MAVORIX INDUSTRIAL. All rights reserved.</div>
+      <div className="border-t border-white/10 py-5 text-center text-sm text-slate-400">&copy; MAVORIX INDUSTRIAL. All rights reserved.</div>
     </footer>
   );
 }
