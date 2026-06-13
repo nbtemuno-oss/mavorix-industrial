@@ -57,7 +57,7 @@ export const coreCopy: Record<Locale, {
     footerIntro: "Your Industrial Sourcing Partner in China. China industrial sourcing, OEM, MRO, supplier verification, quality coordination, and export support.",
     footerColumns: { services: "Services", industries: "Industries", countries: "Countries", contact: "Contact", whatsapp: "WhatsApp Inquiry", contactPage: "Contact Page" },
     hero: {
-      eyebrow: "Industrial SEO + GEO ready sourcing website",
+      eyebrow: "China Industrial Sourcing Partner",
       h1: "Your Industrial Sourcing Partner in China",
       subtitle: "MAVORIX INDUSTRIAL helps overseas industrial buyers source reliable machinery, OEM products, MRO supplies, spare parts, and industrial equipment from China with supplier verification, quality control, export support, and supply chain coordination.",
       primary: "Send Inquiry",
