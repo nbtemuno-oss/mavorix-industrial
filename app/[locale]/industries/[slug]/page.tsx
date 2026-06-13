@@ -20,7 +20,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, slug } = await params;
   const industry = industries.find((item) => item.slug === slug);
   if (!industry) return {};
-  return seo({ title: `${industry.title} Sourcing from China`, description: industry.description, path: `/${locale}/industries/${slug}/` });
+  return seo({
+    title: `${industry.title} Sourcing from China`,
+    description: industry.description,
+    path: `/${locale}/industries/${slug}/`,
+    canonicalPath: `/en/industries/${slug}/`,
+    index: locale === "en"
+  });
 }
 
 export default async function IndustryDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {

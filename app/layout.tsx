@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.mavorixindustrial.com"),
   title: {
     default: "MAVORIX INDUSTRIAL | Industrial Sourcing Partner in China",
-    template: "%s | MAVORIX INDUSTRIAL"
+    template: "%s"
   },
   description:
     "MAVORIX INDUSTRIAL helps overseas industrial buyers source reliable machinery, OEM products, MRO supplies, spare parts, and industrial equipment from China.",

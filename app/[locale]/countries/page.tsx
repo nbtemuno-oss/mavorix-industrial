@@ -6,11 +6,16 @@ import { Container } from "@/components/ui/Container";
 import { countries } from "@/data/countries";
 import { seo } from "@/lib/seo";
 
-export const metadata: Metadata = seo({
-  title: "China Industrial Sourcing for Global Buyers | MAVORIX INDUSTRIAL",
-  description: "MAVORIX INDUSTRIAL supports industrial buyers from Algeria, Peru, Russia, Saudi Arabia, Mexico, Egypt, UAE, Colombia, Chile, Nigeria, South Africa, Serbia, Romania, Bulgaria, and Morocco with China sourcing and procurement support.",
-  path: "/en/countries/"
-});
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return seo({
+    title: "China Industrial Sourcing for Global Buyers | MAVORIX INDUSTRIAL",
+    description: "MAVORIX INDUSTRIAL supports industrial buyers from Algeria, Peru, Russia, Saudi Arabia, Mexico, Egypt, UAE, Colombia, Chile, Nigeria, South Africa, Serbia, Romania, Bulgaria, and Morocco with China sourcing and procurement support.",
+    path: `/${locale}/countries/`,
+    canonicalPath: "/en/countries/",
+    index: locale === "en"
+  });
+}
 
 export default function CountriesPage() {
   return (

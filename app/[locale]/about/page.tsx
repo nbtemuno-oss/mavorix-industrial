@@ -4,11 +4,16 @@ import { PageHero } from "@/components/sections/PageHero";
 import { Container } from "@/components/ui/Container";
 import { seo } from "@/lib/seo";
 
-export const metadata: Metadata = seo({
-  title: "About MAVORIX INDUSTRIAL | China Industrial Sourcing and Procurement Support",
-  description: "Learn about MAVORIX INDUSTRIAL, a China-based industrial sourcing partner helping overseas buyers with machinery, OEM products, MRO supplies, supplier verification, and export support.",
-  path: "/en/about/"
-});
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return seo({
+    title: "About MAVORIX INDUSTRIAL | China Industrial Sourcing and Procurement Support",
+    description: "Learn about MAVORIX INDUSTRIAL, a China-based industrial sourcing partner helping overseas buyers with machinery, OEM products, MRO supplies, supplier verification, and export support.",
+    path: `/${locale}/about/`,
+    canonicalPath: "/en/about/",
+    index: locale === "en"
+  });
+}
 
 export default function AboutPage() {
   const sections = [

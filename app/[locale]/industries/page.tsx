@@ -6,11 +6,16 @@ import { Container } from "@/components/ui/Container";
 import { industries } from "@/data/industries";
 import { seo } from "@/lib/seo";
 
-export const metadata: Metadata = seo({
-  title: "Industries We Support | Industrial Sourcing from China",
-  description: "MAVORIX INDUSTRIAL supports overseas buyers in sourcing products for plastic industry, agricultural equipment, industrial machinery, packaging, metal parts, MRO supplies, and factory spare parts from China.",
-  path: "/en/industries/"
-});
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return seo({
+    title: "Industries We Support | Industrial Sourcing from China",
+    description: "MAVORIX INDUSTRIAL supports overseas buyers in sourcing products for plastic industry, agricultural equipment, industrial machinery, packaging, metal parts, MRO supplies, and factory spare parts from China.",
+    path: `/${locale}/industries/`,
+    canonicalPath: "/en/industries/",
+    index: locale === "en"
+  });
+}
 
 export default function IndustriesPage() {
   return (

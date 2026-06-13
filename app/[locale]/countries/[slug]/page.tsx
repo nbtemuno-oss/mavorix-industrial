@@ -23,7 +23,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return seo({
     title: `China Industrial Sourcing for ${country.title} Buyers`,
     description: `MAVORIX INDUSTRIAL supports buyers from ${country.title} with China sourcing coordination, supplier verification, quality control, and export support for industrial products.`,
-    path: `/${locale}/countries/${slug}/`
+    path: `/${locale}/countries/${slug}/`,
+    canonicalPath: `/en/countries/${slug}/`,
+    index: locale === "en"
   });
 }
 

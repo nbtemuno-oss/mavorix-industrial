@@ -6,11 +6,16 @@ import { Container } from "@/components/ui/Container";
 import { services } from "@/data/services";
 import { seo } from "@/lib/seo";
 
-export const metadata: Metadata = seo({
-  title: "Industrial Sourcing Services from China | MAVORIX INDUSTRIAL",
-  description: "Explore MAVORIX INDUSTRIAL services including China industrial sourcing, OEM manufacturing support, MRO sourcing, supplier verification, quality inspection, export support, and container consolidation.",
-  path: "/en/services/"
-});
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return seo({
+    title: "Industrial Sourcing Services from China | MAVORIX INDUSTRIAL",
+    description: "Explore MAVORIX INDUSTRIAL services including China industrial sourcing, OEM manufacturing support, MRO sourcing, supplier verification, quality inspection, export support, and container consolidation.",
+    path: `/${locale}/services/`,
+    canonicalPath: "/en/services/",
+    index: locale === "en"
+  });
+}
 
 export default function ServicesPage() {
   return (

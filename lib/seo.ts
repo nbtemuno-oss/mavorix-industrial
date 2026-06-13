@@ -5,13 +5,17 @@ type SeoInput = {
   title: string;
   description: string;
   path: string;
+  canonicalPath?: string;
+  index?: boolean;
   locale?: string;
   type?: "website" | "article";
 };
 
-export function seo({ title, description, path, locale = "en", type = "website" }: SeoInput): Metadata {
-  const canonical = `${site.url}${path}`;
-  const suffix = path.replace(/^\/[a-z]{2}/, "") || "/";
+export function seo({ title, description, path, canonicalPath, index = true, locale, type = "website" }: SeoInput): Metadata {
+  const pageLocale = locale ?? path.match(/^\/([a-z]{2})(?:\/|$)/)?.[1] ?? "en";
+  const canonicalSource = canonicalPath ?? path;
+  const canonical = `${site.url}${canonicalSource}`;
+  const suffix = canonicalSource.replace(/^\/[a-z]{2}/, "") || "/";
   const translatedPaths = new Set(["/", "/industrial-sourcing/", "/contact/"]);
   const normalizedSuffix = suffix.endsWith("/") ? suffix : `${suffix}/`;
   const languages = translatedPaths.has(normalizedSuffix)
@@ -33,7 +37,7 @@ export function seo({ title, description, path, locale = "en", type = "website" 
       description,
       url: canonical,
       siteName: site.name,
-      locale,
+      locale: pageLocale,
       type,
       images: [
         {
@@ -51,7 +55,7 @@ export function seo({ title, description, path, locale = "en", type = "website" 
       images: ["/images/logo/mavorix-og-logo-card.jpg"]
     },
     robots: {
-      index: true,
+      index,
       follow: true
     }
   };

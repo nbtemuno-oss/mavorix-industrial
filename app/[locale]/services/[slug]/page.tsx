@@ -20,7 +20,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, slug } = await params;
   const service = services.find((item) => item.slug === slug);
   if (!service) return {};
-  return seo({ title: `${service.title} | China Industrial Procurement Support`, description: service.description, path: `/${locale}/services/${slug}/` });
+  return seo({
+    title: `${service.title} | China Industrial Procurement Support`,
+    description: service.description,
+    path: `/${locale}/services/${slug}/`,
+    canonicalPath: `/en/services/${slug}/`,
+    index: locale === "en"
+  });
 }
 
 export default async function ServiceDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {

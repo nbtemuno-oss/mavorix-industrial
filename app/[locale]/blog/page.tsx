@@ -6,11 +6,16 @@ import { Container } from "@/components/ui/Container";
 import { getAllBlogPosts } from "@/lib/mdx";
 import { seo } from "@/lib/seo";
 
-export const metadata: Metadata = seo({
-  title: "Industrial Sourcing Blog | China Procurement Guides",
-  description: "Practical China industrial sourcing guides for overseas buyers covering supplier verification, MRO sourcing, OEM manufacturing, quality control, and procurement risk reduction.",
-  path: "/en/blog/"
-});
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return seo({
+    title: "Industrial Sourcing Blog | China Procurement Guides",
+    description: "Practical China industrial sourcing guides for overseas buyers covering supplier verification, MRO sourcing, OEM manufacturing, quality control, and procurement risk reduction.",
+    path: `/${locale}/blog/`,
+    canonicalPath: "/en/blog/",
+    index: locale === "en"
+  });
+}
 
 export default function BlogPage() {
   const posts = getAllBlogPosts();
