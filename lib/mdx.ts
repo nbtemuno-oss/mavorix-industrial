@@ -4,6 +4,7 @@ import path from "node:path";
 export type BlogPost = {
   slug: string;
   title: string;
+  metaTitle?: string;
   description: string;
   date: string;
   body: string;
@@ -35,6 +36,7 @@ export function getBlogPost(slug: string): BlogPost {
   return {
     slug,
     title: meta.title,
+    metaTitle: meta.metaTitle,
     description: meta.description,
     date: meta.date || "2025-01-15",
     body,
@@ -48,6 +50,7 @@ export function getAllBlogPosts() {
 
 export function markdownToHtml(markdown: string) {
   return markdown
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2">$1</a>')
     .replace(/^### (.*$)/gim, "<h3>$1</h3>")
     .replace(/^## (.*$)/gim, "<h2>$1</h2>")
     .replace(/^\- (.*$)/gim, "<li>$1</li>")

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, slug } = await params;
   try {
     const post = getBlogPost(slug);
-    return seo({ title: post.title, description: post.description, path: `/${locale}/blog/${slug}/`, type: "article" });
+    return seo({ title: post.metaTitle ?? post.title, description: post.description, path: `/${locale}/blog/${slug}/`, type: "article" });
   } catch {
     return {};
   }
