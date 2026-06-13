@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { PageHero } from "@/components/sections/PageHero";
 import { Button } from "@/components/ui/Button";
@@ -9,6 +9,16 @@ import { site } from "@/data/site";
 import { t } from "@/data/translations";
 import { faqSchema, JsonLd } from "@/lib/schema";
 import { seo } from "@/lib/seo";
+
+const contactDirectTitles: Record<string, string> = {
+  en: "Contact us directly",
+  es: "Contacta con nosotros directamente",
+  fr: "Contactez-nous directement",
+  de: "Kontaktieren Sie uns direkt",
+  pt: "Fale conosco diretamente",
+  ru: "Свяжитесь с нами напрямую",
+  ar: "تواصل معنا مباشرة"
+};
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -24,6 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const copy = t(locale).contact;
+  const contactDirectTitle = copy.contactDirectTitle ?? contactDirectTitles[locale] ?? contactDirectTitles.en;
   return (
     <>
       <PageHero badge={copy.badge} title={copy.title} description={copy.description} breadcrumbs={[{ label: t(locale).nav.home, href: `/${locale}/` }, { label: t(locale).nav.contact, href: `/${locale}/contact/` }]} cta={false} />
@@ -48,7 +59,27 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             <ul className="mt-5 space-y-3 text-sm leading-7 text-slate-300">
               {copy.checklist.map((item) => <li key={item}>{item}</li>)}
             </ul>
-            <div className="mt-7 rounded-md bg-white/10 p-4 text-sm">Email: {site.email}<br />WhatsApp: {site.phone}</div>
+            <div className="mt-7 rounded-lg border border-orange-400/40 bg-slate-800/95 p-5 text-sm shadow-xl shadow-black/20 transition hover:border-signal hover:bg-slate-800">
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-orange-200">{contactDirectTitle}</p>
+              <div className="mt-4 space-y-4">
+                <div>
+                  <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-slate-300">
+                    <Mail size={15} className="text-signal" /> Email
+                  </span>
+                  <a href={`mailto:${site.email}`} dir="ltr" className="mt-2 block break-all text-lg font-black leading-snug text-signal hover:text-orange-200 hover:underline">
+                    {site.email}
+                  </a>
+                </div>
+                <div>
+                  <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-slate-300">
+                    <MessageCircle size={15} className="text-emerald-400" /> WhatsApp
+                  </span>
+                  <a href={site.whatsappUrl} dir="ltr" className="mt-2 block text-base font-bold text-white hover:text-emerald-200 hover:underline">
+                    {site.phone}
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </aside>
       </Container>

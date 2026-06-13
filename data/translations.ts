@@ -47,6 +47,7 @@ export const coreCopy: Record<Locale, {
     submit: string;
     whatsapp: string;
     checklistTitle: string;
+    contactDirectTitle?: string;
     checklist: string[];
     faqs: { q: string; a: string }[];
   };
@@ -129,6 +130,7 @@ export const coreCopy: Record<Locale, {
       submit: "Send Inquiry",
       whatsapp: "Contact on WhatsApp",
       checklistTitle: "Inquiry checklist",
+      contactDirectTitle: "Contact us directly",
       checklist: ["Product name, photos, drawings, or sample details", "Quantity and expected repeat demand", "Material, size, technical standard, or application", "Destination country and target market", "Preferred delivery time and packing needs"],
       faqs: [
         { q: "What information should I send?", a: "Send product name, photos, drawings, quantity, destination country, target use, quality requirements, and any supplier links if available." },
@@ -215,6 +217,7 @@ export const coreCopy: Record<Locale, {
       submit: "Envoyer la demande",
       whatsapp: "Contacter sur WhatsApp",
       checklistTitle: "Liste pour la demande",
+      contactDirectTitle: "Contactez-nous directement",
       checklist: ["Nom du produit, photos, plans ou echantillon", "Quantite et repetition prevue", "Matiere, dimensions, standard ou application", "Pays de destination et marche cible", "Delai et besoins d'emballage"],
       faqs: [
         { q: "Quelles informations envoyer ?", a: "Produit, photos, plans, quantite, pays de destination, application et exigences qualite." },
@@ -310,6 +313,7 @@ coreCopy.es = {
     submit: "Enviar consulta",
     whatsapp: "Contactar por WhatsApp",
     checklistTitle: "Lista para la consulta",
+    contactDirectTitle: "Contacta con nosotros directamente",
     checklist: ["Nombre del producto, fotos, planos o detalles de muestra", "Cantidad y demanda repetida esperada", "Material, tamano, norma tecnica o aplicacion", "Pais de destino y mercado objetivo", "Plazo preferido y requisitos de embalaje"],
     faqs: [
       { q: "Que informacion debo enviar?", a: "Envie producto, fotos, planos, cantidad, pais de destino, uso previsto, requisitos de calidad y enlaces de proveedores si existen." },
