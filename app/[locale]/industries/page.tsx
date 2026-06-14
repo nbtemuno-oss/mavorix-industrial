@@ -42,7 +42,7 @@ export default function IndustriesPage() {
               Our role is not to make exaggerated claims about owning factories in every industry. It is to provide China-side sourcing support that helps buyers ask better questions, avoid weak suppliers, and move from unclear requirement to a more controlled procurement process. These industry pages are designed to help buyers find the most relevant sourcing path and related services.
             </p>
           </div>
-          <IndustrialImage src={pageImages.industries.src} alt={pageImages.industries.alt} className="min-h-[320px]" sizes="(min-width: 1024px) 420px, 100vw" />
+          <IndustrialImage src={pageImages.industries.src} alt={pageImages.industries.alt} className="aspect-video" sizes="(min-width: 1024px) 420px, 100vw" fit="contain" />
         </Container>
       </section>
       <section className="bg-slate-50 py-16">

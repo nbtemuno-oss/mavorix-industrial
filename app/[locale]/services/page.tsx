@@ -41,7 +41,7 @@ export default function ServicesPage() {
               This is especially useful for buyers who already found possible suppliers online but are unsure how to compare them, or for procurement teams that need a China-side contact to reduce communication gaps. The goal is honest execution: clearer requirements, fewer avoidable misunderstandings, better documentation, and more visibility before goods leave China.
             </p>
           </div>
-          <IndustrialImage src={pageImages.services.src} alt={pageImages.services.alt} className="min-h-[320px]" sizes="(min-width: 1024px) 420px, 100vw" />
+          <IndustrialImage src={pageImages.services.src} alt={pageImages.services.alt} className="aspect-video" sizes="(min-width: 1024px) 420px, 100vw" fit="contain" />
         </Container>
       </section>
       <Section title="Types of Buyers We Support" items={buyerTypes} />

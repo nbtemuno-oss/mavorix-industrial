@@ -48,7 +48,7 @@ export default function BlogPage() {
               <Button href="/en/contact/" variant="secondary">Contact MAVORIX</Button>
             </div>
           </div>
-          <IndustrialImage src={pageImages.blog.src} alt={pageImages.blog.alt} className="min-h-[320px]" sizes="(min-width: 1024px) 420px, 100vw" />
+          <IndustrialImage src={pageImages.blog.src} alt={pageImages.blog.alt} className="aspect-video" sizes="(min-width: 1024px) 420px, 100vw" fit="contain" />
         </Container>
       </section>
       <section className="bg-slate-50 py-16">

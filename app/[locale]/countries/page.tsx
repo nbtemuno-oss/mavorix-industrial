@@ -42,7 +42,7 @@ export default function CountriesPage() {
               These country pages do not claim local offices or guaranteed customs outcomes. They are built to help buyers from the Balkan region, Latin America, Middle East, Africa, Europe, and other markets understand how China-side sourcing support can be adapted to real purchasing needs such as plastic factories, industrial spare parts, MRO supplies, machinery, packaging, and agricultural equipment.
             </p>
           </div>
-          <IndustrialImage src={pageImages.countries.src} alt={pageImages.countries.alt} className="min-h-[320px]" sizes="(min-width: 1024px) 420px, 100vw" />
+          <IndustrialImage src={pageImages.countries.src} alt={pageImages.countries.alt} className="aspect-video" sizes="(min-width: 1024px) 420px, 100vw" fit="contain" />
         </Container>
       </section>
       <GridSection title="How Sourcing Needs Differ by Market" items={marketNeeds} />
