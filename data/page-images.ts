@@ -72,6 +72,18 @@ export const pageImages = {
     alt: "Precision metal parts sourcing including stainless steel screws, gears, standoffs, and machined components",
     width: 1200,
     height: 630
+  },
+  electricalMechanicalPartsHero: {
+    src: "/images/industries/electrical-mechanical-parts-hero.webp",
+    alt: "Electrical and mechanical industrial parts including servo motor, drive, oil cooler, butterfly valve, pump, hydraulic valve, pneumatic valve, quick connectors, gearbox, and cylinder",
+    width: 1600,
+    height: 900
+  },
+  electricalMechanicalPartsOg: {
+    src: "/images/industries/electrical-mechanical-parts-og.webp",
+    alt: "Electrical and mechanical parts including servo motor, valves, pump, gearbox, and pneumatic cylinder",
+    width: 1200,
+    height: 630
   }
 } satisfies Record<string, PageImage>;
 
