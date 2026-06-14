@@ -108,6 +108,18 @@ export const pageImages = {
     alt: "Tractor in a golden field with agricultural machinery spare parts and wear parts",
     width: 1200,
     height: 630
+  },
+  factorySparePartsHero: {
+    src: "/images/industries/factory-spare-parts-hero.webp",
+    alt: "Factory spare parts warehouse including motors, bearings, belts, chains, pneumatic cylinders, hydraulic fittings, filters, and industrial components",
+    width: 1600,
+    height: 900
+  },
+  factorySparePartsOg: {
+    src: "/images/industries/factory-spare-parts-og.webp",
+    alt: "Industrial factory spare parts warehouse with MRO components and maintenance parts",
+    width: 1200,
+    height: 630
   }
 } satisfies Record<string, PageImage>;
 
