@@ -120,6 +120,18 @@ export const pageImages = {
     alt: "Industrial factory spare parts warehouse with MRO components and maintenance parts",
     width: 1200,
     height: 630
+  },
+  packagingIndustryHero: {
+    src: "/images/industries/packaging-industry-hero.webp",
+    alt: "Modern packaging production line with conveyors, automated packaging machines, and industrial packaging equipment",
+    width: 1600,
+    height: 900
+  },
+  packagingIndustryOg: {
+    src: "/images/industries/packaging-industry-og.webp",
+    alt: "Packaging industry production line with conveyor and automated packaging machinery",
+    width: 1200,
+    height: 630
   }
 } satisfies Record<string, PageImage>;
 
