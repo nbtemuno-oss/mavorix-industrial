@@ -48,6 +48,18 @@ export const pageImages = {
     alt: "Industrial sourcing inquiry with product photos, drawings, quotation details, email and WhatsApp coordination",
     width: 1600,
     height: 900
+  },
+  plasticIndustryHero: {
+    src: "/images/plastic-industry-injection-molding-hero.webp",
+    alt: "Injection molding machines in a modern plastic manufacturing workshop",
+    width: 1600,
+    height: 900
+  },
+  plasticIndustryOg: {
+    src: "/images/plastic-industry-injection-molding-og.webp",
+    alt: "Plastic factory injection molding production line and auxiliary equipment in China",
+    width: 1200,
+    height: 630
   }
 } satisfies Record<string, PageImage>;
 
