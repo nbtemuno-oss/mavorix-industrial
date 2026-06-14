@@ -28,7 +28,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       ? pageImages.metalPartsOg
       : slug === "electrical-mechanical-parts"
         ? pageImages.electricalMechanicalPartsOg
-        : { src: industry.image, alt: `${industry.title} sourcing visual for China industrial procurement`, width: 1200, height: 800 };
+        : slug === "industrial-machinery"
+          ? pageImages.industrialMachineryOg
+          : { src: industry.image, alt: `${industry.title} sourcing visual for China industrial procurement`, width: 1200, height: 800 };
   return seo({
     title: customMeta?.title ?? `${industry.title} Sourcing from China`,
     description: customMeta?.description ?? industry.description,
@@ -50,13 +52,15 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
       {locale === "en" && industry.slug === "plastic-industry" ? <PlasticHeroImage /> : null}
       {locale === "en" && industry.slug === "metal-parts" ? <MetalPartsHeroImage /> : null}
       {locale === "en" && industry.slug === "electrical-mechanical-parts" ? <ElectricalMechanicalPartsHeroImage /> : null}
+      {locale === "en" && industry.slug === "industrial-machinery" ? <IndustrialMachineryHeroImage /> : null}
       <Container className="grid gap-8 py-16 lg:grid-cols-[1fr_320px]">
         <article className="space-y-10">
           {locale !== "en" ? <EnglishVersionNotice locale={locale} /> : null}
           {locale === "en" && industry.slug === "plastic-industry" ? <PlasticLandingContent /> : null}
           {locale === "en" && industry.slug === "metal-parts" ? <MetalPartsLandingContent /> : null}
           {locale === "en" && industry.slug === "electrical-mechanical-parts" ? <ElectricalMechanicalPartsIntro /> : null}
-          {locale === "en" && (industry.slug === "plastic-industry" || industry.slug === "metal-parts" || industry.slug === "electrical-mechanical-parts") ? null : <IndustrialImage src={industry.image} alt={`${industry.title} sourcing from China`} className="min-h-[360px]" />}
+          {locale === "en" && industry.slug === "industrial-machinery" ? <IndustrialMachineryIntro /> : null}
+          {locale === "en" && (industry.slug === "plastic-industry" || industry.slug === "metal-parts" || industry.slug === "electrical-mechanical-parts" || industry.slug === "industrial-machinery") ? null : <IndustrialImage src={industry.image} alt={`${industry.title} sourcing from China`} className="min-h-[360px]" />}
           <Block title="Industry-Focused Introduction" text={`MAVORIX INDUSTRIAL helps overseas buyers source, verify, and coordinate Chinese suppliers for ${industry.title.toLowerCase()} products. We do not claim to manufacture every item; our role is procurement support and supplier coordination.`} />
           <ListBlock title="Common Sourcing Needs" items={industry.products} />
           <ListBlock title="Common Buyer Problems" items={["Unclear supplier capability", "Difficulty confirming technical specifications", "Quality variation before shipment", "Fragmented communication across multiple factories", "Export packing and document coordination"]} />
@@ -155,6 +159,33 @@ function ElectricalMechanicalPartsHeroImage() {
           priority
         />
       </Container>
+    </section>
+  );
+}
+
+function IndustrialMachineryHeroImage() {
+  return (
+    <section className="bg-white pt-8">
+      <Container>
+        <IndustrialImage
+          src={pageImages.industrialMachineryHero.src}
+          alt={pageImages.industrialMachineryHero.alt}
+          className="min-h-[300px] rounded-lg md:min-h-[460px]"
+          sizes="100vw"
+          priority
+        />
+      </Container>
+    </section>
+  );
+}
+
+function IndustrialMachineryIntro() {
+  return (
+    <section>
+      <h2 className="text-3xl font-black text-navy">Industrial Machinery Sourcing from China</h2>
+      <p className="mt-4 leading-8 text-slate-600">
+        MAVORIX INDUSTRIAL supports overseas buyers sourcing industrial machinery, workshop equipment, production equipment, machinery spare parts, maintenance parts, wear parts, and factory consumables from China. Typical requirements may include band saws, air compressors, punch presses, taper pipe or shrinking machines, laser welding equipment, and related spare parts such as saw blades, filters, belts, pulleys, bearings, seals, bushings, nozzles, copper consumables, springs, dies, and metal components. We help clarify specifications, compare suppliers, review quotations, verify supplier capability, coordinate inspection points, and support sourcing execution for both equipment and spare parts.
+      </p>
     </section>
   );
 }

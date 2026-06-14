@@ -84,6 +84,18 @@ export const pageImages = {
     alt: "Electrical and mechanical parts including servo motor, valves, pump, gearbox, and pneumatic cylinder",
     width: 1200,
     height: 630
+  },
+  industrialMachineryHero: {
+    src: "/images/industries/industrial-machinery-hero.webp",
+    alt: "Industrial machinery and spare parts including band saw, air compressor, press machine, taper pipe machine, laser welding equipment, bearings, filters, belts, and metal components",
+    width: 1600,
+    height: 900
+  },
+  industrialMachineryOg: {
+    src: "/images/industries/industrial-machinery-og.webp",
+    alt: "Industrial machinery and spare parts sourcing including compressors, presses, welding equipment, bearings, filters, and components",
+    width: 1200,
+    height: 630
   }
 } satisfies Record<string, PageImage>;
 
