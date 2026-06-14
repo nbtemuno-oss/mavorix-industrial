@@ -41,7 +41,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
   const { locale, slug } = await params;
   const industry = industries.find((item) => item.slug === slug);
   if (!industry) notFound();
-  const faqs = industry.slug === "plastic-industry" ? plasticIndustryFaqs : buildIndustryFaqs(industry.title);
+  const faqs = industry.slug === "plastic-industry" ? plasticIndustryFaqs : industry.slug === "metal-parts" ? metalPartsFaqs : buildIndustryFaqs(industry.title);
   return (
     <>
       <PageHero badge="Industry" title={`${industry.title} Sourcing from China`} description={industry.description} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Industries", href: `/${locale}/industries/` }, { label: industry.title, href: `/${locale}/industries/${industry.slug}/` }]} />
@@ -51,7 +51,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
         <article className="space-y-10">
           {locale !== "en" ? <EnglishVersionNotice locale={locale} /> : null}
           {locale === "en" && industry.slug === "plastic-industry" ? <PlasticLandingContent /> : null}
-          {locale === "en" && industry.slug === "metal-parts" ? <MetalPartsIntro /> : null}
+          {locale === "en" && industry.slug === "metal-parts" ? <MetalPartsLandingContent /> : null}
           {locale === "en" && (industry.slug === "plastic-industry" || industry.slug === "metal-parts") ? null : <IndustrialImage src={industry.image} alt={`${industry.title} sourcing from China`} className="min-h-[360px]" />}
           <Block title="Industry-Focused Introduction" text={`MAVORIX INDUSTRIAL helps overseas buyers source, verify, and coordinate Chinese suppliers for ${industry.title.toLowerCase()} products. We do not claim to manufacture every item; our role is procurement support and supplier coordination.`} />
           <ListBlock title="Common Sourcing Needs" items={industry.products} />
@@ -80,6 +80,10 @@ const industryMetadata: Record<string, { title: string; description: string }> =
   "plastic-industry": {
     title: "Plastic Industry Sourcing from China | Injection Molding & Equipment | MAVORIX",
     description: "MAVORIX supports plastic factories with sourcing injection molding machines, molds, auxiliary equipment, spare parts, and industrial supply chain solutions from China."
+  },
+  "metal-parts": {
+    title: "Metal Parts Sourcing from China | Fasteners & Machined Components | MAVORIX",
+    description: "MAVORIX supports sourcing of metal parts from China including screws, bolts, spacers, gears, and precision machined components for industrial buyers."
   }
 };
 
@@ -135,14 +139,58 @@ function MetalPartsHeroImage() {
   );
 }
 
-function MetalPartsIntro() {
+function MetalPartsLandingContent() {
   return (
-    <section>
-      <h2 className="text-3xl font-black text-navy">Metal Parts Sourcing from China</h2>
-      <p className="mt-4 leading-8 text-slate-600">
-        MAVORIX INDUSTRIAL supports overseas buyers sourcing metal fasteners, stainless steel screws, threaded parts, spacers, standoffs, set screws, gears, machined parts, stamped parts, metal hardware, and custom precision components from China. We help clarify drawings, samples, materials, surface treatment, tolerances, quantities, supplier capability, quotation details, inspection requirements, and export packing before buyers commit to production or repeat orders.
-      </p>
-    </section>
+    <>
+      <section>
+        <h2 className="text-3xl font-black text-navy">Metal Parts Sourcing from China</h2>
+        <div className="mt-4 space-y-5 leading-8 text-slate-600">
+          <p>
+            MAVORIX INDUSTRIAL supports overseas industrial buyers sourcing metal parts from China for machinery maintenance, OEM production, factory spare parts, distribution, and project procurement. Metal parts sourcing often looks simple at first because product names such as screws, bolts, spacers, gears, brackets, or machined components are familiar. In practice, small details can decide whether an order works: material grade, hardness, thread standard, tolerance, surface treatment, drawing revision, sample confirmation, packing method, and supplier capability all need to be checked before purchase.
+          </p>
+          <p>
+            We help factories, distributors, machinery users, and procurement teams source stainless steel screws and bolts, threaded fasteners, set screws, standoffs, spacers, precision machined parts, stamped metal parts, gears, mechanical components, and custom metal hardware. Our role is not to claim ownership of every production facility. We support the sourcing process by clarifying requirements, searching and comparing suitable Chinese suppliers, checking supplier communication and capability signals, coordinating quotations, and following sample or drawing confirmation when needed.
+          </p>
+          <p>
+            This support is useful when buyers need cost optimization, alternative supplier search, small batch urgent parts, multi-supplier consolidation, or a China-side contact to reduce communication gaps. For metal parts, supplier verification and quality control are especially important because two quotations can look similar while using different materials, tolerances, surface finishes, inspection standards, or packing assumptions. MAVORIX helps buyers organize these details before payment, follow inspection requirements before shipment, and coordinate export packaging or shipment consolidation when several suppliers are involved.
+          </p>
+        </div>
+      </section>
+      <ListBlock title="We Help Source" items={[
+        "Stainless steel screws and bolts",
+        "Threaded fasteners and set screws",
+        "Standoffs and spacers",
+        "Precision machined parts",
+        "Industrial gears and mechanical components",
+        "Stamped metal parts",
+        "Custom metal hardware"
+      ]} />
+      <ListBlock title="Typical Buyer Needs" items={[
+        "Machinery maintenance spare parts sourcing when original parts are expensive, slow, or unavailable",
+        "Factory production line replacement parts that require model, drawing, dimension, or sample confirmation",
+        "OEM custom metal components with drawings, tolerances, surface treatment, and packing requirements",
+        "Small batch urgent sourcing for fasteners, spacers, set screws, machined parts, and mechanical hardware",
+        "Multi-supplier consolidation when buyers purchase fasteners, machined parts, stamped parts, and gears from different factories"
+      ]} />
+      <ListBlock title="Metal Parts Sourcing Process" items={[
+        "Requirement clarification",
+        "Supplier search and matching",
+        "Quotation comparison",
+        "Sample or drawing confirmation",
+        "Quality inspection",
+        "Export packaging",
+        "Shipment consolidation",
+        "Delivery coordination"
+      ]} />
+      <ListBlock title="Risks in Metal Part Sourcing" items={[
+        "Wrong material specification or unclear stainless steel grade",
+        "Low-quality machining tolerance that affects assembly or machine performance",
+        "Surface treatment inconsistency across batches or suppliers",
+        "Thread mismatch issues caused by incomplete drawings, standards, or samples",
+        "Supplier capability mismatch for custom machining, stamped parts, gears, or repeat orders"
+      ]} />
+      <MetalPartsInternalLinks />
+    </>
   );
 }
 
@@ -271,6 +319,25 @@ function InternalLinks() {
   );
 }
 
+function MetalPartsInternalLinks() {
+  const links = [
+    { href: "/en/services/china-industrial-sourcing/", label: "China Industrial Sourcing" },
+    { href: "/en/services/supplier-verification/", label: "Supplier Verification" },
+    { href: "/en/services/quality-inspection/", label: "Quality Inspection" },
+    { href: "/en/services/container-consolidation/", label: "Container Consolidation" },
+    { href: "/en/industries/", label: "Industries We Support" },
+    { href: "/en/contact/", label: "Contact MAVORIX" }
+  ];
+  return (
+    <section>
+      <h2 className="text-3xl font-black text-navy">Related Metal Parts Sourcing Support</h2>
+      <div className="mt-4 flex flex-wrap gap-3">
+        {links.map((link) => <Link key={link.href} href={link.href} className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-bold text-navy ring-1 ring-slate-200 transition hover:bg-slate-50">{link.label}</Link>)}
+      </div>
+    </section>
+  );
+}
+
 const plasticIndustryFaqs = [
   { q: "What plastic industry products can you source from China?", a: "We can help source injection molding machines, plastic molds, auxiliary equipment, mold components, hot runner parts, spare parts, factory consumables, MRO supplies, and packaging materials." },
   { q: "Can you help with injection molding machines and molds?", a: "Yes. We support supplier search, quotation comparison, technical confirmation, drawing or sample coordination, inspection follow-up, and export coordination for injection molding machines and mold-related sourcing." },
@@ -278,4 +345,13 @@ const plasticIndustryFaqs = [
   { q: "Can you consolidate shipments from multiple factories?", a: "Yes. When machines, molds, spare parts, consumables, and packaging materials come from several suppliers, we can help coordinate delivery timing, packing notes, warehouse communication, and consolidation follow-up." },
   { q: "Do you support small spare parts orders?", a: "Yes, when the parts can be identified clearly through photos, drawings, model numbers, nameplates, samples, or dimensions and suppliers can support the order quantity." },
   { q: "Which countries do you support for sourcing?", a: "We support overseas buyers in many regions, including the Balkan region, Latin America, Middle East, Africa, Europe, and other markets that need China-side industrial sourcing coordination." }
+];
+
+const metalPartsFaqs = [
+  { q: "What types of metal parts can you source from China?", a: "We can help source stainless steel screws, bolts, threaded fasteners, set screws, standoffs, spacers, gears, machined components, stamped parts, metal hardware, and custom precision components." },
+  { q: "Can you source small batch fasteners and screws?", a: "Yes, when the requirement is clear enough for supplier matching. Photos, drawings, samples, material grade, thread standard, quantity, and target use help improve search accuracy." },
+  { q: "Do you verify suppliers before purchase?", a: "Yes. We can review supplier identity, communication quality, capability signals, quotation details, production evidence, and practical risk points before buyers pay a deposit or confirm an order." },
+  { q: "Can you consolidate shipments from multiple factories?", a: "Yes. If buyers purchase fasteners, machined parts, stamped parts, gears, and other hardware from different suppliers, we can help coordinate packing, delivery timing, warehouse communication, and consolidation follow-up." },
+  { q: "Do you support OEM metal machining parts?", a: "Yes. We can support OEM metal machining sourcing when buyers provide drawings, samples, tolerances, materials, surface treatment requirements, quantity, and inspection expectations." },
+  { q: "What industries do you support for metal parts sourcing?", a: "We support machinery maintenance, factory production lines, MRO buyers, distributors, OEM projects, packaging equipment, agricultural equipment, plastic factories, and other industrial buyers needing metal parts from China." }
 ];
