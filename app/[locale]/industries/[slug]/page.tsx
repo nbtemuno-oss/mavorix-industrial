@@ -30,7 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         ? pageImages.electricalMechanicalPartsOg
         : slug === "industrial-machinery"
           ? pageImages.industrialMachineryOg
-          : { src: industry.image, alt: `${industry.title} sourcing visual for China industrial procurement`, width: 1200, height: 800 };
+          : slug === "agricultural-equipment"
+            ? pageImages.agriculturalEquipmentOg
+            : { src: industry.image, alt: `${industry.title} sourcing visual for China industrial procurement`, width: 1200, height: 800 };
   return seo({
     title: customMeta?.title ?? `${industry.title} Sourcing from China`,
     description: customMeta?.description ?? industry.description,
@@ -53,6 +55,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
       {locale === "en" && industry.slug === "metal-parts" ? <MetalPartsHeroImage /> : null}
       {locale === "en" && industry.slug === "electrical-mechanical-parts" ? <ElectricalMechanicalPartsHeroImage /> : null}
       {locale === "en" && industry.slug === "industrial-machinery" ? <IndustrialMachineryHeroImage /> : null}
+      {locale === "en" && industry.slug === "agricultural-equipment" ? <AgriculturalEquipmentHeroImage /> : null}
       <Container className="grid gap-8 py-16 lg:grid-cols-[1fr_320px]">
         <article className="space-y-10">
           {locale !== "en" ? <EnglishVersionNotice locale={locale} /> : null}
@@ -60,7 +63,8 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
           {locale === "en" && industry.slug === "metal-parts" ? <MetalPartsLandingContent /> : null}
           {locale === "en" && industry.slug === "electrical-mechanical-parts" ? <ElectricalMechanicalPartsIntro /> : null}
           {locale === "en" && industry.slug === "industrial-machinery" ? <IndustrialMachineryIntro /> : null}
-          {locale === "en" && (industry.slug === "plastic-industry" || industry.slug === "metal-parts" || industry.slug === "electrical-mechanical-parts" || industry.slug === "industrial-machinery") ? null : <IndustrialImage src={industry.image} alt={`${industry.title} sourcing from China`} className="min-h-[360px]" />}
+          {locale === "en" && industry.slug === "agricultural-equipment" ? <AgriculturalEquipmentIntro /> : null}
+          {locale === "en" && (industry.slug === "plastic-industry" || industry.slug === "metal-parts" || industry.slug === "electrical-mechanical-parts" || industry.slug === "industrial-machinery" || industry.slug === "agricultural-equipment") ? null : <IndustrialImage src={industry.image} alt={`${industry.title} sourcing from China`} className="min-h-[360px]" />}
           <Block title="Industry-Focused Introduction" text={`MAVORIX INDUSTRIAL helps overseas buyers source, verify, and coordinate Chinese suppliers for ${industry.title.toLowerCase()} products. We do not claim to manufacture every item; our role is procurement support and supplier coordination.`} />
           <ListBlock title="Common Sourcing Needs" items={industry.products} />
           <ListBlock title="Common Buyer Problems" items={["Unclear supplier capability", "Difficulty confirming technical specifications", "Quality variation before shipment", "Fragmented communication across multiple factories", "Export packing and document coordination"]} />
@@ -175,6 +179,33 @@ function IndustrialMachineryHeroImage() {
           priority
         />
       </Container>
+    </section>
+  );
+}
+
+function AgriculturalEquipmentHeroImage() {
+  return (
+    <section className="bg-white pt-8">
+      <Container>
+        <IndustrialImage
+          src={pageImages.agriculturalEquipmentHero.src}
+          alt={pageImages.agriculturalEquipmentHero.alt}
+          className="min-h-[300px] rounded-lg md:min-h-[460px]"
+          sizes="100vw"
+          priority
+        />
+      </Container>
+    </section>
+  );
+}
+
+function AgriculturalEquipmentIntro() {
+  return (
+    <section>
+      <h2 className="text-3xl font-black text-navy">Agricultural Equipment Sourcing from China</h2>
+      <p className="mt-4 leading-8 text-slate-600">
+        MAVORIX INDUSTRIAL supports overseas buyers sourcing agricultural machinery parts, tractor parts, farm equipment spare parts, replacement parts, wear parts, irrigation-related products, and maintenance components from China. Typical sourcing needs include filters, bearings, belts, seals, bushings, gears, shafts, clutch and transmission-related parts, hydraulic or pump-related parts, and general tractor spare parts. We help clarify part numbers, photos, samples, dimensions, materials, supplier capability, quotation details, inspection requirements, and shipment consolidation so agricultural equipment buyers can coordinate sourcing with less uncertainty.
+      </p>
     </section>
   );
 }

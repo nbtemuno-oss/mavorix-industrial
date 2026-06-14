@@ -96,6 +96,18 @@ export const pageImages = {
     alt: "Industrial machinery and spare parts sourcing including compressors, presses, welding equipment, bearings, filters, and components",
     width: 1200,
     height: 630
+  },
+  agriculturalEquipmentHero: {
+    src: "/images/industries/agricultural-equipment-hero.webp",
+    alt: "Agricultural equipment and tractor spare parts in a golden field, including tractor parts, filters, bearings, gears, belts, and hydraulic components",
+    width: 1600,
+    height: 900
+  },
+  agriculturalEquipmentOg: {
+    src: "/images/industries/agricultural-equipment-og.webp",
+    alt: "Tractor in a golden field with agricultural machinery spare parts and wear parts",
+    width: 1200,
+    height: 630
   }
 } satisfies Record<string, PageImage>;
 
