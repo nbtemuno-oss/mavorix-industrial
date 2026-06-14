@@ -21,12 +21,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const service = services.find((item) => item.slug === slug);
   if (!service) return {};
   const customMeta = serviceMetadata[slug];
+  const image = { src: service.image, alt: `${service.title} visual for China industrial sourcing support`, width: 1200, height: 800 };
   return seo({
     title: customMeta?.title ?? `${service.title} | China Industrial Procurement Support`,
     description: customMeta?.description ?? service.description,
     path: `/${locale}/services/${slug}/`,
     canonicalPath: `/en/services/${slug}/`,
-    index: locale === "en"
+    index: locale === "en",
+    image
   });
 }
 

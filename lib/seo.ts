@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImage } from "@/data/page-images";
 import { site } from "@/data/site";
 
 type SeoInput = {
@@ -9,9 +10,15 @@ type SeoInput = {
   index?: boolean;
   locale?: string;
   type?: "website" | "article";
+  image?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
 };
 
-export function seo({ title, description, path, canonicalPath, index = true, locale, type = "website" }: SeoInput): Metadata {
+export function seo({ title, description, path, canonicalPath, index = true, locale, type = "website", image = defaultOgImage }: SeoInput): Metadata {
   const pageLocale = locale ?? path.match(/^\/([a-z]{2})(?:\/|$)/)?.[1] ?? "en";
   const canonicalSource = canonicalPath ?? path;
   const canonical = `${site.url}${canonicalSource}`;
@@ -41,10 +48,10 @@ export function seo({ title, description, path, canonicalPath, index = true, loc
       type,
       images: [
         {
-          url: "/images/logo/mavorix-og-logo-card.jpg",
-          width: 1200,
-          height: 630,
-          alt: "MAVORIX INDUSTRIAL"
+          url: image.src,
+          width: image.width,
+          height: image.height,
+          alt: image.alt
         }
       ]
     },
@@ -52,7 +59,7 @@ export function seo({ title, description, path, canonicalPath, index = true, loc
       card: "summary_large_image",
       title,
       description,
-      images: ["/images/logo/mavorix-og-logo-card.jpg"]
+      images: [image.src]
     },
     robots: {
       index,

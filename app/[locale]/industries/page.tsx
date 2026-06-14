@@ -6,7 +6,9 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { PageHero } from "@/components/sections/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { IndustrialImage } from "@/components/ui/IndustrialImage";
 import { industries } from "@/data/industries";
+import { pageImages } from "@/data/page-images";
 import { services } from "@/data/services";
 import { faqSchema, JsonLd } from "@/lib/schema";
 import { seo } from "@/lib/seo";
@@ -18,7 +20,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: "Industry-focused China sourcing support for plastic factories, industrial machinery users, spare parts buyers, MRO teams, agricultural equipment buyers, packaging operations, metal parts, and electrical-mechanical parts.",
     path: `/${locale}/industries/`,
     canonicalPath: "/en/industries/",
-    index: locale === "en"
+    index: locale === "en",
+    image: pageImages.industries
   });
 }
 
@@ -27,7 +30,7 @@ export default function IndustriesPage() {
     <>
       <PageHero badge="Industries" title="Industries We Support" description="We help buyers source, verify, and coordinate suppliers for industrial products from China." breadcrumbs={[{ label: "Home", href: "/en/" }, { label: "Industries", href: "/en/industries/" }]} />
       <section className="bg-white py-16">
-        <Container>
+        <Container className="grid gap-8 lg:grid-cols-[1fr_420px] lg:items-center">
           <div className="max-w-5xl space-y-5 text-base leading-8 text-slate-600">
             <p>
               Industrial sourcing works best when the buyer's industry is understood before supplier search begins. A plastic product factory does not evaluate equipment in the same way as a distributor buying spare parts, and an MRO buyer usually needs fast identification, mixed quantities, and practical alternatives rather than a long catalog conversation. MAVORIX INDUSTRIAL supports overseas buyers by organizing China sourcing around real industrial use cases: production equipment, replacement parts, maintenance items, factory consumables, OEM components, and export-ready purchasing.
@@ -39,6 +42,7 @@ export default function IndustriesPage() {
               Our role is not to make exaggerated claims about owning factories in every industry. It is to provide China-side sourcing support that helps buyers ask better questions, avoid weak suppliers, and move from unclear requirement to a more controlled procurement process. These industry pages are designed to help buyers find the most relevant sourcing path and related services.
             </p>
           </div>
+          <IndustrialImage src={pageImages.industries.src} alt={pageImages.industries.alt} className="min-h-[320px]" sizes="(min-width: 1024px) 420px, 100vw" />
         </Container>
       </section>
       <section className="bg-slate-50 py-16">

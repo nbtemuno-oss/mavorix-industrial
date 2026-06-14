@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImage } from "@/data/page-images";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -25,17 +26,17 @@ export const metadata: Metadata = {
     siteName: "MAVORIX INDUSTRIAL",
     images: [
       {
-        url: "/images/logo/mavorix-og-logo-card.jpg",
-        width: 1200,
-        height: 630,
-        alt: "MAVORIX INDUSTRIAL"
+        url: defaultOgImage.src,
+        width: defaultOgImage.width,
+        height: defaultOgImage.height,
+        alt: defaultOgImage.alt
       }
     ],
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/images/logo/mavorix-og-logo-card.jpg"]
+    images: [defaultOgImage.src]
   }
 };
 

@@ -21,12 +21,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const industry = industries.find((item) => item.slug === slug);
   if (!industry) return {};
   const customMeta = industryMetadata[slug];
+  const image = { src: industry.image, alt: `${industry.title} sourcing visual for China industrial procurement`, width: 1200, height: 800 };
   return seo({
     title: customMeta?.title ?? `${industry.title} Sourcing from China`,
     description: customMeta?.description ?? industry.description,
     path: `/${locale}/industries/${slug}/`,
     canonicalPath: `/en/industries/${slug}/`,
-    index: locale === "en"
+    index: locale === "en",
+    image
   });
 }
 

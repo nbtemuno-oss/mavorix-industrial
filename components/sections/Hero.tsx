@@ -4,6 +4,7 @@ import { t } from "@/data/translations";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { IndustrialImage } from "@/components/ui/IndustrialImage";
+import { pageImages } from "@/data/page-images";
 
 export function Hero({ locale }: { locale: string }) {
   const copy = t(locale);
@@ -25,7 +26,7 @@ export function Hero({ locale }: { locale: string }) {
             ))}
           </div>
         </div>
-        <IndustrialImage src="/images/hero-industrial-sourcing.webp" alt="China industrial sourcing coordination" className="min-h-[420px]" />
+        <IndustrialImage src={pageImages.home.src} alt={pageImages.home.alt} className="min-h-[420px]" priority />
       </Container>
     </section>
   );

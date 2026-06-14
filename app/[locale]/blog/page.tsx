@@ -5,6 +5,8 @@ import { CTASection } from "@/components/sections/CTASection";
 import { PageHero } from "@/components/sections/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { IndustrialImage } from "@/components/ui/IndustrialImage";
+import { pageImages } from "@/data/page-images";
 import { getAllBlogPosts } from "@/lib/mdx";
 import { seo } from "@/lib/seo";
 
@@ -15,7 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: "Practical guides for China industrial sourcing, supplier verification, machinery purchasing, spare parts, MRO sourcing, shipment consolidation, plastic factory sourcing, and procurement risk control.",
     path: `/${locale}/blog/`,
     canonicalPath: "/en/blog/",
-    index: locale === "en"
+    index: locale === "en",
+    image: pageImages.blog
   });
 }
 
@@ -29,20 +32,23 @@ export default function BlogPage() {
     <>
       <PageHero badge="Blog" title="China Industrial Sourcing Blog and Procurement Guides" description="Practical guides for China industrial sourcing, supplier verification, machinery purchasing, spare parts, MRO, shipment consolidation, and procurement risk." breadcrumbs={[{ label: "Home", href: "/en/" }, { label: "Blog", href: "/en/blog/" }]} />
       <section className="bg-white py-16">
-        <Container>
-          <div className="max-w-5xl space-y-5 text-base leading-8 text-slate-600">
-            <p>
-              The MAVORIX INDUSTRIAL blog is written for overseas B2B buyers who need practical help sourcing industrial products from China. The guides focus on supplier verification, quotation comparison, machinery purchasing, spare parts identification, MRO sourcing, OEM manufacturing coordination, shipment consolidation, and procurement risk control.
-            </p>
-            <p>
-              Many buyers can find supplier names through search engines, marketplaces, or social media. The harder work is deciding which supplier is suitable, what information must be checked before paying a deposit, how to compare technical offers, and how to reduce problems before shipment. These articles are designed to support that decision process with realistic, experience-based sourcing notes.
-            </p>
+        <Container className="grid gap-8 lg:grid-cols-[1fr_420px] lg:items-center">
+          <div>
+            <div className="max-w-5xl space-y-5 text-base leading-8 text-slate-600">
+              <p>
+                The MAVORIX INDUSTRIAL blog is written for overseas B2B buyers who need practical help sourcing industrial products from China. The guides focus on supplier verification, quotation comparison, machinery purchasing, spare parts identification, MRO sourcing, OEM manufacturing coordination, shipment consolidation, and procurement risk control.
+              </p>
+              <p>
+                Many buyers can find supplier names through search engines, marketplaces, or social media. The harder work is deciding which supplier is suitable, what information must be checked before paying a deposit, how to compare technical offers, and how to reduce problems before shipment. These articles are designed to support that decision process with realistic, experience-based sourcing notes.
+              </p>
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button href="/en/services/china-industrial-sourcing/">China Industrial Sourcing</Button>
+              <Button href="/en/services/supplier-verification/" variant="secondary">Supplier Verification</Button>
+              <Button href="/en/contact/" variant="secondary">Contact MAVORIX</Button>
+            </div>
           </div>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="/en/services/china-industrial-sourcing/">China Industrial Sourcing</Button>
-            <Button href="/en/services/supplier-verification/" variant="secondary">Supplier Verification</Button>
-            <Button href="/en/contact/" variant="secondary">Contact MAVORIX</Button>
-          </div>
+          <IndustrialImage src={pageImages.blog.src} alt={pageImages.blog.alt} className="min-h-[320px]" sizes="(min-width: 1024px) 420px, 100vw" />
         </Container>
       </section>
       <section className="bg-slate-50 py-16">

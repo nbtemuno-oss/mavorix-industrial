@@ -6,6 +6,8 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { PageHero } from "@/components/sections/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { IndustrialImage } from "@/components/ui/IndustrialImage";
+import { pageImages } from "@/data/page-images";
 import { services } from "@/data/services";
 import { faqSchema, JsonLd } from "@/lib/schema";
 import { seo } from "@/lib/seo";
@@ -17,7 +19,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: "Practical China industrial sourcing services for factories, MRO buyers, spare parts buyers, machinery users, distributors, and project buyers who need supplier checks, quotation comparison, inspection, export support, and consolidation.",
     path: `/${locale}/services/`,
     canonicalPath: "/en/services/",
-    index: locale === "en"
+    index: locale === "en",
+    image: pageImages.services
   });
 }
 
@@ -26,7 +29,7 @@ export default function ServicesPage() {
     <>
       <PageHero badge="Services" title="Industrial Sourcing Services from China" description="Services designed to reduce sourcing risk and improve execution for overseas industrial buyers." breadcrumbs={[{ label: "Home", href: "/en/" }, { label: "Services", href: "/en/services/" }]} />
       <section className="bg-white py-16">
-        <Container>
+        <Container className="grid gap-8 lg:grid-cols-[1fr_420px] lg:items-center">
           <div className="max-w-5xl space-y-5 text-base leading-8 text-slate-600">
             <p>
               MAVORIX INDUSTRIAL works as a China industrial sourcing partner for overseas buyers who need more than a list of supplier names. Industrial purchasing often involves unclear specifications, mixed product categories, small but urgent spare parts orders, and suppliers with different levels of export experience. Our role is to help buyers turn a practical requirement into a clearer sourcing path: what should be searched, which suppliers look suitable, what information must be confirmed, and what risks should be checked before payment or shipment.
@@ -38,6 +41,7 @@ export default function ServicesPage() {
               This is especially useful for buyers who already found possible suppliers online but are unsure how to compare them, or for procurement teams that need a China-side contact to reduce communication gaps. The goal is honest execution: clearer requirements, fewer avoidable misunderstandings, better documentation, and more visibility before goods leave China.
             </p>
           </div>
+          <IndustrialImage src={pageImages.services.src} alt={pageImages.services.alt} className="min-h-[320px]" sizes="(min-width: 1024px) 420px, 100vw" />
         </Container>
       </section>
       <Section title="Types of Buyers We Support" items={buyerTypes} />

@@ -6,6 +6,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { IndustrialImage } from "@/components/ui/IndustrialImage";
+import { pageImages } from "@/data/page-images";
 import { site } from "@/data/site";
 import { t } from "@/data/translations";
 import { faqSchema, JsonLd } from "@/lib/schema";
@@ -28,7 +29,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: copy.metaTitle,
     description: copy.metaDescription,
     path: `/${locale}/contact/`,
-    locale
+    locale,
+    image: pageImages.contact
   });
 }
 
@@ -55,7 +57,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           </div>
         </form>
         <aside className="overflow-hidden rounded-lg bg-navy text-white">
-          <IndustrialImage src="/images/contact-global-sourcing.webp" alt="Contact MAVORIX INDUSTRIAL for China sourcing support" className="h-72 rounded-none" />
+          <IndustrialImage src={pageImages.contact.src} alt={pageImages.contact.alt} className="h-72 rounded-none" sizes="(min-width: 1024px) 40vw, 100vw" />
           <div className="p-7">
             <h2 className="text-2xl font-black">{copy.checklistTitle}</h2>
             <ul className="mt-5 space-y-3 text-sm leading-7 text-slate-300">

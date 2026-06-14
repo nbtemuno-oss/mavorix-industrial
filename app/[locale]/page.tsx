@@ -11,6 +11,7 @@ import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { Container } from "@/components/ui/Container";
 import { countries } from "@/data/countries";
 import { industries } from "@/data/industries";
+import { pageImages } from "@/data/page-images";
 import { services } from "@/data/services";
 import { t } from "@/data/translations";
 import { getAllBlogPosts } from "@/lib/mdx";
@@ -23,7 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return seo({
     title: copy.home.metaTitle,
     description: copy.home.metaDescription,
-    path: `/${locale}/`
+    path: `/${locale}/`,
+    image: pageImages.home
   });
 }
 

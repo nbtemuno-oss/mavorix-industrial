@@ -6,7 +6,9 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { PageHero } from "@/components/sections/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { IndustrialImage } from "@/components/ui/IndustrialImage";
 import { countries } from "@/data/countries";
+import { pageImages } from "@/data/page-images";
 import { services } from "@/data/services";
 import { faqSchema, JsonLd } from "@/lib/schema";
 import { seo } from "@/lib/seo";
@@ -18,7 +20,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: "China sourcing support for overseas industrial buyers in the Balkan region, Latin America, Middle East, Africa, and Europe, covering machinery, spare parts, MRO, packaging, agricultural equipment, and supplier verification.",
     path: `/${locale}/countries/`,
     canonicalPath: "/en/countries/",
-    index: locale === "en"
+    index: locale === "en",
+    image: pageImages.countries
   });
 }
 
@@ -27,7 +30,7 @@ export default function CountriesPage() {
     <>
       <PageHero badge="Countries" title="China Industrial Sourcing for Global Buyers" description="Country-focused sourcing pages for overseas industrial buyers who need supplier verification, quality coordination, and export support from China." breadcrumbs={[{ label: "Home", href: "/en/" }, { label: "Countries", href: "/en/countries/" }]} />
       <section className="bg-white py-16">
-        <Container>
+        <Container className="grid gap-8 lg:grid-cols-[1fr_420px] lg:items-center">
           <div className="max-w-5xl space-y-5 text-base leading-8 text-slate-600">
             <p>
               Overseas buyers often search for China sourcing support through their own country or region because procurement conditions are not identical from market to market. A buyer in the Balkan region may need mixed MRO and spare parts consolidation for factories with European technical standards. A Latin American importer may focus on machinery parts, agricultural equipment, packaging supplies, and reliable export communication across long shipping routes. Buyers in the Middle East may prioritize industrial equipment, electrical and mechanical parts, documentation, and packing clarity. African buyers may need practical supplier comparison, durable spare parts, and shipment coordination for machinery, factories, and agricultural projects.
@@ -39,6 +42,7 @@ export default function CountriesPage() {
               These country pages do not claim local offices or guaranteed customs outcomes. They are built to help buyers from the Balkan region, Latin America, Middle East, Africa, Europe, and other markets understand how China-side sourcing support can be adapted to real purchasing needs such as plastic factories, industrial spare parts, MRO supplies, machinery, packaging, and agricultural equipment.
             </p>
           </div>
+          <IndustrialImage src={pageImages.countries.src} alt={pageImages.countries.alt} className="min-h-[320px]" sizes="(min-width: 1024px) 420px, 100vw" />
         </Container>
       </section>
       <GridSection title="How Sourcing Needs Differ by Market" items={marketNeeds} />

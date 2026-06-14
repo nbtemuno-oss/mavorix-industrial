@@ -65,12 +65,13 @@ export function serviceSchema(name: string, description: string, url: string) {
   };
 }
 
-export function articleSchema(input: { title: string; description: string; url: string; date: string }) {
+export function articleSchema(input: { title: string; description: string; url: string; date: string; image?: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: input.title,
     description: input.description,
+    image: input.image,
     datePublished: input.date,
     dateModified: input.date,
     author: { "@type": "Organization", name: site.name },
