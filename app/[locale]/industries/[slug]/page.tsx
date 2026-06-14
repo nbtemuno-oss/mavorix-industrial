@@ -22,7 +22,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const industry = industries.find((item) => item.slug === slug);
   if (!industry) return {};
   const customMeta = industryMetadata[slug];
-  const image = slug === "plastic-industry" ? pageImages.plasticIndustryOg : { src: industry.image, alt: `${industry.title} sourcing visual for China industrial procurement`, width: 1200, height: 800 };
+  const image = slug === "plastic-industry"
+    ? pageImages.plasticIndustryOg
+    : slug === "metal-parts"
+      ? pageImages.metalPartsOg
+      : { src: industry.image, alt: `${industry.title} sourcing visual for China industrial procurement`, width: 1200, height: 800 };
   return seo({
     title: customMeta?.title ?? `${industry.title} Sourcing from China`,
     description: customMeta?.description ?? industry.description,
@@ -42,10 +46,13 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
     <>
       <PageHero badge="Industry" title={`${industry.title} Sourcing from China`} description={industry.description} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Industries", href: `/${locale}/industries/` }, { label: industry.title, href: `/${locale}/industries/${industry.slug}/` }]} />
       {locale === "en" && industry.slug === "plastic-industry" ? <PlasticHeroImage /> : null}
+      {locale === "en" && industry.slug === "metal-parts" ? <MetalPartsHeroImage /> : null}
       <Container className="grid gap-8 py-16 lg:grid-cols-[1fr_320px]">
         <article className="space-y-10">
           {locale !== "en" ? <EnglishVersionNotice locale={locale} /> : null}
-          {locale === "en" && industry.slug === "plastic-industry" ? <PlasticLandingContent /> : <IndustrialImage src={industry.image} alt={`${industry.title} sourcing from China`} className="min-h-[360px]" />}
+          {locale === "en" && industry.slug === "plastic-industry" ? <PlasticLandingContent /> : null}
+          {locale === "en" && industry.slug === "metal-parts" ? <MetalPartsIntro /> : null}
+          {locale === "en" && (industry.slug === "plastic-industry" || industry.slug === "metal-parts") ? null : <IndustrialImage src={industry.image} alt={`${industry.title} sourcing from China`} className="min-h-[360px]" />}
           <Block title="Industry-Focused Introduction" text={`MAVORIX INDUSTRIAL helps overseas buyers source, verify, and coordinate Chinese suppliers for ${industry.title.toLowerCase()} products. We do not claim to manufacture every item; our role is procurement support and supplier coordination.`} />
           <ListBlock title="Common Sourcing Needs" items={industry.products} />
           <ListBlock title="Common Buyer Problems" items={["Unclear supplier capability", "Difficulty confirming technical specifications", "Quality variation before shipment", "Fragmented communication across multiple factories", "Export packing and document coordination"]} />
@@ -108,6 +115,33 @@ function PlasticHeroImage() {
           priority
         />
       </Container>
+    </section>
+  );
+}
+
+function MetalPartsHeroImage() {
+  return (
+    <section className="bg-white pt-8">
+      <Container>
+        <IndustrialImage
+          src={pageImages.metalPartsHero.src}
+          alt={pageImages.metalPartsHero.alt}
+          className="min-h-[300px] rounded-lg md:min-h-[460px]"
+          sizes="100vw"
+          priority
+        />
+      </Container>
+    </section>
+  );
+}
+
+function MetalPartsIntro() {
+  return (
+    <section>
+      <h2 className="text-3xl font-black text-navy">Metal Parts Sourcing from China</h2>
+      <p className="mt-4 leading-8 text-slate-600">
+        MAVORIX INDUSTRIAL supports overseas buyers sourcing metal fasteners, stainless steel screws, threaded parts, spacers, standoffs, set screws, gears, machined parts, stamped parts, metal hardware, and custom precision components from China. We help clarify drawings, samples, materials, surface treatment, tolerances, quantities, supplier capability, quotation details, inspection requirements, and export packing before buyers commit to production or repeat orders.
+      </p>
     </section>
   );
 }

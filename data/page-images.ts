@@ -60,6 +60,18 @@ export const pageImages = {
     alt: "Plastic factory injection molding production line and auxiliary equipment in China",
     width: 1200,
     height: 630
+  },
+  metalPartsHero: {
+    src: "/images/industries/metal-parts-hero.webp",
+    alt: "Industrial metal parts including screws, gears, spacers, machined components, and precision fasteners",
+    width: 1600,
+    height: 900
+  },
+  metalPartsOg: {
+    src: "/images/industries/metal-parts-og.webp",
+    alt: "Precision metal parts sourcing including stainless steel screws, gears, standoffs, and machined components",
+    width: 1200,
+    height: 630
   }
 } satisfies Record<string, PageImage>;
 
