@@ -119,8 +119,8 @@ export const coreCopy: Record<Locale, {
       ]
     },
     contact: {
-      metaTitle: "Contact MAVORIX INDUSTRIAL | China Industrial Sourcing Inquiry",
-      metaDescription: "Contact MAVORIX INDUSTRIAL for industrial sourcing, OEM manufacturing support, MRO supplies, supplier verification, quality inspection, and export support from China.",
+      metaTitle: "Contact MAVORIX for China Supplier Checks and Sourcing",
+      metaDescription: "Contact MAVORIX INDUSTRIAL for China supplier verification, quotation comparison, product sourcing, spare parts sourcing, MRO sourcing, quality inspection, shipment consolidation, and export support.",
       badge: "Contact",
       title: "Send Your China Industrial Sourcing Inquiry",
       description: "Share your product requirement, quantity, target market, drawings, photos, or supplier links. We will review the sourcing path and next steps.",
@@ -131,11 +131,14 @@ export const coreCopy: Record<Locale, {
       whatsapp: "Contact on WhatsApp",
       checklistTitle: "Inquiry checklist",
       contactDirectTitle: "Contact us directly",
-      checklist: ["Product name, photos, drawings, or sample details", "Quantity and expected repeat demand", "Material, size, technical standard, or application", "Destination country and target market", "Preferred delivery time and packing needs"],
+      checklist: ["Product name, photos, drawings, or sample details", "Quantity and expected repeat demand", "Material, size, technical standard, or application", "Target price or current quotation if available", "Destination country and target market", "Supplier information, website, or quotation if available", "Expected delivery time and packing needs"],
       faqs: [
-        { q: "What information should I send?", a: "Send product name, photos, drawings, quantity, destination country, target use, quality requirements, and any supplier links if available." },
+        { q: "What information should I send?", a: "Send product name, quantity, photos, drawings, target price or current quotation, destination country, expected delivery time, target use, quality requirements, and any supplier links if available." },
         { q: "Can I contact you by WhatsApp?", a: "Yes. Contact us at +8613967842747 or use the WhatsApp button." },
-        { q: "Do you provide instant quotations?", a: "Industrial quotations usually require supplier screening and technical clarification, so we avoid unreliable instant pricing." }
+        { q: "When should I contact MAVORIX?", a: "Contact us before paying a deposit, when comparing quotations, when checking a supplier, when sourcing spare parts or MRO items, or when coordinating several suppliers in China." },
+        { q: "Can you check a supplier I already found?", a: "Yes. Send the supplier name, website, quotation, contact details, product information, and any documents you received. We can review practical risk points before you move forward." },
+        { q: "Do you provide instant quotations?", a: "Industrial quotations usually require supplier screening and technical clarification, so we avoid unreliable instant pricing." },
+        { q: "Can you help with shipment consolidation?", a: "Yes. When several suppliers are involved, we can help coordinate supplier delivery timing, packing notes, warehouse communication, and loading follow-up." }
       ]
     }
   },

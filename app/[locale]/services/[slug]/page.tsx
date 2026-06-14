@@ -20,9 +20,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, slug } = await params;
   const service = services.find((item) => item.slug === slug);
   if (!service) return {};
+  const customMeta = serviceMetadata[slug];
   return seo({
-    title: `${service.title} | China Industrial Procurement Support`,
-    description: service.description,
+    title: customMeta?.title ?? `${service.title} | China Industrial Procurement Support`,
+    description: customMeta?.description ?? service.description,
     path: `/${locale}/services/${slug}/`,
     canonicalPath: `/en/services/${slug}/`,
     index: locale === "en"
@@ -47,6 +48,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <ListBlock title="Common Buyer Problems" items={service.problems} />
             <ListBlock title="How MAVORIX INDUSTRIAL Helps" items={service.support} />
             <ListBlock title="What We Can Support" items={["Requirement review and supplier matching", "Technical communication and document exchange", "Quotation and sample coordination", "Quality and packing follow-up", "Export coordination and long-term sourcing support"]} />
+            {locale === "en" && service.slug === "china-industrial-sourcing" ? <IndustrialSourcingExtra /> : null}
+            {locale === "en" && service.slug === "supplier-verification" ? <SupplierVerificationExtra /> : null}
             <Block title="Quality and Risk Control" text="We focus on reducing uncertainty before and during the order. This includes supplier verification, clear specifications, inspection coordination, photo or video checks, packing communication, and practical issue follow-up." />
             <div>
               <h2 className="text-3xl font-black text-navy">Process</h2>
@@ -70,6 +73,117 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       <CTASection />
       <JsonLd data={[faqSchema(faqs), serviceSchema(service.title, service.description, `${site.url}/${locale}/services/${service.slug}/`)]} />
     </>
+  );
+}
+
+const serviceMetadata: Record<string, { title: string; description: string }> = {
+  "china-industrial-sourcing": {
+    title: "China Industrial Sourcing Service for Overseas Buyers | MAVORIX",
+    description: "China industrial sourcing support for machinery, spare parts, MRO supplies, OEM products, plastic factory equipment, quotation comparison, supplier search, inspection coordination, export packing, and shipment consolidation."
+  },
+  "supplier-verification": {
+    title: "Supplier Verification in China Before Deposit | MAVORIX",
+    description: "China supplier verification support for overseas industrial buyers, including business identity checks, quotation review, red flags, capability signals, documents, evidence, and pre-deposit risk review."
+  }
+};
+
+function IndustrialSourcingExtra() {
+  return (
+    <>
+      <ListBlock title="Practical Sourcing Examples" items={[
+        "A plastic factory needs auxiliary equipment, replacement heaters, mold components, and factory consumables from different suppliers.",
+        "A machinery user has photos and nameplates but no exact part number and needs alternative suppliers for replacement parts.",
+        "A distributor wants to compare several Chinese quotations for pumps, valves, bearings, reducers, motors, and electrical parts.",
+        "A project buyer needs machines, spare parts, packing materials, and MRO supplies consolidated before export.",
+        "An OEM buyer has drawings and needs supplier comparison, sample coordination, tolerance clarification, and production follow-up."
+      ]} />
+      <ListBlock title="Buyer Checklist Before Supplier Search" items={[
+        "Product name, application, quantity, and expected repeat demand",
+        "Photos, drawings, samples, model numbers, nameplates, or part numbers",
+        "Material, size, voltage, standard, tolerance, color, packaging, and destination country",
+        "Target price, current supplier quotation, or budget range if available",
+        "Required documents, inspection needs, delivery time, and export packing expectations",
+        "Whether the order should be shipped alone or consolidated with other suppliers"
+      ]} />
+      <ListBlock title="What MAVORIX Can Do" items={[
+        "Clarify requirements and identify missing technical information",
+        "Search and screen suppliers based on product category and order requirements",
+        "Compare quotations, lead times, packing notes, and supplier communication quality",
+        "Coordinate samples, drawings, inspection requirements, and supplier-side export follow-up",
+        "Support consolidation planning when several Chinese suppliers are involved"
+      ]} />
+      <ListBlock title="What MAVORIX Cannot Do" items={[
+        "Guarantee the lowest price in China or force suppliers to accept unrealistic pricing",
+        "Replace formal engineering approval when safety-critical specifications require certified design review",
+        "Guarantee customs clearance, import permits, or local compliance in the buyer's country",
+        "Confirm product performance without samples, inspection, or buyer-approved technical standards",
+        "Claim to manufacture every product category listed on the website"
+      ]} />
+      <RelatedLinks title="Related Sourcing Services" links={[
+        { href: "/en/services/supplier-verification/", label: "Supplier Verification" },
+        { href: "/en/services/quality-inspection/", label: "Quality Inspection" },
+        { href: "/en/services/container-consolidation/", label: "Container Consolidation" },
+        { href: "/en/services/industrial-spare-parts-sourcing/", label: "Spare Parts Sourcing" },
+        { href: "/en/contact/", label: "Contact MAVORIX" }
+      ]} />
+    </>
+  );
+}
+
+function SupplierVerificationExtra() {
+  return (
+    <>
+      <ListBlock title="Supplier Verification Checklist" items={[
+        "Company name, Chinese business name, registration details, and matching contact information",
+        "Whether the supplier appears to be a manufacturer, trading company, distributor, or mixed operation",
+        "Product scope, factory photos or videos, equipment evidence, case photos, and technical response quality",
+        "Quotation clarity, payment terms, lead time, packing details, and export experience",
+        "Consistency between website, marketplace profile, documents, bank information, and sales communication",
+        "Whether the supplier can answer practical questions about drawings, samples, tolerances, inspection, and after-sales"
+      ]} />
+      <ListBlock title="What to Check Before Paying a Deposit" items={[
+        "Confirm the legal company name and payment beneficiary match the supplier story",
+        "Ask for a proforma invoice with product details, quantity, unit price, payment terms, delivery time, and packing notes",
+        "Confirm technical specifications, drawings, photos, model numbers, and any agreed tolerances in writing",
+        "Ask how quality will be checked before shipment and what evidence will be provided",
+        "Clarify export packing, shipping terms, document responsibility, and after-sales handling",
+        "Avoid rushing payment when supplier answers are vague, inconsistent, or unwilling to provide basic evidence"
+      ]} />
+      <ListBlock title="Common Red Flags" items={[
+        "The supplier changes company names, bank accounts, or contact identities without a clear explanation",
+        "Quotation is much lower than comparable suppliers but technical details are incomplete",
+        "Supplier avoids direct answers about production capability, inspection, packing, or lead time",
+        "Documents, website claims, marketplace profile, and communication details do not match",
+        "Pressure to pay quickly before basic verification, sample confirmation, or written specifications",
+        "No clear after-sales contact or refusal to discuss replacement parts, warranty limits, or issue handling"
+      ]} />
+      <ListBlock title="Documents and Evidence Buyers Should Ask For" items={[
+        "Business license or company registration information",
+        "Detailed quotation or proforma invoice",
+        "Product photos, factory photos, production videos, or inspection photos where relevant",
+        "Specification sheet, drawing confirmation, packing list draft, and export document examples",
+        "Test report, certificate, or compliance document only when relevant and verifiable",
+        "References to previous product experience without asking for private customer names or fake testimonials"
+      ]} />
+      <RelatedLinks title="Related Verification Links" links={[
+        { href: "/en/services/china-industrial-sourcing/", label: "China Industrial Sourcing" },
+        { href: "/en/services/quality-inspection/", label: "Quality Inspection" },
+        { href: "/en/blog/how-to-verify-chinese-industrial-supplier/", label: "How to Verify a Chinese Supplier" },
+        { href: "/en/blog/verify-chinese-industrial-suppliers-before-order/", label: "Verify Suppliers Before Order" },
+        { href: "/en/contact/", label: "Contact MAVORIX" }
+      ]} />
+    </>
+  );
+}
+
+function RelatedLinks({ title, links }: { title: string; links: { href: string; label: string }[] }) {
+  return (
+    <section>
+      <h2 className="text-3xl font-black text-navy">{title}</h2>
+      <div className="mt-4 flex flex-wrap gap-3">
+        {links.map((link) => <Link key={link.href} href={link.href} className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-bold text-navy ring-1 ring-slate-200 transition hover:bg-slate-50">{link.label}</Link>)}
+      </div>
+    </section>
   );
 }
 
