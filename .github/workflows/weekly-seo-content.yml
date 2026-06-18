@@ -1,0 +1,72 @@
+name: Weekly SEO Content Automation
+
+on:
+  workflow_dispatch:
+    inputs:
+      article_count:
+        description: "Number of SEO articles to generate in this run"
+        required: false
+        default: "1"
+  schedule:
+    # Runs at 01:00 UTC every Monday and Thursday, about 09:00 Beijing time.
+    - cron: "0 1 * * 1,4"
+
+permissions:
+  contents: write
+
+jobs:
+  generate-seo-content:
+    runs-on: ubuntu-latest
+    env:
+      ARTICLE_COUNT: ${{ github.event.inputs.article_count || '1' }}
+      # Optional future integration:
+      # Configure OPENAI_API_KEY as a GitHub Secret only if the scripts are later
+      # extended to use live AI generation. The current workflow is deterministic
+      # and does not require any external API key or web search access.
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        # This repository currently has no package-lock.json, so npm install is
+        # used instead of npm ci.
+        run: npm install
+
+      - name: Run SEO/GEO keyword planning
+        run: npm run seo:plan
+
+      - name: Generate SEO/GEO article
+        run: npm run seo:generate -- --count "$ARTICLE_COUNT"
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Run build
+        run: npm run build
+
+      - name: Commit generated content
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No generated content changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/en/blog data/seo
+          git commit -m "Add scheduled SEO content"
+
+      - name: Push changes
+        run: |
+          if [ -z "$(git status --porcelain)" ] && [ "$(git log -1 --pretty=%an)" != "github-actions[bot]" ]; then
+            echo "No workflow commit to push."
+            exit 0
+          fi
+          git push

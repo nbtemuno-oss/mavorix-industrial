@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "seo:plan": "node scripts/seo-plan.mjs",
+    "seo:generate": "node scripts/generate-seo-articles.mjs"
   },
   "dependencies": {
     "next": "16.2.6",
