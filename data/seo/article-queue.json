@@ -81,10 +81,11 @@
       "/en/services/china-industrial-sourcing/",
       "/en/contact/"
     ],
-    "status": "planned",
+    "status": "published",
     "priority": "high",
     "createdAt": "2026-06-18",
-    "plannedPublishDay": ""
+    "plannedPublishDay": "",
+    "publishedAt": "2026-06-22"
   },
   {
     "title": "Injection Molding Factory Spare Parts Sourcing from China: What to Prepare",
