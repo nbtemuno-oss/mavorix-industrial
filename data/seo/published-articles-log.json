@@ -16,5 +16,32 @@
     "date": "2026-06-18",
     "filePath": "content/en/blog/factory-consumables-and-mro-supplies-from-china.md",
     "commitHash": ""
+  },
+  {
+    "title": "How to Identify and Source Industrial Spare Parts from China When the Part Number Is Missing",
+    "slug": "identify-industrial-spare-parts-without-part-number",
+    "category": "Factory Spare Parts",
+    "targetKeyword": "industrial spare parts sourcing China",
+    "date": "2026-06-24",
+    "filePath": "content/en/blog/identify-industrial-spare-parts-without-part-number.md",
+    "commitHash": ""
+  },
+  {
+    "title": "Injection Molding Factory Procurement Checklist: How to Match Machines, Molds, Auxiliaries and Utilities",
+    "slug": "injection-molding-factory-procurement-checklist",
+    "category": "Injection Molding Support",
+    "targetKeyword": "injection molding factory setup checklist",
+    "date": "2026-06-24",
+    "filePath": "content/en/blog/injection-molding-factory-procurement-checklist.md",
+    "commitHash": ""
+  },
+  {
+    "title": "How to Compare Industrial Supplier Quotations from China: A Technical and Commercial Checklist",
+    "slug": "compare-industrial-supplier-quotations-china",
+    "category": "Buying Guides",
+    "targetKeyword": "compare Chinese supplier quotations",
+    "date": "2026-06-24",
+    "filePath": "content/en/blog/compare-industrial-supplier-quotations-china.md",
+    "commitHash": ""
   }
 ]

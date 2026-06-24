@@ -52,6 +52,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <ListBlock title="What We Can Support" items={["Requirement review and supplier matching", "Technical communication and document exchange", "Quotation and sample coordination", "Quality and packing follow-up", "Export coordination and long-term sourcing support"]} />
             {locale === "en" && service.slug === "china-industrial-sourcing" ? <IndustrialSourcingExtra /> : null}
             {locale === "en" && service.slug === "supplier-verification" ? <SupplierVerificationExtra /> : null}
+            {locale === "en" ? <ServiceRelatedGuides slug={service.slug} /> : null}
             <Block title="Quality and Risk Control" text="We focus on reducing uncertainty before and during the order. This includes supplier verification, clear specifications, inspection coordination, photo or video checks, packing communication, and practical issue follow-up." />
             <div>
               <h2 className="text-3xl font-black text-navy">Process</h2>
@@ -187,6 +188,23 @@ function RelatedLinks({ title, links }: { title: string; links: { href: string; 
       </div>
     </section>
   );
+}
+
+function ServiceRelatedGuides({ slug }: { slug: string }) {
+  const guides: Record<string, { href: string; label: string }[]> = {
+    "industrial-spare-parts-sourcing": [
+      { href: "/en/blog/identify-industrial-spare-parts-without-part-number/", label: "Guide: Identify Spare Parts Without Part Numbers" }
+    ],
+    "china-industrial-sourcing": [
+      { href: "/en/blog/compare-industrial-supplier-quotations-china/", label: "Guide: Compare Chinese Supplier Quotations" }
+    ],
+    "supplier-verification": [
+      { href: "/en/blog/compare-industrial-supplier-quotations-china/", label: "Guide: Technical and Commercial Quotation Checks" }
+    ]
+  };
+  const links = guides[slug];
+  if (!links) return null;
+  return <RelatedLinks title="Related Buyer Guide" links={links} />;
 }
 
 function EnglishVersionNotice({ locale }: { locale: string }) {

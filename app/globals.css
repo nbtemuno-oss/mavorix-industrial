@@ -54,3 +54,36 @@ a {
   color: #475569;
   line-height: 1.8;
 }
+
+.prose-industrial .table-wrap {
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: white;
+}
+
+.prose-industrial table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.prose-industrial th,
+.prose-industrial td {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.85rem;
+  text-align: left;
+  vertical-align: top;
+  color: #475569;
+  line-height: 1.55;
+}
+
+.prose-industrial th {
+  background: #f8fafc;
+  color: #0f172a;
+  font-weight: 800;
+}

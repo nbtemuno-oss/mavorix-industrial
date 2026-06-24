@@ -132,5 +132,88 @@
       "/en/contact/"
     ],
     "status": "planned"
+  },
+  {
+    "keyword": "industrial spare parts sourcing China",
+    "searchIntent": "Commercial investigation and practical spare-part identification problem solving",
+    "targetCustomer": "Factory maintenance managers, procurement managers, MRO buyers, machinery users, and industrial distributors",
+    "category": "Factory Spare Parts",
+    "geoMarket": "Global",
+    "contentOpportunity": "Why spare parts are difficult to identify; Information buyers should collect; Photo and measurement checklist; Replacement options and risk notes; FAQ",
+    "priority": "high",
+    "recommendedArticleTitle": "How to Identify and Source Industrial Spare Parts from China When the Part Number Is Missing",
+    "recommendedSlug": "identify-industrial-spare-parts-without-part-number",
+    "relatedExistingPages": [
+      "/en/services/industrial-spare-parts-sourcing/",
+      "/en/industries/factory-spare-parts/",
+      "/en/services/mro-sourcing-from-china/",
+      "/en/industries/electrical-mechanical-parts/"
+    ],
+    "internalLinkSuggestions": [
+      "/en/services/industrial-spare-parts-sourcing/",
+      "/en/industries/factory-spare-parts/",
+      "/en/services/mro-sourcing-from-china/",
+      "/en/industries/electrical-mechanical-parts/",
+      "/en/contact/"
+    ],
+    "status": "published"
+  },
+  {
+    "keyword": "injection molding factory setup checklist",
+    "searchIntent": "Technical commercial investigation before buying molding machines, molds, auxiliaries, and utilities",
+    "targetCustomer": "Plastic factory investors, injection molding factory owners, production managers, procurement managers, and overseas buyers",
+    "category": "Injection Molding Support",
+    "geoMarket": "Global",
+    "contentOpportunity": "System-level machine and mold matching; Compatibility checks; Utilities and auxiliaries; Spare parts and layout; Pre-purchase checklist and FAQ",
+    "priority": "high",
+    "recommendedArticleTitle": "Injection Molding Factory Procurement Checklist: How to Match Machines, Molds, Auxiliaries and Utilities",
+    "recommendedSlug": "injection-molding-factory-procurement-checklist",
+    "relatedExistingPages": [
+      "/en/industries/plastic-industry/",
+      "/en/services/china-industrial-sourcing/",
+      "/en/services/supplier-verification/",
+      "/en/services/quality-inspection/",
+      "/en/services/industrial-spare-parts-sourcing/",
+      "/en/services/container-consolidation/"
+    ],
+    "internalLinkSuggestions": [
+      "/en/industries/plastic-industry/",
+      "/en/services/china-industrial-sourcing/",
+      "/en/services/supplier-verification/",
+      "/en/services/quality-inspection/",
+      "/en/services/industrial-spare-parts-sourcing/",
+      "/en/services/container-consolidation/",
+      "/en/contact/"
+    ],
+    "status": "published"
+  },
+  {
+    "keyword": "compare Chinese supplier quotations",
+    "searchIntent": "Commercial investigation and supplier quotation evaluation",
+    "targetCustomer": "Overseas factory owners, procurement managers, industrial buyers, importers, machinery buyers, and distributors",
+    "category": "Buying Guides",
+    "geoMarket": "Global",
+    "contentOpportunity": "Normalize technical scope; Compare commercial terms; Total procurement cost; Quotation checklist; FAQ",
+    "priority": "high",
+    "recommendedArticleTitle": "How to Compare Industrial Supplier Quotations from China: A Technical and Commercial Checklist",
+    "recommendedSlug": "compare-industrial-supplier-quotations-china",
+    "relatedExistingPages": [
+      "/en/services/china-industrial-sourcing/",
+      "/en/services/supplier-verification/",
+      "/en/services/quality-inspection/",
+      "/en/services/export-support/",
+      "/en/services/container-consolidation/",
+      "/en/services/industrial-spare-parts-sourcing/"
+    ],
+    "internalLinkSuggestions": [
+      "/en/services/china-industrial-sourcing/",
+      "/en/services/supplier-verification/",
+      "/en/services/quality-inspection/",
+      "/en/services/export-support/",
+      "/en/services/container-consolidation/",
+      "/en/services/industrial-spare-parts-sourcing/",
+      "/en/contact/"
+    ],
+    "status": "published"
   }
 ]

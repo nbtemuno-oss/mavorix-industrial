@@ -91,12 +91,12 @@ const blogGroups = [
   {
     title: "Sourcing Guides",
     description: "Step-by-step sourcing advice for buyers comparing Chinese suppliers, OEM options, and industrial product requirements.",
-    slugs: ["how-to-source-industrial-products-from-china", "china-oem-manufacturing-guide", "china-industrial-sourcing-partner-for-overseas-factories"]
+    slugs: ["how-to-source-industrial-products-from-china", "china-oem-manufacturing-guide", "china-industrial-sourcing-partner-for-overseas-factories", "compare-industrial-supplier-quotations-china"]
   },
   {
     title: "Factory Consumables and MRO",
     description: "Practical notes for maintenance teams and factory buyers sourcing consumables, spare parts, and mixed MRO items from China.",
-    slugs: ["mro-sourcing-from-china-guide", "factory-consumables-and-mro-supplies-from-china"]
+    slugs: ["mro-sourcing-from-china-guide", "factory-consumables-and-mro-supplies-from-china", "identify-industrial-spare-parts-without-part-number"]
   },
   {
     title: "Supplier Verification",
@@ -116,6 +116,6 @@ const blogGroups = [
   {
     title: "Plastic Factory Sourcing",
     description: "Helpful starting points for plastic factories buying machines, molds, auxiliaries, MRO items, and spare parts.",
-    slugs: []
+    slugs: ["injection-molding-factory-procurement-checklist"]
   }
 ];

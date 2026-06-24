@@ -160,5 +160,117 @@
     "priority": "medium",
     "createdAt": "2026-06-18",
     "plannedPublishDay": ""
+  },
+  {
+    "title": "How to Identify and Source Industrial Spare Parts from China When the Part Number Is Missing",
+    "slug": "identify-industrial-spare-parts-without-part-number",
+    "category": "Factory Spare Parts",
+    "targetKeyword": "industrial spare parts sourcing China",
+    "secondaryKeywords": [
+      "identify industrial spare parts",
+      "replacement parts without part number",
+      "obsolete machinery spare parts",
+      "identify spare parts from photos",
+      "factory spare parts sourcing China",
+      "machinery replacement parts China"
+    ],
+    "geoTarget": "Global",
+    "targetCustomer": "Factory maintenance managers, procurement managers, MRO buyers, machinery users, and industrial distributors",
+    "searchIntent": "Commercial investigation and practical spare-part identification problem solving",
+    "outline": [
+      "Why spare parts are difficult to identify",
+      "Information buyers should collect",
+      "Photo and measurement checklist",
+      "Replacement options and risk notes",
+      "FAQ"
+    ],
+    "internalLinks": [
+      "/en/services/industrial-spare-parts-sourcing/",
+      "/en/industries/factory-spare-parts/",
+      "/en/services/mro-sourcing-from-china/",
+      "/en/industries/electrical-mechanical-parts/",
+      "/en/contact/"
+    ],
+    "status": "published",
+    "priority": "high",
+    "createdAt": "2026-06-24",
+    "plannedPublishDay": "Wednesday",
+    "publishedAt": "2026-06-24"
+  },
+  {
+    "title": "Injection Molding Factory Procurement Checklist: How to Match Machines, Molds, Auxiliaries and Utilities",
+    "slug": "injection-molding-factory-procurement-checklist",
+    "category": "Injection Molding Support",
+    "targetKeyword": "injection molding factory setup checklist",
+    "secondaryKeywords": [
+      "injection molding equipment procurement checklist",
+      "injection molding machine and mold compatibility",
+      "plastic factory equipment sourcing China",
+      "injection molding auxiliary equipment checklist",
+      "injection molding factory equipment list",
+      "injection molding machine mold matching"
+    ],
+    "geoTarget": "Global",
+    "targetCustomer": "Plastic factory investors, injection molding factory owners, production managers, procurement managers, and overseas buyers",
+    "searchIntent": "Technical commercial investigation before buying molding machines, molds, auxiliaries, and utilities",
+    "outline": [
+      "System-level machine and mold matching",
+      "Compatibility checks",
+      "Utilities and auxiliaries",
+      "Spare parts and layout",
+      "Pre-purchase checklist and FAQ"
+    ],
+    "internalLinks": [
+      "/en/industries/plastic-industry/",
+      "/en/services/china-industrial-sourcing/",
+      "/en/services/supplier-verification/",
+      "/en/services/quality-inspection/",
+      "/en/services/industrial-spare-parts-sourcing/",
+      "/en/services/container-consolidation/",
+      "/en/contact/"
+    ],
+    "status": "published",
+    "priority": "high",
+    "createdAt": "2026-06-24",
+    "plannedPublishDay": "Wednesday",
+    "publishedAt": "2026-06-24"
+  },
+  {
+    "title": "How to Compare Industrial Supplier Quotations from China: A Technical and Commercial Checklist",
+    "slug": "compare-industrial-supplier-quotations-china",
+    "category": "Buying Guides",
+    "targetKeyword": "compare Chinese supplier quotations",
+    "secondaryKeywords": [
+      "industrial equipment quotation checklist",
+      "China supplier quotation comparison",
+      "machinery quotation comparison",
+      "industrial RFQ comparison checklist",
+      "compare industrial suppliers China",
+      "China sourcing quotation review"
+    ],
+    "geoTarget": "Global",
+    "targetCustomer": "Overseas factory owners, procurement managers, industrial buyers, importers, machinery buyers, and distributors",
+    "searchIntent": "Commercial investigation and supplier quotation evaluation",
+    "outline": [
+      "Normalize technical scope",
+      "Compare commercial terms",
+      "Total procurement cost",
+      "Quotation checklist",
+      "FAQ"
+    ],
+    "internalLinks": [
+      "/en/services/china-industrial-sourcing/",
+      "/en/services/supplier-verification/",
+      "/en/services/quality-inspection/",
+      "/en/services/export-support/",
+      "/en/services/container-consolidation/",
+      "/en/services/industrial-spare-parts-sourcing/",
+      "/en/contact/"
+    ],
+    "status": "published",
+    "priority": "high",
+    "createdAt": "2026-06-24",
+    "plannedPublishDay": "Wednesday",
+    "publishedAt": "2026-06-24"
   }
 ]

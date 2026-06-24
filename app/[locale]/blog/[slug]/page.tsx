@@ -48,7 +48,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
     <>
       <PageHero badge="Guide" title={post.title} description={post.description} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Blog", href: `/${locale}/blog/` }, { label: post.title, href: `/${locale}/blog/${post.slug}/` }]} />
       <Container className="grid gap-8 py-16 lg:grid-cols-[1fr_300px]">
-        <article className="prose-industrial rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10">
+        <article className="prose-industrial min-w-0 rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10">
           {locale !== "en" ? <div className="mb-8 rounded-lg border border-orange-200 bg-orange-50 p-4 text-sm font-semibold text-orange-900">English version: this blog guide has not been fully translated into {locale.toUpperCase()} yet.</div> : null}
           <IndustrialImage src={image.src} alt={image.alt} className="mb-8 min-h-[320px]" sizes="(min-width: 1024px) 760px, 100vw" />
           <div dangerouslySetInnerHTML={{ __html: html }} />

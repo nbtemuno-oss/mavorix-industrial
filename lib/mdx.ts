@@ -49,7 +49,17 @@ export function getAllBlogPosts() {
 }
 
 export function markdownToHtml(markdown: string) {
-  return markdown
+  const withTables = markdown.replace(/((?:^\|.*\|\n?)+)/gim, (block) => {
+    const rows = block.trim().split("\n").filter((line) => line.trim().startsWith("|"));
+    if (rows.length < 2 || !/^\|?[\s:-]+\|[\s|:-]*$/.test(rows[1].trim())) return block;
+    const headers = rows[0].split("|").slice(1, -1).map((cell) => cell.trim());
+    const bodyRows = rows.slice(2).map((row) => row.split("|").slice(1, -1).map((cell) => cell.trim()));
+    const thead = `<thead><tr>${headers.map((cell) => `<th>${cell}</th>`).join("")}</tr></thead>`;
+    const tbody = `<tbody>${bodyRows.map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join("")}</tr>`).join("")}</tbody>`;
+    return `<div class="table-wrap"><table>${thead}${tbody}</table></div>`;
+  });
+
+  return withTables
     .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2">$1</a>')
     .replace(/^### (.*$)/gim, "<h3>$1</h3>")
     .replace(/^## (.*$)/gim, "<h2>$1</h2>")
@@ -57,7 +67,7 @@ export function markdownToHtml(markdown: string) {
     .replace(/(<li>.*<\/li>)/gims, "<ul>$1</ul>")
     .split(/\n{2,}/)
     .map((block) => {
-      if (block.startsWith("<h") || block.startsWith("<ul")) return block;
+      if (block.startsWith("<h") || block.startsWith("<ul") || block.startsWith("<div")) return block;
       return `<p>${block.replace(/\n/g, " ")}</p>`;
     })
     .join("");

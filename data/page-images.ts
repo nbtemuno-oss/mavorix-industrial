@@ -177,5 +177,23 @@ export const blogImages: Record<string, PageImage> = {
     alt: "Supplier risk review before order confirmation and deposit payment in China",
     width: 1200,
     height: 800
+  },
+  "identify-industrial-spare-parts-without-part-number": {
+    src: "/images/industries/factory-spare-parts-hero.webp",
+    alt: "Industrial spare part identification using photos, nameplates, dimensions and machine information",
+    width: 1600,
+    height: 900
+  },
+  "injection-molding-factory-procurement-checklist": {
+    src: "/images/plastic-industry-injection-molding-hero.webp",
+    alt: "Injection molding factory procurement checklist for machines, molds, auxiliaries and utilities",
+    width: 1600,
+    height: 900
+  },
+  "compare-industrial-supplier-quotations-china": {
+    src: "/images/service-industrial-sourcing.webp",
+    alt: "Technical and commercial comparison of industrial supplier quotations from China",
+    width: 1200,
+    height: 800
   }
 };

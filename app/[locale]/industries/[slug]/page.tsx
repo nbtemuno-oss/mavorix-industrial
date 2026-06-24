@@ -76,6 +76,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
           <ListBlock title="Common Buyer Problems" items={["Unclear supplier capability", "Difficulty confirming technical specifications", "Quality variation before shipment", "Fragmented communication across multiple factories", "Export packing and document coordination"]} />
           <Block title="How MAVORIX INDUSTRIAL Supports Sourcing" text="We review requirements, search and compare suppliers, coordinate technical questions, follow samples or trial orders, arrange quality checks, and support supplier-side export coordination." />
           {locale === "en" && industry.slug === "plastic-industry" ? <PlasticIndustryExtra /> : null}
+          {locale === "en" ? <IndustryRelatedGuides slug={industry.slug} /> : null}
           <Block title="Supplier Verification and Quality Control" text="Supplier screening and quality coordination help buyers reduce risk before payment and before shipment. We focus on realistic checks, clear communication, and practical issue follow-up." />
           <Block title="Export and Logistics Support" text="We support supplier-side export communication, packing follow-up, shipping coordination, and consolidation planning when buyers purchase from several suppliers." />
         </article>
@@ -462,6 +463,27 @@ function MetalPartsInternalLinks() {
   return (
     <section>
       <h2 className="text-3xl font-black text-navy">Related Metal Parts Sourcing Support</h2>
+      <div className="mt-4 flex flex-wrap gap-3">
+        {links.map((link) => <Link key={link.href} href={link.href} className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-bold text-navy ring-1 ring-slate-200 transition hover:bg-slate-50">{link.label}</Link>)}
+      </div>
+    </section>
+  );
+}
+
+function IndustryRelatedGuides({ slug }: { slug: string }) {
+  const guides: Record<string, { href: string; label: string }[]> = {
+    "factory-spare-parts": [
+      { href: "/en/blog/identify-industrial-spare-parts-without-part-number/", label: "Guide: Identify Spare Parts Without Part Numbers" }
+    ],
+    "plastic-industry": [
+      { href: "/en/blog/injection-molding-factory-procurement-checklist/", label: "Guide: Injection Molding Factory Procurement Checklist" }
+    ]
+  };
+  const links = guides[slug];
+  if (!links) return null;
+  return (
+    <section>
+      <h2 className="text-3xl font-black text-navy">Related Buyer Guide</h2>
       <div className="mt-4 flex flex-wrap gap-3">
         {links.map((link) => <Link key={link.href} href={link.href} className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-bold text-navy ring-1 ring-slate-200 transition hover:bg-slate-50">{link.label}</Link>)}
       </div>
