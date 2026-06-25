@@ -107,10 +107,11 @@
       "/en/services/industrial-spare-parts-sourcing/",
       "/en/contact/"
     ],
-    "status": "planned",
+    "status": "published",
     "priority": "high",
     "createdAt": "2026-06-18",
-    "plannedPublishDay": ""
+    "plannedPublishDay": "",
+    "publishedAt": "2026-06-25"
   },
   {
     "title": "How to Consolidate Multiple China Suppliers into One Shipment",
