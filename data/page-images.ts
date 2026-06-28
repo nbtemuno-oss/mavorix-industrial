@@ -195,5 +195,11 @@ export const blogImages: Record<string, PageImage> = {
     alt: "Technical and commercial comparison of industrial supplier quotations from China",
     width: 1200,
     height: 800
+  },
+  "source-75x2000-industrial-belt-sander-china": {
+    src: "/images/blog/75x2000-industrial-belt-sander-specifications.webp",
+    alt: "75x2000 industrial belt sander specifications for metal finishing",
+    width: 1200,
+    height: 630
   }
 };
