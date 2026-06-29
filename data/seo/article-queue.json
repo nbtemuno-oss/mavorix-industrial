@@ -133,10 +133,11 @@
       "/en/services/export-support/",
       "/en/contact/"
     ],
-    "status": "planned",
+    "status": "published",
     "priority": "high",
     "createdAt": "2026-06-18",
-    "plannedPublishDay": ""
+    "plannedPublishDay": "",
+    "publishedAt": "2026-06-29"
   },
   {
     "title": "Packaging Industry Sourcing from China: Machines, Parts, and Supplier Checks",
