@@ -159,10 +159,11 @@
       "/en/services/china-industrial-sourcing/",
       "/en/contact/"
     ],
-    "status": "planned",
+    "status": "published",
     "priority": "medium",
     "createdAt": "2026-06-18",
-    "plannedPublishDay": ""
+    "plannedPublishDay": "",
+    "publishedAt": "2026-07-02"
   },
   {
     "title": "How to Identify and Source Industrial Spare Parts from China When the Part Number Is Missing",
