@@ -473,7 +473,17 @@ function MetalPartsInternalLinks() {
 function IndustryRelatedGuides({ slug }: { slug: string }) {
   const guides: Record<string, { href: string; label: string }[]> = {
     "factory-spare-parts": [
-      { href: "/en/blog/identify-industrial-spare-parts-without-part-number/", label: "Guide: Identify Spare Parts Without Part Numbers" }
+      { href: "/en/blog/identify-industrial-spare-parts-without-part-number/", label: "Guide: Identify Spare Parts Without Part Numbers" },
+      { href: "/en/blog/source-obsolete-discontinued-industrial-spare-parts/", label: "Guide: Obsolete and Discontinued Spare Parts" }
+    ],
+    "packaging-industry": [
+      { href: "/en/blog/packaging-machine-spare-parts-sourcing-china/", label: "Guide: Packaging Machine Spare Parts Sourcing" }
+    ],
+    "agricultural-equipment": [
+      { href: "/en/blog/agricultural-machinery-spare-parts-china-buying-guide/", label: "Guide: Agricultural Machinery Spare Parts Buying" }
+    ],
+    "electrical-mechanical-parts": [
+      { href: "/en/blog/source-obsolete-discontinued-industrial-spare-parts/", label: "Guide: Obsolete and Discontinued Spare Parts" }
     ],
     "plastic-industry": [
       { href: "/en/blog/injection-molding-factory-procurement-checklist/", label: "Guide: Injection Molding Factory Procurement Checklist" }

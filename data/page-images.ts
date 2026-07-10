@@ -184,6 +184,24 @@ export const blogImages: Record<string, PageImage> = {
     width: 1600,
     height: 900
   },
+  "packaging-machine-spare-parts-sourcing-china": {
+    src: "/images/industries/packaging-industry-hero.webp",
+    alt: "Packaging machine spare parts and replacement components for industrial packaging line maintenance",
+    width: 1600,
+    height: 900
+  },
+  "agricultural-machinery-spare-parts-china-buying-guide": {
+    src: "/images/industries/agricultural-equipment-hero.webp",
+    alt: "Agricultural machinery spare parts including tractor, tiller and harvester replacement components",
+    width: 1600,
+    height: 900
+  },
+  "source-obsolete-discontinued-industrial-spare-parts": {
+    src: "/images/industries/factory-spare-parts-hero.webp",
+    alt: "Obsolete and discontinued industrial spare parts replacement options for legacy factory equipment",
+    width: 1600,
+    height: 900
+  },
   "injection-molding-factory-procurement-checklist": {
     src: "/images/plastic-industry-injection-molding-hero.webp",
     alt: "Injection molding factory procurement checklist for machines, molds, auxiliaries and utilities",
