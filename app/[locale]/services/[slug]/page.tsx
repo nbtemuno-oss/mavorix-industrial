@@ -36,7 +36,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const { locale, slug } = await params;
   const service = services.find((item) => item.slug === slug);
   if (!service) notFound();
-  const faqs = buildServiceFaqs(service.title);
+  const faqs = buildServiceFaqs(service);
   return (
     <>
       <PageHero badge="Service" title={service.title} description={`${service.description} Keywords: ${service.keywords.join(", ")}.`} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Services", href: `/${locale}/services/` }, { label: service.title, href: `/${locale}/services/${service.slug}/` }]} />
@@ -51,6 +51,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <ListBlock title="How MAVORIX INDUSTRIAL Helps" items={service.support} />
             <ListBlock title="What We Can Support" items={["Requirement review and supplier matching", "Technical communication and document exchange", "Quotation and sample coordination", "Quality and packing follow-up", "Export coordination and long-term sourcing support"]} />
             {locale === "en" && service.slug === "china-industrial-sourcing" ? <IndustrialSourcingExtra /> : null}
+            {locale === "en" && service.slug === "mro-sourcing-from-china" ? <MroSourcingExtra /> : null}
             {locale === "en" && service.slug === "supplier-verification" ? <SupplierVerificationExtra /> : null}
             {locale === "en" ? <ServiceRelatedGuides slug={service.slug} /> : null}
             <Block title="Quality and Risk Control" text="We focus on reducing uncertainty before and during the order. This includes supplier verification, clear specifications, inspection coordination, photo or video checks, packing communication, and practical issue follow-up." />
@@ -84,9 +85,13 @@ const serviceMetadata: Record<string, { title: string; description: string }> = 
     title: "China Industrial Sourcing Service for Overseas Buyers | MAVORIX",
     description: "China industrial sourcing support for machinery, spare parts, MRO supplies, OEM products, plastic factory equipment, quotation comparison, supplier search, inspection coordination, export packing, and shipment consolidation."
   },
+  "mro-sourcing-from-china": {
+    title: "MRO Sourcing from China | Industrial Supplies & Spare Parts | MAVORIX",
+    description: "MAVORIX helps overseas factories source MRO supplies, spare parts, tools, consumables, bearings, belts, filters, pneumatic and hydraulic parts from China."
+  },
   "supplier-verification": {
-    title: "Supplier Verification in China Before Deposit | MAVORIX",
-    description: "China supplier verification support for overseas industrial buyers, including business identity checks, quotation review, red flags, capability signals, documents, evidence, and pre-deposit risk review."
+    title: "China Supplier Verification Service | Check Suppliers Before Payment | MAVORIX",
+    description: "MAVORIX helps overseas buyers verify Chinese suppliers before payment by checking supplier information, quotation risks, product details, documents, and communication signals."
   }
 };
 
@@ -179,6 +184,69 @@ function SupplierVerificationExtra() {
   );
 }
 
+function MroSourcingExtra() {
+  return (
+    <>
+      <section>
+        <h2 className="text-3xl font-black text-navy">MRO Sourcing from China for Factory Maintenance</h2>
+        <div className="mt-4 space-y-5 leading-8 text-slate-600">
+          <p>
+            MRO sourcing from China covers the maintenance, repair, and operation items that keep factories running. These are often not large capital equipment purchases. They are the mixed factory maintenance supplies, spare parts, consumables, tools, bearings, belts, filters, pneumatic parts, hydraulic parts, electrical components, safety products, workshop supplies, fasteners, hoses, seals, lubricants, and replacement items that buyers need repeatedly or urgently.
+          </p>
+          <p>
+            The sourcing challenge is that MRO orders are usually fragmented. A factory may need twenty small items from ten different suppliers, and each item may require a different model number, material, voltage, pressure rating, size, or installation detail. A normal marketplace search can produce many supplier names, but it does not automatically solve part identification, quotation comparison, supplier verification, quality checks, export packing, or shipment consolidation.
+          </p>
+          <p>
+            MAVORIX INDUSTRIAL helps overseas factories organize MRO requirements into a clearer sourcing path. We review item lists, photos, drawings, nameplates, part numbers, dimensions, quantities, and application notes before contacting suppliers. Then we help compare supplier communication, product fit, quotation details, lead time, packing notes, and consolidation options so buyers can reduce uncertainty before payment and before shipment.
+          </p>
+        </div>
+      </section>
+      <ListBlock title="What MRO Supplies Can Include" items={[
+        "Industrial spare parts, wear parts, repair parts, and replacement components",
+        "Factory consumables including seals, hoses, tapes, cutting items, lubricants, filters, and packing materials",
+        "Tools, workshop supplies, maintenance accessories, fasteners, fittings, and safety products",
+        "Bearings, belts, chains, rollers, gears, couplings, reducers, pumps, valves, and mechanical components",
+        "Pneumatic parts including cylinders, solenoid valves, air fittings, regulators, tubes, and connectors",
+        "Hydraulic parts including hoses, seals, fittings, pumps, valves, cylinders, and related maintenance items",
+        "Electrical components including sensors, switches, relays, contactors, motors, drives, cables, and control accessories"
+      ]} />
+      <ListBlock title="Common MRO Sourcing Problems" items={[
+        "The buyer has photos but no part number, brand, drawing, or exact model reference",
+        "Different suppliers quote similar-looking parts with different materials, ratings, or tolerances",
+        "Small mixed orders are expensive or difficult to ship if each supplier exports separately",
+        "Urgent maintenance needs create pressure to pay before supplier verification is complete",
+        "Replacement parts may be compatible only if dimensions, voltage, pressure, mounting, or working conditions match",
+        "Suppliers may not understand factory maintenance context and quote a product that looks correct but is not suitable"
+      ]} />
+      <ListBlock title="What Buyers Should Provide Before Inquiry" items={[
+        "An item list with product names, quantities, preferred brands, model numbers, and target delivery time",
+        "Clear photos of the part, nameplate, installed position, machine model, and damaged area if relevant",
+        "Drawings, dimensions, material, voltage, pressure, thread, bearing size, belt profile, or other technical details",
+        "Whether exact OEM parts, compatible replacements, Chinese alternatives, or custom-made parts are acceptable",
+        "Destination country, shipment preference, packing requirement, and whether consolidation is needed",
+        "Any supplier links, previous quotations, sample information, or repeat order history already available"
+      ]} />
+      <ListBlock title="How MAVORIX Supports MRO Sourcing" items={[
+        "Organize mixed MRO requirements into clear product groups before supplier search",
+        "Search and compare Chinese suppliers for spare parts, consumables, tools, and maintenance supplies",
+        "Check supplier communication quality, product focus, quotation details, and basic risk signals",
+        "Coordinate technical questions, photos, dimensions, samples, and compatibility confirmation where possible",
+        "Support quality inspection coordination, packing review, and photo or video checks before shipment",
+        "Coordinate container consolidation or mixed shipment planning when many suppliers are involved"
+      ]} />
+      <RelatedLinks title="Related MRO Sourcing Pages" links={[
+        { href: "/en/industries/mro-supplies/", label: "MRO Supplies Industry Page" },
+        { href: "/en/industries/factory-spare-parts/", label: "Factory Spare Parts" },
+        { href: "/en/services/supplier-verification/", label: "Supplier Verification" },
+        { href: "/en/services/quality-inspection/", label: "Quality Inspection" },
+        { href: "/en/services/container-consolidation/", label: "Container Consolidation" },
+        { href: "/en/blog/how-to-source-mro-supplies-from-china/", label: "MRO Supplies Buying Guide" },
+        { href: "/en/contact/", label: "Send MRO Inquiry" }
+      ]} />
+    </>
+  );
+}
+
 function RelatedLinks({ title, links }: { title: string; links: { href: string; label: string }[] }) {
   return (
     <section>
@@ -199,7 +267,12 @@ function ServiceRelatedGuides({ slug }: { slug: string }) {
       { href: "/en/blog/compare-industrial-supplier-quotations-china/", label: "Guide: Compare Chinese Supplier Quotations" }
     ],
     "supplier-verification": [
-      { href: "/en/blog/compare-industrial-supplier-quotations-china/", label: "Guide: Technical and Commercial Quotation Checks" }
+      { href: "/en/blog/compare-industrial-supplier-quotations-china/", label: "Guide: Technical and Commercial Quotation Checks" },
+      { href: "/en/blog/verify-chinese-industrial-suppliers-before-order/", label: "Guide: Verify Suppliers Before Order" }
+    ],
+    "mro-sourcing-from-china": [
+      { href: "/en/blog/how-to-source-mro-supplies-from-china/", label: "Guide: Source MRO Supplies from China" },
+      { href: "/en/blog/factory-consumables-and-mro-supplies-from-china/", label: "Guide: Factory Consumables and MRO Supplies" }
     ]
   };
   const links = guides[slug];
@@ -219,9 +292,29 @@ function ListBlock({ title, items }: { title: string; items: string[] }) {
   return <section><h2 className="text-3xl font-black text-navy">{title}</h2><ul className="mt-4 grid gap-3 md:grid-cols-2">{items.map((item) => <li key={item} className="rounded-md border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-700">{item}</li>)}</ul></section>;
 }
 
-function buildServiceFaqs(title: string) {
+function buildServiceFaqs(service: { title: string; slug: string }) {
+  if (service.slug === "mro-sourcing-from-china") {
+    return [
+      { q: "What does MRO sourcing from China include?", a: "MRO sourcing can include factory maintenance parts, consumables, tools, bearings, belts, filters, pneumatic parts, hydraulic parts, electrical components, safety products, workshop supplies, and spare parts." },
+      { q: "Can MAVORIX help source small mixed MRO items?", a: "Yes. We help organize mixed item lists, identify suppliers, compare quotations, and coordinate consolidation when several Chinese suppliers are involved." },
+      { q: "What information should I send for MRO spare parts?", a: "Send photos, part numbers, nameplates, machine model, dimensions, drawings, quantity, application, destination country, and any previous supplier links or quotations." },
+      { q: "Can you verify MRO suppliers before payment?", a: "Yes. We can review supplier identity, product focus, quotation clarity, communication quality, and basic order risk before buyers pay a deposit." },
+      { q: "Do you support MRO shipment consolidation?", a: "Yes. When buyers purchase many small maintenance items from multiple suppliers, we can help coordinate supplier-side delivery, packing notes, warehouse communication, and consolidation planning." },
+      { q: "Do you guarantee part compatibility?", a: "No. Compatibility depends on correct technical information, buyer confirmation, samples, drawings, and supplier evidence. We help reduce risk but do not replace engineering approval." }
+    ];
+  }
+  if (service.slug === "supplier-verification") {
+    return [
+      { q: "What is China supplier verification?", a: "China supplier verification checks supplier identity, product focus, communication quality, quotation clarity, documents, capability signals, and order risk before payment." },
+      { q: "Is supplier verification the same as supplier search?", a: "No. Supplier search finds possible suppliers. Supplier verification checks whether a selected supplier appears suitable, consistent, and lower risk before an order." },
+      { q: "What should be checked before paying a deposit?", a: "Check the company identity, payment beneficiary, product specifications, quotation details, lead time, packing notes, quality control plan, and supplier communication consistency." },
+      { q: "Can verification prove a supplier is risk-free?", a: "No. Verification reduces uncertainty but cannot remove all risk. Buyers should still use clear contracts, samples, inspections, and staged payment control where appropriate." },
+      { q: "What documents should buyers request?", a: "Useful documents may include business registration information, quotation or proforma invoice, product photos, specification sheet, packing notes, test reports where relevant, and export document examples." },
+      { q: "How can I ask MAVORIX to verify a supplier?", a: "Send the supplier website, quotation, product details, contact information, photos, drawings, payment terms, and order plan through the contact page." }
+    ];
+  }
   return [
-    { q: `What is ${title}?`, a: `${title} helps overseas buyers coordinate China supplier sourcing, verification, technical communication, quality follow-up, and export execution.` },
+    { q: `What is ${service.title}?`, a: `${service.title} helps overseas buyers coordinate China supplier sourcing, verification, technical communication, quality follow-up, and export execution.` },
     { q: "What information should buyers prepare?", a: "Prepare product name, photos, drawings, specifications, quantity, destination country, target use, and any supplier links or samples." },
     { q: "Can MAVORIX verify suppliers?", a: "Yes. We can help screen supplier identity, capability signals, communication quality, quotation clarity, and order execution risk." },
     { q: "Do you guarantee the lowest price?", a: "No. We focus on reliable sourcing, risk reduction, quality coordination, and practical execution rather than lowest-price promises." },

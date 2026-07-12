@@ -166,6 +166,12 @@ export const blogImages: Record<string, PageImage> = {
     width: 1200,
     height: 800
   },
+  "how-to-source-mro-supplies-from-china": {
+    src: "/images/service-mro-sourcing.webp",
+    alt: "MRO supplies sourcing from China for factory maintenance parts, tools, consumables and mixed industrial items",
+    width: 1200,
+    height: 800
+  },
   "reduce-risks-buying-industrial-equipment-from-china": {
     src: "/images/service-quality-inspection.webp",
     alt: "Industrial equipment quality inspection and risk control before shipment from China",
@@ -187,6 +193,12 @@ export const blogImages: Record<string, PageImage> = {
   "packaging-machine-spare-parts-sourcing-china": {
     src: "/images/industries/packaging-industry-hero.webp",
     alt: "Packaging machine spare parts and replacement components for industrial packaging line maintenance",
+    width: 1600,
+    height: 900
+  },
+  "packaging-machine-spare-parts-mro-sourcing-from-china": {
+    src: "/images/industries/packaging-industry-hero.webp",
+    alt: "Packaging machine spare parts and MRO supplies for conveyor, filling, sealing and labeling equipment maintenance",
     width: 1600,
     height: 900
   },

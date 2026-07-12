@@ -51,7 +51,15 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
   const { locale, slug } = await params;
   const industry = industries.find((item) => item.slug === slug);
   if (!industry) notFound();
-  const faqs = industry.slug === "plastic-industry" ? plasticIndustryFaqs : industry.slug === "metal-parts" ? metalPartsFaqs : buildIndustryFaqs(industry.title);
+  const faqs = industry.slug === "plastic-industry"
+    ? plasticIndustryFaqs
+    : industry.slug === "metal-parts"
+      ? metalPartsFaqs
+      : industry.slug === "mro-supplies"
+        ? mroSuppliesFaqs
+        : industry.slug === "packaging-industry"
+          ? packagingIndustryFaqs
+          : buildIndustryFaqs(industry.title);
   return (
     <>
       <PageHero badge="Industry" title={`${industry.title} Sourcing from China`} description={industry.description} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Industries", href: `/${locale}/industries/` }, { label: industry.title, href: `/${locale}/industries/${industry.slug}/` }]} />
@@ -70,6 +78,8 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
           {locale === "en" && industry.slug === "electrical-mechanical-parts" ? <ElectricalMechanicalPartsIntro /> : null}
           {locale === "en" && industry.slug === "industrial-machinery" ? <IndustrialMachineryIntro /> : null}
           {locale === "en" && industry.slug === "agricultural-equipment" ? <AgriculturalEquipmentIntro /> : null}
+          {locale === "en" && industry.slug === "mro-supplies" ? <MroSuppliesLandingContent /> : null}
+          {locale === "en" && industry.slug === "packaging-industry" ? <PackagingIndustryLandingContent /> : null}
           {locale === "en" && (industry.slug === "plastic-industry" || industry.slug === "metal-parts" || industry.slug === "electrical-mechanical-parts" || industry.slug === "industrial-machinery" || industry.slug === "agricultural-equipment" || industry.slug === "factory-spare-parts" || industry.slug === "packaging-industry") ? null : <IndustrialImage src={industry.image} alt={`${industry.title} sourcing from China`} className="min-h-[360px]" />}
           <Block title="Industry-Focused Introduction" text={`MAVORIX INDUSTRIAL helps overseas buyers source, verify, and coordinate Chinese suppliers for ${industry.title.toLowerCase()} products. We do not claim to manufacture every item; our role is procurement support and supplier coordination.`} />
           <ListBlock title="Common Sourcing Needs" items={industry.products} />
@@ -103,6 +113,14 @@ const industryMetadata: Record<string, { title: string; description: string }> =
   "metal-parts": {
     title: "Metal Parts Sourcing from China | Fasteners & Machined Components | MAVORIX",
     description: "MAVORIX supports sourcing of metal parts from China including screws, bolts, spacers, gears, and precision machined components for industrial buyers."
+  },
+  "mro-supplies": {
+    title: "Industrial MRO Supplies from China | Factory Maintenance Sourcing | MAVORIX",
+    description: "Source industrial MRO supplies from China with MAVORIX, including factory maintenance parts, tools, consumables, fasteners, pneumatic parts, hydraulic parts, and spare parts."
+  },
+  "packaging-industry": {
+    title: "Packaging Machine Parts & MRO Sourcing from China | MAVORIX",
+    description: "MAVORIX supports sourcing of packaging machines, conveyor parts, filling parts, sealing equipment, packaging machine spares, and MRO supplies from China."
   }
 };
 
@@ -115,6 +133,16 @@ function Block({ title, text }: { title: string; text: string }) {
 }
 function ListBlock({ title, items }: { title: string; items: string[] }) {
   return <section><h2 className="text-3xl font-black text-navy">{title}</h2><ul className="mt-4 grid gap-3 md:grid-cols-2">{items.map((item) => <li key={item} className="rounded-md border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-700">{item}</li>)}</ul></section>;
+}
+function RelatedLinks({ title, links }: { title: string; links: { href: string; label: string }[] }) {
+  return (
+    <section>
+      <h2 className="text-3xl font-black text-navy">{title}</h2>
+      <div className="mt-4 flex flex-wrap gap-3">
+        {links.map((link) => <Link key={link.href} href={link.href} className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-bold text-navy ring-1 ring-slate-200 transition hover:bg-slate-50">{link.label}</Link>)}
+      </div>
+    </section>
+  );
 }
 function buildIndustryFaqs(title: string) {
   return [
@@ -246,6 +274,102 @@ function AgriculturalEquipmentIntro() {
         MAVORIX INDUSTRIAL supports overseas buyers sourcing agricultural machinery parts, tractor parts, farm equipment spare parts, replacement parts, wear parts, irrigation-related products, and maintenance components from China. Typical sourcing needs include filters, bearings, belts, seals, bushings, gears, shafts, clutch and transmission-related parts, hydraulic or pump-related parts, and general tractor spare parts. We help clarify part numbers, photos, samples, dimensions, materials, supplier capability, quotation details, inspection requirements, and shipment consolidation so agricultural equipment buyers can coordinate sourcing with less uncertainty.
       </p>
     </section>
+  );
+}
+
+function MroSuppliesLandingContent() {
+  return (
+    <>
+      <section>
+        <h2 className="text-3xl font-black text-navy">Industrial MRO Supplies from China</h2>
+        <div className="mt-4 space-y-5 leading-8 text-slate-600">
+          <p>
+            MRO supplies are the maintenance, repair, and operation items that factories use to keep equipment, production lines, workshops, utilities, and spare parts inventories working. They can include industrial consumables, maintenance parts, pneumatic parts, hydraulic parts, electrical parts, fasteners, tools, safety products, workshop supplies, filters, bearings, belts, seals, hoses, fittings, lubricants, cutting items, and factory spare parts.
+          </p>
+          <p>
+            Buyers searching for industrial MRO suppliers in China often face a practical problem: the order is not one simple product. It may contain many small items from several categories, and each item needs enough technical information to avoid wrong replacements. A bearing may require size, load, seal type, and brand reference. A pneumatic valve may require voltage, port size, pressure, coil type, and mounting. A belt may require length, profile, width, and working environment.
+          </p>
+          <p>
+            MAVORIX INDUSTRIAL helps overseas factories and distributors organize MRO sourcing from China with supplier search, quotation comparison, supplier verification, quality coordination, and shipment consolidation. We do not claim to manufacture these products. Our role is to help buyers reduce sourcing risk, clarify technical details, compare realistic options, and coordinate export-side execution when mixed factory maintenance supplies come from multiple Chinese suppliers.
+          </p>
+        </div>
+      </section>
+      <ListBlock title="MRO Product Categories We Can Help Source" items={[
+        "Industrial consumables, workshop supplies, tools, safety products, and factory maintenance items",
+        "Maintenance parts including bearings, belts, chains, seals, filters, hoses, rollers, couplings, and fasteners",
+        "Pneumatic parts including cylinders, solenoid valves, fittings, tubes, regulators, and air preparation units",
+        "Hydraulic parts including hoses, fittings, seals, pumps, valves, cylinders, and maintenance accessories",
+        "Electrical parts including sensors, switches, relays, contactors, cables, motors, drives, and control accessories",
+        "Factory spare parts and replacement components for production lines, machinery, packaging equipment, and utilities"
+      ]} />
+      <ListBlock title="Typical Buyers" items={[
+        "Factories that need mixed maintenance supplies and replacement parts from China",
+        "MRO distributors and importers building repeat sourcing channels for factory customers",
+        "Maintenance teams that have photos, nameplates, or samples but incomplete part numbers",
+        "Procurement managers comparing China MRO suppliers before payment",
+        "Industrial buyers consolidating small orders from several suppliers into one shipment"
+      ]} />
+      <ListBlock title="Common Sourcing Risks" items={[
+        "Wrong model, material, voltage, pressure rating, dimension, or installation detail",
+        "Supplier quotes a similar-looking item without confirming real application requirements",
+        "Small mixed items become expensive when shipped separately by different suppliers",
+        "Unverified suppliers overpromise lead time or product compatibility",
+        "No clear inspection, packing, labeling, or item-list control before shipment",
+        "Poor record keeping makes repeat MRO orders difficult months later"
+      ]} />
+      <RelatedLinks title="Related MRO Support" links={[
+        { href: "/en/services/mro-sourcing-from-china/", label: "MRO Sourcing Service" },
+        { href: "/en/industries/factory-spare-parts/", label: "Factory Spare Parts" },
+        { href: "/en/services/supplier-verification/", label: "Supplier Verification" },
+        { href: "/en/services/container-consolidation/", label: "Container Consolidation" },
+        { href: "/en/blog/how-to-source-mro-supplies-from-china/", label: "How to Source MRO Supplies from China" },
+        { href: "/en/contact/", label: "Send MRO Inquiry" }
+      ]} />
+    </>
+  );
+}
+
+function PackagingIndustryLandingContent() {
+  return (
+    <>
+      <section>
+        <h2 className="text-3xl font-black text-navy">Packaging Machine Parts and MRO Sourcing from China</h2>
+        <div className="mt-4 space-y-5 leading-8 text-slate-600">
+          <p>
+            MAVORIX INDUSTRIAL supports overseas buyers sourcing packaging machines, packaging machine spare parts, conveyor parts, filling parts, sealing equipment, labeling equipment, rollers, belts, guide rails, sensors, bearings, nozzles, heaters, pneumatic components, electrical parts, and industrial packaging supplies from China. Packaging industry sourcing often involves both production equipment and MRO maintenance items, so the sourcing process needs careful technical confirmation.
+          </p>
+          <p>
+            A packaging line may include conveyors, fillers, cappers, sealers, labelers, coders, wrapping machines, cartoners, and inspection equipment from different suppliers. Spare parts can look simple in photos, but small differences in voltage, size, mounting, material, product-contact area, sealing temperature, belt profile, nozzle design, sensor type, or pneumatic connection can cause downtime or poor packaging quality.
+          </p>
+          <p>
+            We help buyers compare Chinese suppliers by reviewing product focus, quotation clarity, communication quality, technical answers, inspection options, packing notes, and export coordination. This is especially useful when a buyer needs packaging machine MRO items from several factories and wants one China-side sourcing partner to coordinate supplier verification, quality checks, and consolidation.
+          </p>
+        </div>
+      </section>
+      <ListBlock title="Packaging Machine MRO and Maintenance Needs" items={[
+        "Conveyor belts, rollers, chains, guide rails, shafts, bearings, motors, reducers, and support parts",
+        "Filling machine parts including filling nozzles, valves, seals, pumps, tubes, fittings, and product-contact components",
+        "Sealing equipment parts including heaters, sealing bars, temperature sensors, belts, cutters, and wear parts",
+        "Labeling and coding machine parts including sensors, rollers, motors, belts, brackets, and electrical accessories",
+        "Pneumatic and electrical components including cylinders, solenoid valves, switches, relays, cables, and control items",
+        "Packaging supplies including films, cartons, labels, bags, pallets, and export packing materials where relevant"
+      ]} />
+      <ListBlock title="How MAVORIX Helps Compare Chinese Suppliers" items={[
+        "Clarify the machine model, spare part function, dimensions, material, voltage, and installation details",
+        "Search suppliers with relevant packaging equipment or spare parts experience",
+        "Compare quotations, MOQ, lead time, packing notes, photos, and technical responses",
+        "Review supplier verification signals before payment and coordinate inspection points before shipment",
+        "Support mixed packaging MRO sourcing and consolidation when several suppliers are involved"
+      ]} />
+      <RelatedLinks title="Related Packaging Sourcing Pages" links={[
+        { href: "/en/services/mro-sourcing-from-china/", label: "MRO Sourcing from China" },
+        { href: "/en/services/china-industrial-sourcing/", label: "China Industrial Sourcing" },
+        { href: "/en/industries/factory-spare-parts/", label: "Factory Spare Parts" },
+        { href: "/en/services/supplier-verification/", label: "Supplier Verification" },
+        { href: "/en/blog/packaging-machine-spare-parts-mro-sourcing-from-china/", label: "Packaging MRO Buying Guide" },
+        { href: "/en/contact/", label: "Contact MAVORIX" }
+      ]} />
+    </>
   );
 }
 
@@ -474,10 +598,16 @@ function IndustryRelatedGuides({ slug }: { slug: string }) {
   const guides: Record<string, { href: string; label: string }[]> = {
     "factory-spare-parts": [
       { href: "/en/blog/identify-industrial-spare-parts-without-part-number/", label: "Guide: Identify Spare Parts Without Part Numbers" },
-      { href: "/en/blog/source-obsolete-discontinued-industrial-spare-parts/", label: "Guide: Obsolete and Discontinued Spare Parts" }
+      { href: "/en/blog/source-obsolete-discontinued-industrial-spare-parts/", label: "Guide: Obsolete and Discontinued Spare Parts" },
+      { href: "/en/blog/how-to-source-mro-supplies-from-china/", label: "Guide: MRO Supplies for Factory Maintenance" }
     ],
     "packaging-industry": [
-      { href: "/en/blog/packaging-machine-spare-parts-sourcing-china/", label: "Guide: Packaging Machine Spare Parts Sourcing" }
+      { href: "/en/blog/packaging-machine-spare-parts-sourcing-china/", label: "Guide: Packaging Machine Spare Parts Sourcing" },
+      { href: "/en/blog/packaging-machine-spare-parts-mro-sourcing-from-china/", label: "Guide: Packaging Machine MRO Sourcing" }
+    ],
+    "mro-supplies": [
+      { href: "/en/blog/how-to-source-mro-supplies-from-china/", label: "Guide: How to Source MRO Supplies from China" },
+      { href: "/en/blog/factory-consumables-and-mro-supplies-from-china/", label: "Guide: Factory Consumables and MRO Supplies" }
     ],
     "agricultural-equipment": [
       { href: "/en/blog/agricultural-machinery-spare-parts-china-buying-guide/", label: "Guide: Agricultural Machinery Spare Parts Buying" }
@@ -517,4 +647,22 @@ const metalPartsFaqs = [
   { q: "Can you consolidate shipments from multiple factories?", a: "Yes. If buyers purchase fasteners, machined parts, stamped parts, gears, and other hardware from different suppliers, we can help coordinate packing, delivery timing, warehouse communication, and consolidation follow-up." },
   { q: "Do you support OEM metal machining parts?", a: "Yes. We can support OEM metal machining sourcing when buyers provide drawings, samples, tolerances, materials, surface treatment requirements, quantity, and inspection expectations." },
   { q: "What industries do you support for metal parts sourcing?", a: "We support machinery maintenance, factory production lines, MRO buyers, distributors, OEM projects, packaging equipment, agricultural equipment, plastic factories, and other industrial buyers needing metal parts from China." }
+];
+
+const mroSuppliesFaqs = [
+  { q: "What are industrial MRO supplies?", a: "Industrial MRO supplies are maintenance, repair, and operation items used to keep factories running, including consumables, spare parts, tools, bearings, belts, filters, fasteners, pneumatic parts, hydraulic parts, electrical parts, and workshop supplies." },
+  { q: "Can MAVORIX help source mixed MRO items from China?", a: "Yes. We help overseas buyers organize mixed item lists, search and compare suppliers, coordinate technical questions, and plan shipment consolidation when several Chinese suppliers are involved." },
+  { q: "What information should I prepare for MRO sourcing?", a: "Prepare item names, quantities, photos, part numbers, model numbers, nameplates, dimensions, drawings, machine application, destination country, and any previous supplier links or quotations." },
+  { q: "Can you verify MRO suppliers?", a: "Yes. We can review supplier identity, product focus, quotation clarity, communication quality, export experience, and basic risk signals before payment." },
+  { q: "Do you support factory spare parts and urgent replacement items?", a: "Yes, when the parts can be identified with enough information. For urgent items, clear photos, nameplates, dimensions, samples, or drawings are especially important." },
+  { q: "Can MRO orders be consolidated?", a: "Yes. Mixed MRO orders from multiple suppliers can often be consolidated to improve packing control, documentation, and shipment coordination." }
+];
+
+const packagingIndustryFaqs = [
+  { q: "What packaging machine parts can you help source from China?", a: "We can help source conveyor parts, filling parts, sealing equipment parts, labeling machine parts, rollers, belts, guide rails, sensors, bearings, nozzles, pneumatic parts, electrical parts, and packaging supplies." },
+  { q: "Can you support packaging equipment MRO sourcing?", a: "Yes. We support packaging machine MRO sourcing by clarifying part details, comparing suppliers, checking quotation risks, coordinating inspection, and supporting mixed-item consolidation." },
+  { q: "What information is needed for packaging machine spare parts?", a: "Useful information includes machine model, part photos, installed position, nameplate, dimensions, voltage, material, function, product handled, quantity, and any old supplier or part number." },
+  { q: "Can you verify packaging machine spare parts suppliers?", a: "Yes. We can help review supplier identity, product focus, communication quality, quotation clarity, evidence, packing notes, and practical sourcing risks before payment." },
+  { q: "Do you manufacture packaging machines?", a: "No. MAVORIX INDUSTRIAL is a sourcing and procurement support partner. We help buyers source, verify, compare, coordinate, and consolidate suppliers from China." },
+  { q: "Can several packaging suppliers be consolidated into one shipment?", a: "Yes. When buyers purchase packaging parts, MRO supplies, packaging materials, and factory spare parts from different suppliers, we can help coordinate shipment consolidation." }
 ];
