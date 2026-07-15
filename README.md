@@ -1,29 +1,67 @@
 # MAVORIX INDUSTRIAL
 
-Modern Next.js website for **MAVORIX INDUSTRIAL — Your Industrial Sourcing Partner in China**.
+Modern Next.js website for **MAVORIX INDUSTRIAL - Your Industrial Sourcing Partner in China**.
 
-This project is designed for GitHub + Vercel deployment. It does not use WordPress, Astra, SiteGround static upload, a database, or a complex CMS.
+The site is built for GitHub + Vercel deployment, Google SEO, AI/GEO-readable content, multilingual expansion, and long-term industrial B2B lead generation. It does not use WordPress, Astra, SiteGround static upload logic, a database, or a complex CMS in the current version.
+
+Production domain in code:
+
+```text
+https://www.mavorixindustrial.com
+```
+
+## Documentation For Future Codex Sessions
+
+- `AGENTS.md`: operating rules for Codex and future coding agents.
+- `PROJECT_CONTEXT.md`: project background, current state, architecture decisions, known issues, and next priorities.
+- `SETUP_MAC.md`: Apple Silicon Mac mini setup and migration guide.
+- `docs/weekly-seo-content-workflow.md`: weekly SEO/GEO content automation notes.
+
+Read these before making larger changes.
 
 ## Tech Stack
 
 - Next.js App Router
+- React
 - TypeScript
 - Tailwind CSS
-- Local data files for services, industries, countries, and navigation
+- Local TypeScript data files
 - Local Markdown blog content in `content/en/blog`
 - Next.js Metadata API
 - JSON-LD schema helpers
 - Dynamic sitemap and robots routes
 - Locale route structure: `/en/`, `/fr/`, `/es/`, `/ru/`, `/ar/`
 
-## Local Development
+## Main Directories
+
+- `app/`: pages, layouts, sitemap, robots, global CSS.
+- `components/`: layout, section, card, and UI components.
+- `content/en/blog/`: English Markdown blog articles.
+- `data/`: site settings, services, industries, countries, navigation, translations, SEO planning data.
+- `lib/`: SEO, schema, Markdown parsing, and i18n helpers.
+- `public/`: static images, logos, favicon, and Google verification file.
+- `scripts/`: SEO planning and article generation scripts.
+- `.github/workflows/`: GitHub Actions automation.
+
+## Install
 
 ```bash
 npm install
+```
+
+The repository currently has no `package-lock.json`; the GitHub workflow uses `npm install`.
+
+## Start Development
+
+```bash
 npm run dev
 ```
 
-Open `http://localhost:3000/en/`.
+Open:
+
+```text
+http://localhost:3000/en/
+```
 
 ## Build
 
@@ -31,52 +69,150 @@ Open `http://localhost:3000/en/`.
 npm run build
 ```
 
-## Vercel Deployment
+## Lint / Type Check
 
-1. Push this folder to a GitHub repository named `mavorix-industrial`.
-2. In Vercel, choose **Add New Project**.
-3. Import the GitHub repository.
-4. Framework preset: **Next.js**.
-5. Build command: `npm run build`.
-6. Output directory: keep the Vercel default for Next.js.
-7. Deploy.
+```bash
+npm run lint
+```
 
-## Bind `mavorixindustrial.com`
+This currently runs:
 
-1. In Vercel project settings, open **Domains**.
-2. Add `mavorixindustrial.com` and optionally `www.mavorixindustrial.com`.
-3. Follow Vercel's DNS instructions at your domain registrar.
-4. Set the preferred canonical domain in Vercel.
-5. Keep `metadataBase` and `site.url` as `https://mavorixindustrial.com`.
+```bash
+tsc --noEmit
+```
 
-## Change WhatsApp and Email
+## Tests
 
-Edit `data/site.ts`:
+There is currently no separate `npm test` script. Use `npm run lint` and `npm run build` as required checks unless a test script is added later.
 
-- `email`
-- `whatsappUrl`
+## SEO Automation
 
-## Add a Service Page
+Plan SEO topics:
 
-Add an item to `data/services.ts`. The dynamic route `/[locale]/services/[slug]/` will generate the page, metadata, FAQ, internal links, and sitemap entry.
+```bash
+npm run seo:plan
+```
 
-## Add an Industry Page
+Generate one planned article:
 
-Add an item to `data/industries.ts`. The dynamic route `/[locale]/industries/[slug]/` will generate the page and sitemap entry.
+```bash
+npm run seo:generate
+```
 
-## Add a Country Page
+Generate multiple planned articles:
 
-Add an item to `data/countries.ts`. The dynamic route `/[locale]/countries/[slug]/` will generate the country-focused page and sitemap entry.
+```bash
+npm run seo:generate -- --count 2
+```
 
-## Add a Blog Article
+Generated articles are written to `content/en/blog/`; SEO queue/log data is under `data/seo/`.
 
-Create a Markdown file in `content/en/blog/`:
+## Deployment
+
+Deployment is handled by Vercel connected to the GitHub repository.
+
+Recommended Vercel settings:
+
+- Framework preset: Next.js
+- Install command: default or `npm install`
+- Build command: `npm run build`
+- Output directory: keep the default Next.js output
+
+Do not set the output directory to `public`.
+
+After pushing to `main`, Vercel should deploy automatically.
+
+## Domain
+
+Canonical domain in code:
+
+```text
+https://www.mavorixindustrial.com
+```
+
+The domain is configured in `data/site.ts`, sitemap, robots, and SEO helpers through shared site settings.
+
+Vercel DNS/domain settings are managed outside this repository.
+
+## Contact Information
+
+Central configuration:
+
+```text
+data/site.ts
+```
+
+Current values:
+
+```text
+Email: mavorixindustrial@163.com
+Phone: +8613967842747
+WhatsApp URL: https://wa.me/8613967842747
+```
+
+Update contact details only through the shared site configuration unless a component has a verified special case.
+
+## Add A Service Page
+
+Add an item to:
+
+```text
+data/services.ts
+```
+
+The dynamic route generates:
+
+```text
+/[locale]/services/[slug]/
+```
+
+## Add An Industry Page
+
+Add an item to:
+
+```text
+data/industries.ts
+```
+
+The dynamic route generates:
+
+```text
+/[locale]/industries/[slug]/
+```
+
+## Add A Country Page
+
+Add an item to:
+
+```text
+data/countries.ts
+```
+
+The dynamic route generates:
+
+```text
+/[locale]/countries/[slug]/
+```
+
+## Add A Blog Article
+
+Create a Markdown file in:
+
+```text
+content/en/blog/
+```
+
+Example:
 
 ```md
 ---
 title: "Article Title"
+metaTitle: "SEO Title | MAVORIX"
 description: "SEO meta description."
-date: "2025-05-28"
+date: "2026-07-15"
+category: "Industrial Sourcing"
+slug: "article-slug"
+language: "en"
 ---
 
 ## Main section
@@ -87,27 +223,59 @@ Article content.
 Answer.
 ```
 
-The route `/en/blog/your-file-name/` will be generated automatically.
+The route is generated automatically:
 
-## Add Small-Language Pages
+```text
+/en/blog/article-slug/
+```
 
-The route structure already supports `/fr/`, `/es/`, `/ru/`, and `/ar/`. First-version pages reuse the same data model so language expansion can be done gradually without automatic translation plugins. Add localized data/content files when each language is ready.
+Blog pages are included in `sitemap.xml` through `getBlogSlugs()`.
 
-## SEO and Sitemap
+## Multilingual Notes
 
-- Page metadata is handled with the Next.js Metadata API.
-- Canonical and hreflang alternates are generated in `lib/seo.ts`.
-- Sitemap is generated at `/sitemap.xml` from services, industries, countries, blog posts, and locale paths.
-- Robots file is generated at `/robots.txt`.
-- JSON-LD schema helpers are in `lib/schema.ts`.
+The route structure supports:
 
-## Content Strategy
+```text
+/en/
+/fr/
+/es/
+/ru/
+/ar/
+```
 
-The site is structured for industrial SEO and GEO / AI search optimization:
+Do not fake translations. If a detailed page is not translated, show an English-version notice or keep it clearly English rather than pretending it is localized.
 
-- Definition-style sections
-- FAQ blocks
-- Process sections
-- Who-this-is-for content
-- Risk and solution framing
-- Internal links between services, industries, countries, blog, and contact pages
+Arabic pages should keep basic RTL support where applicable.
+
+## SEO And Sitemap
+
+- Metadata is generated with the Next.js Metadata API.
+- Canonical and hreflang logic is in `lib/seo.ts`.
+- Sitemap is generated by `app/sitemap.ts`.
+- Robots is generated by `app/robots.ts`.
+- JSON-LD helpers are in `lib/schema.tsx`.
+
+Check:
+
+```text
+https://www.mavorixindustrial.com/sitemap.xml
+https://www.mavorixindustrial.com/robots.txt
+```
+
+## Migration To Mac
+
+Use:
+
+```text
+SETUP_MAC.md
+```
+
+Important migration rule: do not copy `node_modules/`, `.next/`, logs, caches, or `.env.local` from Windows. Clone from GitHub and run `npm install` on the Mac.
+
+## Safety Rules
+
+- Do not commit secrets, passwords, tokens, private keys, or real API keys.
+- Do not invent customer cases, certifications, offices, or manufacturing claims.
+- Do not add a database or CMS unless explicitly requested.
+- Do not remove static assets without checking references.
+- Run `npm run lint` and `npm run build` after changes.
