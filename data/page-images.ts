@@ -231,5 +231,17 @@ export const blogImages: Record<string, PageImage> = {
     alt: "75x2000 industrial belt sander specifications for metal finishing",
     width: 1200,
     height: 630
+  },
+  "how-latin-american-factories-source-industrial-spare-parts-from-china": {
+    src: "/images/industries/factory-spare-parts-hero.webp",
+    alt: "Industrial spare parts sourcing for Latin American factories including machinery parts, MRO items, and replacement components",
+    width: 1600,
+    height: 900
+  },
+  "industrial-spare-parts-sourcing-for-balkan-eastern-european-manufacturers": {
+    src: "/images/service-mro-sourcing.webp",
+    alt: "MRO and industrial spare parts sourcing support for Balkan and Eastern European manufacturers",
+    width: 1200,
+    height: 800
   }
 };
