@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { sendContactNotification } from "@/lib/contact-mail";
 
 type ContactRequest = {
+  [key: string]: unknown;
   locale?: string;
   name?: string;
   company?: string;
@@ -20,6 +21,15 @@ function field(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
 }
 
+function fieldFrom(body: ContactRequest, ...keys: string[]) {
+  for (const key of keys) {
+    const value = field(body[key]);
+    if (value) return value;
+  }
+
+  return "";
+}
+
 function isEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
@@ -33,15 +43,15 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Invalid request body." }, { status: 400 });
   }
 
-  const name = field(body.name);
-  const company = field(body.company);
-  const country = field(body.country);
-  const email = field(body.email);
-  const whatsapp = field(body.whatsapp);
-  const quantity = field(body.quantity);
-  const targetMarket = field(body.targetMarket);
-  const requirement = field(body.requirement);
-  const message = field(body.message);
+  const name = fieldFrom(body, "name", "nombre", "nom");
+  const company = fieldFrom(body, "company", "empresa", "societe");
+  const country = fieldFrom(body, "country", "pais", "pays");
+  const email = fieldFrom(body, "email");
+  const whatsapp = fieldFrom(body, "whatsapp");
+  const quantity = fieldFrom(body, "quantity", "cantidad", "quantite");
+  const targetMarket = fieldFrom(body, "targetMarket", "mercadoObjetivo", "mercado-objetivo", "marcheCible", "marche-cible");
+  const requirement = fieldFrom(body, "requirement", "requisito", "besoin");
+  const message = fieldFrom(body, "message", "mensaje");
 
   if (!name) {
     return NextResponse.json({ ok: false, error: "Name is required." }, { status: 400 });

@@ -46,6 +46,8 @@ export const coreCopy: Record<Locale, {
     message: string;
     submit: string;
     whatsapp: string;
+    successMessage?: string;
+    errorMessage?: string;
     checklistTitle: string;
     contactDirectTitle?: string;
     checklist: string[];
@@ -129,6 +131,8 @@ export const coreCopy: Record<Locale, {
       message: "Message",
       submit: "Send Inquiry",
       whatsapp: "Contact on WhatsApp",
+      successMessage: "Thank you. Your inquiry has been submitted. We will reply as soon as possible.",
+      errorMessage: "Sorry, the inquiry could not be sent. Please contact us by email or WhatsApp.",
       checklistTitle: "Inquiry checklist",
       contactDirectTitle: "Contact us directly",
       checklist: ["Product name, photos, drawings, or sample details", "Quantity and expected repeat demand", "Material, size, technical standard, or application", "Target price or current quotation if available", "Destination country and target market", "Supplier information, website, or quotation if available", "Expected delivery time and packing needs"],
@@ -315,6 +319,8 @@ coreCopy.es = {
     message: "Mensaje",
     submit: "Enviar consulta",
     whatsapp: "Contactar por WhatsApp",
+    successMessage: "Gracias. Su consulta ha sido enviada. Le responderemos lo antes posible.",
+    errorMessage: "Lo sentimos, no se pudo enviar la consulta. Por favor contactenos por email o WhatsApp.",
     checklistTitle: "Lista para la consulta",
     contactDirectTitle: "Contacta con nosotros directamente",
     checklist: ["Nombre del producto, fotos, planos o detalles de muestra", "Cantidad y demanda repetida esperada", "Material, tamano, norma tecnica o aplicacion", "Pais de destino y mercado objetivo", "Plazo preferido y requisitos de embalaje"],
