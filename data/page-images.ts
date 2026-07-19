@@ -172,6 +172,12 @@ export const blogImages: Record<string, PageImage> = {
     width: 1200,
     height: 800
   },
+  "how-to-source-industrial-hand-tools-from-china": {
+    src: "/images/service-mro-sourcing.webp",
+    alt: "Industrial hand tools sourcing from China for factory maintenance and MRO procurement",
+    width: 1200,
+    height: 800
+  },
   "reduce-risks-buying-industrial-equipment-from-china": {
     src: "/images/service-quality-inspection.webp",
     alt: "Industrial equipment quality inspection and risk control before shipment from China",

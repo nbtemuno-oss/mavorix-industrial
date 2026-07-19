@@ -96,7 +96,7 @@ const blogGroups = [
   {
     title: "Factory Consumables and MRO",
     description: "Practical notes for maintenance teams and factory buyers sourcing consumables, spare parts, and mixed MRO items from China.",
-    slugs: ["source-75x2000-industrial-belt-sander-china", "mro-sourcing-from-china-guide", "factory-consumables-and-mro-supplies-from-china", "identify-industrial-spare-parts-without-part-number"]
+    slugs: ["how-to-source-industrial-hand-tools-from-china", "source-75x2000-industrial-belt-sander-china", "mro-sourcing-from-china-guide", "factory-consumables-and-mro-supplies-from-china", "identify-industrial-spare-parts-without-part-number"]
   },
   {
     title: "Supplier Verification",
