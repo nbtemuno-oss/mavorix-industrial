@@ -43,7 +43,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <PageHero badge={copy.badge} title={copy.title} description={copy.description} breadcrumbs={[{ label: t(locale).nav.home, href: `/${locale}/` }, { label: t(locale).nav.contact, href: `/${locale}/contact/` }]} cta={false} />
       {locale === "en" ? <ContactIntro /> : null}
       <Container className="grid gap-8 py-16 lg:grid-cols-[1.1fr_.9fr]">
-        <form action={`mailto:${site.email}`} method="post" encType="text/plain" className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+        <form action={`mailto:${site.contactFormNotifyEmail}`} method="post" encType="text/plain" className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
           <div className="grid gap-4 md:grid-cols-2">
             {copy.fields.map((label) => (
               <label key={label} className="text-sm font-bold text-slate-700">{label}<input name={label.toLowerCase().replaceAll(" ", "-")} className="mt-2 h-12 w-full rounded-md border border-slate-300 px-3 outline-none focus:border-signal" /></label>

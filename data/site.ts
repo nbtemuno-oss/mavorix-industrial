@@ -4,6 +4,7 @@ export const site = {
   domain: "www.mavorixindustrial.com",
   url: "https://www.mavorixindustrial.com",
   email: "michael@mavorixindustrial.com",
+  contactFormNotifyEmail: "mavorixindustrial@163.com",
   phone: "+8613967842747",
   whatsappUrl: "https://wa.me/8613967842747",
   locales: ["en", "fr", "es", "ru", "ar"] as const,
