@@ -93,7 +93,7 @@ export const coreCopy: Record<Locale, {
         { q: "Are you a trading company or sourcing agent?", a: "MAVORIX INDUSTRIAL is a China-based industrial sourcing partner. We help overseas buyers identify, verify, coordinate, and follow up with suitable suppliers." },
         { q: "What industrial products can you help source?", a: "We focus on machinery, OEM parts, MRO supplies, industrial spare parts, agricultural equipment parts, packaging machinery parts, metal parts, and factory maintenance products." },
         { q: "Can you verify Chinese suppliers?", a: "Yes. We can help screen supplier identity, communication quality, production capability signals, quotation clarity, and order execution risk." },
-        { q: "How can I send an inquiry?", a: "Use the contact form, email mavorixindustrial@163.com, or send a WhatsApp message to +8613967842747." }
+        { q: "How can I send an inquiry?", a: "Use the contact form, email michael@mavorixindustrial.com, or send a WhatsApp message to +8613967842747." }
       ]
     },
     cta: { title: "Need Industrial Sourcing Support from China?", text: "Send your product details, target quantity, photos, drawings, or supplier links. We will help review the sourcing path and next steps.", button: "Send Your Requirement", whatsapp: "WhatsApp" },
@@ -183,7 +183,7 @@ export const coreCopy: Record<Locale, {
         { q: "Etes-vous une societe de trading ou un agent de sourcing ?", a: "MAVORIX INDUSTRIAL est un partenaire de sourcing industriel base en Chine pour verifier, coordonner et suivre les fournisseurs." },
         { q: "Quels produits pouvez-vous sourcer ?", a: "Machines, pieces OEM, fournitures MRO, pieces detachees, pieces agricoles, emballage, metal et maintenance usine." },
         { q: "Pouvez-vous verifier les fournisseurs chinois ?", a: "Oui, nous aidons a verifier l'identite, la capacite, la communication et les risques avant commande." },
-        { q: "Comment envoyer une demande ?", a: "Utilisez le formulaire, l'email mavorixindustrial@163.com ou WhatsApp +8613967842747." }
+        { q: "Comment envoyer une demande ?", a: "Utilisez le formulaire, l'email michael@mavorixindustrial.com ou WhatsApp +8613967842747." }
       ]
     },
     cta: { title: "Besoin de support de sourcing industriel depuis la Chine ?", text: "Envoyez details produit, quantite, photos, plans ou liens fournisseurs. Nous examinerons la prochaine etape.", button: "Envoyer votre besoin", whatsapp: "WhatsApp" },
@@ -277,7 +277,7 @@ coreCopy.es = {
       { q: "Son una empresa comercial o agente de sourcing?", a: "MAVORIX INDUSTRIAL es un socio de sourcing industrial en China para verificar, coordinar y dar seguimiento a proveedores." },
       { q: "Que productos pueden abastecer?", a: "Maquinaria, piezas OEM, MRO, repuestos industriales, piezas agricolas, embalaje, metal y mantenimiento de fabrica." },
       { q: "Pueden verificar proveedores chinos?", a: "Si, revisamos identidad, capacidad, comunicacion, claridad de cotizacion y riesgos." },
-      { q: "Como envio una consulta?", a: "Use el formulario, email mavorixindustrial@163.com o WhatsApp +8613967842747." }
+      { q: "Como envio una consulta?", a: "Use el formulario, email michael@mavorixindustrial.com o WhatsApp +8613967842747." }
     ]
   },
   cta: { title: "Necesita soporte de sourcing industrial desde China?", text: "Envie detalles del producto, cantidad, fotos, planos o enlaces de proveedores. Revisaremos los siguientes pasos.", button: "Enviar requisito", whatsapp: "WhatsApp" },
@@ -369,7 +369,7 @@ coreCopy.ru = {
       { q: "Вы торговая компания или агент по сорсингу?", a: "MAVORIX INDUSTRIAL - партнер по промышленному сорсингу в Китае для проверки, координации и сопровождения поставщиков." },
       { q: "Какие товары вы помогаете закупать?", a: "Оборудование, OEM детали, MRO материалы, промышленные запчасти, детали сельхозтехники, упаковочное оборудование, металл и заводские расходники." },
       { q: "Можете проверить китайского поставщика?", a: "Да. Мы помогаем проверить идентичность, сигналы возможностей, качество коммуникации, ясность предложения и риски исполнения." },
-      { q: "Как отправить запрос?", a: "Через форму, email mavorixindustrial@163.com или WhatsApp +8613967842747." }
+      { q: "Как отправить запрос?", a: "Через форму, email michael@mavorixindustrial.com или WhatsApp +8613967842747." }
     ]
   },
   cta: { title: "Нужна поддержка промышленного сорсинга из Китая?", text: "Отправьте детали продукта, количество, фотографии, чертежи или ссылки на поставщиков. Мы оценим путь закупки и следующие шаги.", button: "Отправить требование", whatsapp: "WhatsApp" },
@@ -460,7 +460,7 @@ coreCopy.ar = {
       { q: "هل أنتم شركة تجارية أم شريك توريد؟", a: "MAVORIX INDUSTRIAL شريك توريد صناعي في الصين يساعد في التحقق والتنسيق والمتابعة مع الموردين." },
       { q: "ما المنتجات التي يمكنكم المساعدة في توريدها؟", a: "المعدات، قطع OEM، مستلزمات MRO، قطع الغيار، قطع المعدات الزراعية، آلات التعبئة، المعادن ومستلزمات المصانع." },
       { q: "هل يمكنكم التحقق من الموردين الصينيين؟", a: "نعم، نساعد في مراجعة هوية المورد وقدرته وجودة التواصل ووضوح العرض ومخاطر التنفيذ." },
-      { q: "كيف أرسل استفسارا؟", a: "عبر النموذج أو البريد mavorixindustrial@163.com أو واتساب +8613967842747." }
+      { q: "كيف أرسل استفسارا؟", a: "عبر النموذج أو البريد michael@mavorixindustrial.com أو واتساب +8613967842747." }
     ]
   },
   cta: { title: "هل تحتاج إلى دعم توريد صناعي من الصين؟", text: "أرسل تفاصيل المنتج والكمية والصور والرسومات أو روابط الموردين. سنراجع مسار التوريد والخطوات التالية.", button: "أرسل متطلباتك", whatsapp: "واتساب" },

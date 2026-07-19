@@ -145,7 +145,7 @@ data/site.ts
 Current values:
 
 ```text
-Email: mavorixindustrial@163.com
+Email: michael@mavorixindustrial.com
 Phone: +8613967842747
 WhatsApp URL: https://wa.me/8613967842747
 ```

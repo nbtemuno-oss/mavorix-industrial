@@ -119,7 +119,7 @@ This support can be useful when Latin American buyers need to compare Chinese su
 
 Send your spare-part list, photos, drawings, nameplates, supplier links, target quantity, urgency, and destination country through the [contact page](/en/contact/).
 
-Email: mavorixindustrial@163.com  
+Email: michael@mavorixindustrial.com  
 WhatsApp / Phone: +86-13967842747
 
 ### FAQ: Can MAVORIX find every industrial spare part from China?

@@ -126,7 +126,7 @@ For MRO buyers, related items can also be grouped through [MRO sourcing from Chi
 
 For electrical, pneumatic, hydraulic, motor, valve, bearing, sensor, and reducer items, see [Electrical and Mechanical Parts](/en/industries/electrical-mechanical-parts/). If you need support comparing suppliers or confirming quotation scope, send the available photos, drawings, nameplates, model numbers, quantity, destination country, and existing supplier links through the [contact page](/en/contact/).
 
-Email: mavorixindustrial@163.com  
+Email: michael@mavorixindustrial.com  
 WhatsApp / Phone: +86-13967842747
 
 ### FAQ: Can every industrial spare part be identified from photos?

@@ -107,7 +107,7 @@ For spare parts and consumables, also check future availability through [industr
 
 If you are comparing several Chinese supplier quotations, send the quotations, product details, drawings, photos, model numbers, target quantity, destination country, and any questions to MAVORIX INDUSTRIAL through the [contact page](/en/contact/). The team can help organize a technical and commercial comparison before you choose a supplier.
 
-Email: mavorixindustrial@163.com  
+Email: michael@mavorixindustrial.com  
 WhatsApp / Phone: +86-13967842747
 
 ### FAQ: Should I choose the lowest quotation?

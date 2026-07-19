@@ -104,7 +104,7 @@ For Balkan and Eastern European manufacturers, this can be useful when local pro
 
 Send your spare-part list, photos, nameplates, drawings, dimensions, quantity, urgency, destination country, and supplier links through the [contact page](/en/contact/).
 
-Email: mavorixindustrial@163.com  
+Email: michael@mavorixindustrial.com  
 WhatsApp / Phone: +86-13967842747
 
 ### FAQ: Can MAVORIX support industrial spare parts sourcing for Serbia, Romania, and Bulgaria?

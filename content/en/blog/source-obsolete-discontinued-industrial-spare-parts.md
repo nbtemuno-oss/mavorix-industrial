@@ -114,7 +114,7 @@ For [Factory Spare Parts](/en/industries/factory-spare-parts/) programs, group o
 
 Send original manufacturer, exact part number, lifecycle information if available, photos, machine model, required quantity and whether repair, compatible replacement or retrofit is acceptable through the [contact page](/en/contact/). MAVORIX INDUSTRIAL can help review the sourcing path and coordinate practical next steps from China.
 
-Email: mavorixindustrial@163.com  
+Email: michael@mavorixindustrial.com  
 WhatsApp / Phone: +86-13967842747
 
 ### FAQ: What can I do when an industrial spare part is discontinued?

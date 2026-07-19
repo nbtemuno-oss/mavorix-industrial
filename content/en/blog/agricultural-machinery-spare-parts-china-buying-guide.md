@@ -128,7 +128,7 @@ Export packing matters because agricultural parts can be heavy, oily, sharp, mix
 
 Send machine model, engine model where relevant, part number, photos, dimensions, quantity and destination country through the [contact page](/en/contact/). MAVORIX INDUSTRIAL can help review the sourcing path, compare suppliers and coordinate the next steps from China.
 
-Email: mavorixindustrial@163.com  
+Email: michael@mavorixindustrial.com  
 WhatsApp / Phone: +86-13967842747
 
 ### FAQ: How do I buy agricultural machinery spare parts from China?

@@ -98,7 +98,7 @@ Acceptance should also identify who approves samples and what evidence is enough
 
 If you are preparing an injection molding equipment procurement checklist, send product drawings, material, part weight, expected output, mold information, machine quotations, auxiliary equipment list, required quantity, and destination country to MAVORIX INDUSTRIAL through the [contact page](/en/contact/).
 
-Email: mavorixindustrial@163.com  
+Email: michael@mavorixindustrial.com  
 WhatsApp / Phone: +86-13967842747
 
 ### FAQ: Can one machine size be recommended from product weight alone?

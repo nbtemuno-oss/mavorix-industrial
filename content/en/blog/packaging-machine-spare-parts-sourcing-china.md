@@ -127,7 +127,7 @@ For China-side checks before shipment, buyers can use [quality inspection suppor
 
 Send machine brand/model, part photos, nameplate, old part number, dimensions, quantity and destination country to MAVORIX INDUSTRIAL through the [contact page](/en/contact/). We can help review the sourcing path, compare supplier options and coordinate the next steps from China.
 
-Email: mavorixindustrial@163.com  
+Email: michael@mavorixindustrial.com  
 WhatsApp / Phone: +86-13967842747
 
 ### FAQ: How do I source packaging machine spare parts from China?

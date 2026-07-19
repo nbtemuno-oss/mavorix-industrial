@@ -123,7 +123,7 @@ The exact Vercel project settings must be confirmed in the Vercel dashboard.
 Current contact details in code:
 
 ```text
-Email: mavorixindustrial@163.com
+Email: michael@mavorixindustrial.com
 Phone/WhatsApp display: +8613967842747
 WhatsApp URL: https://wa.me/8613967842747
 ```
