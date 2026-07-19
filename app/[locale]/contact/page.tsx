@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Mail, MessageCircle } from "lucide-react";
+import { ContactForm } from "@/components/contact/ContactForm";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { PageHero } from "@/components/sections/PageHero";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { IndustrialImage } from "@/components/ui/IndustrialImage";
 import { pageImages } from "@/data/page-images";
@@ -43,19 +43,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <PageHero badge={copy.badge} title={copy.title} description={copy.description} breadcrumbs={[{ label: t(locale).nav.home, href: `/${locale}/` }, { label: t(locale).nav.contact, href: `/${locale}/contact/` }]} cta={false} />
       {locale === "en" ? <ContactIntro /> : null}
       <Container className="grid gap-8 py-16 lg:grid-cols-[1.1fr_.9fr]">
-        <form action={`mailto:${site.contactFormNotifyEmail}`} method="post" encType="text/plain" className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-          <div className="grid gap-4 md:grid-cols-2">
-            {copy.fields.map((label) => (
-              <label key={label} className="text-sm font-bold text-slate-700">{label}<input name={label.toLowerCase().replaceAll(" ", "-")} className="mt-2 h-12 w-full rounded-md border border-slate-300 px-3 outline-none focus:border-signal" /></label>
-            ))}
-            <label className="text-sm font-bold text-slate-700 md:col-span-2">{copy.requirement}<input name="requirement" className="mt-2 h-12 w-full rounded-md border border-slate-300 px-3 outline-none focus:border-signal" /></label>
-            <label className="text-sm font-bold text-slate-700 md:col-span-2">{copy.message}<textarea name="message" rows={6} className="mt-2 w-full rounded-md border border-slate-300 px-3 py-3 outline-none focus:border-signal" /></label>
-          </div>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <button type="submit" className="min-h-11 rounded-md bg-signal px-5 py-3 text-sm font-black text-white hover:bg-orange-600">{copy.submit}</button>
-            <Button href={site.whatsappUrl} variant="dark"><MessageCircle className="mr-2" size={17} /> {copy.whatsapp}</Button>
-          </div>
-        </form>
+        <ContactForm copy={copy} locale={locale} whatsappUrl={site.whatsappUrl} />
         <aside className="overflow-hidden rounded-lg bg-navy text-white">
           <IndustrialImage src={pageImages.contact.src} alt={pageImages.contact.alt} className="h-72 rounded-none" sizes="(min-width: 1024px) 40vw, 100vw" />
           <div className="p-7">
