@@ -30,5 +30,16 @@ export const publishedProducts: PublishedProduct[] = [
       "/images/products/electrical-components/i-autoc-ksi480d80-l-068/i-autoc-ksi480d80-l-068-80a-solid-state-relay-thumbnail.webp",
     imageAlt: "i-Autoc KSI480D80-L(068) 80A solid state relay",
     categorySlugs: ["electrical-mechanical-parts"]
+  },
+  {
+    slug: "rexroth-4we6d6x-ofeg24n9k4-directional-control-valve",
+    title: "Rexroth 4WE6D6X/OFEG24N9K4 Directional Control Valve",
+    description:
+      "Hydraulic directional control valve, MNR R900567512, with 350 bar pressure marking for industrial hydraulic spare parts sourcing.",
+    path: "/en/products/hydraulic-components/rexroth-4we6d6x-ofeg24n9k4-directional-control-valve/",
+    image:
+      "/images/products/hydraulic-components/rexroth-4we6d6x-ofeg24n9k4/rexroth-4we6d6x-ofeg24n9k4-thumbnail.webp",
+    imageAlt: "Rexroth 4WE6D6X/OFEG24N9K4 hydraulic directional control valves in packaging",
+    categorySlugs: ["industrial-machinery", "factory-spare-parts"]
   }
 ];

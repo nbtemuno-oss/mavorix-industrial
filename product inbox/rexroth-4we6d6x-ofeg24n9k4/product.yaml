@@ -1,0 +1,69 @@
+status: approved
+publish_status: published
+
+product_name: Rexroth 4WE6D6X/OFEG24N9K4 Directional Control Valve
+short_name: Rexroth 4WE6D6X/OFEG24N9K4
+slug: rexroth-4we6d6x-ofeg24n9k4-directional-control-valve
+
+brand: Rexroth
+model: 4WE6D6X/OFEG24N9K4
+material_number: R900567512
+
+part_type: hydraulic_directional_control_valve
+equipment_category:
+  - Industrial Hydraulic Components
+  - Hydraulic Valves
+  - Directional Control Valves
+
+confirmed_specs:
+  - label: Brand
+    value: Rexroth
+    source: image_confirmed
+  - label: Model
+    value: 4WE6D6X/OFEG24N9K4
+    source: image_confirmed
+  - label: Material Number
+    value: R900567512
+    source: image_confirmed
+  - label: Maximum Pressure Marking
+    value: 350 bar
+    source: image_confirmed
+  - label: Product Type
+    value: Solenoid-operated directional spool valve
+    source: image_confirmed
+  - label: Visible Valve Symbol
+    value: Hydraulic directional valve symbol visible on the label
+    source: image_confirmed
+  - label: Country Marking
+    value: Made in China
+    source: image_confirmed
+
+unconfirmed_fields:
+  - Coil voltage
+  - Rated flow
+  - Nominal size details
+  - Electrical connector specification
+  - Protection class
+  - Installation dimensions
+  - Authenticity or authorized-distributor status
+
+internal_notes:
+  - coil_voltage_requires_manual_confirmation
+  - "The model contains EG24, but coil voltage must not be shown as confirmed unless verified from the coil label or manufacturer documentation."
+  - "One source image contains a mixed batch of multiple hydraulic valve models and must not be described as only this exact model."
+
+compatibility_status: verification_required
+image_content_editing: manual_only
+manual_image_review_required: false
+
+seo:
+  title: Rexroth 4WE6D6X/OFEG24N9K4 Directional Valve | MAVORIX
+  meta_description: Source the Rexroth 4WE6D6X/OFEG24N9K4 hydraulic directional control valve, MNR R900567512, with 350 bar pressure marking. Send the old valve label and coil details for verification.
+  primary_keyword: Rexroth 4WE6D6X/OFEG24N9K4
+  secondary_keywords:
+    - R900567512
+    - Rexroth directional control valve
+    - hydraulic directional valve
+    - solenoid operated directional valve
+    - Rexroth hydraulic valve replacement
+    - industrial hydraulic spare parts

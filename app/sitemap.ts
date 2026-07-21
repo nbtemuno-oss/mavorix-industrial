@@ -56,6 +56,14 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/solid state relay 80A/product.yaml"
     ];
   }
+  if (path.startsWith("products/hydraulic-components/")) {
+    return [
+      ...common,
+      "app/[locale]/products/hydraulic-components/[slug]/page.tsx",
+      "data/products.ts",
+      "product inbox/rexroth-4we6d6x-ofeg24n9k4/product.yaml"
+    ];
+  }
   if (path.startsWith("blog/")) {
     const slug = path.replace("blog/", "");
     return [...common, "app/[locale]/blog/[slug]/page.tsx", `content/en/blog/${slug}.md`];
