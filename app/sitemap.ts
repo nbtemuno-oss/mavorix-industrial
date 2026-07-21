@@ -6,7 +6,7 @@ import { industries } from "@/data/industries";
 import { publishedProducts } from "@/data/products";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
-import { getBlogSlugs } from "@/lib/mdx";
+import { getPublishedBlogSlugs } from "@/lib/mdx";
 
 function getLastModified(files: string[]): Date {
   const existingFiles = files.filter((file) => existsSync(file));
@@ -89,7 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...industries.map((item) => `industries/${item.slug}`),
     ...countries.map((item) => `countries/${item.slug}`),
     ...publishedProducts.map((item) => item.path.replace(/^\/en\//, "").replace(/\/$/, "")),
-    ...getBlogSlugs().map((slug) => `blog/${slug}`)
+    ...getPublishedBlogSlugs().map((slug) => `blog/${slug}`)
   ];
   const enUrls = [...staticPaths, ...detailPaths].map((path) =>
     sitemapEntry("en", path, path === "" ? 1 : path.includes("/") ? 0.72 : 0.82, path.includes("blog/") ? "monthly" : "weekly")

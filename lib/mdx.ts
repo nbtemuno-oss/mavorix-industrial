@@ -7,6 +7,7 @@ export type BlogPost = {
   metaTitle?: string;
   description: string;
   date: string;
+  draft: boolean;
   body: string;
   faqs: { q: string; a: string }[];
 };
@@ -29,23 +30,42 @@ export function getBlogSlugs() {
   return fs.readdirSync(blogDir).filter((file) => file.endsWith(".md")).map((file) => file.replace(/\.md$/, ""));
 }
 
+function extractFaqs(body: string) {
+  const prefixedFaqs = [...body.matchAll(/### FAQ: (.*?)\n([\s\S]*?)(?=\n### FAQ:|\n## |$)/g)];
+  if (prefixedFaqs.length) {
+    return prefixedFaqs.map((match) => ({ q: match[1].trim(), a: match[2].trim().replace(/\n+/g, " ") }));
+  }
+
+  const faqSection = body.match(/\n## FAQ\n([\s\S]*?)(?=\n## |$)/);
+  if (!faqSection) return [];
+
+  return [...faqSection[1].matchAll(/### (.*?)\n([\s\S]*?)(?=\n### |$)/g)].map((match) => ({
+    q: match[1].trim(),
+    a: match[2].trim().replace(/\n+/g, " ")
+  }));
+}
+
 export function getBlogPost(slug: string): BlogPost {
   const raw = fs.readFileSync(path.join(blogDir, `${slug}.md`), "utf8");
   const { meta, body } = parseFrontmatter(raw);
-  const faqMatches = [...body.matchAll(/### FAQ: (.*?)\n([\s\S]*?)(?=\n### FAQ:|\n## |$)/g)];
   return {
     slug,
     title: meta.title,
     metaTitle: meta.metaTitle,
     description: meta.description,
     date: meta.date || "2025-01-15",
+    draft: meta.draft === "true",
     body,
-    faqs: faqMatches.map((match) => ({ q: match[1].trim(), a: match[2].trim().replace(/\n+/g, " ") }))
+    faqs: extractFaqs(body)
   };
 }
 
-export function getAllBlogPosts() {
-  return getBlogSlugs().map(getBlogPost);
+export function getPublishedBlogSlugs() {
+  return getBlogSlugs().filter((slug) => !getBlogPost(slug).draft);
+}
+
+export function getAllBlogPosts({ includeDrafts = false }: { includeDrafts?: boolean } = {}) {
+  return getBlogSlugs().map(getBlogPost).filter((post) => includeDrafts || !post.draft);
 }
 
 export function markdownToHtml(markdown: string) {
@@ -59,16 +79,19 @@ export function markdownToHtml(markdown: string) {
     return `<div class="table-wrap"><table>${thead}${tbody}</table></div>`;
   });
 
-  return withTables
+  const withLists = withTables.replace(/((?:^- .*(?:\n|$))+)/gim, (block) => {
+    const items = block.trim().split("\n").map((line) => `<li>${line.replace(/^- /, "").trim()}</li>`).join("");
+    return `<ul>${items}</ul>`;
+  });
+
+  return withLists
     .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2">$1</a>')
     .replace(/^### (.*$)/gim, "<h3>$1</h3>")
     .replace(/^## (.*$)/gim, "<h2>$1</h2>")
-    .replace(/^\- (.*$)/gim, "<li>$1</li>")
-    .replace(/(<li>.*<\/li>)/gims, "<ul>$1</ul>")
     .split(/\n{2,}/)
     .map((block) => {
       const trimmedBlock = block.trim();
-      if (trimmedBlock.startsWith("<h") || trimmedBlock.startsWith("<ul") || trimmedBlock.startsWith("<div")) return trimmedBlock;
+      if (trimmedBlock.startsWith("<h") || trimmedBlock.startsWith("<ul") || trimmedBlock.startsWith("<div") || trimmedBlock.startsWith("<figure") || trimmedBlock.startsWith("<p")) return trimmedBlock;
       return `<p>${trimmedBlock.replace(/\n/g, " ")}</p>`;
     })
     .join("");

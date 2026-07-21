@@ -8,6 +8,7 @@ type SeoInput = {
   path: string;
   canonicalPath?: string;
   index?: boolean;
+  follow?: boolean;
   locale?: string;
   type?: "website" | "article";
   image?: {
@@ -18,7 +19,7 @@ type SeoInput = {
   };
 };
 
-export function seo({ title, description, path, canonicalPath, index = true, locale, type = "website", image = defaultOgImage }: SeoInput): Metadata {
+export function seo({ title, description, path, canonicalPath, index = true, follow = true, locale, type = "website", image = defaultOgImage }: SeoInput): Metadata {
   const pageLocale = locale ?? path.match(/^\/([a-z]{2})(?:\/|$)/)?.[1] ?? "en";
   const canonicalSource = canonicalPath ?? path;
   const canonical = `${site.url}${canonicalSource}`;
@@ -63,7 +64,7 @@ export function seo({ title, description, path, canonicalPath, index = true, loc
     },
     robots: {
       index,
-      follow: true
+      follow
     }
   };
 }

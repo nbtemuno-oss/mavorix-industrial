@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CTASection } from "@/components/sections/CTASection";
+import { FAQSection } from "@/components/sections/FAQSection";
 import { PageHero } from "@/components/sections/PageHero";
+import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { IndustrialImage } from "@/components/ui/IndustrialImage";
 import { blogImages, pageImages } from "@/data/page-images";
@@ -25,7 +27,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: post.description,
       path: `/${locale}/blog/${slug}/`,
       canonicalPath: `/en/blog/${slug}/`,
-      index: locale === "en",
+      index: locale === "en" && !post.draft,
+      follow: !post.draft,
       type: "article",
       image
     });
@@ -42,7 +45,9 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   } catch {
     notFound();
   }
-  const html = markdownToHtml(post.body);
+  const isRexrothCase = post.slug === "bosch-rexroth-hydraulic-valves-sourcing-consolidation-case";
+  const body = isRexrothCase ? post.body.replace(/\n## FAQ\n[\s\S]*$/, "") : post.body;
+  const html = markdownToHtml(body);
   const image = blogImages[post.slug] ?? pageImages.blog;
   const articleUrl = `${site.url}/${locale}/blog/${post.slug}/`;
   const breadcrumbItems = [
@@ -53,23 +58,55 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
 
   return (
     <>
-      <PageHero badge="Guide" title={post.title} description={post.description} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Blog", href: `/${locale}/blog/` }, { label: post.title, href: `/${locale}/blog/${post.slug}/` }]} />
-      <Container className="grid gap-8 py-16 lg:grid-cols-[1fr_300px]">
-        <article className="prose-industrial min-w-0 rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10">
+      <PageHero
+        badge="Guide"
+        title={post.title}
+        description={post.description}
+        breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Blog", href: `/${locale}/blog/` }, { label: post.title, href: `/${locale}/blog/${post.slug}/` }]}
+        cta={!isRexrothCase}
+        containerClassName={isRexrothCase ? "py-12 lg:py-16" : undefined}
+        titleClassName={isRexrothCase ? "mt-5 max-w-[920px] text-[2.15rem] font-black leading-tight md:text-[3.15rem]" : undefined}
+        descriptionClassName={isRexrothCase ? "mt-6 max-w-[860px] text-base leading-8 text-slate-300 md:text-lg" : undefined}
+      />
+      <Container className={isRexrothCase ? "py-14" : "grid gap-8 py-16 lg:grid-cols-[1fr_300px]"}>
+        <article className={isRexrothCase ? "prose-industrial mx-auto min-w-0 max-w-[900px] rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10" : "prose-industrial min-w-0 rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10"}>
           {locale !== "en" ? <div className="mb-8 rounded-lg border border-orange-200 bg-orange-50 p-4 text-sm font-semibold text-orange-900">English version: this blog guide has not been fully translated into {locale.toUpperCase()} yet.</div> : null}
-          <IndustrialImage src={image.src} alt={image.alt} className="mb-8 min-h-[320px]" sizes="(min-width: 1024px) 760px, 100vw" />
+          <IndustrialImage src={image.src} alt={image.alt} className={isRexrothCase ? "mb-8 aspect-[16/9]" : "mb-8 min-h-[320px]"} sizes={isRexrothCase ? "(min-width: 1024px) 840px, 100vw" : "(min-width: 1024px) 760px, 100vw"} fit={isRexrothCase ? "contain" : "cover"} />
+          {isRexrothCase ? <p className="case-featured-caption">Rexroth hydraulic valves arranged for model and quantity checking before consolidated packing.</p> : null}
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
-        <aside className="h-fit rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="font-black text-navy">Next Steps</h2>
-          <div className="mt-4 space-y-3 text-sm font-semibold text-slate-600">
-            <Link href={`/${locale}/services/china-industrial-sourcing/`} className="block hover:text-signal">China Industrial Sourcing</Link>
-            <Link href={`/${locale}/services/supplier-verification/`} className="block hover:text-signal">Supplier Verification</Link>
-            <Link href={`/${locale}/contact/`} className="block hover:text-signal">Send Inquiry</Link>
-          </div>
-        </aside>
+        {!isRexrothCase ? (
+          <aside className="h-fit rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 className="font-black text-navy">Next Steps</h2>
+            <div className="mt-4 space-y-3 text-sm font-semibold text-slate-600">
+              <Link href={`/${locale}/services/china-industrial-sourcing/`} className="block hover:text-signal">China Industrial Sourcing</Link>
+              <Link href={`/${locale}/services/supplier-verification/`} className="block hover:text-signal">Supplier Verification</Link>
+              <Link href={`/${locale}/contact/`} className="block hover:text-signal">Send Inquiry</Link>
+            </div>
+          </aside>
+        ) : null}
       </Container>
-      <CTASection />
+      {isRexrothCase ? (
+        <>
+          <FAQSection faqs={post.faqs} containerClassName="max-w-[980px]" gridClassName="mt-8 grid gap-4" />
+          <section className="bg-slate-50 pb-16">
+            <Container>
+              <div className="mx-auto max-w-[900px] rounded-lg bg-navy p-7 text-white shadow-industrial md:p-10">
+                <h2 className="text-2xl font-black leading-tight md:text-3xl">Have a Hydraulic Valve or Mixed Spare-Parts List to Source?</h2>
+                <p className="mt-4 max-w-3xl leading-8 text-slate-300">
+                  Send the complete model codes, material numbers, label photos and required quantities. MAVORIX can help organize China-side supplier sourcing, model checking and consolidated packing.
+                </p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                  <Button href={`/${locale}/contact/`}>Send Your Parts List</Button>
+                  <Button href="https://wa.me/8613967842747" variant="secondary">Discuss Your Requirement</Button>
+                </div>
+              </div>
+            </Container>
+          </section>
+        </>
+      ) : (
+        <CTASection />
+      )}
       <JsonLd data={[breadcrumbSchema(breadcrumbItems), articleSchema({ title: post.title, description: post.description, date: post.date, url: articleUrl, image: `${site.url}${image.src}` }), faqSchema(post.faqs)]} />
     </>
   );

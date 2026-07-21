@@ -90,7 +90,7 @@ export default function BlogPage() {
 const blogGroups = [
   {
     title: "Industrial Sourcing Case Studies",
-    description: "Real MAVORIX sourcing examples involving product verification, spare parts coordination, packing checks, and shipment consolidation.",
+    description: "MAVORIX sourcing examples involving model checking, spare parts coordination, packing review, and shipment preparation.",
     slugs: ["bosch-rexroth-hydraulic-valves-sourcing-consolidation-case"]
   },
   {

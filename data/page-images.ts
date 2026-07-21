@@ -252,7 +252,7 @@ export const blogImages: Record<string, PageImage> = {
   },
   "bosch-rexroth-hydraulic-valves-sourcing-consolidation-case": {
     src: "/images/blog/bosch-rexroth-hydraulic-valves-sourcing-case/bosch-rexroth-hydraulic-valves-sourcing-case.webp",
-    alt: "Batch of Bosch Rexroth hydraulic valves sourced for an overseas industrial customer",
+    alt: "Batch of Bosch Rexroth hydraulic valves prepared for sourcing review",
     width: 1600,
     height: 900
   }
