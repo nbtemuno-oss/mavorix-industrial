@@ -1,0 +1,32 @@
+status: published
+
+product_name: TAISHENG APC-400X1 Auto Loader Controller Board
+brand: TAISHENG
+model: APC-400X1
+item_no: "91012559"
+
+part_type: Controller board
+equipment_type: Auto loader / vacuum loader
+input_voltage: 230VAC
+maximum_current: 0.1A
+
+condition: New
+quantity_in_photo: 6
+
+category:
+  - Plastic Auxiliary Machine Spare Parts
+  - Auto Loader Spare Parts
+  - Controller Boards
+
+compatibility_status: verification_required
+
+customer_requirements:
+  - Confirm old controller board model
+  - Confirm machine model
+  - Confirm voltage
+  - Confirm connector and wiring
+  - Confirm mounting dimensions
+
+manual_image_review_required: true
+image_content_editing: manual_only
+publish_status: published

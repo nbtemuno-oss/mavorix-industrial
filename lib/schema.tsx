@@ -1,7 +1,15 @@
 import { site } from "@/data/site";
 
 export function JsonLd({ data }: { data: Record<string, unknown> | Record<string, unknown>[] }) {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+  const entries = Array.isArray(data) ? data : [data];
+
+  return (
+    <>
+      {entries.map((entry, index) => (
+        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(entry) }} />
+      ))}
+    </>
+  );
 }
 
 export function organizationSchema() {

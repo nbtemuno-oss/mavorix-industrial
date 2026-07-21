@@ -138,6 +138,14 @@ There is currently no separate automated test script in `package.json`.
 - Do not remove existing images unless all references are updated and the user approves.
 - Large source files, raw exports, or unused design files should not be committed unless the user asks.
 
+## Product Image Content Policy
+
+- Images in `product inbox` are treated as user-approved final public images.
+- Do not automatically blur, mask, mosaic, cover, remove logos, remove labels, remove barcodes, or modify visible product content.
+- Image processing is limited to orientation correction, conservative cropping, resizing, renaming, WebP conversion, and compression.
+- Privacy removal or logo removal must be completed manually by the user before the image is placed in `product inbox`.
+- If sensitive information is detected, generate a warning only; do not modify the image automatically.
+
 ## Git Commit And Push Rules
 
 - Check status before and after changes:

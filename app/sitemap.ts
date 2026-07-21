@@ -3,6 +3,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, statSync } from "node:fs";
 import { countries } from "@/data/countries";
 import { industries } from "@/data/industries";
+import { publishedProducts } from "@/data/products";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
 import { getBlogSlugs } from "@/lib/mdx";
@@ -44,6 +45,17 @@ function sourceFilesFor(locale: string, path: string): string[] {
   if (path.startsWith("services/")) return [...common, "app/[locale]/services/[slug]/page.tsx", "data/services.ts"];
   if (path.startsWith("industries/")) return [...common, "app/[locale]/industries/[slug]/page.tsx", "data/industries.ts"];
   if (path.startsWith("countries/")) return [...common, "app/[locale]/countries/[slug]/page.tsx", "data/countries.ts"];
+  if (path.startsWith("products/auto-loader-spare-parts/")) {
+    return [...common, "app/[locale]/products/auto-loader-spare-parts/[slug]/page.tsx", "data/products.ts", "product inbox/apc-400/product.yaml"];
+  }
+  if (path.startsWith("products/electrical-components/")) {
+    return [
+      ...common,
+      "app/[locale]/products/electrical-components/[slug]/page.tsx",
+      "data/products.ts",
+      "product inbox/solid state relay 80A/product.yaml"
+    ];
+  }
   if (path.startsWith("blog/")) {
     const slug = path.replace("blog/", "");
     return [...common, "app/[locale]/blog/[slug]/page.tsx", `content/en/blog/${slug}.md`];
@@ -68,6 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...services.map((item) => `services/${item.slug}`),
     ...industries.map((item) => `industries/${item.slug}`),
     ...countries.map((item) => `countries/${item.slug}`),
+    ...publishedProducts.map((item) => item.path.replace(/^\/en\//, "").replace(/\/$/, "")),
     ...getBlogSlugs().map((slug) => `blog/${slug}`)
   ];
   const enUrls = [...staticPaths, ...detailPaths].map((path) =>

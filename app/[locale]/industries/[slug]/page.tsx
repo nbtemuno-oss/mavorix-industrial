@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CTASection } from "@/components/sections/CTASection";
@@ -8,6 +9,7 @@ import { Container } from "@/components/ui/Container";
 import { IndustrialImage } from "@/components/ui/IndustrialImage";
 import { industries } from "@/data/industries";
 import { pageImages } from "@/data/page-images";
+import { publishedProducts } from "@/data/products";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
 import { faqSchema, JsonLd, serviceSchema } from "@/lib/schema";
@@ -81,6 +83,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
           {locale === "en" && industry.slug === "mro-supplies" ? <MroSuppliesLandingContent /> : null}
           {locale === "en" && industry.slug === "packaging-industry" ? <PackagingIndustryLandingContent /> : null}
           {locale === "en" && (industry.slug === "plastic-industry" || industry.slug === "metal-parts" || industry.slug === "electrical-mechanical-parts" || industry.slug === "industrial-machinery" || industry.slug === "agricultural-equipment" || industry.slug === "factory-spare-parts" || industry.slug === "packaging-industry") ? null : <IndustrialImage src={industry.image} alt={`${industry.title} sourcing from China`} className="min-h-[360px]" />}
+          {locale === "en" ? <PublishedProductCards industrySlug={industry.slug} /> : null}
           <Block title="Industry-Focused Introduction" text={`MAVORIX INDUSTRIAL helps overseas buyers source, verify, and coordinate Chinese suppliers for ${industry.title.toLowerCase()} products. We do not claim to manufacture every item; our role is procurement support and supplier coordination.`} />
           <ListBlock title="Common Sourcing Needs" items={industry.products} />
           <ListBlock title="Common Buyer Problems" items={["Unclear supplier capability", "Difficulty confirming technical specifications", "Quality variation before shipment", "Fragmented communication across multiple factories", "Export packing and document coordination"]} />
@@ -140,6 +143,38 @@ function RelatedLinks({ title, links }: { title: string; links: { href: string; 
       <h2 className="text-3xl font-black text-navy">{title}</h2>
       <div className="mt-4 flex flex-wrap gap-3">
         {links.map((link) => <Link key={link.href} href={link.href} className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-bold text-navy ring-1 ring-slate-200 transition hover:bg-slate-50">{link.label}</Link>)}
+      </div>
+    </section>
+  );
+}
+function PublishedProductCards({ industrySlug }: { industrySlug: string }) {
+  const products = publishedProducts.filter((product) => product.categorySlugs.includes(industrySlug));
+  if (products.length === 0) return null;
+
+  return (
+    <section>
+      <h2 className="text-3xl font-black text-navy">Related Product Sourcing</h2>
+      <p className="mt-4 leading-8 text-slate-600">
+        These product pages show current MAVORIX sourcing references for this category. Send model labels, photos, application details
+        and required quantity before ordering replacement parts.
+      </p>
+      <div className="mt-6 grid gap-5 md:grid-cols-2">
+        {products.map((product) => (
+          <Link
+            key={product.slug}
+            href={product.path}
+            className="group overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-signal hover:shadow-industrial"
+          >
+            <div className="relative aspect-[4/3] bg-slate-100">
+              <Image src={product.image} alt={product.imageAlt} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-contain p-3" />
+            </div>
+            <div className="space-y-3 p-5">
+              <h3 className="text-lg font-black text-navy group-hover:text-signal">{product.title}</h3>
+              <p className="text-sm leading-6 text-slate-600">{product.description}</p>
+              <span className="inline-flex text-sm font-black text-signal">View Product</span>
+            </div>
+          </Link>
+        ))}
       </div>
     </section>
   );

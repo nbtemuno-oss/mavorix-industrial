@@ -1,0 +1,109 @@
+status: published
+publish_status: published
+
+product_name: "i-Autoc KSI480D80-L(068) 80A Solid State Relay"
+short_name: "80A Solid State Relay"
+slug: "i-autoc-ksi480d80-l-068-80a-solid-state-relay"
+
+part_type: solid_state_relay
+equipment_category: industrial_electrical_components
+
+brand: "i-Autoc"
+model: "KSI480D80-L(068)"
+part_number: ""
+
+rated_current:
+  value: "80A"
+  source: image_confirmed
+  confidence: high
+
+control_input:
+  value: "4-32VDC"
+  source: image_confirmed
+  confidence: high
+
+load_output:
+  value: "480VAC"
+  source: image_confirmed
+  confidence: high
+
+switching_type:
+  value: ""
+  source: manual_confirmation_required
+  confidence: ""
+
+condition: new
+
+product_identity_status: verification_required
+compatibility_status: verification_required
+
+confirmed_specs:
+  - label: Brand
+    value: "i-Autoc"
+    source: image_confirmed
+  - label: Model
+    value: "KSI480D80-L(068)"
+    source: image_confirmed
+  - label: Rated Current
+    value: "80A"
+    source: image_confirmed
+  - label: Load
+    value: "480VAC"
+    source: image_confirmed
+  - label: Control Input
+    value: "4-32VDC"
+    source: image_confirmed
+  - label: Product Type
+    value: "Solid State Relay"
+    source: image_confirmed
+  - label: Terminal Marking
+    value: "1 / 2 LOAD, 3+ / 4- INPUT"
+    source: image_confirmed
+  - label: Visible Marks
+    value: "cRUus, CE, CCC, RoHS"
+    source: image_confirmed
+
+user_provided_information:
+  - "Folder name indicates an 80A solid state relay"
+
+unconfirmed_notes:
+  - "Packaging labels show KSI480D80-L(068), item 46210150088, quantity 2, max air temperature 80C, RA212, inspection PASS, and Xiamen Kudom Electronics Technology Co., Ltd.; these details should be manually checked before publication."
+  - "The blue relay and white component appear together in the product photo; the white component may be a cover or matching accessory, but the exact relationship should be confirmed."
+  - "Switching type such as zero-cross or random-fire is not clearly confirmed from the visible product label."
+
+questions_for_user:
+  - "Confirm whether the white component shown beside the blue relay is included with the same product."
+  - "Confirm whether i-Autoc should be used as the product brand in the public title."
+  - "Confirm whether packaging quantity 2 should be shown on a future published page."
+  - "Confirm whether item number 46210150088 should be treated as a public part number."
+  - "Confirm switching type, heat sink requirement, operating temperature range, and installation conditions before formal publication."
+
+applications:
+  - industrial heating control
+  - temperature control systems
+  - plastic processing machinery
+  - packaging machinery
+  - ovens and heating equipment
+  - industrial automation panels
+
+image_content_editing: manual_only
+manual_image_review_required: false
+
+category:
+  - Industrial Electrical Components
+  - Relays and Control Components
+  - Solid State Relays
+
+seo:
+  title: "i-Autoc KSI480D80-L(068) 80A Solid State Relay | MAVORIX"
+  meta_description: "Source an i-Autoc KSI480D80-L(068) 80A solid state relay for industrial heating and automation systems. Send relay label photos, control input and load voltage for technical verification."
+  primary_keyword: "i-Autoc KSI480D80-L(068) 80A solid state relay"
+  secondary_keywords:
+    - "80A solid state relay"
+    - "industrial solid state relay"
+    - "SSR relay 80A"
+    - "solid state relay supplier"
+    - "industrial heating control relay"
+    - "temperature controller SSR"
+    - "solid state relay replacement"
+    - "electrical control components sourcing"
