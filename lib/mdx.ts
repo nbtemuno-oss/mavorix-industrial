@@ -67,8 +67,9 @@ export function markdownToHtml(markdown: string) {
     .replace(/(<li>.*<\/li>)/gims, "<ul>$1</ul>")
     .split(/\n{2,}/)
     .map((block) => {
-      if (block.startsWith("<h") || block.startsWith("<ul") || block.startsWith("<div")) return block;
-      return `<p>${block.replace(/\n/g, " ")}</p>`;
+      const trimmedBlock = block.trim();
+      if (trimmedBlock.startsWith("<h") || trimmedBlock.startsWith("<ul") || trimmedBlock.startsWith("<div")) return trimmedBlock;
+      return `<p>${trimmedBlock.replace(/\n/g, " ")}</p>`;
     })
     .join("");
 }

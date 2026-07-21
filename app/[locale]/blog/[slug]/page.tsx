@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { IndustrialImage } from "@/components/ui/IndustrialImage";
 import { blogImages, pageImages } from "@/data/page-images";
 import { site } from "@/data/site";
-import { articleSchema, faqSchema, JsonLd } from "@/lib/schema";
+import { articleSchema, breadcrumbSchema, faqSchema, JsonLd } from "@/lib/schema";
 import { getBlogPost, getBlogSlugs, markdownToHtml } from "@/lib/mdx";
 import { seo } from "@/lib/seo";
 
@@ -44,6 +44,13 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   }
   const html = markdownToHtml(post.body);
   const image = blogImages[post.slug] ?? pageImages.blog;
+  const articleUrl = `${site.url}/${locale}/blog/${post.slug}/`;
+  const breadcrumbItems = [
+    { name: "Home", url: `${site.url}/${locale}/` },
+    { name: "Blog", url: `${site.url}/${locale}/blog/` },
+    { name: post.title, url: articleUrl }
+  ];
+
   return (
     <>
       <PageHero badge="Guide" title={post.title} description={post.description} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Blog", href: `/${locale}/blog/` }, { label: post.title, href: `/${locale}/blog/${post.slug}/` }]} />
@@ -63,7 +70,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
         </aside>
       </Container>
       <CTASection />
-      <JsonLd data={[articleSchema({ title: post.title, description: post.description, date: post.date, url: `${site.url}/${locale}/blog/${post.slug}/`, image: `${site.url}${image.src}` }), faqSchema(post.faqs)]} />
+      <JsonLd data={[breadcrumbSchema(breadcrumbItems), articleSchema({ title: post.title, description: post.description, date: post.date, url: articleUrl, image: `${site.url}${image.src}` }), faqSchema(post.faqs)]} />
     </>
   );
 }

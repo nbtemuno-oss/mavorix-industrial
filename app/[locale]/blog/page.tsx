@@ -89,6 +89,11 @@ export default function BlogPage() {
 
 const blogGroups = [
   {
+    title: "Industrial Sourcing Case Studies",
+    description: "Real MAVORIX sourcing examples involving product verification, spare parts coordination, packing checks, and shipment consolidation.",
+    slugs: ["bosch-rexroth-hydraulic-valves-sourcing-consolidation-case"]
+  },
+  {
     title: "Sourcing Guides",
     description: "Step-by-step sourcing advice for buyers comparing Chinese suppliers, OEM options, and industrial product requirements.",
     slugs: ["how-to-source-industrial-products-from-china", "china-oem-manufacturing-guide", "china-industrial-sourcing-partner-for-overseas-factories", "compare-industrial-supplier-quotations-china"]
