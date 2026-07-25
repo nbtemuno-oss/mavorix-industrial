@@ -52,5 +52,16 @@ export const publishedProducts: PublishedProduct[] = [
       "/images/products/hydraulic-components/aryung-atp-216ha-vb-t-rotor-coolant-pump/aryung-atp-216ha-vb-t-rotor-coolant-pump-thumbnail.webp",
     imageAlt: "ARYUNG ATP-216HA(VB) T-rotor coolant pump label view",
     categorySlugs: ["industrial-machinery", "factory-spare-parts"]
+  },
+  {
+    slug: "daikin-v38a3rx-95-piston-pump",
+    title: "DAIKIN V38A3RX-95 Piston Pump",
+    description:
+      "DAIKIN V38A3RX-95 piston pump, MFG No. YED00-2511-00070, with visible label markings for hydraulic spare parts sourcing.",
+    path: "/en/products/hydraulic-components/daikin-v38a3rx-95-piston-pump/",
+    image:
+      "/images/products/hydraulic-components/daikin-v38a3rx-95-piston-pump/daikin-v38a3rx-95-piston-pump-thumbnail.webp",
+    imageAlt: "DAIKIN V38A3RX-95 piston pump label view",
+    categorySlugs: ["industrial-machinery", "factory-spare-parts"]
   }
 ];

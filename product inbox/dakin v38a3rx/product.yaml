@@ -1,0 +1,50 @@
+status: approved
+publish_status: published
+product_name: "DAIKIN V38A3RX-95 Piston Pump"
+short_name: "DAIKIN V38A3RX-95"
+slug: "daikin-v38a3rx-95-piston-pump"
+brand: "DAIKIN"
+model: "V38A3RX-95"
+part_number: "YED00-2511-00070"
+part_type: "piston_pump"
+condition: "New or unused appearance; final condition confirmation required"
+compatibility_status: "manual_confirmation_required"
+image_content_editing: "manual_only"
+category: "hydraulic-components"
+categories:
+  - "industrial-machinery"
+  - "factory-spare-parts"
+confirmed_specs:
+  - label: "Brand"
+    value: "DAIKIN"
+  - label: "Model"
+    value: "V38A3RX-95"
+  - label: "MFG No."
+    value: "YED00-2511-00070"
+  - label: "Product Type"
+    value: "Piston Pump"
+  - label: "Manufacturer Marking"
+    value: "DAIKIN INDUSTRIES, LTD."
+  - label: "Country Marking"
+    value: "Made in Japan"
+unconfirmed_fields:
+  - "Displacement"
+  - "Pressure rating"
+  - "Rotation direction"
+  - "Shaft specification"
+  - "Port size and orientation"
+  - "Mounting dimensions"
+  - "Hydraulic oil requirements"
+  - "Exact machine compatibility"
+questions_for_user:
+  - "Please confirm whether the MFG No. should be recorded exactly as YED00-2511-00070."
+  - "Please provide additional nameplate or catalog information for displacement, pressure, port and mounting details if available."
+images:
+  originals:
+    - "0260725174113_138_4.jpg"
+  generated:
+    main: "/images/products/hydraulic-components/daikin-v38a3rx-95-piston-pump/daikin-v38a3rx-95-piston-pump-main.webp"
+    thumbnail: "/images/products/hydraulic-components/daikin-v38a3rx-95-piston-pump/daikin-v38a3rx-95-piston-pump-thumbnail.webp"
+seo:
+  title: "DAIKIN V38A3RX-95 Piston Pump | MAVORIX"
+  description: "Source DAIKIN V38A3RX-95 piston pump, MFG No. YED00-2511-00070, with visible label-based verification notes."

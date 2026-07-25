@@ -61,7 +61,9 @@ function sourceFilesFor(locale: string, path: string): string[] {
       ...common,
       "app/[locale]/products/hydraulic-components/[slug]/page.tsx",
       "data/products.ts",
-      "product inbox/rexroth-4we6d6x-ofeg24n9k4/product.yaml"
+      "product inbox/rexroth-4we6d6x-ofeg24n9k4/product.yaml",
+      "product inbox/aryung atp-216ha/product.yaml",
+      "product inbox/dakin v38a3rx/product.yaml"
     ];
   }
   if (path.startsWith("blog/")) {
