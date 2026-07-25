@@ -20,6 +20,102 @@ const aryungPath = `/en/products/hydraulic-components/${aryungSlug}/`;
 const daikinSlug = "daikin-v38a3rx-95-piston-pump";
 const daikinTitle = "DAIKIN V38A3RX-95 Piston Pump";
 const daikinPath = `/en/products/hydraulic-components/${daikinSlug}/`;
+const hytekSlug = "hytek-hg0-08-01a-vpc-hydraulic-pump";
+const hytekTitle = "HYTEK HG0-08-01A-VPC Hydraulic Pump";
+const hytekPath = `/en/products/hydraulic-components/${hytekSlug}/`;
+
+const hytekImages = [
+  {
+    src: "/images/products/hydraulic-components/hytek-hg0-08-01a-vpc-hydraulic-pump/hytek-hg0-08-01a-vpc-hydraulic-pump-main.webp",
+    alt: "HYTEK HG0-08-01A-VPC hydraulic pump label and shaft view",
+    label: "Label and shaft view"
+  }
+];
+
+const hytekSummarySpecs = [
+  ["Brand", "HYTEK"],
+  ["Model", "HG0-08-01A-VPC"],
+  ["Product Type", "Hydraulic Pump"],
+  ["Visible Form", "Flange-mounted pump body with protected splined shaft"],
+  ["Compatibility", "Manual confirmation required before ordering"]
+];
+
+const hytekConfirmedSpecs = [
+  ["Brand", "HYTEK"],
+  ["Model", "HG0-08-01A-VPC"],
+  ["Product Type", "Hydraulic Pump"],
+  ["Visible Form", "Flange-mounted pump body"],
+  ["Visible Shaft", "Protected splined shaft visible"],
+  ["Label Position", "HYTEK label visible on pump body"]
+];
+
+const hytekKeyFeatures = [
+  "HYTEK brand label visible",
+  "HG0-08-01A-VPC model reference provided",
+  "Hydraulic pump body visible",
+  "Flange-mounted front section visible",
+  "Protected splined shaft visible",
+  "Suitable for sourcing review based on label and product photos",
+  "Pump parameters should be confirmed before ordering",
+  "Useful for industrial hydraulic spare parts sourcing"
+];
+
+const hytekApplications = [
+  "Industrial hydraulic systems",
+  "Factory machinery maintenance",
+  "Hydraulic power unit repair",
+  "Machine tool hydraulic support",
+  "Production equipment spare parts",
+  "Mixed industrial spare parts consolidation"
+];
+
+const hytekOrderingInfo = [
+  "Clear straight-on label photo",
+  "Complete pump model",
+  "Old pump photos from multiple angles",
+  "Pump type and displacement",
+  "Pressure and flow requirements",
+  "Rotation direction",
+  "Shaft specification",
+  "Port size and orientation",
+  "Mounting dimensions",
+  "Equipment brand and model",
+  "Required quantity",
+  "Whether exact replacement or compatible option is required"
+];
+
+const hytekSourcingSupport = [
+  "Hydraulic pump label checking",
+  "Model-code comparison",
+  "China-side supplier sourcing",
+  "Supplier photo confirmation",
+  "Replacement option review based on buyer-provided data",
+  "Consolidation with valves, motors, seals and electrical components",
+  "Export packing and shipment coordination"
+];
+
+const hytekFaqs = [
+  {
+    q: "Is HG0-08-01A-VPC enough information for ordering this hydraulic pump?",
+    a: "It is a useful model reference, but buyers should also confirm pump type, displacement, pressure rating, flow, rotation direction, shaft, ports and mounting dimensions before ordering."
+  },
+  {
+    q: "What visible information is confirmed from the current photo?",
+    a: "The current photo shows a HYTEK label on a flange-mounted hydraulic pump body with a protected splined shaft. The model reference should be confirmed from a straight-on label photo before formal ordering."
+  },
+  {
+    q: "Can a similar-looking hydraulic pump be used as a replacement?",
+    a: "Not automatically. Similar appearance does not confirm hydraulic rating, shaft, ports, mounting, rotation direction or machine compatibility."
+  },
+  {
+    q: "What should I send before requesting a quotation?",
+    a: "Send a straight-on label photo, old pump photos from multiple angles, shaft and port details, mounting dimensions, equipment model and required quantity."
+  },
+  {
+    q: "Can MAVORIX consolidate this pump with other spare parts?",
+    a: "Yes. MAVORIX can help coordinate sourcing and packing for hydraulic pumps, valves, motors, seals, sensors and other industrial spare parts in one purchasing workflow."
+  }
+];
 
 const daikinImages = [
   {
@@ -322,7 +418,8 @@ export function generateStaticParams() {
   return [
     { locale: "en", slug: productSlug },
     { locale: "en", slug: aryungSlug },
-    { locale: "en", slug: daikinSlug }
+    { locale: "en", slug: daikinSlug },
+    { locale: "en", slug: hytekSlug }
   ];
 }
 
@@ -412,6 +509,48 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       }
     };
   }
+  if (locale === "en" && slug === hytekSlug) {
+    return {
+      title: "HYTEK HG0-08-01A-VPC Hydraulic Pump | MAVORIX",
+      description:
+        "Source HYTEK HG0-08-01A-VPC hydraulic pump with label and product photo checking for industrial hydraulic spare parts sourcing.",
+      alternates: {
+        canonical: `${site.url}${hytekPath}`
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true
+        }
+      },
+      openGraph: {
+        title: hytekTitle,
+        description:
+          "HYTEK HG0-08-01A-VPC hydraulic pump sourcing support based on buyer-provided product photo information.",
+        url: `${site.url}${hytekPath}`,
+        siteName: site.name,
+        locale: "en",
+        type: "website",
+        images: [
+          {
+            url: hytekImages[0].src,
+            width: 1400,
+            height: 1050,
+            alt: hytekImages[0].alt
+          }
+        ]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: hytekTitle,
+        description:
+          "HYTEK HG0-08-01A-VPC hydraulic pump sourcing support based on buyer-provided product photo information.",
+        images: [hytekImages[0].src]
+      }
+    };
+  }
   if (locale !== "en" || slug !== productSlug) return {};
 
   return {
@@ -460,6 +599,7 @@ export default async function RexrothDirectionalValvePage({ params }: { params: 
   const { locale, slug } = await params;
   if (locale === "en" && slug === aryungSlug) return <AryungCoolantPumpPage />;
   if (locale === "en" && slug === daikinSlug) return <DaikinPistonPumpPage />;
+  if (locale === "en" && slug === hytekSlug) return <HytekHydraulicPumpPage />;
   if (locale !== "en" || slug !== productSlug) notFound();
 
   const inquirySubject = encodeURIComponent("Rexroth 4WE6D6X/OFEG24N9K4 directional valve inquiry");
@@ -981,6 +1121,186 @@ function DaikinPistonPumpPage() {
       <JsonLd data={[breadcrumbSchema(breadcrumbItems), daikinProductSchema(), faqSchema(daikinFaqs)]} />
     </>
   );
+}
+
+function HytekHydraulicPumpPage() {
+  const inquirySubject = encodeURIComponent("HYTEK HG0-08-01A-VPC hydraulic pump inquiry");
+  const mailtoHref = `mailto:${site.email}?subject=${inquirySubject}`;
+  const breadcrumbItems = [
+    { name: "Home", url: `${site.url}/en/` },
+    { name: "Industrial Machinery", url: `${site.url}/en/industries/industrial-machinery/` },
+    { name: hytekTitle, url: `${site.url}${hytekPath}` }
+  ];
+
+  return (
+    <>
+      <section className="bg-slate-50 py-8">
+        <Container>
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/en/" },
+              { label: "Industrial Machinery", href: "/en/industries/industrial-machinery/" },
+              { label: hytekTitle, href: hytekPath }
+            ]}
+          />
+        </Container>
+      </section>
+
+      <section className="bg-white py-12">
+        <Container className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(360px,480px)] lg:items-start">
+          <ProductImageGallery images={hytekImages} />
+
+          <div className="space-y-7">
+            <div>
+              <Badge>Hydraulic Pump</Badge>
+              <h1 className="mt-4 break-words [overflow-wrap:anywhere] text-4xl font-black leading-tight text-navy md:text-5xl">
+                {hytekTitle}
+              </h1>
+              <p className="mt-5 text-lg leading-8 text-slate-600">
+                HYTEK HG0-08-01A-VPC hydraulic pump shown with visible HYTEK label, flange-mounted pump body and protected splined
+                shaft. Buyers should confirm the exact label code, pump type, displacement, pressure, shaft, ports and mounting
+                dimensions before ordering a replacement.
+              </p>
+            </div>
+
+            <dl className="grid gap-3 rounded-lg border border-slate-200 bg-slate-50 p-5 text-sm md:grid-cols-2">
+              {hytekSummarySpecs.map(([label, value]) => (
+                <SpecTerm key={label} label={label} value={value} className={label === "Compatibility" ? "md:col-span-2" : ""} />
+              ))}
+            </dl>
+
+            <div className="flex flex-wrap gap-3">
+              <Button href={mailtoHref} className="gap-2">
+                <Send size={17} aria-hidden="true" /> Send Pump Label Photo
+              </Button>
+              <Button href={site.whatsappUrl} variant="secondary" className="gap-2">
+                <MessageCircle size={17} aria-hidden="true" /> Request a Quote
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <Container className="py-14">
+        <article className="space-y-12">
+          <Section title="Product Overview">
+            <p>
+              The HYTEK HG0-08-01A-VPC hydraulic pump is prepared as a sourcing reference page for buyers who need industrial
+              hydraulic spare parts support. The current product photo shows the HYTEK label, pump housing, front flange and protected
+              splined shaft.
+            </p>
+            <p>
+              Hydraulic pump replacement should be checked with a clear straight-on label photo and the old pump application details.
+              Partial model strings or similar-looking housings are not enough to confirm interchangeability.
+            </p>
+            <p>
+              MAVORIX can help overseas buyers organize label checking, supplier communication, photo confirmation and consolidated
+              export support for hydraulic pumps and related industrial components.
+            </p>
+          </Section>
+
+          <section>
+            <h2 className="text-3xl font-black text-navy">Confirmed Specifications</h2>
+            <div className="mt-5 overflow-hidden rounded-lg border border-slate-200 bg-white">
+              <table className="w-full text-left text-sm">
+                <tbody>
+                  {hytekConfirmedSpecs.map(([label, value]) => (
+                    <tr key={label} className="border-b border-slate-200 last:border-0">
+                      <th className="w-44 bg-slate-50 px-4 py-3 font-black text-navy">{label}</th>
+                      <td className="px-4 py-3 font-semibold text-slate-700">{value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <Section title="Key Features">
+            <ul className="grid gap-3 md:grid-cols-2">
+              {hytekKeyFeatures.map((item) => (
+                <li key={item} className="rounded-md border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-700">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="Typical Applications">
+            <ul className="grid gap-3 md:grid-cols-2">
+              {hytekApplications.map((item) => (
+                <li key={item} className="rounded-md border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-700">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="Compatibility / Selection Notice">
+            <p>
+              Final replacement selection should be confirmed against the old pump label, pump type, displacement, pressure rating,
+              flow, rotation direction, shaft specification, port arrangement, mounting dimensions and machine hydraulic circuit.
+            </p>
+            <p>
+              Pump type, displacement, pressure rating, flow rating, shaft details, port size and mounting dimensions are not confirmed
+              from the current single angled photo.
+            </p>
+          </Section>
+
+          <Section title="Information Required Before Ordering">
+            <ul className="grid gap-3 md:grid-cols-2">
+              {hytekOrderingInfo.map((item) => (
+                <li key={item} className="rounded-md bg-slate-50 p-4 text-sm font-semibold text-slate-700 ring-1 ring-slate-200">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="MAVORIX Sourcing Support">
+            <p>
+              MAVORIX supports industrial buyers with hydraulic pump model checking, supplier sourcing and China-side spare-parts
+              coordination. Related requests can also connect with our{" "}
+              <LinkText href="/en/industrial-sourcing/">industrial sourcing</LinkText>,{" "}
+              <LinkText href="/en/industries/factory-spare-parts/">factory spare parts</LinkText>,{" "}
+              <LinkText href="/en/industries/industrial-machinery/">industrial machinery</LinkText> and{" "}
+              <LinkText href="/en/contact/">contact</LinkText> workflows.
+            </p>
+            <ul className="grid gap-3 md:grid-cols-2">
+              {hytekSourcingSupport.map((item) => (
+                <li key={item} className="rounded-md border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-700">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Section>
+        </article>
+      </Container>
+
+      <FAQSection faqs={hytekFaqs} />
+      <CTASection
+        title="Need Help Checking a Hydraulic Pump Replacement?"
+        text="Send the pump label, old pump photos, shaft and port details, mounting dimensions, machine model and required quantity for sourcing support."
+      />
+      <JsonLd data={[breadcrumbSchema(breadcrumbItems), hytekProductSchema(), faqSchema(hytekFaqs)]} />
+    </>
+  );
+}
+
+function hytekProductSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: hytekTitle,
+    brand: {
+      "@type": "Brand",
+      name: "HYTEK"
+    },
+    model: "HG0-08-01A-VPC",
+    category: "Hydraulic Pump",
+    image: hytekImages.map((image) => `${site.url}${image.src}`),
+    description:
+      "HYTEK HG0-08-01A-VPC hydraulic pump sourcing reference with visible label, pump body and protected splined shaft."
+  };
 }
 
 function daikinProductSchema() {

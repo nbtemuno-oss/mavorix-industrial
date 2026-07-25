@@ -63,5 +63,16 @@ export const publishedProducts: PublishedProduct[] = [
       "/images/products/hydraulic-components/daikin-v38a3rx-95-piston-pump/daikin-v38a3rx-95-piston-pump-thumbnail.webp",
     imageAlt: "DAIKIN V38A3RX-95 piston pump label view",
     categorySlugs: ["industrial-machinery", "factory-spare-parts"]
+  },
+  {
+    slug: "hytek-hg0-08-01a-vpc-hydraulic-pump",
+    title: "HYTEK HG0-08-01A-VPC Hydraulic Pump",
+    description:
+      "HYTEK HG0-08-01A-VPC hydraulic pump with visible label, flange-mounted body and protected splined shaft for industrial spare parts sourcing.",
+    path: "/en/products/hydraulic-components/hytek-hg0-08-01a-vpc-hydraulic-pump/",
+    image:
+      "/images/products/hydraulic-components/hytek-hg0-08-01a-vpc-hydraulic-pump/hytek-hg0-08-01a-vpc-hydraulic-pump-thumbnail.webp",
+    imageAlt: "HYTEK HG0-08-01A-VPC hydraulic pump label and shaft view",
+    categorySlugs: ["industrial-machinery", "factory-spare-parts"]
   }
 ];
