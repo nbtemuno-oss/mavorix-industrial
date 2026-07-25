@@ -41,5 +41,16 @@ export const publishedProducts: PublishedProduct[] = [
       "/images/products/hydraulic-components/rexroth-4we6d6x-ofeg24n9k4/rexroth-4we6d6x-ofeg24n9k4-thumbnail.webp",
     imageAlt: "Rexroth 4WE6D6X/OFEG24N9K4 hydraulic directional control valves in packaging",
     categorySlugs: ["industrial-machinery", "factory-spare-parts"]
+  },
+  {
+    slug: "aryung-atp-216ha-vb-t-rotor-coolant-pump",
+    title: "ARYUNG ATP-216HA(VB) T-Rotor Coolant Pump",
+    description:
+      "T-rotor coolant pump, MFG No. 25060186, with visible ARYUNG label markings for industrial machinery spare parts sourcing.",
+    path: "/en/products/hydraulic-components/aryung-atp-216ha-vb-t-rotor-coolant-pump/",
+    image:
+      "/images/products/hydraulic-components/aryung-atp-216ha-vb-t-rotor-coolant-pump/aryung-atp-216ha-vb-t-rotor-coolant-pump-thumbnail.webp",
+    imageAlt: "ARYUNG ATP-216HA(VB) T-rotor coolant pump label view",
+    categorySlugs: ["industrial-machinery", "factory-spare-parts"]
   }
 ];

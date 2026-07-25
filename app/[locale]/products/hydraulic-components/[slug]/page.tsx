@@ -14,6 +14,103 @@ import { breadcrumbSchema, faqSchema, JsonLd } from "@/lib/schema";
 const productSlug = "rexroth-4we6d6x-ofeg24n9k4-directional-control-valve";
 const productTitle = "Rexroth 4WE6D6X/OFEG24N9K4 Directional Control Valve";
 const productPath = `/en/products/hydraulic-components/${productSlug}/`;
+const aryungSlug = "aryung-atp-216ha-vb-t-rotor-coolant-pump";
+const aryungTitle = "ARYUNG ATP-216HA(VB) T-Rotor Coolant Pump";
+const aryungPath = `/en/products/hydraulic-components/${aryungSlug}/`;
+
+const aryungImages = [
+  {
+    src: "/images/products/hydraulic-components/aryung-atp-216ha-vb-t-rotor-coolant-pump/aryung-atp-216ha-vb-t-rotor-coolant-pump-main.webp",
+    alt: "ARYUNG ATP-216HA(VB) T-rotor coolant pump label view",
+    label: "Label view"
+  }
+];
+
+const aryungSummarySpecs = [
+  ["Brand", "ARYUNG"],
+  ["Model / Type", "ATP-216HA(VB)"],
+  ["MFG No.", "25060186"],
+  ["Product Type", "T-Rotor Pump"],
+  ["Application Marking", "Coolant"],
+  ["Compatibility", "Manual confirmation required before ordering"]
+];
+
+const aryungConfirmedSpecs = [
+  ["Brand", "ARYUNG"],
+  ["Model / Type", "ATP-216HA(VB)"],
+  ["MFG No.", "25060186"],
+  ["Product Type", "T-Rotor Pump"],
+  ["Application Marking", "Coolant"],
+  ["Country Marking", "Made in Korea"],
+  ["Visible Direction Marking", "Rotation arrow and IN / OUT markings are visible on the pump label"]
+];
+
+const aryungKeyFeatures = [
+  "T-rotor pump marking visible on the product label",
+  "ARYUNG brand label visible",
+  "ATP-216HA(VB) type marking visible",
+  "MFG No. 25060186 visible",
+  "Coolant application marking visible",
+  "IN / OUT direction markings visible",
+  "Suitable for sourcing review based on clear label comparison",
+  "Additional electrical and performance data should be confirmed before ordering"
+];
+
+const aryungApplications = [
+  "Machine tool coolant circulation",
+  "Industrial machinery coolant systems",
+  "Factory spare parts replacement sourcing",
+  "Metalworking equipment support",
+  "Maintenance spare parts purchasing",
+  "Mixed industrial spare parts consolidation"
+];
+
+const aryungOrderingInfo = [
+  "Clear full-label photo",
+  "Complete pump model or type",
+  "MFG number",
+  "Voltage and power rating",
+  "Flow rate and pressure requirement",
+  "Port size and connection type",
+  "Mounting dimensions",
+  "Old pump photos from multiple angles",
+  "Machine brand and model",
+  "Required quantity",
+  "Whether exact replacement or compatible option is required"
+];
+
+const aryungSourcingSupport = [
+  "Pump label identification",
+  "Model and MFG number comparison",
+  "China-side supplier sourcing",
+  "Supplier photo checking",
+  "Replacement option review based on buyer-provided data",
+  "Consolidation with other machine tool and factory spare parts",
+  "Export packing and shipment coordination"
+];
+
+const aryungFaqs = [
+  {
+    q: "Is ATP-216HA(VB) enough information for ordering a replacement pump?",
+    a: "It is a useful model reference, but buyers should also confirm voltage, power rating, flow, pressure, port size, mounting dimensions and machine application before ordering."
+  },
+  {
+    q: "What visible information is confirmed from the current photo?",
+    a: "The visible label shows ARYUNG, ATP-216HA(VB), MFG No. 25060186, T-Rotor Pump, Coolant, Made in Korea, and IN / OUT direction markings."
+  },
+  {
+    q: "Can a similar-looking coolant pump be used as a replacement?",
+    a: "Not automatically. Similar appearance does not confirm electrical rating, mounting, port connection, flow or pressure compatibility."
+  },
+  {
+    q: "What should I send before requesting a quotation?",
+    a: "Send the full label, old pump photos, voltage and power markings, port details, mounting dimensions, equipment model and required quantity."
+  },
+  {
+    q: "Can MAVORIX consolidate this pump with other spare parts?",
+    a: "Yes. MAVORIX can help coordinate sourcing and packing for pumps, sensors, relays, valves and other industrial spare parts in one purchasing workflow."
+  }
+];
 
 const productImages = [
   {
@@ -123,11 +220,56 @@ const faqs = [
 ];
 
 export function generateStaticParams() {
-  return [{ locale: "en", slug: productSlug }];
+  return [
+    { locale: "en", slug: productSlug },
+    { locale: "en", slug: aryungSlug }
+  ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
+  if (locale === "en" && slug === aryungSlug) {
+    return {
+      title: "ARYUNG ATP-216HA(VB) T-Rotor Coolant Pump | MAVORIX",
+      description:
+        "Source ARYUNG ATP-216HA(VB) T-rotor coolant pump, MFG No. 25060186. Confirm voltage, flow, pressure, ports and mounting before ordering.",
+      alternates: {
+        canonical: `${site.url}${aryungPath}`
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true
+        }
+      },
+      openGraph: {
+        title: aryungTitle,
+        description:
+          "ARYUNG ATP-216HA(VB) T-rotor coolant pump sourcing support based on visible label information.",
+        url: `${site.url}${aryungPath}`,
+        siteName: site.name,
+        locale: "en",
+        type: "website",
+        images: [
+          {
+            url: aryungImages[0].src,
+            width: 1400,
+            height: 590,
+            alt: aryungImages[0].alt
+          }
+        ]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: aryungTitle,
+        description:
+          "ARYUNG ATP-216HA(VB) T-rotor coolant pump sourcing support based on visible label information.",
+        images: [aryungImages[0].src]
+      }
+    };
+  }
   if (locale !== "en" || slug !== productSlug) return {};
 
   return {
@@ -174,6 +316,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function RexrothDirectionalValvePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
+  if (locale === "en" && slug === aryungSlug) return <AryungCoolantPumpPage />;
   if (locale !== "en" || slug !== productSlug) notFound();
 
   const inquirySubject = encodeURIComponent("Rexroth 4WE6D6X/OFEG24N9K4 directional valve inquiry");
@@ -354,6 +497,185 @@ export default async function RexrothDirectionalValvePage({ params }: { params: 
       <JsonLd data={[breadcrumbSchema(breadcrumbItems), productSchema(), faqSchema(faqs)]} />
     </>
   );
+}
+
+function AryungCoolantPumpPage() {
+  const inquirySubject = encodeURIComponent("ARYUNG ATP-216HA(VB) coolant pump inquiry");
+  const mailtoHref = `mailto:${site.email}?subject=${inquirySubject}`;
+  const breadcrumbItems = [
+    { name: "Home", url: `${site.url}/en/` },
+    { name: "Industrial Machinery", url: `${site.url}/en/industries/industrial-machinery/` },
+    { name: aryungTitle, url: `${site.url}${aryungPath}` }
+  ];
+
+  return (
+    <>
+      <section className="bg-slate-50 py-8">
+        <Container>
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/en/" },
+              { label: "Industrial Machinery", href: "/en/industries/industrial-machinery/" },
+              { label: aryungTitle, href: aryungPath }
+            ]}
+          />
+        </Container>
+      </section>
+
+      <section className="bg-white py-12">
+        <Container className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(360px,480px)] lg:items-start">
+          <ProductImageGallery images={aryungImages} />
+
+          <div className="space-y-7">
+            <div>
+              <Badge>T-Rotor Coolant Pump</Badge>
+              <h1 className="mt-4 break-words [overflow-wrap:anywhere] text-4xl font-black leading-tight text-navy md:text-5xl">
+                {aryungTitle}
+              </h1>
+              <p className="mt-5 text-lg leading-8 text-slate-600">
+                ARYUNG ATP-216HA(VB) T-rotor coolant pump with visible MFG No. 25060186 and coolant application marking. Buyers
+                should confirm voltage, power, flow, pressure, port size and mounting details before ordering a replacement.
+              </p>
+            </div>
+
+            <dl className="grid gap-3 rounded-lg border border-slate-200 bg-slate-50 p-5 text-sm md:grid-cols-2">
+              {aryungSummarySpecs.map(([label, value]) => (
+                <SpecTerm key={label} label={label} value={value} className={label === "Compatibility" ? "md:col-span-2" : ""} />
+              ))}
+            </dl>
+
+            <div className="flex flex-wrap gap-3">
+              <Button href={mailtoHref} className="gap-2">
+                <Send size={17} aria-hidden="true" /> Send Pump Label Photo
+              </Button>
+              <Button href={site.whatsappUrl} variant="secondary" className="gap-2">
+                <MessageCircle size={17} aria-hidden="true" /> Request a Quote
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <Container className="py-14">
+        <article className="space-y-12">
+          <Section title="Product Overview">
+            <p>
+              The ARYUNG ATP-216HA(VB) is shown on the product label as a T-rotor pump for coolant use. The visible label also
+              shows MFG No. 25060186, IN / OUT markings and a country marking of Made in Korea.
+            </p>
+            <p>
+              For machine-tool and industrial machinery maintenance, coolant pump replacement should be checked using the complete
+              pump label and installation details. A similar pump body or series name is not enough to confirm interchangeability.
+            </p>
+            <p>
+              MAVORIX can help overseas buyers organize label checking, supplier communication, photo confirmation and spare-parts
+              consolidation for pumps and related industrial components.
+            </p>
+          </Section>
+
+          <section>
+            <h2 className="text-3xl font-black text-navy">Confirmed Specifications</h2>
+            <div className="mt-5 overflow-hidden rounded-lg border border-slate-200 bg-white">
+              <table className="w-full text-left text-sm">
+                <tbody>
+                  {aryungConfirmedSpecs.map(([label, value]) => (
+                    <tr key={label} className="border-b border-slate-200 last:border-0">
+                      <th className="w-44 bg-slate-50 px-4 py-3 font-black text-navy">{label}</th>
+                      <td className="px-4 py-3 font-semibold text-slate-700">{value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <Section title="Key Features">
+            <ul className="grid gap-3 md:grid-cols-2">
+              {aryungKeyFeatures.map((item) => (
+                <li key={item} className="rounded-md border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-700">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="Typical Applications">
+            <ul className="grid gap-3 md:grid-cols-2">
+              {aryungApplications.map((item) => (
+                <li key={item} className="rounded-md border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-700">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="Compatibility / Selection Notice">
+            <p>
+              Final replacement selection should be confirmed against the old pump label, electrical rating, coolant system
+              requirements, mounting position, port connection and machine model.
+            </p>
+            <p>
+              Voltage, power, flow rate, pressure range, port size and mounting dimensions are not confirmed from the current
+              single photo.
+            </p>
+          </Section>
+
+          <Section title="Information Required Before Ordering">
+            <ul className="grid gap-3 md:grid-cols-2">
+              {aryungOrderingInfo.map((item) => (
+                <li key={item} className="rounded-md bg-slate-50 p-4 text-sm font-semibold text-slate-700 ring-1 ring-slate-200">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="MAVORIX Sourcing Support">
+            <p>
+              MAVORIX supports industrial buyers with pump model checking, supplier sourcing and China-side spare-parts
+              coordination. Related requests can also connect with our{" "}
+              <LinkText href="/en/industrial-sourcing/">industrial sourcing</LinkText>,{" "}
+              <LinkText href="/en/industries/factory-spare-parts/">factory spare parts</LinkText>,{" "}
+              <LinkText href="/en/industries/industrial-machinery/">industrial machinery</LinkText> and{" "}
+              <LinkText href="/en/contact/">contact</LinkText> workflows.
+            </p>
+            <ul className="grid gap-3 md:grid-cols-2">
+              {aryungSourcingSupport.map((item) => (
+                <li key={item} className="rounded-md border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-700">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Section>
+        </article>
+      </Container>
+
+      <FAQSection faqs={aryungFaqs} />
+      <CTASection
+        title="Need Help Checking a Coolant Pump Replacement?"
+        text="Send the pump label, voltage and power markings, port details, mounting dimensions, machine model and required quantity for sourcing support."
+      />
+      <JsonLd data={[breadcrumbSchema(breadcrumbItems), aryungProductSchema(), faqSchema(aryungFaqs)]} />
+    </>
+  );
+}
+
+function aryungProductSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: aryungTitle,
+    brand: {
+      "@type": "Brand",
+      name: "ARYUNG"
+    },
+    model: "ATP-216HA(VB)",
+    mpn: "25060186",
+    category: "T-Rotor Coolant Pump",
+    image: aryungImages.map((image) => `${site.url}${image.src}`),
+    description:
+      "ARYUNG ATP-216HA(VB) T-rotor coolant pump with visible MFG No. 25060186 and coolant application marking."
+  };
 }
 
 function SpecTerm({ label, value, className = "" }: { label: string; value: string; className?: string }) {
