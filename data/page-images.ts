@@ -261,5 +261,11 @@ export const blogImages: Record<string, PageImage> = {
     alt: "Palletized bags of TR-T 20×20 ceramic tumbling media prepared for a bulk order",
     width: 1600,
     height: 900
+  },
+  "industrial-led-flood-light-sourcing-case": {
+    src: "/images/blog/industrial-led-flood-light-sourcing-case/industrial-led-flood-light-production-batch.webp",
+    alt: "Batch of industrial LED flood lights during production in China",
+    width: 1600,
+    height: 900
   }
 };
