@@ -91,7 +91,7 @@ const blogGroups = [
   {
     title: "Industrial Sourcing Case Studies",
     description: "MAVORIX sourcing examples involving model checking, spare parts coordination, packing review, and shipment preparation.",
-    slugs: ["bosch-rexroth-hydraulic-valves-sourcing-consolidation-case"]
+    slugs: ["tr-t-20x20-ceramic-tumbling-media-sourcing-case", "bosch-rexroth-hydraulic-valves-sourcing-consolidation-case"]
   },
   {
     title: "Sourcing Guides",

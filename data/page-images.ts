@@ -255,5 +255,11 @@ export const blogImages: Record<string, PageImage> = {
     alt: "Batch of Bosch Rexroth hydraulic valves prepared for sourcing review",
     width: 1600,
     height: 900
+  },
+  "tr-t-20x20-ceramic-tumbling-media-sourcing-case": {
+    src: "/images/blog/tr-t-20x20-ceramic-tumbling-media-sourcing-case/tr-t-20x20-ceramic-tumbling-media-bulk-order.webp",
+    alt: "Palletized bags of TR-T 20×20 ceramic tumbling media prepared for a bulk order",
+    width: 1600,
+    height: 900
   }
 };

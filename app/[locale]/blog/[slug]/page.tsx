@@ -46,7 +46,9 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
     notFound();
   }
   const isRexrothCase = post.slug === "bosch-rexroth-hydraulic-valves-sourcing-consolidation-case";
-  const body = isRexrothCase ? post.body.replace(/\n## FAQ\n[\s\S]*$/, "") : post.body;
+  const isCeramicMediaCase = post.slug === "tr-t-20x20-ceramic-tumbling-media-sourcing-case";
+  const isSourcingCase = isRexrothCase || isCeramicMediaCase;
+  const body = isSourcingCase ? post.body.replace(/\n## FAQ\n[\s\S]*$/, "") : post.body;
   const html = markdownToHtml(body);
   const image = blogImages[post.slug] ?? pageImages.blog;
   const articleUrl = `${site.url}/${locale}/blog/${post.slug}/`;
@@ -59,23 +61,26 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   return (
     <>
       <PageHero
-        badge="Guide"
+        badge={isSourcingCase ? "Case Study" : "Guide"}
         title={post.title}
-        description={post.description}
+        description={isCeramicMediaCase ? "An overseas customer required 10 tons of TR-T 20×20 ceramic abrasive media for a mass-finishing application. MAVORIX coordinated specification confirmation, China-side sourcing, bulk packing checks and shipment preparation." : post.description}
         breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Blog", href: `/${locale}/blog/` }, { label: post.title, href: `/${locale}/blog/${post.slug}/` }]}
         cta={!isRexrothCase}
-        containerClassName={isRexrothCase ? "py-12 lg:py-16" : undefined}
-        titleClassName={isRexrothCase ? "mt-5 max-w-[920px] text-[2.15rem] font-black leading-tight md:text-[3.15rem]" : undefined}
-        descriptionClassName={isRexrothCase ? "mt-6 max-w-[860px] text-base leading-8 text-slate-300 md:text-lg" : undefined}
+        primaryCta={isCeramicMediaCase ? { href: `/${locale}/contact/`, label: "Send Your Media Requirement" } : undefined}
+        secondaryCta={isCeramicMediaCase ? { href: `/${locale}/industrial-sourcing/`, label: "Industrial Sourcing Services" } : undefined}
+        containerClassName={isSourcingCase ? "py-12 lg:py-16" : undefined}
+        titleClassName={isSourcingCase ? "mt-5 max-w-[920px] text-[2.15rem] font-black leading-tight md:text-[3.15rem]" : undefined}
+        descriptionClassName={isSourcingCase ? "mt-6 max-w-[860px] text-base leading-8 text-slate-300 md:text-lg" : undefined}
       />
-      <Container className={isRexrothCase ? "py-14" : "grid gap-8 py-16 lg:grid-cols-[1fr_300px]"}>
-        <article className={isRexrothCase ? "prose-industrial mx-auto min-w-0 max-w-[900px] rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10" : "prose-industrial min-w-0 rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10"}>
+      <Container className={isSourcingCase ? "py-14" : "grid gap-8 py-16 lg:grid-cols-[1fr_300px]"}>
+        <article className={isSourcingCase ? "prose-industrial mx-auto min-w-0 max-w-[900px] rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10" : "prose-industrial min-w-0 rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10"}>
           {locale !== "en" ? <div className="mb-8 rounded-lg border border-orange-200 bg-orange-50 p-4 text-sm font-semibold text-orange-900">English version: this blog guide has not been fully translated into {locale.toUpperCase()} yet.</div> : null}
-          <IndustrialImage src={image.src} alt={image.alt} className={isRexrothCase ? "mb-8 aspect-[16/9]" : "mb-8 min-h-[320px]"} sizes={isRexrothCase ? "(min-width: 1024px) 840px, 100vw" : "(min-width: 1024px) 760px, 100vw"} fit={isRexrothCase ? "contain" : "cover"} />
+          <IndustrialImage src={image.src} alt={image.alt} className={isSourcingCase ? "mb-8 aspect-[16/9]" : "mb-8 min-h-[320px]"} sizes={isSourcingCase ? "(min-width: 1024px) 840px, 100vw" : "(min-width: 1024px) 760px, 100vw"} fit={isSourcingCase ? "contain" : "cover"} />
           {isRexrothCase ? <p className="case-featured-caption">Rexroth hydraulic valves arranged for model and quantity checking before consolidated packing.</p> : null}
+          {isCeramicMediaCase ? <p className="case-featured-caption">Bagged ceramic abrasive media arranged on wooden pallets for packing and shipment preparation.</p> : null}
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
-        {!isRexrothCase ? (
+        {!isSourcingCase ? (
           <aside className="h-fit rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
             <h2 className="font-black text-navy">Next Steps</h2>
             <div className="mt-4 space-y-3 text-sm font-semibold text-slate-600">
@@ -86,19 +91,23 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
           </aside>
         ) : null}
       </Container>
-      {isRexrothCase ? (
+      {isSourcingCase ? (
         <>
           <FAQSection faqs={post.faqs} containerClassName="max-w-[980px]" gridClassName="mt-8 grid gap-4" />
           <section className="bg-slate-50 pb-16">
             <Container>
               <div className="mx-auto max-w-[900px] rounded-lg bg-navy p-7 text-white shadow-industrial md:p-10">
-                <h2 className="text-2xl font-black leading-tight md:text-3xl">Have a Hydraulic Valve or Mixed Spare-Parts List to Source?</h2>
+                <h2 className="text-2xl font-black leading-tight md:text-3xl">
+                  {isCeramicMediaCase ? "Need Ceramic Tumbling Media for a New or Existing Finishing Process?" : "Have a Hydraulic Valve or Mixed Spare-Parts List to Source?"}
+                </h2>
                 <p className="mt-4 max-w-3xl leading-8 text-slate-300">
-                  Send the complete model codes, material numbers, label photos and required quantities. MAVORIX can help organize China-side supplier sourcing, model checking and consolidated packing.
+                  {isCeramicMediaCase
+                    ? "Send the media sample or photo, workpiece details, required finishing result, trial quantity and expected bulk quantity. MAVORIX can assist with supplier sourcing, specification comparison and packing coordination in China."
+                    : "Send the complete model codes, material numbers, label photos and required quantities. MAVORIX can help organize China-side supplier sourcing, model checking and consolidated packing."}
                 </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                  <Button href={`/${locale}/contact/`}>Send Your Parts List</Button>
-                  <Button href="https://wa.me/8613967842747" variant="secondary">Discuss Your Requirement</Button>
+                  <Button href={`/${locale}/contact/`}>{isCeramicMediaCase ? "Send Your Requirement" : "Send Your Parts List"}</Button>
+                  <Button href={site.whatsappUrl} variant="secondary">{isCeramicMediaCase ? "Discuss a Bulk Order" : "Discuss Your Requirement"}</Button>
                 </div>
               </div>
             </Container>

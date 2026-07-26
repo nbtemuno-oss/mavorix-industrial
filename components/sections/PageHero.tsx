@@ -9,6 +9,8 @@ export function PageHero({
   description,
   breadcrumbs,
   cta = true,
+  primaryCta = { href: "/en/contact/", label: "Send Inquiry" },
+  secondaryCta = { href: "/en/services/", label: "Explore Services" },
   containerClassName = "py-14 lg:py-20",
   titleClassName = "mt-5 max-w-4xl text-4xl font-black leading-tight md:text-6xl",
   descriptionClassName = "mt-6 max-w-3xl text-lg leading-8 text-slate-300"
@@ -18,6 +20,8 @@ export function PageHero({
   description: string;
   breadcrumbs?: { label: string; href: string }[];
   cta?: boolean;
+  primaryCta?: { href: string; label: string };
+  secondaryCta?: { href: string; label: string };
   containerClassName?: string;
   titleClassName?: string;
   descriptionClassName?: string;
@@ -31,8 +35,8 @@ export function PageHero({
         <p className={descriptionClassName}>{description}</p>
         {cta ? (
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="/en/contact/">Send Inquiry</Button>
-            <Button href="/en/services/" variant="secondary">Explore Services</Button>
+            <Button href={primaryCta.href}>{primaryCta.label}</Button>
+            <Button href={secondaryCta.href} variant="secondary">{secondaryCta.label}</Button>
           </div>
         ) : null}
       </Container>
