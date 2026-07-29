@@ -1,0 +1,107 @@
+status: published
+publish_status: published
+
+product_name: "Custom Cutting Tools & Non-Standard CNC Tools"
+short_name: "Custom Cutting Tools"
+slug: "custom-cutting-tools"
+
+part_type: custom_cutting_tool_sourcing_capability
+equipment_category: cutting_tools
+compatibility_status: application_specific
+
+confirmed_specs:
+  - label: Page Type
+    value: "Custom cutting-tool sourcing capability"
+    source: user_provided
+  - label: Sourcing Basis
+    value: "Customer drawing, physical sample, workpiece drawing or machining requirement"
+    source: user_provided
+  - label: MAVORIX Role
+    value: "China-side industrial sourcing and supplier coordination partner"
+    source: user_provided
+
+unconfirmed_fields:
+  - field: tool_material
+    status: manual_confirmation_required
+    note: "Material is application-specific and must be confirmed for each quotation."
+  - field: coating
+    status: manual_confirmation_required
+    note: "Coating is application-specific and must be confirmed for each quotation."
+  - field: dimensions
+    status: manual_confirmation_required
+    note: "Diameter, shank, length, flute count, direction, geometry and tolerance depend on the drawing or RFQ."
+  - field: machining_application
+    status: manual_confirmation_required
+    note: "Workpiece material, operation, machine, coolant and performance requirements must be supplied by the buyer."
+  - field: minimum_order_quantity
+    status: quotation_specific
+    note: "Small-batch feasibility depends on geometry, material, process and supplier capability."
+  - field: tool_life
+    status: quotation_specific
+    note: "Tool-life targets require application data and supplier evaluation."
+
+internal_notes:
+  - "This is a capability page, not a fixed-SKU product page."
+  - "The tools shown are examples of different custom cutting-tool configurations."
+  - "Do not infer carbide, HSS, coating type, dimensions or intended application from appearance."
+  - "MAVORIX must be described as a sourcing and supplier coordination partner, not a cutting-tool manufacturer."
+
+questions_for_user: []
+
+images:
+  featured:
+    source: "0260729211950_185_4.jpg"
+    output: "custom-cutting-tools-main.webp"
+    alt: "Assorted custom cutting tools with varied stepped and profiled geometries in a tool holder"
+  gallery:
+    - source: "20260729211932_181_4.jpg"
+      output: "custom-cutting-tools-gallery-02.webp"
+      alt: "Long custom CNC tools with different cutting profiles arranged for inspection"
+    - source: "20260729211936_182_4.jpg"
+      output: "custom-cutting-tools-gallery-03.webp"
+      alt: "Batch of bronze-colored special cutting tools with varied end geometries"
+    - source: "20260729211939_183_4.jpg"
+      output: "custom-cutting-tools-gallery-04.webp"
+      alt: "Rows of dark-finish profile cutting tools in clear inspection stands"
+    - source: "20260729211944_184_4.jpg"
+      output: "custom-cutting-tools-gallery-05.webp"
+      alt: "Five long-shank custom form tools with rounded cutting heads"
+
+image_content_editing: manual_only
+manual_image_review_required: false
+
+category:
+  - Custom Cutting Tools
+  - Non-Standard CNC Tools
+  - Industrial Tooling Sourcing
+
+seo:
+  title: "Custom Cutting Tools & Non-Standard CNC Tools | MAVORIX"
+  meta_description: "Source custom cutting tools and non-standard CNC tools made to drawings, samples or machining requirements. MAVORIX supports supplier sourcing, specification review, sample follow-up and batch supply in China."
+  primary_keyword: "custom cutting tools"
+  secondary_keywords:
+    - "non-standard cutting tools"
+    - "custom CNC cutting tools"
+    - "special cutting tools"
+    - "custom precision cutting tools"
+    - "custom form tools"
+    - "made to drawing cutting tools"
+    - "special CNC tools"
+    - "custom machining tools"
+  long_tail_keywords:
+    - "custom cutting tools made to drawing"
+    - "custom cutting tools made to print"
+    - "custom cutting tool manufacturer China"
+    - "custom CNC tools from China"
+    - "non-standard cutting tools supplier"
+    - "custom form cutting tools"
+    - "custom cutting tools from sample"
+    - "custom tool manufacturing to customer drawing"
+    - "custom cutting tool sourcing China"
+
+publication:
+  route: "/en/products/cutting-tools/custom-cutting-tools/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: false

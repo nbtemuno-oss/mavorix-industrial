@@ -10,6 +10,16 @@ export type PublishedProduct = {
 
 export const publishedProducts: PublishedProduct[] = [
   {
+    slug: "custom-cutting-tools",
+    title: "Custom Cutting Tools & Non-Standard CNC Tools",
+    description:
+      "Custom cutting-tool sourcing based on buyer drawings, physical samples, workpiece drawings or application-specific machining requirements.",
+    path: "/en/products/cutting-tools/custom-cutting-tools/",
+    image: "/images/products/cutting-tools/custom-cutting-tools/custom-cutting-tools-thumbnail.webp",
+    imageAlt: "Assorted custom cutting tools with varied stepped and profiled geometries",
+    categorySlugs: ["industrial-machinery"]
+  },
+  {
     slug: "taisheng-apc-400x1-auto-loader-controller-board",
     title: "TAISHENG APC-400X1 Auto Loader Controller Board",
     description:

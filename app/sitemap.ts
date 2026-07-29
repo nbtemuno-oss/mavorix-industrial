@@ -67,6 +67,14 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/hytek HG0-08-01a-vpc/product.yaml"
     ];
   }
+  if (path.startsWith("products/cutting-tools/")) {
+    return [
+      ...common,
+      "app/[locale]/products/cutting-tools/[slug]/page.tsx",
+      "data/products.ts",
+      "product inbox/custom cutting tools/product.yaml"
+    ];
+  }
   if (path.startsWith("blog/")) {
     const slug = path.replace("blog/", "");
     return [...common, "app/[locale]/blog/[slug]/page.tsx", `content/en/blog/${slug}.md`];
