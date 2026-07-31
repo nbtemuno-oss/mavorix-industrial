@@ -48,6 +48,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   const isRexrothCase = post.slug === "bosch-rexroth-hydraulic-valves-sourcing-consolidation-case";
   const isCeramicMediaCase = post.slug === "tr-t-20x20-ceramic-tumbling-media-sourcing-case";
   const isLedFloodLightCase = post.slug === "industrial-led-flood-light-sourcing-case";
+  const isCustomCuttingToolsGuide = post.slug === "how-to-source-custom-cutting-tools-from-china";
   const isSourcingCase = isRexrothCase || isCeramicMediaCase || isLedFloodLightCase;
   const body = isSourcingCase ? post.body.replace(/\n## FAQ\n[\s\S]*$/, "") : post.body;
   const html = markdownToHtml(body);
@@ -67,8 +68,8 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
         description={isLedFloodLightCase ? "A recent overseas order involving large finned floodlight housings, reflector assembly, LED component checking, power-on testing and export packing preparation in China." : isCeramicMediaCase ? "An overseas customer required 10 tons of TR-T 20×20 ceramic abrasive media for a mass-finishing application. MAVORIX coordinated specification confirmation, China-side sourcing, bulk packing checks and shipment preparation." : post.description}
         breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Blog", href: `/${locale}/blog/` }, { label: post.title, href: `/${locale}/blog/${post.slug}/` }]}
         cta={!isRexrothCase}
-        primaryCta={isLedFloodLightCase ? { href: `/${locale}/contact/`, label: "Send Your Lighting Requirement" } : isCeramicMediaCase ? { href: `/${locale}/contact/`, label: "Send Your Media Requirement" } : undefined}
-        secondaryCta={isLedFloodLightCase || isCeramicMediaCase ? { href: `/${locale}/industrial-sourcing/`, label: "Industrial Sourcing Services" } : undefined}
+        primaryCta={isLedFloodLightCase ? { href: `/${locale}/contact/`, label: "Send Your Lighting Requirement" } : isCeramicMediaCase ? { href: `/${locale}/contact/`, label: "Send Your Media Requirement" } : isCustomCuttingToolsGuide ? { href: `/${locale}/contact/`, label: "Send Your Tool Drawing" } : undefined}
+        secondaryCta={isLedFloodLightCase || isCeramicMediaCase ? { href: `/${locale}/industrial-sourcing/`, label: "Industrial Sourcing Services" } : isCustomCuttingToolsGuide ? { href: `/${locale}/products/cutting-tools/custom-cutting-tools/`, label: "Custom Tool Capability" } : undefined}
         containerClassName={isSourcingCase ? "py-12 lg:py-16" : undefined}
         titleClassName={isSourcingCase ? "mt-5 max-w-[920px] text-[2.15rem] font-black leading-tight md:text-[3.15rem]" : undefined}
         descriptionClassName={isSourcingCase ? "mt-6 max-w-[860px] text-base leading-8 text-slate-300 md:text-lg" : undefined}
@@ -87,6 +88,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
             <h2 className="font-black text-navy">Next Steps</h2>
             <div className="mt-4 space-y-3 text-sm font-semibold text-slate-600">
               <Link href={`/${locale}/services/china-industrial-sourcing/`} className="block hover:text-signal">China Industrial Sourcing</Link>
+              {isCustomCuttingToolsGuide ? <Link href={`/${locale}/products/cutting-tools/custom-cutting-tools/`} className="block hover:text-signal">Custom Cutting Tools</Link> : null}
               <Link href={`/${locale}/services/supplier-verification/`} className="block hover:text-signal">Supplier Verification</Link>
               <Link href={`/${locale}/contact/`} className="block hover:text-signal">Send Inquiry</Link>
             </div>
@@ -118,7 +120,10 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
           </section>
         </>
       ) : (
-        <CTASection />
+        <CTASection
+          title={isCustomCuttingToolsGuide ? "Need a Custom Cutting Tool for a Specific Machining Operation?" : undefined}
+          text={isCustomCuttingToolsGuide ? "Send the tool drawing, sample photos, workpiece drawing, machining details and required quantity. MAVORIX can help coordinate supplier evaluation and quotation in China." : undefined}
+        />
       )}
       <JsonLd data={[breadcrumbSchema(breadcrumbItems), articleSchema({ title: post.title, description: post.description, date: post.date, url: articleUrl, image: `${site.url}${image.src}` }), faqSchema(post.faqs)]} />
     </>

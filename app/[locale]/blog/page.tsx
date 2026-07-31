@@ -96,7 +96,7 @@ const blogGroups = [
   {
     title: "Sourcing Guides",
     description: "Step-by-step sourcing advice for buyers comparing Chinese suppliers, OEM options, and industrial product requirements.",
-    slugs: ["how-to-source-industrial-products-from-china", "china-oem-manufacturing-guide", "china-industrial-sourcing-partner-for-overseas-factories", "compare-industrial-supplier-quotations-china"]
+    slugs: ["how-to-source-custom-cutting-tools-from-china", "how-to-source-industrial-products-from-china", "china-oem-manufacturing-guide", "china-industrial-sourcing-partner-for-overseas-factories", "compare-industrial-supplier-quotations-china"]
   },
   {
     title: "Factory Consumables and MRO",

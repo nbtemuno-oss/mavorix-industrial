@@ -267,5 +267,11 @@ export const blogImages: Record<string, PageImage> = {
     alt: "Batch of industrial LED flood lights during production in China",
     width: 1600,
     height: 900
+  },
+  "how-to-source-custom-cutting-tools-from-china": {
+    src: "/images/products/cutting-tools/custom-cutting-tools/custom-cutting-tools-main.webp",
+    alt: "Assorted custom cutting tools with varied stepped and profiled geometries in a tool holder",
+    width: 1400,
+    height: 1050
   }
 };
