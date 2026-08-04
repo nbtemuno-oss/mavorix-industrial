@@ -24,6 +24,236 @@ const hytekSlug = "hytek-hg0-08-01a-vpc-hydraulic-pump";
 const hytekTitle = "HYTEK HG0-08-01A-VPC Hydraulic Pump";
 const hytekPath = `/en/products/hydraulic-components/${hytekSlug}/`;
 
+type HydraulicPumpData = {
+  slug: string;
+  title: string;
+  path: string;
+  badge: string;
+  brand: string;
+  model: string;
+  materialNumber?: string;
+  category: string;
+  metaDescription: string;
+  summary: string;
+  schemaDescription: string;
+  images: { src: string; alt: string; label: string }[];
+  summarySpecs: string[][];
+  confirmedSpecs: string[][];
+  overview: string[];
+  keyFeatures: string[];
+  applications: string[];
+  selectionNotice: string[];
+  orderingInfo: string[];
+  faqs: { q: string; a: string }[];
+};
+
+const hydromaxPump: HydraulicPumpData = {
+  slug: "hydromax-hgp-22a-f4-4r-tandem-gear-pump",
+  title: "HYDROMAX HGP-22A-F4+4R Tandem Gear Pump",
+  path: "/en/products/hydraulic-components/hydromax-hgp-22a-f4-4r-tandem-gear-pump/",
+  badge: "Tandem Gear Pump",
+  brand: "HYDROMAX",
+  model: "HGP-22A-F4+4R",
+  category: "Hydraulic Tandem Gear Pump",
+  metaDescription:
+    "Source a HYDROMAX HGP-22A-F4+4R tandem gear pump with model-photo checking. Confirm displacement, rotation, shaft, ports and mounting before ordering.",
+  summary:
+    "HYDROMAX HGP-22A-F4+4R tandem gear pump shown with a two-section body, flange mounting, keyed shaft and protected hydraulic ports. Section displacement, rotation, shaft, ports and mounting must be checked before replacement ordering.",
+  schemaDescription:
+    "HYDROMAX HGP-22A-F4+4R tandem hydraulic gear pump sourcing reference based on visible model and product-form information.",
+  images: [
+    {
+      src: "/images/products/hydraulic-components/hydromax-hgp-22a-f4-4r-tandem-gear-pump/hydromax-hgp-22a-f4-4r-tandem-gear-pump-main.webp",
+      alt: "Two HYDROMAX HGP-22A-F4+4R tandem gear pumps showing shaft, flange and protected ports",
+      label: "Pump and model view"
+    }
+  ],
+  summarySpecs: [
+    ["Brand", "HYDROMAX"],
+    ["Model", "HGP-22A-F4+4R"],
+    ["Product Type", "Tandem gear pump"],
+    ["Visible Shaft", "Keyed shaft"],
+    ["Compatibility", "Manual confirmation required before ordering"]
+  ],
+  confirmedSpecs: [
+    ["Brand", "HYDROMAX"],
+    ["Model", "HGP-22A-F4+4R"],
+    ["Product Type", "Tandem gear pump"],
+    ["Visible Form", "Two-section pump body"],
+    ["Mounting Form", "Flange-mounted front section"],
+    ["Visible Shaft", "Keyed shaft"],
+    ["Visible Ports", "Multiple protected hydraulic ports"]
+  ],
+  overview: [
+    "The visible body marking identifies this pump as HYDROMAX HGP-22A-F4+4R. The product photo shows the two connected pump sections expected from a tandem gear-pump arrangement, along with a front mounting flange, keyed drive shaft and protected hydraulic ports.",
+    "For a replacement inquiry, the complete model is a useful starting point, but the old pump should still be compared section by section. Displacement, rotation, shaft, ports and mounting details can differ even when pumps have a similar body shape.",
+    "MAVORIX can help overseas industrial buyers organize model checking, supplier communication, pre-shipment photos and consolidation with other hydraulic and factory spare parts."
+  ],
+  keyFeatures: [
+    "HYDROMAX brand marking visible",
+    "HGP-22A-F4+4R model marking visible",
+    "Two-section tandem pump body",
+    "Front flange mounting form",
+    "Keyed drive shaft visible",
+    "Hydraulic ports fitted with protective plugs",
+    "Suitable for label-and-dimension-based sourcing review",
+    "Performance parameters require quotation-specific confirmation"
+  ],
+  applications: [
+    "Industrial hydraulic power systems",
+    "Factory machinery maintenance",
+    "Mobile and material-handling equipment repair",
+    "Machine replacement-pump sourcing",
+    "Hydraulic equipment spare-parts purchasing",
+    "Mixed MRO parts consolidation"
+  ],
+  selectionNotice: [
+    "Do not select a tandem gear pump from appearance alone. Both pump sections must be checked for displacement and function, and the direction of rotation must suit the drive arrangement.",
+    "The shaft, flange, mounting holes, port threads and port orientation should be compared with the old unit or a controlled dimensional drawing. Final hydraulic suitability and installation should be confirmed by qualified technical personnel."
+  ],
+  orderingInfo: [
+    "Clear model and body-marking photos",
+    "Old pump photos from every side",
+    "Displacement required for each section",
+    "Rated and maximum pressure requirements",
+    "Rotation direction",
+    "Shaft type and dimensions",
+    "Port thread, size and orientation",
+    "Flange and mounting dimensions",
+    "Machine brand and model",
+    "Required quantity and destination"
+  ],
+  faqs: [
+    {
+      q: "Is HGP-22A-F4+4R enough information to order this tandem gear pump?",
+      a: "It is a strong model reference, but the displacement of both sections, rotation, shaft, ports, mounting dimensions and machine application should also be confirmed."
+    },
+    {
+      q: "What information is confirmed from the current product photo?",
+      a: "The photo confirms the HYDROMAX brand, HGP-22A-F4+4R marking, two-section pump form, flange mounting, keyed shaft and protected hydraulic ports."
+    },
+    {
+      q: "Can a similar-looking tandem pump be used as a replacement?",
+      a: "Not automatically. Similar appearance does not confirm section displacement, rotation, shaft, ports, mounting or hydraulic performance."
+    },
+    {
+      q: "What should I send for a HYDROMAX gear pump quotation?",
+      a: "Send the complete model, old-pump photos, section displacement, rotation, shaft and port details, mounting dimensions, machine model, quantity and destination."
+    },
+    {
+      q: "Can MAVORIX consolidate this pump with other hydraulic parts?",
+      a: "Yes. MAVORIX can coordinate approved pumps, valves, seals, sensors and other industrial spare parts in one China-side purchasing and packing workflow."
+    }
+  ]
+};
+
+const rexrothAzpwPump: HydraulicPumpData = {
+  slug: "rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump",
+  title: "Rexroth AZPW-21-022RQRXXMB-S0593 External Gear Pump",
+  path: "/en/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/",
+  badge: "External Gear Pump",
+  brand: "Rexroth",
+  model: "AZPW-21-022RQRXXMB-S0593",
+  materialNumber: "R983032286",
+  category: "Hydraulic External Gear Pump",
+  metaDescription:
+    "Source a Rexroth AZPW-21-022RQRXXMB-S0593 external gear pump, MNR R983032286. Confirm the full code, shaft, ports and mounting before ordering.",
+  summary:
+    "Rexroth AZPW-21-022RQRXXMB-S0593 external gear pump with visible Material Number R983032286 and Made in India marking. The complete code, shaft, ports, rotation and mounting should be checked before replacement ordering.",
+  schemaDescription:
+    "Rexroth AZPW-21-022RQRXXMB-S0593 external hydraulic gear pump with visible Material Number R983032286 and Made in India marking.",
+  images: [
+    {
+      src: "/images/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump-main.webp",
+      alt: "Rexroth AZPW-21-022RQRXXMB-S0593 external gear pumps with label, flange and protected shaft visible",
+      label: "Label and shaft view"
+    },
+    {
+      src: "/images/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump-gallery-02.webp",
+      alt: "Batch of Rexroth AZPW external gear pumps arranged for quantity and label checking",
+      label: "Batch view"
+    }
+  ],
+  summarySpecs: [
+    ["Brand", "Rexroth"],
+    ["Model", "AZPW-21-022RQRXXMB-S0593"],
+    ["Material Number", "R983032286"],
+    ["Product Type", "External gear pump"],
+    ["Country Marking", "Made in India"],
+    ["Compatibility", "Full-code and dimensional confirmation required"]
+  ],
+  confirmedSpecs: [
+    ["Brand", "Rexroth"],
+    ["Model", "AZPW-21-022RQRXXMB-S0593"],
+    ["Material Number", "R983032286"],
+    ["Product Type", "External gear pump"],
+    ["Country Marking", "Made in India"],
+    ["Mounting Form", "Flange-mounted pump body"],
+    ["Visible Protection", "Shaft and ports protected in supplier photos"]
+  ],
+  overview: [
+    "The visible Rexroth label identifies model AZPW-21-022RQRXXMB-S0593 and Material Number R983032286. The same label includes a Made in India marking. One photo provides a close model-and-shaft view; the second records a larger batch arranged for checking.",
+    "Rexroth identifies its AZ range as external gear units, but a replacement should still be selected from the complete product code and the old pump's physical interfaces. Reading one code segment in isolation is not a substitute for checking the full configuration.",
+    "MAVORIX supports label comparison, supplier-side photo checking, quotation coordination and consolidation for industrial hydraulic spare-parts orders in China."
+  ],
+  keyFeatures: [
+    "Rexroth label visible",
+    "Complete AZPW-21-022RQRXXMB-S0593 model visible",
+    "Material Number R983032286 visible",
+    "Made in India marking visible",
+    "External gear-pump form",
+    "Flange mounting and protected shaft visible",
+    "Batch photo available for quantity-checking context",
+    "Hydraulic and dimensional parameters require confirmation"
+  ],
+  applications: [
+    "Mobile machinery hydraulic systems",
+    "Industrial equipment hydraulic supply",
+    "Factory machinery maintenance",
+    "Material-handling equipment repair",
+    "Hydraulic power and auxiliary circuits",
+    "Mixed industrial spare-parts sourcing"
+  ],
+  selectionNotice: [
+    "Order against the complete AZPW-21-022RQRXXMB-S0593 code and R983032286 reference where applicable. A partial AZPW-21-022 description or similar housing is not enough to confirm interchangeability.",
+    "Confirm rotation, shaft, flange, ports, dimensions, operating requirements and equipment application before purchase. Any proposed successor or compatible option should be reviewed against written technical information."
+  ],
+  orderingInfo: [
+    "Clear full-label photo",
+    "Complete model code",
+    "Material Number / MNR",
+    "Old pump photos from every side",
+    "Required displacement and pressure data",
+    "Rotation direction",
+    "Shaft type and dimensions",
+    "Port thread, size and orientation",
+    "Flange and mounting dimensions",
+    "Equipment model, quantity and destination"
+  ],
+  faqs: [
+    {
+      q: "What is the visible material number for this Rexroth AZPW pump?",
+      a: "The close label photo shows Material Number R983032286 together with model AZPW-21-022RQRXXMB-S0593."
+    },
+    {
+      q: "Does the current photo confirm the pump's pressure and displacement?",
+      a: "No. This page does not publish pressure or displacement as confirmed specifications. Use the complete code and manufacturer data, and confirm the actual application before ordering."
+    },
+    {
+      q: "Can another AZPW-21 pump replace this exact configuration?",
+      a: "Not automatically. The complete model code, material number, rotation, shaft, ports, flange, dimensions and system requirements should be compared."
+    },
+    {
+      q: "What should I send for a Rexroth external gear pump inquiry?",
+      a: "Send the full label, old-pump photos, shaft and port details, mounting dimensions, equipment model, quantity and destination."
+    },
+    {
+      q: "Is MAVORIX an authorized Rexroth distributor?",
+      a: "MAVORIX provides independent industrial sourcing and supplier coordination. We do not claim authorized-distributor status unless it is explicitly documented for a specific supply channel."
+    }
+  ]
+};
+
 const hytekImages = [
   {
     src: "/images/products/hydraulic-components/hytek-hg0-08-01a-vpc-hydraulic-pump/hytek-hg0-08-01a-vpc-hydraulic-pump-main.webp",
@@ -419,12 +649,42 @@ export function generateStaticParams() {
     { locale: "en", slug: productSlug },
     { locale: "en", slug: aryungSlug },
     { locale: "en", slug: daikinSlug },
-    { locale: "en", slug: hytekSlug }
+    { locale: "en", slug: hytekSlug },
+    { locale: "en", slug: hydromaxPump.slug },
+    { locale: "en", slug: rexrothAzpwPump.slug }
   ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
+  const pump = [hydromaxPump, rexrothAzpwPump].find((item) => locale === "en" && item.slug === slug);
+  if (pump) {
+    return {
+      title: `${pump.title} | MAVORIX`,
+      description: pump.metaDescription,
+      alternates: { canonical: `${site.url}${pump.path}` },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: { index: true, follow: true }
+      },
+      openGraph: {
+        title: pump.title,
+        description: pump.metaDescription,
+        url: `${site.url}${pump.path}`,
+        siteName: site.name,
+        locale: "en",
+        type: "website",
+        images: [{ url: pump.images[0].src, alt: pump.images[0].alt }]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: pump.title,
+        description: pump.metaDescription,
+        images: [pump.images[0].src]
+      }
+    };
+  }
   if (locale === "en" && slug === aryungSlug) {
     return {
       title: "ARYUNG ATP-216HA(VB) T-Rotor Coolant Pump | MAVORIX",
@@ -597,6 +857,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function RexrothDirectionalValvePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
+  if (locale === "en" && slug === hydromaxPump.slug) return <HydraulicPumpPage product={hydromaxPump} />;
+  if (locale === "en" && slug === rexrothAzpwPump.slug) return <HydraulicPumpPage product={rexrothAzpwPump} />;
   if (locale === "en" && slug === aryungSlug) return <AryungCoolantPumpPage />;
   if (locale === "en" && slug === daikinSlug) return <DaikinPistonPumpPage />;
   if (locale === "en" && slug === hytekSlug) return <HytekHydraulicPumpPage />;
@@ -1282,6 +1544,163 @@ function HytekHydraulicPumpPage() {
         text="Send the pump label, old pump photos, shaft and port details, mounting dimensions, machine model and required quantity for sourcing support."
       />
       <JsonLd data={[breadcrumbSchema(breadcrumbItems), hytekProductSchema(), faqSchema(hytekFaqs)]} />
+    </>
+  );
+}
+
+function HydraulicPumpPage({ product }: { product: HydraulicPumpData }) {
+  const inquirySubject = encodeURIComponent(`${product.model} hydraulic pump inquiry`);
+  const mailtoHref = `mailto:${site.email}?subject=${inquirySubject}`;
+  const breadcrumbItems = [
+    { name: "Home", url: `${site.url}/en/` },
+    { name: "Industrial Machinery", url: `${site.url}/en/industries/industrial-machinery/` },
+    { name: product.title, url: `${site.url}${product.path}` }
+  ];
+  const sourcingSupport = [
+    "Pump label and complete model-code checking",
+    "Supplier sourcing and quotation coordination in China",
+    "Shaft, port and mounting-information follow-up",
+    "Supplier-side product and packing photo collection",
+    "Exact-code or proposed-alternative comparison",
+    "Consolidation with valves, seals, sensors and other MRO parts",
+    "Export packing and shipment coordination"
+  ];
+
+  return (
+    <>
+      <section className="bg-slate-50 py-8">
+        <Container>
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/en/" },
+              { label: "Industrial Machinery", href: "/en/industries/industrial-machinery/" },
+              { label: product.title, href: product.path }
+            ]}
+          />
+        </Container>
+      </section>
+
+      <section className="bg-white py-12">
+        <Container className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(360px,480px)] lg:items-start">
+          <ProductImageGallery images={product.images} />
+
+          <div className="space-y-7">
+            <div>
+              <Badge>{product.badge}</Badge>
+              <h1 className="mt-4 break-words [overflow-wrap:anywhere] text-4xl font-black leading-tight text-navy md:text-5xl">
+                {product.title}
+              </h1>
+              <p className="mt-5 text-lg leading-8 text-slate-600">{product.summary}</p>
+            </div>
+
+            <dl className="grid gap-3 rounded-lg border border-slate-200 bg-slate-50 p-5 text-sm md:grid-cols-2">
+              {product.summarySpecs.map(([label, value]) => (
+                <SpecTerm key={label} label={label} value={value} className={label === "Compatibility" ? "md:col-span-2" : ""} />
+              ))}
+            </dl>
+
+            <div className="flex flex-wrap gap-3">
+              <Button href={mailtoHref} className="gap-2">
+                <Send size={17} aria-hidden="true" /> Send Pump Label
+              </Button>
+              <Button href={site.whatsappUrl} variant="secondary" className="gap-2">
+                <MessageCircle size={17} aria-hidden="true" /> Request a Quote
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <Container className="py-14">
+        <article className="space-y-12">
+          <Section title="Product Overview">
+            {product.overview.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          </Section>
+
+          <section>
+            <h2 className="text-3xl font-black text-navy">Confirmed Specifications</h2>
+            <div className="mt-5 overflow-hidden rounded-lg border border-slate-200 bg-white">
+              <table className="w-full text-left text-sm">
+                <tbody>
+                  {product.confirmedSpecs.map(([label, value]) => (
+                    <tr key={label} className="border-b border-slate-200 last:border-0">
+                      <th className="w-44 bg-slate-50 px-4 py-3 font-black text-navy">{label}</th>
+                      <td className="px-4 py-3 font-semibold text-slate-700">{value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <Section title="Key Features">
+            <ul className="grid gap-3 md:grid-cols-2">
+              {product.keyFeatures.map((item) => (
+                <li key={item} className="rounded-md border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-700">{item}</li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="Typical Applications">
+            <ul className="grid gap-3 md:grid-cols-2">
+              {product.applications.map((item) => (
+                <li key={item} className="rounded-md border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-700">{item}</li>
+              ))}
+            </ul>
+            <p>These are typical sourcing contexts only. Final pump selection must be based on the hydraulic system and equipment requirements.</p>
+          </Section>
+
+          <Section title="Compatibility / Selection Notice">
+            {product.selectionNotice.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          </Section>
+
+          <Section title="Information Required Before Ordering">
+            <ul className="grid gap-3 md:grid-cols-2">
+              {product.orderingInfo.map((item) => (
+                <li key={item} className="rounded-md bg-slate-50 p-4 text-sm font-semibold text-slate-700 ring-1 ring-slate-200">{item}</li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="MAVORIX Sourcing Support">
+            <p>
+              MAVORIX acts as an independent China-side sourcing and supplier coordination partner. Related requests can connect with our{" "}
+              <LinkText href="/en/industrial-sourcing/">industrial sourcing</LinkText>,{" "}
+              <LinkText href="/en/industries/factory-spare-parts/">factory spare parts</LinkText>,{" "}
+              <LinkText href="/en/industries/industrial-machinery/">industrial machinery</LinkText> and{" "}
+              <LinkText href="/en/contact/">contact</LinkText> workflows.
+            </p>
+            <ul className="grid gap-3 md:grid-cols-2">
+              {sourcingSupport.map((item) => (
+                <li key={item} className="rounded-md border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-700">{item}</li>
+              ))}
+            </ul>
+          </Section>
+        </article>
+      </Container>
+
+      <FAQSection faqs={product.faqs} />
+      <CTASection
+        title="Need Help Checking a Hydraulic Pump Replacement?"
+        text="Send the complete label, old pump photos, shaft and port details, mounting dimensions, machine model and required quantity for sourcing support."
+      />
+      <JsonLd
+        data={[
+          breadcrumbSchema(breadcrumbItems),
+          {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: product.title,
+            brand: { "@type": "Brand", name: product.brand },
+            model: product.model,
+            ...(product.materialNumber ? { mpn: product.materialNumber } : {}),
+            category: product.category,
+            image: product.images.map((image) => `${site.url}${image.src}`),
+            description: product.schemaDescription
+          },
+          faqSchema(product.faqs)
+        ]}
+      />
     </>
   );
 }

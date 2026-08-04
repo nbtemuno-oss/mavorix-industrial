@@ -84,5 +84,27 @@ export const publishedProducts: PublishedProduct[] = [
       "/images/products/hydraulic-components/hytek-hg0-08-01a-vpc-hydraulic-pump/hytek-hg0-08-01a-vpc-hydraulic-pump-thumbnail.webp",
     imageAlt: "HYTEK HG0-08-01A-VPC hydraulic pump label and shaft view",
     categorySlugs: ["industrial-machinery", "factory-spare-parts"]
+  },
+  {
+    slug: "hydromax-hgp-22a-f4-4r-tandem-gear-pump",
+    title: "HYDROMAX HGP-22A-F4+4R Tandem Gear Pump",
+    description:
+      "HYDROMAX HGP-22A-F4+4R tandem gear pump with visible two-section body, flange mounting, keyed shaft and protected hydraulic ports.",
+    path: "/en/products/hydraulic-components/hydromax-hgp-22a-f4-4r-tandem-gear-pump/",
+    image:
+      "/images/products/hydraulic-components/hydromax-hgp-22a-f4-4r-tandem-gear-pump/hydromax-hgp-22a-f4-4r-tandem-gear-pump-thumbnail.webp",
+    imageAlt: "HYDROMAX HGP-22A-F4+4R tandem gear pump with keyed shaft and protected ports",
+    categorySlugs: ["industrial-machinery", "factory-spare-parts"]
+  },
+  {
+    slug: "rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump",
+    title: "Rexroth AZPW-21-022RQRXXMB-S0593 External Gear Pump",
+    description:
+      "Rexroth AZPW-21-022RQRXXMB-S0593 external gear pump, Material Number R983032286, with visible Made in India marking.",
+    path: "/en/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/",
+    image:
+      "/images/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump-thumbnail.webp",
+    imageAlt: "Rexroth AZPW-21-022RQRXXMB-S0593 external gear pump label and shaft view",
+    categorySlugs: ["industrial-machinery", "factory-spare-parts"]
   }
 ];

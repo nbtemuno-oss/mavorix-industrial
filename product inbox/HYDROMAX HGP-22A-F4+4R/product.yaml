@@ -1,0 +1,81 @@
+status: approved
+publish_status: published
+
+product_name: "HYDROMAX HGP-22A-F4+4R Tandem Gear Pump"
+short_name: "HYDROMAX HGP-22A-F4+4R"
+slug: "hydromax-hgp-22a-f4-4r-tandem-gear-pump"
+
+brand: "HYDROMAX"
+model: "HGP-22A-F4+4R"
+part_number: ""
+material_number: ""
+part_type: "tandem_gear_pump"
+condition: "New or unused appearance; final condition confirmation required"
+compatibility_status: "manual_confirmation_required"
+image_content_editing: "manual_only"
+category: "hydraulic-components"
+categories:
+  - "industrial-machinery"
+  - "factory-spare-parts"
+
+confirmed_specs:
+  - label: "Brand"
+    value: "HYDROMAX"
+    source: "image_confirmed"
+  - label: "Model"
+    value: "HGP-22A-F4+4R"
+    source: "image_confirmed"
+  - label: "Product Type"
+    value: "Tandem gear pump"
+    source: "model_and_product_photo"
+  - label: "Visible Form"
+    value: "Two-section pump body with flange mounting and keyed shaft"
+    source: "image_confirmed"
+  - label: "Visible Ports"
+    value: "Multiple protected hydraulic ports"
+    source: "image_confirmed"
+
+unconfirmed_fields:
+  - "Displacement of each pump section"
+  - "Rated and maximum pressure"
+  - "Rotation direction"
+  - "Shaft dimensions"
+  - "Port thread and orientation"
+  - "Mounting dimensions"
+  - "Hydraulic fluid requirements"
+  - "Exact machine compatibility"
+
+questions_for_user:
+  - "Please provide the old pump label or machine information if this is for replacement use."
+  - "Please confirm displacement, rotation, shaft, ports and mounting dimensions before formal ordering."
+
+images:
+  originals:
+    - "20260803172923_205_4.jpg"
+  generated:
+    main: "/images/products/hydraulic-components/hydromax-hgp-22a-f4-4r-tandem-gear-pump/hydromax-hgp-22a-f4-4r-tandem-gear-pump-main.webp"
+    thumbnail: "/images/products/hydraulic-components/hydromax-hgp-22a-f4-4r-tandem-gear-pump/hydromax-hgp-22a-f4-4r-tandem-gear-pump-thumbnail.webp"
+
+seo:
+  title: "HYDROMAX HGP-22A-F4+4R Tandem Gear Pump | MAVORIX"
+  meta_description: "Source a HYDROMAX HGP-22A-F4+4R tandem gear pump with model-photo checking. Confirm displacement, rotation, shaft, ports and mounting before ordering."
+  primary_keyword: "HYDROMAX HGP-22A-F4+4R tandem gear pump"
+  secondary_keywords:
+    - "HYDROMAX HGP-22A gear pump"
+    - "HGP-22A tandem hydraulic pump"
+    - "HYDROMAX hydraulic gear pump"
+    - "tandem gear pump replacement"
+    - "industrial hydraulic pump sourcing"
+  long_tail_keywords:
+    - "source HYDROMAX HGP-22A-F4+4R tandem gear pump"
+    - "HYDROMAX HGP-22A-F4+4R replacement pump"
+    - "HGP-22A tandem gear pump supplier China"
+    - "how to verify HYDROMAX tandem gear pump model"
+    - "industrial tandem hydraulic pump sourcing China"
+
+publication:
+  route: "/en/products/hydraulic-components/hydromax-hgp-22a-f4-4r-tandem-gear-pump/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: false

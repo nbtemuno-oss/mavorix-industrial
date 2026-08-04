@@ -48,8 +48,9 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   const isRexrothCase = post.slug === "bosch-rexroth-hydraulic-valves-sourcing-consolidation-case";
   const isCeramicMediaCase = post.slug === "tr-t-20x20-ceramic-tumbling-media-sourcing-case";
   const isLedFloodLightCase = post.slug === "industrial-led-flood-light-sourcing-case";
+  const isHydraulicValveSourcingCase = post.slug === "rexroth-dbds6p1x-315-pressure-relief-valve-sourcing";
   const isCustomCuttingToolsGuide = post.slug === "how-to-source-custom-cutting-tools-from-china";
-  const isSourcingCase = isRexrothCase || isCeramicMediaCase || isLedFloodLightCase;
+  const isSourcingCase = isRexrothCase || isCeramicMediaCase || isLedFloodLightCase || isHydraulicValveSourcingCase;
   const body = isSourcingCase ? post.body.replace(/\n## FAQ\n[\s\S]*$/, "") : post.body;
   const html = markdownToHtml(body);
   const image = blogImages[post.slug] ?? pageImages.blog;
@@ -65,11 +66,11 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
       <PageHero
         badge={isSourcingCase ? "Case Study" : "Guide"}
         title={post.title}
-        description={isLedFloodLightCase ? "A recent overseas order involving large finned floodlight housings, reflector assembly, LED component checking, power-on testing and export packing preparation in China." : isCeramicMediaCase ? "An overseas customer required 10 tons of TR-T 20×20 ceramic abrasive media for a mass-finishing application. MAVORIX coordinated specification confirmation, China-side sourcing, bulk packing checks and shipment preparation." : post.description}
+        description={isLedFloodLightCase ? "A recent overseas order involving large finned floodlight housings, reflector assembly, LED component checking, power-on testing and export packing preparation in China." : isCeramicMediaCase ? "An overseas customer required 10 tons of TR-T 20×20 ceramic abrasive media for a mass-finishing application. MAVORIX coordinated specification confirmation, China-side sourcing, bulk packing checks and shipment preparation." : isHydraulicValveSourcingCase ? "A real customer order of Rexroth pressure relief valves, and a practical look at how MAVORIX helps overseas buyers source hydraulic valves from multiple brands in China." : post.description}
         breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Blog", href: `/${locale}/blog/` }, { label: post.title, href: `/${locale}/blog/${post.slug}/` }]}
         cta={!isRexrothCase}
-        primaryCta={isLedFloodLightCase ? { href: `/${locale}/contact/`, label: "Send Your Lighting Requirement" } : isCeramicMediaCase ? { href: `/${locale}/contact/`, label: "Send Your Media Requirement" } : isCustomCuttingToolsGuide ? { href: `/${locale}/contact/`, label: "Send Your Tool Drawing" } : undefined}
-        secondaryCta={isLedFloodLightCase || isCeramicMediaCase ? { href: `/${locale}/industrial-sourcing/`, label: "Industrial Sourcing Services" } : isCustomCuttingToolsGuide ? { href: `/${locale}/products/cutting-tools/custom-cutting-tools/`, label: "Custom Tool Capability" } : undefined}
+        primaryCta={isLedFloodLightCase ? { href: `/${locale}/contact/`, label: "Send Your Lighting Requirement" } : isCeramicMediaCase ? { href: `/${locale}/contact/`, label: "Send Your Media Requirement" } : isHydraulicValveSourcingCase ? { href: `/${locale}/contact/`, label: "Send Your Valve List" } : isCustomCuttingToolsGuide ? { href: `/${locale}/contact/`, label: "Send Your Tool Drawing" } : undefined}
+        secondaryCta={isLedFloodLightCase || isCeramicMediaCase || isHydraulicValveSourcingCase ? { href: `/${locale}/industrial-sourcing/`, label: "Industrial Sourcing Services" } : isCustomCuttingToolsGuide ? { href: `/${locale}/products/cutting-tools/custom-cutting-tools/`, label: "Custom Tool Capability" } : undefined}
         containerClassName={isSourcingCase ? "py-12 lg:py-16" : undefined}
         titleClassName={isSourcingCase ? "mt-5 max-w-[920px] text-[2.15rem] font-black leading-tight md:text-[3.15rem]" : undefined}
         descriptionClassName={isSourcingCase ? "mt-6 max-w-[860px] text-base leading-8 text-slate-300 md:text-lg" : undefined}
@@ -77,10 +78,17 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
       <Container className={isSourcingCase ? "py-14" : "grid gap-8 py-16 lg:grid-cols-[1fr_300px]"}>
         <article className={isSourcingCase ? "prose-industrial mx-auto min-w-0 max-w-[900px] rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10" : "prose-industrial min-w-0 rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10"}>
           {locale !== "en" ? <div className="mb-8 rounded-lg border border-orange-200 bg-orange-50 p-4 text-sm font-semibold text-orange-900">English version: this blog guide has not been fully translated into {locale.toUpperCase()} yet.</div> : null}
-          <IndustrialImage src={image.src} alt={image.alt} className={isSourcingCase ? "mb-8 aspect-[16/9]" : "mb-8 min-h-[320px]"} sizes={isSourcingCase ? "(min-width: 1024px) 840px, 100vw" : "(min-width: 1024px) 760px, 100vw"} fit={isSourcingCase ? "contain" : "cover"} />
+          <IndustrialImage
+            src={image.src}
+            alt={image.alt}
+            className={isHydraulicValveSourcingCase ? "mx-auto mb-8 aspect-[9/16] w-full max-w-[680px]" : isSourcingCase ? "mb-8 aspect-[16/9]" : "mb-8 min-h-[320px]"}
+            sizes={isHydraulicValveSourcingCase ? "(min-width: 768px) 680px, 100vw" : isSourcingCase ? "(min-width: 1024px) 840px, 100vw" : "(min-width: 1024px) 760px, 100vw"}
+            fit={isSourcingCase ? "contain" : "cover"}
+          />
           {isRexrothCase ? <p className="case-featured-caption">Rexroth hydraulic valves arranged for model and quantity checking before consolidated packing.</p> : null}
           {isCeramicMediaCase ? <p className="case-featured-caption">Bagged ceramic abrasive media arranged on wooden pallets for packing and shipment preparation.</p> : null}
           {isLedFloodLightCase ? <p className="case-featured-caption">Industrial LED flood light housings arranged during supplier-side production follow-up.</p> : null}
+          {isHydraulicValveSourcingCase ? <p className="case-featured-caption">Rexroth DBDS6P1X/315 pressure relief valves purchased for a customer and photographed during shipment packing.</p> : null}
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
         {!isSourcingCase ? (

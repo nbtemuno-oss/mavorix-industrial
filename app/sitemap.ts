@@ -64,7 +64,9 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/rexroth-4we6d6x-ofeg24n9k4/product.yaml",
       "product inbox/aryung atp-216ha/product.yaml",
       "product inbox/dakin v38a3rx/product.yaml",
-      "product inbox/hytek HG0-08-01a-vpc/product.yaml"
+      "product inbox/hytek HG0-08-01a-vpc/product.yaml",
+      "product inbox/HYDROMAX HGP-22A-F4+4R/product.yaml",
+      "product inbox/Rexroth pump AZPW-21-022RQRXXMB-S0593/product.yaml"
     ];
   }
   if (path.startsWith("products/cutting-tools/")) {

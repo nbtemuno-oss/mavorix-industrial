@@ -273,5 +273,11 @@ export const blogImages: Record<string, PageImage> = {
     alt: "Assorted custom cutting tools with varied stepped and profiled geometries in a tool holder",
     width: 1400,
     height: 1050
+  },
+  "rexroth-dbds6p1x-315-pressure-relief-valve-sourcing": {
+    src: "/images/blog/rexroth-dbds6p1x-315-pressure-relief-valve-sourcing/rexroth-dbds6p1x-315-pressure-relief-valves-packed.webp",
+    alt: "Full carton of Rexroth DBDS6P1X/315 pressure relief valves purchased for a customer and packed for shipment",
+    width: 1080,
+    height: 1920
   }
 };

@@ -1,0 +1,88 @@
+status: approved
+publish_status: published
+
+product_name: "Rexroth AZPW-21-022RQRXXMB-S0593 External Gear Pump"
+short_name: "Rexroth AZPW-21-022RQRXXMB-S0593"
+slug: "rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump"
+
+brand: "Rexroth"
+model: "AZPW-21-022RQRXXMB-S0593"
+part_number: ""
+material_number: "R983032286"
+part_type: "external_gear_pump"
+condition: "New or unused appearance; final condition confirmation required"
+compatibility_status: "manual_confirmation_required"
+image_content_editing: "manual_only"
+category: "hydraulic-components"
+categories:
+  - "industrial-machinery"
+  - "factory-spare-parts"
+
+confirmed_specs:
+  - label: "Brand"
+    value: "Rexroth"
+    source: "image_confirmed"
+  - label: "Model"
+    value: "AZPW-21-022RQRXXMB-S0593"
+    source: "image_confirmed"
+  - label: "Material Number"
+    value: "R983032286"
+    source: "image_confirmed"
+  - label: "Product Type"
+    value: "External gear pump"
+    source: "manufacturer_series_reference"
+  - label: "Country Marking"
+    value: "Made in India"
+    source: "image_confirmed"
+  - label: "Visible Form"
+    value: "Flange-mounted pump with protected shaft and ports"
+    source: "image_confirmed"
+
+unconfirmed_fields:
+  - "Displacement interpretation from the model code"
+  - "Rated and maximum pressure"
+  - "Rotation direction"
+  - "Shaft specification"
+  - "Port thread and orientation"
+  - "Mounting dimensions"
+  - "Hydraulic fluid requirements"
+  - "Exact machine compatibility"
+  - "Authorized-distributor or channel status"
+
+questions_for_user:
+  - "Please confirm the old pump model and equipment application before ordering a replacement."
+  - "Please provide shaft, port and mounting dimensions if no original pump is available for comparison."
+
+images:
+  originals:
+    - "0260804085107_210_4.jpg"
+    - "20260804085105_209_4.jpg"
+  generated:
+    main: "/images/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump-main.webp"
+    gallery:
+      - "/images/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump-gallery-02.webp"
+    thumbnail: "/images/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump-thumbnail.webp"
+
+seo:
+  title: "Rexroth AZPW-21-022RQRXXMB-S0593 Gear Pump | MAVORIX"
+  meta_description: "Source a Rexroth AZPW-21-022RQRXXMB-S0593 external gear pump, MNR R983032286. Confirm the full code, shaft, ports and mounting before ordering."
+  primary_keyword: "Rexroth AZPW-21-022RQRXXMB-S0593 gear pump"
+  secondary_keywords:
+    - "R983032286"
+    - "Rexroth AZPW external gear pump"
+    - "Rexroth hydraulic gear pump replacement"
+    - "AZPW-21-022 gear pump"
+    - "industrial hydraulic pump sourcing"
+  long_tail_keywords:
+    - "source Rexroth AZPW-21-022RQRXXMB-S0593 gear pump"
+    - "Rexroth R983032286 replacement gear pump"
+    - "AZPW-21-022RQRXXMB-S0593 supplier China"
+    - "how to verify Rexroth AZPW gear pump model code"
+    - "Rexroth external gear pump sourcing for industrial machinery"
+
+publication:
+  route: "/en/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: false
