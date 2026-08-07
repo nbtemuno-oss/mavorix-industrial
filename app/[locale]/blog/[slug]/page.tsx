@@ -49,8 +49,9 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   const isCeramicMediaCase = post.slug === "tr-t-20x20-ceramic-tumbling-media-sourcing-case";
   const isLedFloodLightCase = post.slug === "industrial-led-flood-light-sourcing-case";
   const isHydraulicValveSourcingCase = post.slug === "rexroth-dbds6p1x-315-pressure-relief-valve-sourcing";
+  const isStrappingMachineCase = post.slug === "automatic-strapping-machine-sourcing-romania-case";
   const isCustomCuttingToolsGuide = post.slug === "how-to-source-custom-cutting-tools-from-china";
-  const isSourcingCase = isRexrothCase || isCeramicMediaCase || isLedFloodLightCase || isHydraulicValveSourcingCase;
+  const isSourcingCase = isRexrothCase || isCeramicMediaCase || isLedFloodLightCase || isHydraulicValveSourcingCase || isStrappingMachineCase;
   const body = isSourcingCase ? post.body.replace(/\n## FAQ\n[\s\S]*$/, "") : post.body;
   const html = markdownToHtml(body);
   const image = blogImages[post.slug] ?? pageImages.blog;
@@ -66,11 +67,11 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
       <PageHero
         badge={isSourcingCase ? "Case Study" : "Guide"}
         title={post.title}
-        description={isLedFloodLightCase ? "A recent overseas order involving large finned floodlight housings, reflector assembly, LED component checking, power-on testing and export packing preparation in China." : isCeramicMediaCase ? "An overseas customer required 10 tons of TR-T 20×20 ceramic abrasive media for a mass-finishing application. MAVORIX coordinated specification confirmation, China-side sourcing, bulk packing checks and shipment preparation." : isHydraulicValveSourcingCase ? "A real customer order of Rexroth pressure relief valves, and a practical look at how MAVORIX helps overseas buyers source hydraulic valves from multiple brands in China." : post.description}
+        description={isLedFloodLightCase ? "A recent overseas order involving large finned floodlight housings, reflector assembly, LED component checking, power-on testing and export packing preparation in China." : isCeramicMediaCase ? "An overseas customer required 10 tons of TR-T 20×20 ceramic abrasive media for a mass-finishing application. MAVORIX coordinated specification confirmation, China-side sourcing, bulk packing checks and shipment preparation." : isHydraulicValveSourcingCase ? "A real customer order of Rexroth pressure relief valves, and a practical look at how MAVORIX helps overseas buyers source hydraulic valves from multiple brands in China." : isStrappingMachineCase ? "An MS-505 automatic PP strapping machine order for Romania, documented through specification review, workshop inspection photos, warehouse intake and wooden-case packing." : post.description}
         breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Blog", href: `/${locale}/blog/` }, { label: post.title, href: `/${locale}/blog/${post.slug}/` }]}
         cta={!isRexrothCase}
-        primaryCta={isLedFloodLightCase ? { href: `/${locale}/contact/`, label: "Send Your Lighting Requirement" } : isCeramicMediaCase ? { href: `/${locale}/contact/`, label: "Send Your Media Requirement" } : isHydraulicValveSourcingCase ? { href: `/${locale}/contact/`, label: "Send Your Valve List" } : isCustomCuttingToolsGuide ? { href: `/${locale}/contact/`, label: "Send Your Tool Drawing" } : undefined}
-        secondaryCta={isLedFloodLightCase || isCeramicMediaCase || isHydraulicValveSourcingCase ? { href: `/${locale}/industrial-sourcing/`, label: "Industrial Sourcing Services" } : isCustomCuttingToolsGuide ? { href: `/${locale}/products/cutting-tools/custom-cutting-tools/`, label: "Custom Tool Capability" } : undefined}
+        primaryCta={isLedFloodLightCase ? { href: `/${locale}/contact/`, label: "Send Your Lighting Requirement" } : isCeramicMediaCase ? { href: `/${locale}/contact/`, label: "Send Your Media Requirement" } : isHydraulicValveSourcingCase ? { href: `/${locale}/contact/`, label: "Send Your Valve List" } : isStrappingMachineCase ? { href: `/${locale}/contact/`, label: "Send Your Package Details" } : isCustomCuttingToolsGuide ? { href: `/${locale}/contact/`, label: "Send Your Tool Drawing" } : undefined}
+        secondaryCta={isLedFloodLightCase || isCeramicMediaCase || isHydraulicValveSourcingCase || isStrappingMachineCase ? { href: `/${locale}/industrial-sourcing/`, label: "Industrial Sourcing Services" } : isCustomCuttingToolsGuide ? { href: `/${locale}/products/cutting-tools/custom-cutting-tools/`, label: "Custom Tool Capability" } : undefined}
         containerClassName={isSourcingCase ? "py-12 lg:py-16" : undefined}
         titleClassName={isSourcingCase ? "mt-5 max-w-[920px] text-[2.15rem] font-black leading-tight md:text-[3.15rem]" : undefined}
         descriptionClassName={isSourcingCase ? "mt-6 max-w-[860px] text-base leading-8 text-slate-300 md:text-lg" : undefined}
@@ -81,14 +82,15 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
           <IndustrialImage
             src={image.src}
             alt={image.alt}
-            className={isHydraulicValveSourcingCase ? "mx-auto mb-8 aspect-[9/16] w-full max-w-[680px]" : isSourcingCase ? "mb-8 aspect-[16/9]" : "mb-8 min-h-[320px]"}
-            sizes={isHydraulicValveSourcingCase ? "(min-width: 768px) 680px, 100vw" : isSourcingCase ? "(min-width: 1024px) 840px, 100vw" : "(min-width: 1024px) 760px, 100vw"}
+            className={isHydraulicValveSourcingCase ? "mx-auto mb-8 aspect-[9/16] w-full max-w-[680px]" : isStrappingMachineCase ? "mx-auto mb-8 aspect-[3/4] w-full max-w-[680px]" : isSourcingCase ? "mb-8 aspect-[16/9]" : "mb-8 min-h-[320px]"}
+            sizes={isHydraulicValveSourcingCase || isStrappingMachineCase ? "(min-width: 768px) 680px, 100vw" : isSourcingCase ? "(min-width: 1024px) 840px, 100vw" : "(min-width: 1024px) 760px, 100vw"}
             fit={isSourcingCase ? "contain" : "cover"}
           />
           {isRexrothCase ? <p className="case-featured-caption">Rexroth hydraulic valves arranged for model and quantity checking before consolidated packing.</p> : null}
           {isCeramicMediaCase ? <p className="case-featured-caption">Bagged ceramic abrasive media arranged on wooden pallets for packing and shipment preparation.</p> : null}
           {isLedFloodLightCase ? <p className="case-featured-caption">Industrial LED flood light housings arranged during supplier-side production follow-up.</p> : null}
           {isHydraulicValveSourcingCase ? <p className="case-featured-caption">Rexroth DBDS6P1X/315 pressure relief valves purchased for a customer and photographed during shipment packing.</p> : null}
+          {isStrappingMachineCase ? <p className="case-featured-caption">MS-505 automatic PP strapping machine photographed during supplier-side checking before warehouse intake and export packing.</p> : null}
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
         {!isSourcingCase ? (
@@ -110,18 +112,20 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
             <Container>
               <div className="mx-auto max-w-[900px] rounded-lg bg-navy p-7 text-white shadow-industrial md:p-10">
                 <h2 className="text-2xl font-black leading-tight md:text-3xl">
-                  {isLedFloodLightCase ? "Planning an Industrial LED Flood Light Order?" : isCeramicMediaCase ? "Need Ceramic Tumbling Media for a New or Existing Finishing Process?" : "Have a Hydraulic Valve or Mixed Spare-Parts List to Source?"}
+                  {isLedFloodLightCase ? "Planning an Industrial LED Flood Light Order?" : isCeramicMediaCase ? "Need Ceramic Tumbling Media for a New or Existing Finishing Process?" : isStrappingMachineCase ? "Planning an Automatic Strapping Machine Order?" : "Have a Hydraulic Valve or Mixed Spare-Parts List to Source?"}
                 </h2>
                 <p className="mt-4 max-w-3xl leading-8 text-slate-300">
                   {isLedFloodLightCase
                     ? "Send the application, wattage and lumen target, input voltage, beam requirement, mounting details, protection rating, quantity and destination market. MAVORIX can assist with supplier sourcing, specification comparison and production follow-up in China."
                     : isCeramicMediaCase
                     ? "Send the media sample or photo, workpiece details, required finishing result, trial quantity and expected bulk quantity. MAVORIX can assist with supplier sourcing, specification comparison and packing coordination in China."
+                    : isStrappingMachineCase
+                    ? "Send package photos, minimum and maximum dimensions, weight, throughput, PP strap, required arch, site power, destination and quantity. MAVORIX can help compare suppliers, coordinate inspection and follow export packing in China."
                     : "Send the complete model codes, material numbers, label photos and required quantities. MAVORIX can help organize China-side supplier sourcing, model checking and consolidated packing."}
                 </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                  <Button href={`/${locale}/contact/`}>{isLedFloodLightCase ? "Send Your Lighting Requirement" : isCeramicMediaCase ? "Send Your Requirement" : "Send Your Parts List"}</Button>
-                  <Button href={site.whatsappUrl} variant="secondary">{isLedFloodLightCase ? "Discuss the Project" : isCeramicMediaCase ? "Discuss a Bulk Order" : "Discuss Your Requirement"}</Button>
+                  <Button href={`/${locale}/contact/`}>{isLedFloodLightCase ? "Send Your Lighting Requirement" : isCeramicMediaCase ? "Send Your Requirement" : isStrappingMachineCase ? "Send Package Details" : "Send Your Parts List"}</Button>
+                  <Button href={site.whatsappUrl} variant="secondary">{isLedFloodLightCase ? "Discuss the Project" : isCeramicMediaCase ? "Discuss a Bulk Order" : isStrappingMachineCase ? "Discuss the Machine" : "Discuss Your Requirement"}</Button>
                 </div>
               </div>
             </Container>

@@ -279,5 +279,11 @@ export const blogImages: Record<string, PageImage> = {
     alt: "Full carton of Rexroth DBDS6P1X/315 pressure relief valves purchased for a customer and packed for shipment",
     width: 1080,
     height: 1920
+  },
+  "automatic-strapping-machine-sourcing-romania-case": {
+    src: "/images/blog/automatic-strapping-machine-sourcing-romania-case/ms-505-automatic-strapping-machine-romania-case.webp",
+    alt: "MS-505 automatic PP strapping machine photographed during inspection for a Romania-bound sourcing order",
+    width: 1080,
+    height: 1440
   }
 };

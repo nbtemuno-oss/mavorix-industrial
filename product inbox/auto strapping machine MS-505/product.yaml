@@ -1,0 +1,99 @@
+status: approved
+publish_status: published
+
+product_name: "MS-505 High-Speed Automatic PP Strapping Machine"
+short_name: "MS-505 Automatic Strapping Machine"
+slug: "ms-505-high-speed-automatic-pp-strapping-machine"
+
+brand: ""
+model: "MS-505"
+part_number: ""
+material_number: ""
+part_type: "automatic_arch_strapping_machine"
+condition: "New machine; final condition confirmation required before ordering"
+compatibility_status: "application_confirmation_required"
+image_content_editing: "manual_only"
+category: "packaging-equipment"
+categories:
+  - "packaging-industry"
+  - "industrial-machinery"
+
+confirmed_specs:
+  - label: "Model"
+    value: "MS-505"
+    source: "user_provided_document"
+  - label: "Machine Type"
+    value: "High-speed automatic arch strapping machine"
+    source: "user_provided_document"
+  - label: "Power Supply"
+    value: "220V, 50/60Hz, single phase, 0.6kW, 4A"
+    source: "user_provided_document"
+  - label: "Strapping Speed"
+    value: "Up to 65 straps/min"
+    source: "user_provided_document"
+  - label: "Tension Range"
+    value: "0-45kg"
+    source: "user_provided_document"
+  - label: "Standard Arch Opening"
+    value: "650mm W x 500mm H inner size"
+    source: "user_provided_document"
+  - label: "Standard PP Strap"
+    value: "5mm or 6mm wide, 0.5-0.8mm thick; specify before ordering"
+    source: "user_provided_document"
+  - label: "Machine Dimensions"
+    value: "1170 x 585 x 1450mm"
+    source: "user_provided_document"
+  - label: "Net / Gross Weight"
+    value: "185kg / 230kg"
+    source: "user_provided_document"
+
+unconfirmed_fields:
+  - "Manufacturer or public brand name"
+  - "Country-specific electrical plug and compliance requirements"
+  - "Actual cycle rate for the buyer's package size and strap settings"
+  - "Minimum and maximum package dimensions beyond the standard arch opening"
+  - "Production-line conveyor integration"
+  - "Photo-eye or automatic package detection configuration"
+  - "Final customized arch size"
+  - "Final PP strap width and spool specification"
+  - "Warranty and spare-parts package"
+  - "Destination-market certification"
+
+questions_for_user:
+  - "Confirm the package dimensions, weight, surface condition and required straps per pack."
+  - "Confirm Romanian site voltage, plug, safety and conformity-document requirements before formal ordering."
+  - "Confirm whether the machine will be operator-fed, used in continuous mode or integrated with conveyors."
+
+images:
+  originals:
+    - "微信图片_20260807093650_244_4.jpg"
+  generated:
+    main: "/images/products/packaging-equipment/ms-505-high-speed-automatic-pp-strapping-machine/ms-505-high-speed-automatic-pp-strapping-machine-main.webp"
+    thumbnail: "/images/products/packaging-equipment/ms-505-high-speed-automatic-pp-strapping-machine/ms-505-high-speed-automatic-pp-strapping-machine-thumbnail.webp"
+
+seo:
+  title: "MS-505 High-Speed Automatic PP Strapping Machine | MAVORIX"
+  meta_description: "Source the MS-505 high-speed automatic PP strapping machine with up to 65 straps/min, 0-45kg tension and a 650 x 500mm standard arch."
+  primary_keyword: "automatic strapping machine"
+  secondary_keywords:
+    - "high speed automatic strapping machine"
+    - "automatic PP strapping machine"
+    - "automatic arch strapping machine"
+    - "carton strapping machine"
+    - "box strapping machine"
+    - "industrial strapping machine"
+    - "packaging strapping machine"
+  long_tail_keywords:
+    - "MS-505 automatic strapping machine supplier China"
+    - "high speed automatic PP strapping machine for cartons"
+    - "automatic arch strapping machine 650 x 500mm"
+    - "65 straps per minute automatic strapping machine"
+    - "automatic box strapping machine with touch screen"
+    - "industrial carton strapping machine sourcing from China"
+
+publication:
+  route: "/en/products/packaging-equipment/ms-505-high-speed-automatic-pp-strapping-machine/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

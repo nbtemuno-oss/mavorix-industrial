@@ -148,6 +148,23 @@ a {
   max-width: 840px;
 }
 
+.prose-industrial .case-image-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2rem auto;
+}
+
+.prose-industrial .case-image-pair .case-image {
+  margin: 0;
+}
+
+@media (max-width: 639px) {
+  .prose-industrial .case-image-pair {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .prose-industrial .case-image figcaption {
   margin-top: 0.75rem;
   text-align: center;

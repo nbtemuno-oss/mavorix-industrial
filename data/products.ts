@@ -10,6 +10,17 @@ export type PublishedProduct = {
 
 export const publishedProducts: PublishedProduct[] = [
   {
+    slug: "ms-505-high-speed-automatic-pp-strapping-machine",
+    title: "MS-505 High-Speed Automatic PP Strapping Machine",
+    description:
+      "Automatic PP arch strapping machine with up to 65 straps/min, adjustable 0-45kg tension and a 650 x 500mm standard arch.",
+    path: "/en/products/packaging-equipment/ms-505-high-speed-automatic-pp-strapping-machine/",
+    image:
+      "/images/products/packaging-equipment/ms-505-high-speed-automatic-pp-strapping-machine/ms-505-high-speed-automatic-pp-strapping-machine-thumbnail.webp",
+    imageAlt: "MS-505 high-speed automatic PP strapping machine with arch and side strap spool",
+    categorySlugs: ["packaging-industry", "industrial-machinery"]
+  },
+  {
     slug: "custom-cutting-tools",
     title: "Custom Cutting Tools & Non-Standard CNC Tools",
     description:

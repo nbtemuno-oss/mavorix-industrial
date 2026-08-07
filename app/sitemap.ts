@@ -77,6 +77,14 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/custom cutting tools/product.yaml"
     ];
   }
+  if (path.startsWith("products/packaging-equipment/")) {
+    return [
+      ...common,
+      "app/[locale]/products/packaging-equipment/[slug]/page.tsx",
+      "data/products.ts",
+      "product inbox/auto strapping machine MS-505/product.yaml"
+    ];
+  }
   if (path.startsWith("blog/")) {
     const slug = path.replace("blog/", "");
     return [...common, "app/[locale]/blog/[slug]/page.tsx", `content/en/blog/${slug}.md`];
