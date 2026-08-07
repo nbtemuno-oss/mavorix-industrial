@@ -140,6 +140,14 @@ a {
   border-radius: 0.375rem;
 }
 
+.prose-industrial .case-image video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+  background: #0f172a;
+}
+
 .prose-industrial .case-image-portrait {
   max-width: 660px;
 }

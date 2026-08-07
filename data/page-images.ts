@@ -285,5 +285,11 @@ export const blogImages: Record<string, PageImage> = {
     alt: "MS-505 automatic PP strapping machine photographed during inspection for a Romania-bound sourcing order",
     width: 1080,
     height: 1440
+  },
+  "304-stainless-steel-countersunk-screw-inspection-serbia": {
+    src: "/images/blog/304-stainless-steel-countersunk-screw-inspection-serbia/stainless-steel-countersunk-screws-palletized-for-serbia.webp",
+    alt: "Cartons of M6 x 15 stainless steel countersunk screws palletized for shipment to Serbia",
+    width: 918,
+    height: 1076
   }
 };
