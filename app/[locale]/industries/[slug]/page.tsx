@@ -63,9 +63,16 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
           ? packagingIndustryFaqs
           : buildIndustryFaqs(industry.title);
   const isMroSupplies = locale === "en" && industry.slug === "mro-supplies";
-  const heroTitle = isMroSupplies ? "Industrial MRO Supplies and Spare Parts Sourcing from China" : `${industry.title} Sourcing from China`;
+  const isMetalParts = locale === "en" && industry.slug === "metal-parts";
+  const heroTitle = isMroSupplies
+    ? "Industrial MRO Supplies and Spare Parts Sourcing from China"
+    : isMetalParts
+      ? "Metal Parts Sourcing from China for Fasteners, Machining and Custom Components"
+      : `${industry.title} Sourcing from China`;
   const heroDescription = isMroSupplies
     ? "China sourcing support for industrial MRO supplies, factory spare parts, maintenance consumables, tools, pneumatic parts, hydraulic parts, electrical components, and mixed repair items from multiple suppliers."
+    : isMetalParts
+      ? "Supplier search and order coordination for stainless steel screws, bolts, CNC machined parts, stamped parts, gears, spacers, brackets, and drawing-based metal components from China."
     : industry.description;
   return (
     <>
@@ -119,12 +126,12 @@ const industryMetadata: Record<string, { title: string; description: string }> =
     description: "MAVORIX supports plastic factories with sourcing injection molding machines, molds, auxiliary equipment, spare parts, and industrial supply chain solutions from China."
   },
   "metal-parts": {
-    title: "Metal Parts Sourcing from China | Fasteners & Machined Components | MAVORIX",
-    description: "MAVORIX supports sourcing of metal parts from China including screws, bolts, spacers, gears, and precision machined components for industrial buyers."
+    title: "Metal Parts Sourcing from China | Fasteners, CNC & Custom Parts | MAVORIX",
+    description: "Source metal parts from China with supplier checks, drawing review, quotation comparison, inspection coordination, and shipment consolidation for fasteners, CNC machined parts, stamped parts, gears, and custom hardware."
   },
   "mro-supplies": {
-    title: "Industrial MRO Supplies from China | MRO Supplier & Factory Spare Parts | MAVORIX",
-    description: "Source industrial MRO supplies and factory spare parts from China. MAVORIX helps compare MRO suppliers, organize mixed item lists, verify suppliers, and consolidate shipments."
+    title: "Industrial MRO Suppliers in China | MRO Supplies & Spare Parts | MAVORIX",
+    description: "Find industrial MRO suppliers in China for factory spare parts, consumables, tools, pneumatic, hydraulic, and electrical items. MAVORIX helps check suppliers, compare quotes, and consolidate mixed MRO orders."
   },
   "packaging-industry": {
     title: "Packaging Machine Parts & MRO Sourcing from China | MAVORIX",
@@ -381,7 +388,9 @@ function MroSuppliesLandingContent() {
         { href: "/en/services/container-consolidation/", label: "Container Consolidation" },
         { href: "/en/products/hydraulic-components/aryung-atp-216ha-vb-t-rotor-coolant-pump/", label: "Coolant Pump Sourcing Example" },
         { href: "/en/products/hydraulic-components/daikin-v38a3rx-95-piston-pump/", label: "Piston Pump Sourcing Example" },
-        { href: "/en/blog/how-to-source-mro-supplies-from-china/", label: "How to Source MRO Supplies from China" },
+        { href: "/en/blog/how-to-find-industrial-mro-suppliers-in-china/", label: "Find Industrial MRO Suppliers" },
+        { href: "/en/blog/mro-sourcing-from-china-buyer-checklist/", label: "MRO Buyer Checklist" },
+        { href: "/en/blog/how-to-consolidate-mixed-mro-orders-from-chinese-suppliers/", label: "Mixed MRO Consolidation Guide" },
         { href: "/en/contact/", label: "Send MRO Inquiry" }
       ]} />
     </>
@@ -486,6 +495,22 @@ function MetalPartsLandingContent() {
         "OEM custom metal components with drawings, tolerances, surface treatment, and packing requirements",
         "Small batch urgent sourcing for fasteners, spacers, set screws, machined parts, and mechanical hardware",
         "Multi-supplier consolidation when buyers purchase fasteners, machined parts, stamped parts, and gears from different factories"
+      ]} />
+      <ListBlock title="What Buyers Should Send" items={[
+        "Drawing, 3D file, sample photos, or old part photos with visible key dimensions",
+        "Material grade, hardness, thread standard, tolerance, surface treatment, and drawing revision",
+        "Quantity, expected repeat demand, target application, and whether sample approval is required",
+        "Current supplier quotation, rejected sample notes, or quality problems from previous orders if available",
+        "Packing requirement, labeling requirement, destination country, and whether consolidation is needed",
+        "Inspection points such as thread gauge, surface finish, dimension report, material certificate, or visual defect limits"
+      ]} />
+      <ListBlock title="Real Metal Parts Procurement Scenarios" items={[
+        "A factory needs replacement stainless steel fasteners and spacers but only has old samples and rough dimensions",
+        "An OEM buyer compares CNC machined parts from several workshops where tolerances, material, and finish are not quoted the same way",
+        "A machinery maintenance team needs gears, brackets, threaded parts, and custom hardware consolidated with other MRO items",
+        "An importer needs supplier screening before paying for a drawing-based metal component order",
+        "A buyer receives a very low quote and needs to check whether material grade, machining tolerance, surface treatment, and packing are included",
+        "A distributor wants repeat supply records for fasteners, stamped parts, machined parts, and small custom metal components"
       ]} />
       <ListBlock title="Metal Parts Sourcing Process" items={[
         "Requirement clarification",
@@ -640,6 +665,10 @@ function MetalPartsInternalLinks() {
     { href: "/en/services/supplier-verification/", label: "Supplier Verification" },
     { href: "/en/services/quality-inspection/", label: "Quality Inspection" },
     { href: "/en/services/container-consolidation/", label: "Container Consolidation" },
+    { href: "/en/services/mro-sourcing-from-china/", label: "MRO Sourcing from China" },
+    { href: "/en/blog/304-stainless-steel-countersunk-screw-inspection-serbia/", label: "Stainless Steel Screw Case" },
+    { href: "/en/blog/compare-industrial-supplier-quotations-china/", label: "Quotation Comparison Guide" },
+    { href: "/en/blog/how-to-consolidate-multiple-china-suppliers-into-one-shipment/", label: "Supplier Consolidation Guide" },
     { href: "/en/industries/", label: "Industries We Support" },
     { href: "/en/contact/", label: "Contact MAVORIX" }
   ];
@@ -665,8 +694,18 @@ function IndustryRelatedGuides({ slug }: { slug: string }) {
       { href: "/en/blog/packaging-machine-spare-parts-mro-sourcing-from-china/", label: "Guide: Packaging Machine MRO Sourcing" }
     ],
     "mro-supplies": [
+      { href: "/en/blog/how-to-find-industrial-mro-suppliers-in-china/", label: "Guide: Find Industrial MRO Suppliers in China" },
+      { href: "/en/blog/mro-sourcing-from-china-buyer-checklist/", label: "Guide: MRO Sourcing Buyer Checklist" },
+      { href: "/en/blog/factory-spare-parts-sourcing-from-china/", label: "Guide: Factory Spare Parts Sourcing" },
+      { href: "/en/blog/how-to-consolidate-mixed-mro-orders-from-chinese-suppliers/", label: "Guide: Consolidate Mixed MRO Orders" },
+      { href: "/en/blog/mro-supplier-risk-chinese-trading-company-checklist/", label: "Guide: MRO Supplier Risk Checklist" },
       { href: "/en/blog/how-to-source-mro-supplies-from-china/", label: "Guide: How to Source MRO Supplies from China" },
       { href: "/en/blog/factory-consumables-and-mro-supplies-from-china/", label: "Guide: Factory Consumables and MRO Supplies" }
+    ],
+    "metal-parts": [
+      { href: "/en/blog/304-stainless-steel-countersunk-screw-inspection-serbia/", label: "Case: Stainless Steel Countersunk Screws" },
+      { href: "/en/blog/compare-industrial-supplier-quotations-china/", label: "Guide: Compare Supplier Quotations" },
+      { href: "/en/blog/how-to-consolidate-multiple-china-suppliers-into-one-shipment/", label: "Guide: Consolidate China Suppliers" }
     ],
     "agricultural-equipment": [
       { href: "/en/blog/agricultural-machinery-spare-parts-china-buying-guide/", label: "Guide: Agricultural Machinery Spare Parts Buying" }
@@ -700,23 +739,27 @@ const plasticIndustryFaqs = [
 ];
 
 const metalPartsFaqs = [
-  { q: "What types of metal parts can you source from China?", a: "We can help source stainless steel screws, bolts, threaded fasteners, set screws, standoffs, spacers, gears, machined components, stamped parts, metal hardware, and custom precision components." },
+  { q: "What metal parts can MAVORIX help source from China?", a: "We can help source stainless steel screws, bolts, threaded fasteners, set screws, spacers, gears, CNC machined components, stamped parts, brackets, metal hardware, and custom drawing-based components." },
+  { q: "What should I send for a custom metal parts quotation?", a: "Send drawings, 3D files, samples or photos, material grade, tolerance, surface treatment, quantity, application, inspection requirements, packing needs, and destination country." },
   { q: "Can you source small batch fasteners and screws?", a: "Yes, when the requirement is clear enough for supplier matching. Photos, drawings, samples, material grade, thread standard, quantity, and target use help improve search accuracy." },
-  { q: "Do you verify suppliers before purchase?", a: "Yes. We can review supplier identity, communication quality, capability signals, quotation details, production evidence, and practical risk points before buyers pay a deposit or confirm an order." },
-  { q: "Can you consolidate shipments from multiple factories?", a: "Yes. If buyers purchase fasteners, machined parts, stamped parts, gears, and other hardware from different suppliers, we can help coordinate packing, delivery timing, warehouse communication, and consolidation follow-up." },
+  { q: "How do you compare metal parts suppliers in China?", a: "We compare supplier focus, drawing understanding, material and tolerance confirmation, quotation completeness, sample process, inspection options, lead time, packing notes, and communication quality." },
+  { q: "Can you help check metal part quality before shipment?", a: "Yes. Depending on the item, checks may include photos, dimensions, thread confirmation, surface finish, material document review, packing photos, and third-party inspection coordination." },
+  { q: "Can you consolidate metal parts with other MRO orders?", a: "Yes. If buyers purchase fasteners, machined parts, stamped parts, gears, hydraulic parts, and other MRO items from different suppliers, we can help coordinate packing, delivery timing, and consolidation follow-up." },
   { q: "Do you support OEM metal machining parts?", a: "Yes. We can support OEM metal machining sourcing when buyers provide drawings, samples, tolerances, materials, surface treatment requirements, quantity, and inspection expectations." },
   { q: "What industries do you support for metal parts sourcing?", a: "We support machinery maintenance, factory production lines, MRO buyers, distributors, OEM projects, packaging equipment, agricultural equipment, plastic factories, and other industrial buyers needing metal parts from China." }
 ];
 
 const mroSuppliesFaqs = [
   { q: "What are industrial MRO supplies?", a: "Industrial MRO supplies are maintenance, repair, and operation items used to keep factories running, including consumables, spare parts, tools, bearings, belts, filters, fasteners, pneumatic parts, hydraulic parts, electrical parts, and workshop supplies." },
+  { q: "How can overseas buyers find industrial MRO suppliers in China?", a: "Buyers should organize items by category, prepare photos and model details, compare supplier focus and quotation clarity, check basic risk signals, and plan consolidation when several suppliers are involved." },
   { q: "Can MAVORIX help find industrial MRO suppliers in China?", a: "Yes. We help buyers search and compare suitable Chinese MRO suppliers, review quotation details, check basic risk signals, and coordinate technical questions before payment." },
   { q: "Can MAVORIX help source mixed MRO items from China?", a: "Yes. We help overseas buyers organize mixed item lists, search and compare suppliers, coordinate technical questions, and plan shipment consolidation when several Chinese suppliers are involved." },
   { q: "Do you support MRO spare parts as well as consumables?", a: "Yes. MRO requests often include both routine consumables and factory spare parts such as bearings, belts, filters, sensors, relays, pneumatic parts, hydraulic parts, pumps, valves, hoses, and machine replacement items." },
-  { q: "What information should I prepare for MRO sourcing?", a: "Prepare item names, quantities, photos, part numbers, model numbers, nameplates, dimensions, drawings, machine application, destination country, and any previous supplier links or quotations." },
-  { q: "Can you verify MRO suppliers?", a: "Yes. We can review supplier identity, product focus, quotation clarity, communication quality, export experience, and basic risk signals before payment." },
+  { q: "What information should I prepare for MRO sourcing?", a: "Prepare item names, quantities, photos, part numbers, model numbers, nameplates, dimensions, drawings, machine application, acceptable replacements, destination country, and any previous supplier links or quotations." },
+  { q: "Can you verify MRO suppliers or trading companies?", a: "Yes. We can review supplier identity, product focus, quotation clarity, communication quality, export experience, payment details, and basic risk signals before payment." },
   { q: "Do you support factory spare parts and urgent replacement items?", a: "Yes, when the parts can be identified with enough information. For urgent items, clear photos, nameplates, dimensions, samples, or drawings are especially important." },
-  { q: "Can MRO orders be consolidated?", a: "Yes. Mixed MRO orders from multiple suppliers can often be consolidated to improve packing control, documentation, and shipment coordination." }
+  { q: "Can MRO orders be consolidated?", a: "Yes. Mixed MRO orders from multiple suppliers can often be consolidated to improve packing control, documentation, and shipment coordination." },
+  { q: "What should buyers check before paying an MRO supplier?", a: "Check product model, replacement status, company identity, quotation details, lead time, payment beneficiary, packing plan, photos before shipment, and how wrong items will be handled." }
 ];
 
 const packagingIndustryFaqs = [

@@ -100,24 +100,27 @@ export const coreCopy: Record<Locale, {
     },
     cta: { title: "Need Industrial Sourcing Support from China?", text: "Send your product details, target quantity, photos, drawings, or supplier links. We will help review the sourcing path and next steps.", button: "Send Your Requirement", whatsapp: "WhatsApp" },
     industrial: {
-      metaTitle: "China Industrial Sourcing Services | MAVORIX INDUSTRIAL",
-      metaDescription: "MAVORIX INDUSTRIAL provides China industrial sourcing services for overseas buyers, including machinery, OEM products, MRO supplies, spare parts, supplier verification, quality control, and export coordination.",
+      metaTitle: "China Industrial Sourcing Partner for MRO, Spare Parts & OEM | MAVORIX",
+      metaDescription: "China industrial sourcing partner for overseas buyers sourcing MRO supplies, factory spare parts, metal parts, OEM components, supplier verification, inspection, export packing, and shipment consolidation.",
       badge: "Industrial sourcing",
-      title: "China Industrial Sourcing Services",
-      description: "Structured sourcing support for overseas buyers purchasing machinery, OEM products, MRO supplies, spare parts, and industrial equipment from China.",
+      title: "China Industrial Sourcing Partner for MRO, Spare Parts and OEM Components",
+      description: "Structured China-side sourcing support for overseas buyers purchasing industrial MRO supplies, factory spare parts, metal parts, OEM components, machinery, and mixed supplier orders.",
       features: [
         { title: "What Is Industrial Sourcing?", text: "Supplier identification, verification, technical clarification, quotation comparison, quality coordination, and export follow-up for industrial procurement." },
         { title: "Why Buyers Need Support", text: "China has many suppliers, but industrial buyers need reliable screening, specification control, and practical execution support." },
-        { title: "What We Can Source", text: "Machinery, OEM parts, MRO supplies, spare parts, agricultural equipment parts, packaging products, metal parts, and factory supplies." },
-        { title: "Supplier Verification", text: "We help check supplier identity, capability signals, communication quality, quotation clarity, and execution risk." },
-        { title: "Quality Control", text: "We coordinate inspection requirements, specification checks, photo reports, packing checks, and issue follow-up before shipment." },
-        { title: "Export Support", text: "We support supplier-side documentation communication, shipping coordination, packing follow-up, and consolidation planning." }
+        { title: "What We Can Source", text: "Machinery, OEM parts, MRO supplies, factory spare parts, agricultural equipment parts, packaging products, metal parts, and factory maintenance supplies." },
+        { title: "Supplier Verification", text: "We help check supplier identity, trading company risk, capability signals, communication quality, quotation clarity, and execution risk." },
+        { title: "Quality and Packing Control", text: "We coordinate inspection requirements, specification checks, photo reports, packing checks, and issue follow-up before shipment." },
+        { title: "Export and Consolidation Support", text: "We support supplier-side documentation communication, shipping coordination, packing follow-up, and consolidation planning for mixed orders." }
       ],
       processTitle: "Sourcing Process",
       faqs: [
-        { q: "What is industrial sourcing?", a: "Industrial sourcing is the process of finding, verifying, comparing, and coordinating suppliers for machinery, parts, MRO items, OEM products, and industrial equipment." },
-        { q: "Why use a China sourcing partner?", a: "A sourcing partner helps reduce risk by improving supplier screening, technical communication, quotation comparison, quality checks, and export coordination." },
-        { q: "Can you source custom industrial parts?", a: "Yes. We can support OEM and custom parts sourcing when buyers provide drawings, samples, photos, specifications, or target use information." }
+        { q: "What is industrial sourcing from China?", a: "Industrial sourcing from China means finding, verifying, comparing, and coordinating suppliers for machinery, MRO supplies, factory spare parts, OEM components, metal parts, and industrial equipment." },
+        { q: "What should buyers send before supplier search?", a: "Send product names, photos, drawings, model numbers, nameplates, quantities, target use, destination country, current supplier links, and any quality or packing requirements." },
+        { q: "Can MAVORIX verify Chinese suppliers before payment?", a: "Yes. We can help review company identity, supplier type, quotation clarity, technical answers, payment risk, product evidence, and packing or export capability before buyers commit." },
+        { q: "Can you support mixed MRO and spare parts orders?", a: "Yes. Mixed MRO and spare parts orders can often be organized by item group, supplier, risk level, packing need, and consolidation plan." },
+        { q: "Can you source custom industrial parts?", a: "Yes. We can support OEM and custom parts sourcing when buyers provide drawings, samples, photos, specifications, tolerances, materials, and target use information." },
+        { q: "Do you guarantee the lowest supplier price?", a: "No. MAVORIX focuses on practical supplier search, risk reduction, quotation comparison, quality coordination, and export execution rather than lowest-price claims." }
       ]
     },
     contact: {

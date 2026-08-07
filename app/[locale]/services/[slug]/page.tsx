@@ -38,9 +38,16 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   if (!service) notFound();
   const faqs = buildServiceFaqs(service);
   const isMroSourcing = locale === "en" && service.slug === "mro-sourcing-from-china";
-  const heroTitle = isMroSourcing ? "MRO Sourcing from China for Industrial Spare Parts" : service.title;
+  const isSupplierVerification = locale === "en" && service.slug === "supplier-verification";
+  const heroTitle = isMroSourcing
+    ? "MRO Sourcing from China for Industrial Spare Parts"
+    : isSupplierVerification
+      ? "China Supplier Verification Before Payment or Production"
+      : service.title;
   const heroDescription = isMroSourcing
     ? "China-side MRO sourcing support for overseas factories, importers, and maintenance teams buying industrial MRO supplies, factory spare parts, tools, consumables, pneumatic parts, hydraulic parts, electrical components, and mixed repair items from several suppliers."
+    : isSupplierVerification
+      ? "Practical supplier checks for overseas buyers before paying Chinese manufacturers, trading companies, distributors, or MRO suppliers, including identity, quotation clarity, payment risk, technical answers, packing, and export capability."
     : `${service.description} Keywords: ${service.keywords.join(", ")}.`;
   return (
     <>
@@ -87,16 +94,16 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
 const serviceMetadata: Record<string, { title: string; description: string }> = {
   "china-industrial-sourcing": {
-    title: "China Industrial Sourcing Service for Overseas Buyers | MAVORIX",
-    description: "China industrial sourcing support for machinery, spare parts, MRO supplies, OEM products, plastic factory equipment, quotation comparison, supplier search, inspection coordination, export packing, and shipment consolidation."
+    title: "China Industrial Sourcing Partner | MRO, Spare Parts & OEM | MAVORIX",
+    description: "China industrial sourcing partner for overseas buyers sourcing machinery, MRO supplies, factory spare parts, metal parts, OEM products, supplier verification, inspection, export packing, and shipment consolidation."
   },
   "mro-sourcing-from-china": {
-    title: "MRO Sourcing from China | MRO Supplier & Spare Parts Support | MAVORIX",
-    description: "MAVORIX helps overseas factories source MRO supplies, compare industrial MRO suppliers, identify spare parts, consolidate mixed orders, and coordinate export support from China."
+    title: "MRO Sourcing from China | Industrial MRO Suppliers & Spare Parts | MAVORIX",
+    description: "MAVORIX helps overseas factories source MRO supplies from China, find industrial MRO suppliers, identify spare parts, compare quotes, check supplier risk, and consolidate mixed orders."
   },
   "supplier-verification": {
-    title: "China Supplier Verification Service | Check Suppliers Before Payment | MAVORIX",
-    description: "MAVORIX helps overseas buyers verify Chinese suppliers before payment by checking supplier information, quotation risks, product details, documents, and communication signals."
+    title: "China Supplier Verification Service | Check Supplier Risk Before Payment | MAVORIX",
+    description: "Verify Chinese suppliers before payment. MAVORIX helps buyers check manufacturer or trading company identity, quotation risk, product evidence, documents, payment details, packing, and export capability."
   }
 };
 
@@ -109,6 +116,13 @@ function IndustrialSourcingExtra() {
         "A distributor wants to compare several Chinese quotations for pumps, valves, bearings, reducers, motors, and electrical parts.",
         "A project buyer needs machines, spare parts, packing materials, and MRO supplies consolidated before export.",
         "An OEM buyer has drawings and needs supplier comparison, sample coordination, tolerance clarification, and production follow-up."
+      ]} />
+      <ListBlock title="High-Intent Buyer Scenarios" items={[
+        "A buyer already found three Chinese suppliers online but needs help comparing quotation details and execution risk",
+        "A factory wants to source MRO supplies, spare parts, and metal components together instead of managing separate suppliers",
+        "A distributor needs China-side support for repeat industrial parts sourcing and supplier records",
+        "A project buyer needs machines, spare parts, packaging materials, and export packing coordinated before shipment",
+        "A maintenance team has photos, nameplates, and old samples but incomplete model numbers"
       ]} />
       <ListBlock title="Buyer Checklist Before Supplier Search" items={[
         "Product name, application, quantity, and expected repeat demand",
@@ -133,10 +147,14 @@ function IndustrialSourcingExtra() {
         "Claim to manufacture every product category listed on the website"
       ]} />
       <RelatedLinks title="Related Sourcing Services" links={[
+        { href: "/en/industries/mro-supplies/", label: "Industrial MRO Supplies" },
+        { href: "/en/industries/metal-parts/", label: "Metal Parts Sourcing" },
         { href: "/en/services/supplier-verification/", label: "Supplier Verification" },
         { href: "/en/services/quality-inspection/", label: "Quality Inspection" },
         { href: "/en/services/container-consolidation/", label: "Container Consolidation" },
         { href: "/en/services/industrial-spare-parts-sourcing/", label: "Spare Parts Sourcing" },
+        { href: "/en/blog/mro-sourcing-from-china-buyer-checklist/", label: "MRO Buyer Checklist" },
+        { href: "/en/blog/factory-spare-parts-sourcing-from-china/", label: "Factory Spare Parts Guide" },
         { href: "/en/contact/", label: "Contact MAVORIX" }
       ]} />
     </>
@@ -153,6 +171,14 @@ function SupplierVerificationExtra() {
         "Quotation clarity, payment terms, lead time, packing details, and export experience",
         "Consistency between website, marketplace profile, documents, bank information, and sales communication",
         "Whether the supplier can answer practical questions about drawings, samples, tolerances, inspection, and after-sales"
+      ]} />
+      <ListBlock title="Real Verification Scenarios" items={[
+        "A buyer found a supplier on a marketplace and wants to check whether the company is a factory, distributor, or trading company",
+        "A quotation is much cheaper than other offers and the buyer needs to understand what may be missing",
+        "A supplier requests a deposit but has not confirmed model suffixes, drawings, material, packing, or inspection evidence",
+        "A mixed MRO supplier claims to source every item but cannot explain product categories or replacement risks",
+        "A buyer needs to confirm whether the payment beneficiary, invoice, company name, and sales contact are consistent",
+        "A factory wants supplier risk notes before placing a repeat spare parts or OEM component order"
       ]} />
       <ListBlock title="What to Check Before Paying a Deposit" items={[
         "Confirm the legal company name and payment beneficiary match the supplier story",
@@ -181,8 +207,12 @@ function SupplierVerificationExtra() {
       <RelatedLinks title="Related Verification Links" links={[
         { href: "/en/services/china-industrial-sourcing/", label: "China Industrial Sourcing" },
         { href: "/en/services/quality-inspection/", label: "Quality Inspection" },
+        { href: "/en/services/mro-sourcing-from-china/", label: "MRO Sourcing from China" },
+        { href: "/en/industries/mro-supplies/", label: "Industrial MRO Supplies" },
         { href: "/en/blog/how-to-verify-chinese-industrial-supplier/", label: "How to Verify a Chinese Supplier" },
         { href: "/en/blog/verify-chinese-industrial-suppliers-before-order/", label: "Verify Suppliers Before Order" },
+        { href: "/en/blog/mro-supplier-risk-chinese-trading-company-checklist/", label: "MRO Supplier Risk Checklist" },
+        { href: "/en/blog/compare-industrial-supplier-quotations-china/", label: "Quotation Risk Checklist" },
         { href: "/en/contact/", label: "Contact MAVORIX" }
       ]} />
     </>
@@ -258,13 +288,18 @@ function MroSourcingExtra() {
       <RelatedLinks title="Related MRO Sourcing Pages" links={[
         { href: "/en/industries/mro-supplies/", label: "MRO Supplies Industry Page" },
         { href: "/en/industries/factory-spare-parts/", label: "Factory Spare Parts" },
+        { href: "/en/industries/metal-parts/", label: "Metal Parts Sourcing" },
         { href: "/en/services/industrial-spare-parts-sourcing/", label: "Industrial Spare Parts Sourcing" },
         { href: "/en/services/supplier-verification/", label: "Supplier Verification" },
         { href: "/en/services/quality-inspection/", label: "Quality Inspection" },
         { href: "/en/services/container-consolidation/", label: "Container Consolidation" },
         { href: "/en/products/hydraulic-components/rexroth-4we6d6x-ofeg24n9k4-directional-control-valve/", label: "Hydraulic Valve Sourcing Example" },
         { href: "/en/products/hydraulic-components/hytek-hg0-08-01a-vpc-hydraulic-pump/", label: "Hydraulic Pump Sourcing Example" },
-        { href: "/en/blog/how-to-source-mro-supplies-from-china/", label: "MRO Supplies Buying Guide" },
+        { href: "/en/blog/how-to-find-industrial-mro-suppliers-in-china/", label: "Find Industrial MRO Suppliers" },
+        { href: "/en/blog/mro-sourcing-from-china-buyer-checklist/", label: "MRO Buyer Checklist" },
+        { href: "/en/blog/factory-spare-parts-sourcing-from-china/", label: "Factory Spare Parts Guide" },
+        { href: "/en/blog/how-to-consolidate-mixed-mro-orders-from-chinese-suppliers/", label: "Mixed MRO Consolidation Guide" },
+        { href: "/en/blog/mro-supplier-risk-chinese-trading-company-checklist/", label: "MRO Supplier Risk Checklist" },
         { href: "/en/contact/", label: "Send MRO Inquiry" }
       ]} />
     </>
@@ -288,13 +323,19 @@ function ServiceRelatedGuides({ slug }: { slug: string }) {
       { href: "/en/blog/identify-industrial-spare-parts-without-part-number/", label: "Guide: Identify Spare Parts Without Part Numbers" }
     ],
     "china-industrial-sourcing": [
-      { href: "/en/blog/compare-industrial-supplier-quotations-china/", label: "Guide: Compare Chinese Supplier Quotations" }
+      { href: "/en/blog/compare-industrial-supplier-quotations-china/", label: "Guide: Compare Chinese Supplier Quotations" },
+      { href: "/en/blog/mro-sourcing-from-china-buyer-checklist/", label: "Guide: MRO Sourcing Buyer Checklist" },
+      { href: "/en/blog/factory-spare-parts-sourcing-from-china/", label: "Guide: Factory Spare Parts Sourcing" }
     ],
     "supplier-verification": [
       { href: "/en/blog/compare-industrial-supplier-quotations-china/", label: "Guide: Technical and Commercial Quotation Checks" },
       { href: "/en/blog/verify-chinese-industrial-suppliers-before-order/", label: "Guide: Verify Suppliers Before Order" }
     ],
     "mro-sourcing-from-china": [
+      { href: "/en/blog/how-to-find-industrial-mro-suppliers-in-china/", label: "Guide: Find Industrial MRO Suppliers" },
+      { href: "/en/blog/mro-sourcing-from-china-buyer-checklist/", label: "Guide: MRO Sourcing Buyer Checklist" },
+      { href: "/en/blog/how-to-consolidate-mixed-mro-orders-from-chinese-suppliers/", label: "Guide: Consolidate Mixed MRO Orders" },
+      { href: "/en/blog/mro-supplier-risk-chinese-trading-company-checklist/", label: "Guide: MRO Supplier Risk Checklist" },
       { href: "/en/blog/how-to-source-mro-supplies-from-china/", label: "Guide: Source MRO Supplies from China" },
       { href: "/en/blog/factory-consumables-and-mro-supplies-from-china/", label: "Guide: Factory Consumables and MRO Supplies" }
     ]
@@ -320,12 +361,14 @@ function buildServiceFaqs(service: { title: string; slug: string }) {
   if (service.slug === "mro-sourcing-from-china") {
     return [
       { q: "What does MRO sourcing from China include?", a: "MRO sourcing can include factory maintenance parts, consumables, tools, bearings, belts, filters, pneumatic parts, hydraulic parts, electrical components, safety products, workshop supplies, and spare parts." },
+      { q: "How do I find reliable industrial MRO suppliers in China?", a: "Start with a structured item list, group products by category, prepare photos and model details, compare supplier focus and quotation clarity, verify risk signals, and plan consolidation before suppliers ship." },
       { q: "Can MAVORIX help source small mixed MRO items?", a: "Yes. We help organize mixed item lists, identify suppliers, compare quotations, and coordinate consolidation when several Chinese suppliers are involved." },
       { q: "Is MAVORIX an MRO supplier or sourcing partner?", a: "MAVORIX is a China-side sourcing and coordination partner. We help buyers find, compare, verify, and coordinate MRO suppliers rather than claiming to manufacture every MRO item ourselves." },
       { q: "Can you help compare industrial MRO suppliers?", a: "Yes. We can compare supplier product focus, quotation clarity, communication quality, lead time, packing notes, export experience, and basic risk signals before payment." },
       { q: "What information should I send for MRO spare parts?", a: "Send photos, part numbers, nameplates, machine model, dimensions, drawings, quantity, application, destination country, and any previous supplier links or quotations." },
-      { q: "Can you verify MRO suppliers before payment?", a: "Yes. We can review supplier identity, product focus, quotation clarity, communication quality, and basic order risk before buyers pay a deposit." },
+      { q: "Can you verify MRO suppliers or trading companies before payment?", a: "Yes. We can review supplier identity, product focus, quotation clarity, communication quality, payment beneficiary consistency, export capability, and basic order risk before buyers pay a deposit." },
       { q: "Do you support MRO shipment consolidation?", a: "Yes. When buyers purchase many small maintenance items from multiple suppliers, we can help coordinate supplier-side delivery, packing notes, warehouse communication, and consolidation planning." },
+      { q: "What should buyers check before accepting a replacement MRO part?", a: "Check model code, dimensions, material, voltage, pressure, connector, mounting, working conditions, supplier evidence, and whether the buyer's maintenance team accepts the replacement risk." },
       { q: "Do you guarantee part compatibility?", a: "No. Compatibility depends on correct technical information, buyer confirmation, samples, drawings, and supplier evidence. We help reduce risk but do not replace engineering approval." }
     ];
   }
@@ -334,8 +377,11 @@ function buildServiceFaqs(service: { title: string; slug: string }) {
       { q: "What is China supplier verification?", a: "China supplier verification checks supplier identity, product focus, communication quality, quotation clarity, documents, capability signals, and order risk before payment." },
       { q: "Is supplier verification the same as supplier search?", a: "No. Supplier search finds possible suppliers. Supplier verification checks whether a selected supplier appears suitable, consistent, and lower risk before an order." },
       { q: "What should be checked before paying a deposit?", a: "Check the company identity, payment beneficiary, product specifications, quotation details, lead time, packing notes, quality control plan, and supplier communication consistency." },
+      { q: "How can I tell whether a Chinese supplier is a factory or trading company?", a: "Check registration details, product scope, factory evidence, technical answers, quotation source, business documents, address consistency, and whether the supplier can explain production or distribution channels clearly." },
+      { q: "Can a Chinese trading company be suitable for MRO sourcing?", a: "Yes. A professional trading company can be useful for mixed MRO orders, but buyers should check transparency, technical understanding, quotation clarity, packing control, and supplier source management." },
       { q: "Can verification prove a supplier is risk-free?", a: "No. Verification reduces uncertainty but cannot remove all risk. Buyers should still use clear contracts, samples, inspections, and staged payment control where appropriate." },
       { q: "What documents should buyers request?", a: "Useful documents may include business registration information, quotation or proforma invoice, product photos, specification sheet, packing notes, test reports where relevant, and export document examples." },
+      { q: "What are common supplier red flags before payment?", a: "Red flags include inconsistent company names, vague technical answers, unclear payment beneficiary, unusually low prices, no real product photos, pressure to pay quickly, and refusal to discuss inspection or packing." },
       { q: "How can I ask MAVORIX to verify a supplier?", a: "Send the supplier website, quotation, product details, contact information, photos, drawings, payment terms, and order plan through the contact page." }
     ];
   }
