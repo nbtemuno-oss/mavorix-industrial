@@ -62,9 +62,14 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
         : industry.slug === "packaging-industry"
           ? packagingIndustryFaqs
           : buildIndustryFaqs(industry.title);
+  const isMroSupplies = locale === "en" && industry.slug === "mro-supplies";
+  const heroTitle = isMroSupplies ? "Industrial MRO Supplies and Spare Parts Sourcing from China" : `${industry.title} Sourcing from China`;
+  const heroDescription = isMroSupplies
+    ? "China sourcing support for industrial MRO supplies, factory spare parts, maintenance consumables, tools, pneumatic parts, hydraulic parts, electrical components, and mixed repair items from multiple suppliers."
+    : industry.description;
   return (
     <>
-      <PageHero badge="Industry" title={`${industry.title} Sourcing from China`} description={industry.description} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Industries", href: `/${locale}/industries/` }, { label: industry.title, href: `/${locale}/industries/${industry.slug}/` }]} />
+      <PageHero badge="Industry" title={heroTitle} description={heroDescription} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Industries", href: `/${locale}/industries/` }, { label: industry.title, href: `/${locale}/industries/${industry.slug}/` }]} />
       {locale === "en" && industry.slug === "plastic-industry" ? <PlasticHeroImage /> : null}
       {locale === "en" && industry.slug === "metal-parts" ? <MetalPartsHeroImage /> : null}
       {locale === "en" && industry.slug === "electrical-mechanical-parts" ? <ElectricalMechanicalPartsHeroImage /> : null}
@@ -118,8 +123,8 @@ const industryMetadata: Record<string, { title: string; description: string }> =
     description: "MAVORIX supports sourcing of metal parts from China including screws, bolts, spacers, gears, and precision machined components for industrial buyers."
   },
   "mro-supplies": {
-    title: "Industrial MRO Supplies from China | Factory Maintenance Sourcing | MAVORIX",
-    description: "Source industrial MRO supplies from China with MAVORIX, including factory maintenance parts, tools, consumables, fasteners, pneumatic parts, hydraulic parts, and spare parts."
+    title: "Industrial MRO Supplies from China | MRO Supplier & Factory Spare Parts | MAVORIX",
+    description: "Source industrial MRO supplies and factory spare parts from China. MAVORIX helps compare MRO suppliers, organize mixed item lists, verify suppliers, and consolidate shipments."
   },
   "packaging-industry": {
     title: "Packaging Machine Parts & MRO Sourcing from China | MAVORIX",
@@ -316,7 +321,7 @@ function MroSuppliesLandingContent() {
   return (
     <>
       <section>
-        <h2 className="text-3xl font-black text-navy">Industrial MRO Supplies from China</h2>
+        <h2 className="text-3xl font-black text-navy">Industrial MRO Supplies from China for Factory Maintenance</h2>
         <div className="mt-4 space-y-5 leading-8 text-slate-600">
           <p>
             MRO supplies are the maintenance, repair, and operation items that factories use to keep equipment, production lines, workshops, utilities, and spare parts inventories working. They can include industrial consumables, maintenance parts, pneumatic parts, hydraulic parts, electrical parts, fasteners, tools, safety products, workshop supplies, filters, bearings, belts, seals, hoses, fittings, lubricants, cutting items, and factory spare parts.
@@ -337,12 +342,28 @@ function MroSuppliesLandingContent() {
         "Electrical parts including sensors, switches, relays, contactors, cables, motors, drives, and control accessories",
         "Factory spare parts and replacement components for production lines, machinery, packaging equipment, and utilities"
       ]} />
+      <ListBlock title="Industrial MRO Supplier Search Priorities" items={[
+        "Confirm whether the item is a routine consumable, urgent repair part, brand-specific spare part, or custom replacement component",
+        "Match suppliers by product focus instead of sending one mixed list to unsuitable factories",
+        "Compare MRO supplier answers on model code, material, size, voltage, pressure, mounting, packing, and lead time",
+        "Keep item lists, photos, quotation versions, supplier answers, and packing notes organized for repeat purchasing",
+        "Check whether several small MRO orders should be consolidated before export to reduce communication and packing risk",
+        "Use supplier verification and pre-shipment photo checks when the order includes many small but critical maintenance items"
+      ]} />
       <ListBlock title="Typical Buyers" items={[
         "Factories that need mixed maintenance supplies and replacement parts from China",
         "MRO distributors and importers building repeat sourcing channels for factory customers",
         "Maintenance teams that have photos, nameplates, or samples but incomplete part numbers",
         "Procurement managers comparing China MRO suppliers before payment",
         "Industrial buyers consolidating small orders from several suppliers into one shipment"
+      ]} />
+      <ListBlock title="MRO and Spare Parts Sourcing Examples" items={[
+        "Bearings, belts, filters, fasteners, seals, hoses, fittings, lubricants, cutting items, and workshop consumables",
+        "Pneumatic cylinders, solenoid valves, air preparation units, tubing, quick couplings, and related repair parts",
+        "Hydraulic pumps, valves, hoses, fittings, seals, cylinders, coolers, and maintenance accessories",
+        "Sensors, switches, relays, contactors, cables, motors, drives, control accessories, and electrical spare parts",
+        "Packaging machine spare parts, conveyor components, rollers, guide rails, heaters, nozzles, and machine wear parts",
+        "Hard-to-identify replacement parts where the buyer can provide photos, labels, old samples, dimensions, or machine application"
       ]} />
       <ListBlock title="Common Sourcing Risks" items={[
         "Wrong model, material, voltage, pressure rating, dimension, or installation detail",
@@ -355,8 +376,11 @@ function MroSuppliesLandingContent() {
       <RelatedLinks title="Related MRO Support" links={[
         { href: "/en/services/mro-sourcing-from-china/", label: "MRO Sourcing Service" },
         { href: "/en/industries/factory-spare-parts/", label: "Factory Spare Parts" },
+        { href: "/en/services/industrial-spare-parts-sourcing/", label: "Industrial Spare Parts Sourcing" },
         { href: "/en/services/supplier-verification/", label: "Supplier Verification" },
         { href: "/en/services/container-consolidation/", label: "Container Consolidation" },
+        { href: "/en/products/hydraulic-components/aryung-atp-216ha-vb-t-rotor-coolant-pump/", label: "Coolant Pump Sourcing Example" },
+        { href: "/en/products/hydraulic-components/daikin-v38a3rx-95-piston-pump/", label: "Piston Pump Sourcing Example" },
         { href: "/en/blog/how-to-source-mro-supplies-from-china/", label: "How to Source MRO Supplies from China" },
         { href: "/en/contact/", label: "Send MRO Inquiry" }
       ]} />
@@ -686,7 +710,9 @@ const metalPartsFaqs = [
 
 const mroSuppliesFaqs = [
   { q: "What are industrial MRO supplies?", a: "Industrial MRO supplies are maintenance, repair, and operation items used to keep factories running, including consumables, spare parts, tools, bearings, belts, filters, fasteners, pneumatic parts, hydraulic parts, electrical parts, and workshop supplies." },
+  { q: "Can MAVORIX help find industrial MRO suppliers in China?", a: "Yes. We help buyers search and compare suitable Chinese MRO suppliers, review quotation details, check basic risk signals, and coordinate technical questions before payment." },
   { q: "Can MAVORIX help source mixed MRO items from China?", a: "Yes. We help overseas buyers organize mixed item lists, search and compare suppliers, coordinate technical questions, and plan shipment consolidation when several Chinese suppliers are involved." },
+  { q: "Do you support MRO spare parts as well as consumables?", a: "Yes. MRO requests often include both routine consumables and factory spare parts such as bearings, belts, filters, sensors, relays, pneumatic parts, hydraulic parts, pumps, valves, hoses, and machine replacement items." },
   { q: "What information should I prepare for MRO sourcing?", a: "Prepare item names, quantities, photos, part numbers, model numbers, nameplates, dimensions, drawings, machine application, destination country, and any previous supplier links or quotations." },
   { q: "Can you verify MRO suppliers?", a: "Yes. We can review supplier identity, product focus, quotation clarity, communication quality, export experience, and basic risk signals before payment." },
   { q: "Do you support factory spare parts and urgent replacement items?", a: "Yes, when the parts can be identified with enough information. For urgent items, clear photos, nameplates, dimensions, samples, or drawings are especially important." },

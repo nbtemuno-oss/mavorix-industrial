@@ -34,10 +34,10 @@ export const services: Service[] = [
     slug: "mro-sourcing-from-china",
     title: "MRO Sourcing from China",
     shortTitle: "MRO Sourcing",
-    description: "MRO sourcing from China for maintenance, repair, operation supplies, factory consumables, and replacement parts.",
-    keywords: ["MRO sourcing China", "MRO supplies China", "industrial MRO procurement China"],
+    description: "MRO sourcing from China for factory spare parts, industrial MRO suppliers, maintenance consumables, mixed repair items, and consolidated procurement.",
+    keywords: ["MRO sourcing China", "MRO supplier China", "industrial MRO suppliers", "MRO supplies China", "factory spare parts sourcing"],
     image: "/images/service-mro-sourcing.webp",
-    support: ["MRO item consolidation", "Alternative supplier search", "Maintenance part coordination", "Repeat order support"],
+    support: ["MRO supplier search", "Mixed MRO item consolidation", "Spare parts identification support", "Repeat order coordination"],
     problems: ["Small mixed orders", "Hard-to-identify spare parts", "Multiple supplier shipments", "Urgent maintenance needs"]
   },
   {
