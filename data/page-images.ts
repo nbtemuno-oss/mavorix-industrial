@@ -291,5 +291,11 @@ export const blogImages: Record<string, PageImage> = {
     alt: "Cartons of M6 x 15 stainless steel countersunk screws palletized for shipment to Serbia",
     width: 918,
     height: 1076
+  },
+  "22kw-rotary-screw-air-compressor-system-uae": {
+    src: "/images/blog/22kw-rotary-screw-air-compressor-system-uae/complete-air-compressor-system-loaded-for-uae.webp",
+    alt: "Complete XPS22/8 compressed air system loaded into a shipping container for the UAE",
+    width: 806,
+    height: 1088
   }
 };
