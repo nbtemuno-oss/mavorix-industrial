@@ -10,6 +10,28 @@ export type PublishedProduct = {
 
 export const publishedProducts: PublishedProduct[] = [
   {
+    slug: "gas-fired-batch-burn-off-oven-paint-polymer-removal",
+    title: "Gas-Fired Batch Burn-Off Oven for Paint and Polymer Removal",
+    description:
+      "Gas-fired batch burn-off oven for removing suitable paint, powder coating and polymer residues from heat-resistant metal parts.",
+    path: "/en/products/industrial-cleaning-equipment/gas-fired-batch-burn-off-oven-paint-polymer-removal/",
+    image:
+      "/images/products/general-products/gas-fired-batch-burn-off-oven-paint-polymer-removal/gas-fired-batch-burn-off-oven-paint-polymer-removal-thumbnail.webp",
+    imageAlt: "Gas-fired batch burn-off oven with reinforced double loading doors",
+    categorySlugs: ["industrial-machinery", "plastic-industry"]
+  },
+  {
+    slug: "rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805",
+    title: "Rexroth A10VSO 28 DFR1 Variable Axial Piston Pump R910916805",
+    description:
+      "Rexroth A10VSO 28 DFR1 variable axial piston pump with complete type code A A10VSO 28 DFR1/31R-VPA12N00 and MNR R910916805.",
+    path: "/en/products/hydraulic-components/rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805/",
+    image:
+      "/images/products/general-products/rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805/rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805-thumbnail.webp",
+    imageAlt: "Rexroth A10VSO 28 DFR1 variable axial piston pump R910916805",
+    categorySlugs: ["industrial-machinery", "factory-spare-parts"]
+  },
+  {
     slug: "ms-505-high-speed-automatic-pp-strapping-machine",
     title: "MS-505 High-Speed Automatic PP Strapping Machine",
     description:

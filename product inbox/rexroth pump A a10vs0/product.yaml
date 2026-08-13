@@ -1,0 +1,93 @@
+status: approved
+publish_status: published
+
+product_name: "Rexroth A10VSO 28 DFR1 Variable Axial Piston Pump R910916805"
+short_name: "Rexroth A10VSO 28 DFR1 Pump"
+slug: "rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805"
+
+brand: "Rexroth"
+model: "A A10VSO 28 DFR1/31R-VPA12N00"
+part_number: ""
+material_number: "R910916805"
+part_type: "variable_axial_piston_pump"
+condition: "New or unused appearance; final condition confirmation required"
+compatibility_status: "manual_confirmation_required"
+image_content_editing: "manual_only"
+category: "hydraulic-components"
+categories:
+  - "industrial-machinery"
+  - "factory-spare-parts"
+
+confirmed_specs:
+  - label: "Brand"
+    value: "Rexroth"
+    source: "image_confirmed"
+  - label: "Complete Type Code"
+    value: "A A10VSO 28 DFR1/31R-VPA12N00"
+    source: "image_confirmed"
+  - label: "Material Number"
+    value: "R910916805"
+    source: "image_confirmed"
+  - label: "Product Type"
+    value: "Variable-displacement axial piston pump"
+    source: "manufacturer_series_reference"
+  - label: "Nominal Size / Displacement Marking"
+    value: "28 cm3"
+    source: "image_confirmed"
+  - label: "Speed Marking"
+    value: "1500 min-1"
+    source: "image_confirmed"
+  - label: "DR Pressure Marking"
+    value: "280 bar"
+    source: "image_confirmed"
+  - label: "FR Pressure Marking"
+    value: "14 bar"
+    source: "image_confirmed"
+  - label: "Mass Marking"
+    value: "17.8 kg"
+    source: "image_confirmed"
+  - label: "Country Marking"
+    value: "Made in China"
+    source: "image_confirmed"
+
+unconfirmed_fields:
+  - "Maximum pressure and complete performance curve for this exact material number"
+  - "Shaft dimensions and mounting dimensions"
+  - "Port threads and port orientation"
+  - "Hydraulic fluid and viscosity requirements"
+  - "Exact machine compatibility"
+  - "Authorized-distributor or channel status"
+
+questions_for_user:
+  - "Provide the old pump label and machine model before ordering an exact replacement."
+  - "Confirm shaft, flange, port and installation dimensions against the existing pump."
+
+images:
+  originals:
+    - "微信图片_20260813085252_280_4.jpg"
+  generated:
+    main: "/images/products/general-products/rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805/rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805-main.webp"
+    thumbnail: "/images/products/general-products/rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805/rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805-thumbnail.webp"
+
+seo:
+  title: "Rexroth A10VSO 28 DFR1 Piston Pump R910916805 | MAVORIX"
+  meta_description: "Source Rexroth A10VSO 28 DFR1/31R-VPA12N00 variable axial piston pump, MNR R910916805. Verify the full label, shaft, ports and mounting."
+  primary_keyword: "Rexroth A10VSO 28 DFR1 pump"
+  secondary_keywords:
+    - "R910916805"
+    - "A10VSO 28 variable axial piston pump"
+    - "A10VSO28DFR1/31R-VPA12N00"
+    - "Rexroth variable displacement piston pump"
+    - "Rexroth hydraulic pump replacement"
+  long_tail_keywords:
+    - "Rexroth A10VSO 28 DFR1/31R-VPA12N00 supplier"
+    - "Rexroth R910916805 variable piston pump sourcing"
+    - "A10VSO 28 DFR1 hydraulic pump replacement China"
+    - "how to verify Rexroth A10VSO pump model code"
+
+publication:
+  route: "/en/products/hydraulic-components/rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

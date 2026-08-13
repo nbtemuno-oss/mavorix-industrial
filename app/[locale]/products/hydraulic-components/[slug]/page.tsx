@@ -254,6 +254,115 @@ const rexrothAzpwPump: HydraulicPumpData = {
   ]
 };
 
+const rexrothA10vsoPump: HydraulicPumpData = {
+  slug: "rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805",
+  title: "Rexroth A10VSO 28 DFR1 Variable Axial Piston Pump R910916805",
+  path: "/en/products/hydraulic-components/rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805/",
+  badge: "Variable Axial Piston Pump",
+  brand: "Rexroth",
+  model: "A A10VSO 28 DFR1/31R-VPA12N00",
+  materialNumber: "R910916805",
+  category: "Hydraulic Variable-Displacement Axial Piston Pump",
+  metaDescription:
+    "Source Rexroth A10VSO 28 DFR1/31R-VPA12N00 variable axial piston pump, MNR R910916805. Verify the full label, shaft, ports and mounting.",
+  summary:
+    "Rexroth A10VSO 28 DFR1 variable-displacement axial piston pump with full type code A A10VSO 28 DFR1/31R-VPA12N00 and Material Number R910916805 visible on the nameplate. Replacement selection should be based on the complete code and physical interfaces, not A10VSO 28 alone.",
+  schemaDescription:
+    "Rexroth A10VSO 28 DFR1 variable axial piston pump sourcing reference based on visible type code A A10VSO 28 DFR1/31R-VPA12N00 and Material Number R910916805.",
+  images: [
+    {
+      src: "/images/products/general-products/rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805/rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805-main.webp",
+      alt: "Rexroth A10VSO 28 DFR1 variable axial piston pump R910916805 with nameplate, shaft and protected ports visible",
+      label: "Pump and nameplate view"
+    }
+  ],
+  summarySpecs: [
+    ["Brand", "Rexroth"],
+    ["Type Code", "A A10VSO 28 DFR1/31R-VPA12N00"],
+    ["Material Number", "R910916805"],
+    ["Nominal Size", "28 cm3/rev marking"],
+    ["Pump Type", "Variable axial piston pump"],
+    ["Compatibility", "Full-code and dimensional confirmation required"]
+  ],
+  confirmedSpecs: [
+    ["Brand", "Rexroth"],
+    ["Complete Type Code", "A A10VSO 28 DFR1/31R-VPA12N00"],
+    ["Material Number / MNR", "R910916805"],
+    ["Product Family", "A10VSO variable-displacement axial piston pump"],
+    ["Series", "31"],
+    ["Nominal Size / Displacement Marking", "28 cm3"],
+    ["Controller Code", "DFR1"],
+    ["Rotation", "Clockwise symbol on nameplate"],
+    ["Speed Marking", "1500 min-1"],
+    ["DR Pressure Marking", "280 bar"],
+    ["FR Pressure Marking", "14 bar"],
+    ["Mass Marking", "17.8 kg"],
+    ["Manufacturing Date Code", "26W02"],
+    ["Country Marking", "Made in China"]
+  ],
+  overview: [
+    "The nameplate in the supplied photo identifies a Rexroth A10VSO series variable axial piston pump. The complete type code is A A10VSO 28 DFR1/31R-VPA12N00 and the visible Material Number is R910916805. These two references should stay together throughout an RFQ and replacement review.",
+    "A10VSO is an open-circuit, swashplate-type variable pump family used in industrial hydraulic systems. The size 28 marking identifies the nominal displacement class, while DFR1 identifies the control configuration. Those family descriptions help explain the product, but they do not replace configuration checking for the exact material number.",
+    "MAVORIX supports overseas buyers with label reading, quotation coordination, supplier-side product photos and consolidation of hydraulic pumps with valves, seals, sensors and other MRO parts."
+  ],
+  keyFeatures: [
+    "Rexroth nameplate visible in the supplied product photo",
+    "Complete A A10VSO 28 DFR1/31R-VPA12N00 type code visible",
+    "Material Number R910916805 visible",
+    "Variable-displacement axial piston pump design",
+    "Size 28 / 28 cm3 displacement marking",
+    "DFR1 controller configuration code",
+    "Clockwise rotation symbol on the nameplate",
+    "Shaft and hydraulic ports protected in the supplier photo"
+  ],
+  applications: [
+    "Industrial hydraulic power units",
+    "Machine tools and production machinery",
+    "Presses and material-forming equipment",
+    "Factory automation hydraulic systems",
+    "Hydraulic pump maintenance and replacement",
+    "Mixed industrial MRO spare-parts orders"
+  ],
+  selectionNotice: [
+    "Do not order from A10VSO 28 or DFR1 alone. Compare the complete type code, Material Number R910916805, rotation, shaft, flange, ports, controller and installation dimensions with the existing pump or an approved drawing.",
+    "The pressure and speed values shown on this page are transcribed from the photographed nameplate. Final system suitability, operating limits, hydraulic fluid requirements and commissioning should follow the applicable Rexroth technical documentation and qualified engineering review."
+  ],
+  orderingInfo: [
+    "Clear nameplate photo showing the complete type code",
+    "Material Number / MNR",
+    "Old pump photos from every side",
+    "Machine brand, model and hydraulic function",
+    "Required pressure, flow and operating speed",
+    "Rotation direction",
+    "Shaft type and dimensions",
+    "Port thread, size and orientation",
+    "Flange and mounting dimensions",
+    "Required quantity and destination"
+  ],
+  faqs: [
+    {
+      q: "What is the complete model of the photographed Rexroth A10VSO pump?",
+      a: "The visible nameplate reads A A10VSO 28 DFR1/31R-VPA12N00 with Material Number R910916805."
+    },
+    {
+      q: "Is this a fixed-displacement pump?",
+      a: "No. A10VSO is a variable-displacement axial piston pump family. The exact control and installation configuration must still be checked from the complete type code."
+    },
+    {
+      q: "Can any A10VSO 28 replace R910916805?",
+      a: "Not automatically. Controller, rotation, shaft, flange, ports and other code segments can differ even within the same size."
+    },
+    {
+      q: "What should I send for a Rexroth A10VSO pump quotation?",
+      a: "Send the complete nameplate, old-pump photos, shaft and port details, mounting dimensions, hydraulic requirements, machine model, quantity and destination."
+    },
+    {
+      q: "Is MAVORIX an authorized Rexroth distributor?",
+      a: "MAVORIX provides independent industrial sourcing and supplier coordination. We do not claim authorized-distributor status unless it is explicitly documented for a specific supply channel."
+    }
+  ]
+};
+
 const hytekImages = [
   {
     src: "/images/products/hydraulic-components/hytek-hg0-08-01a-vpc-hydraulic-pump/hytek-hg0-08-01a-vpc-hydraulic-pump-main.webp",
@@ -651,13 +760,14 @@ export function generateStaticParams() {
     { locale: "en", slug: daikinSlug },
     { locale: "en", slug: hytekSlug },
     { locale: "en", slug: hydromaxPump.slug },
-    { locale: "en", slug: rexrothAzpwPump.slug }
+    { locale: "en", slug: rexrothAzpwPump.slug },
+    { locale: "en", slug: rexrothA10vsoPump.slug }
   ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const pump = [hydromaxPump, rexrothAzpwPump].find((item) => locale === "en" && item.slug === slug);
+  const pump = [hydromaxPump, rexrothAzpwPump, rexrothA10vsoPump].find((item) => locale === "en" && item.slug === slug);
   if (pump) {
     return {
       title: `${pump.title} | MAVORIX`,
@@ -859,6 +969,7 @@ export default async function RexrothDirectionalValvePage({ params }: { params: 
   const { locale, slug } = await params;
   if (locale === "en" && slug === hydromaxPump.slug) return <HydraulicPumpPage product={hydromaxPump} />;
   if (locale === "en" && slug === rexrothAzpwPump.slug) return <HydraulicPumpPage product={rexrothAzpwPump} />;
+  if (locale === "en" && slug === rexrothA10vsoPump.slug) return <HydraulicPumpPage product={rexrothA10vsoPump} />;
   if (locale === "en" && slug === aryungSlug) return <AryungCoolantPumpPage />;
   if (locale === "en" && slug === daikinSlug) return <DaikinPistonPumpPage />;
   if (locale === "en" && slug === hytekSlug) return <HytekHydraulicPumpPage />;

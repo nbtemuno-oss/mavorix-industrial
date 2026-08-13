@@ -1,0 +1,128 @@
+status: approved
+publish_status: published
+
+product_name: "Gas-Fired Batch Burn-Off Oven for Paint and Polymer Removal"
+short_name: "Gas-Fired Batch Burn-Off Oven"
+slug: "gas-fired-batch-burn-off-oven-paint-polymer-removal"
+
+brand: ""
+model: "Custom chamber configuration"
+part_number: ""
+material_number: ""
+part_type: "industrial_burn_off_oven"
+condition: "New equipment shown; final configuration confirmation required"
+compatibility_status: "application_confirmation_required"
+image_content_editing: "manual_only"
+category: "industrial-cleaning-equipment"
+categories:
+  - "industrial-machinery"
+  - "metal-processing"
+  - "plastic-industry"
+
+confirmed_specs:
+  - label: "Equipment Type"
+    value: "Gas-fired batch burn-off oven / pyrolysis cleaning oven"
+    source: "user_provided_document"
+  - label: "Overall Dimensions"
+    value: "2300 x 2100 x 2800 mm (L x W x H)"
+    source: "user_provided_document"
+  - label: "Internal Chamber"
+    value: "1800 x 1600 x 1700 mm (L x W x H)"
+    source: "user_provided_document"
+  - label: "Loading Cart"
+    value: "1700 x 1400 x 1200 mm (L x W x H)"
+    source: "user_provided_document"
+  - label: "Typical Cleaning Cycle"
+    value: "Approximately 2-3 hours per batch"
+    source: "user_provided_document"
+  - label: "Coating Removal Capacity"
+    value: "18-22 kg/h, based on coating weight"
+    source: "user_provided_document"
+  - label: "Fuel"
+    value: "Natural gas or suitable fuel oil"
+    source: "user_provided_document"
+  - label: "Natural Gas Requirement"
+    value: "4-5 kPa; stated flow 23 m3/h"
+    source: "user_provided_document"
+  - label: "Outer Wall Temperature"
+    value: "Not more than ambient temperature +20 C"
+    source: "user_provided_document"
+  - label: "Electrical Load"
+    value: "Less than 700 W"
+    source: "user_provided_document"
+  - label: "Control Supply"
+    value: "220 V / 50 Hz"
+    source: "user_provided_document"
+  - label: "Water Supply"
+    value: "Normal mains/tap water"
+    source: "user_provided_document"
+  - label: "Control Method"
+    value: "Automatic PLC control"
+    source: "user_provided_document"
+  - label: "Primary Chamber Temperature"
+    value: "Adjustable from ambient temperature to 500 C"
+    source: "user_provided_document"
+  - label: "Secondary Combustion Temperature"
+    value: "Approximately 650-900 C in the process description"
+    source: "user_provided_document"
+
+unconfirmed_fields:
+  - "Public manufacturer brand and model"
+  - "Final burner model and fuel configuration"
+  - "Destination-market electrical and emissions compliance"
+  - "Permitted coating and polymer chemistry"
+  - "Maximum load weight of parts and cart"
+  - "Required chimney and site exhaust arrangement"
+  - "Installation, commissioning and operator-training scope"
+  - "Warranty and spare-parts package"
+
+questions_for_user:
+  - "Confirm the coating or polymer chemistry, parts material, part dimensions, load weight and contamination per batch."
+  - "Confirm site fuel, power, water, exhaust, emissions and local safety requirements before final engineering."
+
+images:
+  originals:
+    - "微信图片_20260813133407_281_4.png"
+    - "微信图片_20260813133408_282_4.jpg"
+    - "微信图片_20260813133408_283_4.png"
+    - "微信图片_20260813133409_284_4.png"
+    - "微信图片_20260813133410_285_4.png"
+    - "微信图片_20260813133411_286_4.png"
+    - "微信图片_20260813133505_287_4.png"
+    - "微信图片_20260813133614_288_4.png"
+  generated:
+    main: "/images/products/general-products/gas-fired-batch-burn-off-oven-paint-polymer-removal/gas-fired-batch-burn-off-oven-paint-polymer-removal-main.webp"
+    gallery:
+      - "/images/products/general-products/gas-fired-batch-burn-off-oven-paint-polymer-removal/gas-fired-batch-burn-off-oven-paint-polymer-removal-gallery-02.webp"
+      - "/images/products/general-products/gas-fired-batch-burn-off-oven-paint-polymer-removal/gas-fired-batch-burn-off-oven-paint-polymer-removal-gallery-03.webp"
+      - "/images/products/general-products/gas-fired-batch-burn-off-oven-paint-polymer-removal/gas-fired-batch-burn-off-oven-paint-polymer-removal-gallery-04.webp"
+      - "/images/products/general-products/gas-fired-batch-burn-off-oven-paint-polymer-removal/gas-fired-batch-burn-off-oven-paint-polymer-removal-gallery-05.webp"
+      - "/images/products/general-products/gas-fired-batch-burn-off-oven-paint-polymer-removal/gas-fired-batch-burn-off-oven-paint-polymer-removal-gallery-06.webp"
+      - "/images/products/general-products/gas-fired-batch-burn-off-oven-paint-polymer-removal/gas-fired-batch-burn-off-oven-paint-polymer-removal-gallery-07.webp"
+      - "/images/products/general-products/gas-fired-batch-burn-off-oven-paint-polymer-removal/gas-fired-batch-burn-off-oven-paint-polymer-removal-gallery-08.webp"
+    thumbnail: "/images/products/general-products/gas-fired-batch-burn-off-oven-paint-polymer-removal/gas-fired-batch-burn-off-oven-paint-polymer-removal-thumbnail.webp"
+
+seo:
+  title: "Gas-Fired Batch Burn-Off Oven for Paint Removal | MAVORIX"
+  meta_description: "Source a gas-fired batch burn-off oven for paint, powder coating and polymer removal from metal racks, hooks, fixtures and heat-resistant parts."
+  primary_keyword: "batch burn-off oven"
+  secondary_keywords:
+    - "industrial burn-off oven"
+    - "paint stripping oven"
+    - "pyrolysis cleaning oven"
+    - "thermal cleaning furnace"
+    - "powder coating rack cleaning oven"
+    - "polymer removal furnace"
+  long_tail_keywords:
+    - "gas-fired burn-off oven for paint stripping"
+    - "batch burn-off oven for powder coating hooks and racks"
+    - "pyrolysis cleaning oven for metal fixtures"
+    - "industrial thermal cleaning furnace supplier China"
+    - "paint and polymer removal oven with afterburner"
+
+publication:
+  route: "/en/products/industrial-cleaning-equipment/gas-fired-batch-burn-off-oven-paint-polymer-removal/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

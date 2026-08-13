@@ -66,7 +66,16 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/dakin v38a3rx/product.yaml",
       "product inbox/hytek HG0-08-01a-vpc/product.yaml",
       "product inbox/HYDROMAX HGP-22A-F4+4R/product.yaml",
-      "product inbox/Rexroth pump AZPW-21-022RQRXXMB-S0593/product.yaml"
+      "product inbox/Rexroth pump AZPW-21-022RQRXXMB-S0593/product.yaml",
+      "product inbox/rexroth pump A a10vs0/product.yaml"
+    ];
+  }
+  if (path.startsWith("products/industrial-cleaning-equipment/")) {
+    return [
+      ...common,
+      "app/[locale]/products/industrial-cleaning-equipment/[slug]/page.tsx",
+      "data/products.ts",
+      "product inbox/heat cleaning furnance/product.yaml"
     ];
   }
   if (path.startsWith("products/cutting-tools/")) {
