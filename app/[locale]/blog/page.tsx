@@ -101,12 +101,37 @@ const blogGroups = [
   {
     title: "Factory Consumables and MRO",
     description: "Practical notes for maintenance teams and factory buyers sourcing consumables, spare parts, and mixed MRO items from China.",
-    slugs: ["how-to-source-industrial-hand-tools-from-china", "source-75x2000-industrial-belt-sander-china", "mro-sourcing-from-china-guide", "factory-consumables-and-mro-supplies-from-china", "identify-industrial-spare-parts-without-part-number"]
+    slugs: [
+      "how-to-find-industrial-mro-suppliers-in-china",
+      "mro-sourcing-from-china-buyer-checklist",
+      "how-to-source-mro-supplies-from-china",
+      "factory-consumables-and-mro-supplies-from-china",
+      "mro-sourcing-from-china-guide",
+      "how-to-source-industrial-hand-tools-from-china",
+      "source-75x2000-industrial-belt-sander-china"
+    ]
+  },
+  {
+    title: "Factory Spare Parts",
+    description: "Guides for buyers identifying, sourcing, checking, and consolidating factory spare parts from Chinese suppliers.",
+    slugs: [
+      "factory-spare-parts-sourcing-from-china",
+      "identify-industrial-spare-parts-without-part-number",
+      "source-obsolete-discontinued-industrial-spare-parts",
+      "industrial-spare-parts-sourcing-for-balkan-eastern-european-manufacturers",
+      "injection-molding-factory-spare-parts-sourcing-from-china",
+      "packaging-machine-spare-parts-mro-sourcing-from-china"
+    ]
   },
   {
     title: "Supplier Verification",
     description: "Guides for checking supplier identity, communication, capability signals, and payment risk before committing to an order.",
-    slugs: ["how-to-verify-chinese-industrial-supplier", "verify-chinese-industrial-suppliers-before-order"]
+    slugs: [
+      "mro-supplier-risk-chinese-trading-company-checklist",
+      "how-to-verify-chinese-industrial-supplier",
+      "verify-chinese-industrial-suppliers-before-order",
+      "compare-industrial-supplier-quotations-china"
+    ]
   },
   {
     title: "Risk Control",
@@ -116,7 +141,12 @@ const blogGroups = [
   {
     title: "Shipment Consolidation",
     description: "Content for buyers purchasing from several suppliers and trying to reduce fragmented shipment problems.",
-    slugs: ["consolidate-industrial-products-from-china"]
+    slugs: [
+      "how-to-consolidate-mixed-mro-orders-from-chinese-suppliers",
+      "how-to-consolidate-multiple-china-suppliers-into-one-shipment",
+      "consolidate-industrial-products-from-china",
+      "bosch-rexroth-hydraulic-valves-sourcing-consolidation-case"
+    ]
   },
   {
     title: "Plastic Factory Sourcing",
