@@ -90,8 +90,10 @@ function sourceFilesFor(locale: string, path: string): string[] {
     return [
       ...common,
       "app/[locale]/products/packaging-equipment/[slug]/page.tsx",
+      "app/[locale]/products/packaging-equipment/[slug]/TraySealingMachinePage.tsx",
       "data/products.ts",
-      "product inbox/auto strapping machine MS-505/product.yaml"
+      "product inbox/auto strapping machine MS-505/product.yaml",
+      "product inbox/box sealing machine/product.yaml"
     ];
   }
   if (path.startsWith("blog/")) {

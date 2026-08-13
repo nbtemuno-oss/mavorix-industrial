@@ -10,6 +10,17 @@ export type PublishedProduct = {
 
 export const publishedProducts: PublishedProduct[] = [
   {
+    slug: "semi-automatic-tray-sealing-machine-2-4-cavity",
+    title: "Semi-Automatic Tray Sealing Machine with 2- and 4-Cavity Molds",
+    description:
+      "Semi-automatic tray sealer with 2- or 4-cavity tooling and single- or double-station configurations for pre-formed tray packaging.",
+    path: "/en/products/packaging-equipment/semi-automatic-tray-sealing-machine-2-4-cavity/",
+    image:
+      "/images/products/general-products/semi-automatic-tray-sealing-machine-2-4-cavity/semi-automatic-tray-sealing-machine-2-4-cavity-thumbnail.webp",
+    imageAlt: "Semi-automatic tray sealing machine with twin loading positions and roll-film holder",
+    categorySlugs: ["packaging-industry", "industrial-machinery"]
+  },
+  {
     slug: "gas-fired-batch-burn-off-oven-paint-polymer-removal",
     title: "Gas-Fired Batch Burn-Off Oven for Paint and Polymer Removal",
     description:

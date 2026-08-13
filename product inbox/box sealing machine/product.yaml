@@ -1,0 +1,100 @@
+status: approved
+publish_status: published
+
+product_name: "Semi-Automatic Tray Sealing Machine with 2- and 4-Cavity Molds"
+short_name: "Semi-Automatic Tray Sealing Machine"
+slug: "semi-automatic-tray-sealing-machine-2-4-cavity"
+
+brand: "Unbranded / supplier to be confirmed"
+model: ""
+part_type: "semi_automatic_tray_sealing_machine"
+condition: "New machine shown in supplied photo and test videos"
+compatibility_status: "manual_confirmation_required"
+image_content_editing: "manual_only"
+category: "packaging-equipment"
+categories:
+  - "packaging-industry"
+  - "industrial-machinery"
+
+confirmed_specs:
+  - label: "Machine Type"
+    value: "Semi-automatic tray sealing machine"
+    source: "user_and_media_confirmed"
+  - label: "Available Mold Layouts"
+    value: "2-cavity for larger trays or 4-cavity for smaller trays"
+    source: "supplied_quotation"
+  - label: "Double-Station, 2-Cavity Output"
+    value: "Approximately 1,000 trays per hour; two operators stated"
+    source: "supplied_quotation"
+  - label: "Double-Station, 4-Cavity Output"
+    value: "Approximately 2,000 trays per hour; two operators stated"
+    source: "supplied_quotation"
+  - label: "Single-Station, 2-Cavity Output"
+    value: "Approximately 700 trays per hour; one operator stated"
+    source: "supplied_quotation"
+  - label: "Single-Station, 4-Cavity Output"
+    value: "Approximately 1,000 trays per hour; one operator stated"
+    source: "supplied_quotation"
+  - label: "Visible Controls"
+    value: "Touch-screen interface, two temperature displays, emergency stop and start control"
+    source: "image_confirmed"
+  - label: "Film Handling"
+    value: "Roll-fed lidding film arrangement visible on the machine"
+    source: "image_confirmed"
+
+unconfirmed_fields:
+  - "Tray dimensions and sealing-flange geometry"
+  - "Tray and lidding-film materials"
+  - "Sealing temperature and dwell-time range"
+  - "Electrical voltage, frequency, phase and power"
+  - "Compressed-air requirement"
+  - "Machine dimensions and weight"
+  - "Food-contact material documentation"
+  - "MAP, vacuum or skin-pack capability"
+  - "Automatic film cutting method and waste collection"
+  - "Destination-market conformity documents"
+
+questions_for_user:
+  - "Please provide the tray drawing or samples, including outside dimensions, depth and sealing-flange width."
+  - "Please confirm the tray material, lidding-film specification, packed product and required seal result."
+  - "Please confirm the target output, single- or double-station layout, site power and destination market."
+
+images:
+  originals:
+    - "微信图片_20260813175454_292_4.png"
+  generated:
+    main: "/images/products/general-products/semi-automatic-tray-sealing-machine-2-4-cavity/semi-automatic-tray-sealing-machine-2-4-cavity-main.webp"
+    gallery: []
+    thumbnail: "/images/products/general-products/semi-automatic-tray-sealing-machine-2-4-cavity/semi-automatic-tray-sealing-machine-2-4-cavity-thumbnail.webp"
+  videos:
+    - source: "bcae58b7845c68e4945cb5c00e1d888f.mp4"
+      public_path: "/videos/products/packaging-equipment/semi-automatic-tray-sealer-2-cavity-test.mp4"
+      label: "2-cavity tray sealing test"
+    - source: "5f58626c177c5df9eba4e84cae515c3f.mp4"
+      public_path: "/videos/products/packaging-equipment/semi-automatic-tray-sealer-4-cavity-test.mp4"
+      label: "4-cavity tray sealing test"
+
+seo:
+  title: "Semi-Automatic Tray Sealing Machine | 2/4 Cavity | MAVORIX"
+  meta_description: "Source a semi-automatic tray sealing machine with 2- or 4-cavity tooling. Compare single- and double-station output for plastic tray packaging."
+  primary_keyword: "semi-automatic tray sealing machine"
+  secondary_keywords:
+    - "semi-automatic tray sealer"
+    - "food tray sealing machine"
+    - "plastic tray sealing machine"
+    - "tray heat sealing machine"
+    - "multi-cavity tray sealer"
+    - "container sealing machine"
+  long_tail_keywords:
+    - "semi-automatic tray sealing machine with 2 cavity mold"
+    - "4 cavity food tray sealing machine supplier"
+    - "single station versus double station tray sealer"
+    - "plastic container sealing machine with roll film"
+    - "semi-automatic tray sealer sourcing from China"
+
+publication:
+  route: "/en/products/packaging-equipment/semi-automatic-tray-sealing-machine-2-4-cavity/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: false

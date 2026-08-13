@@ -10,6 +10,14 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/data/site";
 import { breadcrumbSchema, faqSchema, JsonLd } from "@/lib/schema";
+import {
+  TraySealingMachinePage,
+  traySealerImages,
+  traySealerMetaDescription,
+  traySealerPath,
+  traySealerSlug,
+  traySealerTitle
+} from "./TraySealingMachinePage";
 
 const productSlug = "ms-505-high-speed-automatic-pp-strapping-machine";
 const productTitle = "MS-505 High-Speed Automatic PP Strapping Machine";
@@ -134,12 +142,45 @@ const faqs = [
 ];
 
 export function generateStaticParams() {
-  return [{ locale: "en", slug: productSlug }];
+  return [
+    { locale: "en", slug: productSlug },
+    { locale: "en", slug: traySealerSlug }
+  ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
-  if (locale !== "en" || slug !== productSlug) return {};
+  if (locale !== "en") return {};
+
+  if (slug === traySealerSlug) {
+    return {
+      title: "Semi-Automatic Tray Sealing Machine | 2/4 Cavity | MAVORIX",
+      description: traySealerMetaDescription,
+      alternates: { canonical: `${site.url}${traySealerPath}` },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: { index: true, follow: true }
+      },
+      openGraph: {
+        title: traySealerTitle,
+        description: traySealerMetaDescription,
+        url: `${site.url}${traySealerPath}`,
+        siteName: site.name,
+        locale: "en",
+        type: "website",
+        images: [{ url: traySealerImages[0].src, width: 892, height: 1230, alt: traySealerImages[0].alt }]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: traySealerTitle,
+        description: traySealerMetaDescription,
+        images: [traySealerImages[0].src]
+      }
+    };
+  }
+
+  if (slug !== productSlug) return {};
 
   return {
     title: "MS-505 High-Speed Automatic PP Strapping Machine | MAVORIX",
@@ -170,7 +211,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function AutomaticStrappingMachinePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
-  if (locale !== "en" || slug !== productSlug) notFound();
+  if (locale !== "en") notFound();
+  if (slug === traySealerSlug) return <TraySealingMachinePage />;
+  if (slug !== productSlug) notFound();
 
   const inquirySubject = encodeURIComponent("MS-505 automatic strapping machine quotation");
   const mailtoHref = `mailto:${site.email}?subject=${inquirySubject}`;
