@@ -102,6 +102,7 @@ const blogGroups = [
     title: "Factory Consumables and MRO",
     description: "Practical notes for maintenance teams and factory buyers sourcing consumables, spare parts, and mixed MRO items from China.",
     slugs: [
+      "industrial-mro-suppliers-in-china-what-buyers-should-check",
       "how-to-find-industrial-mro-suppliers-in-china",
       "mro-sourcing-from-china-buyer-checklist",
       "how-to-source-mro-supplies-from-china",
@@ -128,6 +129,7 @@ const blogGroups = [
     description: "Guides for checking supplier identity, communication, capability signals, and payment risk before committing to an order.",
     slugs: [
       "mro-supplier-risk-chinese-trading-company-checklist",
+      "industrial-mro-suppliers-in-china-what-buyers-should-check",
       "how-to-verify-chinese-industrial-supplier",
       "verify-chinese-industrial-suppliers-before-order",
       "compare-industrial-supplier-quotations-china"

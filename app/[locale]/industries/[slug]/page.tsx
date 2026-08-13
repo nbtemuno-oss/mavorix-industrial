@@ -388,6 +388,7 @@ function MroSuppliesLandingContent() {
         { href: "/en/services/container-consolidation/", label: "Container Consolidation" },
         { href: "/en/products/hydraulic-components/aryung-atp-216ha-vb-t-rotor-coolant-pump/", label: "Coolant Pump Sourcing Example" },
         { href: "/en/products/hydraulic-components/daikin-v38a3rx-95-piston-pump/", label: "Piston Pump Sourcing Example" },
+        { href: "/en/blog/industrial-mro-suppliers-in-china-what-buyers-should-check/", label: "Industrial MRO Supplier Checklist" },
         { href: "/en/blog/how-to-find-industrial-mro-suppliers-in-china/", label: "Find Industrial MRO Suppliers" },
         { href: "/en/blog/mro-sourcing-from-china-buyer-checklist/", label: "MRO Buyer Checklist" },
         { href: "/en/blog/how-to-consolidate-mixed-mro-orders-from-chinese-suppliers/", label: "Mixed MRO Consolidation Guide" },
@@ -694,6 +695,7 @@ function IndustryRelatedGuides({ slug }: { slug: string }) {
       { href: "/en/blog/packaging-machine-spare-parts-mro-sourcing-from-china/", label: "Guide: Packaging Machine MRO Sourcing" }
     ],
     "mro-supplies": [
+      { href: "/en/blog/industrial-mro-suppliers-in-china-what-buyers-should-check/", label: "Guide: Industrial MRO Supplier Checklist" },
       { href: "/en/blog/how-to-find-industrial-mro-suppliers-in-china/", label: "Guide: Find Industrial MRO Suppliers in China" },
       { href: "/en/blog/mro-sourcing-from-china-buyer-checklist/", label: "Guide: MRO Sourcing Buyer Checklist" },
       { href: "/en/blog/factory-spare-parts-sourcing-from-china/", label: "Guide: Factory Spare Parts Sourcing" },

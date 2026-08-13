@@ -295,6 +295,7 @@ function MroSourcingExtra() {
         { href: "/en/services/container-consolidation/", label: "Container Consolidation" },
         { href: "/en/products/hydraulic-components/rexroth-4we6d6x-ofeg24n9k4-directional-control-valve/", label: "Hydraulic Valve Sourcing Example" },
         { href: "/en/products/hydraulic-components/hytek-hg0-08-01a-vpc-hydraulic-pump/", label: "Hydraulic Pump Sourcing Example" },
+        { href: "/en/blog/industrial-mro-suppliers-in-china-what-buyers-should-check/", label: "Industrial MRO Supplier Checklist" },
         { href: "/en/blog/how-to-find-industrial-mro-suppliers-in-china/", label: "Find Industrial MRO Suppliers" },
         { href: "/en/blog/mro-sourcing-from-china-buyer-checklist/", label: "MRO Buyer Checklist" },
         { href: "/en/blog/factory-spare-parts-sourcing-from-china/", label: "Factory Spare Parts Guide" },
@@ -332,6 +333,7 @@ function ServiceRelatedGuides({ slug }: { slug: string }) {
       { href: "/en/blog/verify-chinese-industrial-suppliers-before-order/", label: "Guide: Verify Suppliers Before Order" }
     ],
     "mro-sourcing-from-china": [
+      { href: "/en/blog/industrial-mro-suppliers-in-china-what-buyers-should-check/", label: "Guide: Industrial MRO Supplier Checklist" },
       { href: "/en/blog/how-to-find-industrial-mro-suppliers-in-china/", label: "Guide: Find Industrial MRO Suppliers" },
       { href: "/en/blog/mro-sourcing-from-china-buyer-checklist/", label: "Guide: MRO Sourcing Buyer Checklist" },
       { href: "/en/blog/how-to-consolidate-mixed-mro-orders-from-chinese-suppliers/", label: "Guide: Consolidate Mixed MRO Orders" },
