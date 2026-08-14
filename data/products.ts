@@ -10,6 +10,17 @@ export type PublishedProduct = {
 
 export const publishedProducts: PublishedProduct[] = [
   {
+    slug: "zs-60-tube-tapering-reducing-machine",
+    title: "ZS-60 Tube Tapering and Reducing Machine",
+    description:
+      "Cold-forming machine for reducing steel tube diameter and producing long tapered profiles for furniture legs and tubular components.",
+    path: "/en/products/metalworking-equipment/zs-60-tube-tapering-reducing-machine/",
+    image:
+      "/images/products/general-products/zs-60-tube-tapering-reducing-machine/zs-60-tube-tapering-reducing-machine-thumbnail.webp",
+    imageAlt: "ZS-60 tube tapering and reducing machine in a metalworking equipment workshop",
+    categorySlugs: ["industrial-machinery"]
+  },
+  {
     slug: "semi-automatic-tray-sealing-machine-2-4-cavity",
     title: "Semi-Automatic Tray Sealing Machine with 2- and 4-Cavity Molds",
     description:

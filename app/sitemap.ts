@@ -78,6 +78,14 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/heat cleaning furnance/product.yaml"
     ];
   }
+  if (path.startsWith("products/metalworking-equipment/")) {
+    return [
+      ...common,
+      "app/[locale]/products/metalworking-equipment/[slug]/page.tsx",
+      "data/products.ts",
+      "product inbox/pipe taper machine/product.yaml"
+    ];
+  }
   if (path.startsWith("products/cutting-tools/")) {
     return [
       ...common,

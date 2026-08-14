@@ -297,5 +297,11 @@ export const blogImages: Record<string, PageImage> = {
     alt: "Complete XPS22/8 compressed air system loaded into a shipping container for the UAE",
     width: 806,
     height: 1088
+  },
+  "tube-tapering-machine-sourcing-romania": {
+    src: "/images/blog/tube-tapering-machine-sourcing-romania/zs-60-tube-tapering-machine-workshop.webp",
+    alt: "ZS-60 tube tapering and reducing machine photographed before testing for a Romania sourcing project",
+    width: 1062,
+    height: 1252
   }
 };
