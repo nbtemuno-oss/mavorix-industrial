@@ -14,10 +14,10 @@ export const defaultOgImage: PageImage = {
 
 export const pageImages = {
   home: {
-    src: "/images/hero-industrial-sourcing.webp",
-    alt: "China industrial sourcing coordination for overseas industrial buyers",
-    width: 1200,
-    height: 800
+    src: "/images/hero/industrial-sourcing-consolidation-hero.webp",
+    alt: "China industrial sourcing, MRO spare parts checking and export shipment consolidation",
+    width: 1536,
+    height: 1024
   },
   services: {
     src: "/images/services-china-sourcing-workflow-mavorix.webp",
