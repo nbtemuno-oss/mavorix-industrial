@@ -10,6 +10,13 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/data/site";
 import { breadcrumbSchema, faqSchema, JsonLd } from "@/lib/schema";
+import {
+  counterbalanceValveDescription,
+  counterbalanceValvePath,
+  counterbalanceValveSlug,
+  counterbalanceValveTitle,
+  RexrothCounterbalanceValvePage
+} from "./RexrothCounterbalanceValvePage";
 
 const productSlug = "rexroth-4we6d6x-ofeg24n9k4-directional-control-valve";
 const productTitle = "Rexroth 4WE6D6X/OFEG24N9K4 Directional Control Valve";
@@ -761,12 +768,45 @@ export function generateStaticParams() {
     { locale: "en", slug: hytekSlug },
     { locale: "en", slug: hydromaxPump.slug },
     { locale: "en", slug: rexrothAzpwPump.slug },
-    { locale: "en", slug: rexrothA10vsoPump.slug }
+    { locale: "en", slug: rexrothA10vsoPump.slug },
+    { locale: "en", slug: counterbalanceValveSlug }
   ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
+  if (locale === "en" && slug === counterbalanceValveSlug) {
+    return {
+      title: "Rexroth R930050353 Counterbalance Valve | MAVORIX",
+      description: counterbalanceValveDescription,
+      alternates: { canonical: `${site.url}${counterbalanceValvePath}` },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: { index: true, follow: true }
+      },
+      openGraph: {
+        title: counterbalanceValveTitle,
+        description: counterbalanceValveDescription,
+        url: `${site.url}${counterbalanceValvePath}`,
+        siteName: site.name,
+        locale: "en",
+        type: "website",
+        images: [{
+          url: "/images/products/general-products/rexroth-r930050353-single-counterbalance-valve/rexroth-r930050353-single-counterbalance-valve-main.webp",
+          width: 1080,
+          height: 1440,
+          alt: "Two Rexroth R930050353 single counterbalance valve blocks with identification labels"
+        }]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: counterbalanceValveTitle,
+        description: counterbalanceValveDescription,
+        images: ["/images/products/general-products/rexroth-r930050353-single-counterbalance-valve/rexroth-r930050353-single-counterbalance-valve-main.webp"]
+      }
+    };
+  }
   const pump = [hydromaxPump, rexrothAzpwPump, rexrothA10vsoPump].find((item) => locale === "en" && item.slug === slug);
   if (pump) {
     return {
@@ -967,6 +1007,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function RexrothDirectionalValvePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
+  if (locale === "en" && slug === counterbalanceValveSlug) return <RexrothCounterbalanceValvePage />;
   if (locale === "en" && slug === hydromaxPump.slug) return <HydraulicPumpPage product={hydromaxPump} />;
   if (locale === "en" && slug === rexrothAzpwPump.slug) return <HydraulicPumpPage product={rexrothAzpwPump} />;
   if (locale === "en" && slug === rexrothA10vsoPump.slug) return <HydraulicPumpPage product={rexrothA10vsoPump} />;

@@ -67,7 +67,9 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/hytek HG0-08-01a-vpc/product.yaml",
       "product inbox/HYDROMAX HGP-22A-F4+4R/product.yaml",
       "product inbox/Rexroth pump AZPW-21-022RQRXXMB-S0593/product.yaml",
-      "product inbox/rexroth pump A a10vs0/product.yaml"
+      "product inbox/rexroth pump A a10vs0/product.yaml",
+      "product inbox/rexroth valve manifold/product.yaml",
+      "app/[locale]/products/hydraulic-components/[slug]/RexrothCounterbalanceValvePage.tsx"
     ];
   }
   if (path.startsWith("products/industrial-cleaning-equipment/")) {

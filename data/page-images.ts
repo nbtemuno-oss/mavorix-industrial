@@ -303,5 +303,11 @@ export const blogImages: Record<string, PageImage> = {
     alt: "ZS-60 tube tapering and reducing machine photographed before testing for a Romania sourcing project",
     width: 1062,
     height: 1252
+  },
+  "used-injection-mold-sourcing-export-packing-case": {
+    src: "/images/blog/used-injection-mold-sourcing-export-packing-case/used-injection-molds-prepared-for-export.webp",
+    alt: "Batch of used plastic injection molds wrapped and grouped for export preparation in China",
+    width: 1200,
+    height: 1600
   }
 };

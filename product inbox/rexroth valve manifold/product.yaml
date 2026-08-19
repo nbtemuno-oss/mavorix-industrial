@@ -1,0 +1,90 @@
+status: approved
+publish_status: published
+
+product_name: "Rexroth R930050353 A-VBSO Single Counterbalance Valve"
+short_name: "Rexroth R930050353 Counterbalance Valve"
+slug: "rexroth-r930050353-single-counterbalance-valve"
+
+brand: "Rexroth"
+model: "A-VBSO-SE-CCAP33PSE34SAE"
+part_number: "08356265723500B"
+material_number: "R930050353"
+part_type: "single_counterbalance_valve"
+condition: "Protective film and port fittings visible; final condition and supply channel confirmation required"
+compatibility_status: "complete_code_and_application_confirmation_required"
+image_content_editing: "manual_only"
+category: "hydraulic-components"
+categories:
+  - "factory-spare-parts"
+  - "industrial-machinery"
+
+confirmed_specs:
+  - label: "Brand"
+    value: "Rexroth"
+    source: "image_confirmed"
+  - label: "Material Number"
+    value: "R930050353"
+    source: "image_confirmed"
+  - label: "Type Code"
+    value: "08356265723500B"
+    source: "label_and_product_cross_reference"
+  - label: "Product Code"
+    value: "A-VBSO-SE-CCAP33PSE34SAE"
+    source: "product_cross_reference"
+  - label: "Product Type"
+    value: "Single counterbalance valve"
+    source: "product_cross_reference"
+  - label: "Product Family"
+    value: "Bosch Rexroth Oil Control / mobile hydraulics"
+    source: "product_cross_reference"
+  - label: "Visible Quantity"
+    value: "Two valve blocks"
+    source: "image_confirmed"
+
+unconfirmed_fields:
+  - "Pressure setting and maximum operating pressure"
+  - "Rated or maximum flow"
+  - "Pilot ratio"
+  - "Port threads, connection sizes and interface dimensions"
+  - "Exact hydraulic circuit function and adjustment configuration"
+  - "Equipment or machine compatibility"
+  - "Country of manufacture"
+  - "Authenticity and authorized distribution status"
+  - "Warranty, stock status and delivery time"
+
+questions_for_user:
+  - "Provide the old valve label, hydraulic schematic or machine parts list for compatibility checking."
+  - "Confirm required pressure setting, flow, pilot ratio, port details, quantity and destination before ordering."
+
+images:
+  originals:
+    - "微信图片_20260819090010_314_4.jpg"
+  generated:
+    main: "/images/products/general-products/rexroth-r930050353-single-counterbalance-valve/rexroth-r930050353-single-counterbalance-valve-main.webp"
+    thumbnail: "/images/products/general-products/rexroth-r930050353-single-counterbalance-valve/rexroth-r930050353-single-counterbalance-valve-thumbnail.webp"
+
+seo:
+  title: "Rexroth R930050353 Counterbalance Valve | MAVORIX"
+  meta_description: "Source Rexroth R930050353 single counterbalance valve, code 08356265723500B / A-VBSO-SE-CCAP33PSE34SAE. Confirm ports, setting and application."
+  primary_keyword: "Rexroth R930050353 counterbalance valve"
+  secondary_keywords:
+    - "Rexroth R930050353"
+    - "08356265723500B"
+    - "A-VBSO-SE-CCAP33PSE34SAE"
+    - "Rexroth counterbalance valve"
+    - "Rexroth load holding valve"
+    - "Bosch Rexroth Oil Control valve"
+    - "hydraulic counterbalance valve block"
+  long_tail_keywords:
+    - "source Rexroth R930050353 counterbalance valve"
+    - "Rexroth 08356265723500B replacement valve"
+    - "A-VBSO-SE-CCAP33PSE34SAE supplier China"
+    - "how to verify Rexroth counterbalance valve model"
+    - "hydraulic load holding valve sourcing"
+
+publication:
+  route: "/en/products/hydraulic-components/rexroth-r930050353-single-counterbalance-valve/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

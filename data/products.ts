@@ -10,6 +10,17 @@ export type PublishedProduct = {
 
 export const publishedProducts: PublishedProduct[] = [
   {
+    slug: "rexroth-r930050353-single-counterbalance-valve",
+    title: "Rexroth R930050353 A-VBSO Single Counterbalance Valve",
+    description:
+      "Rexroth single counterbalance valve identified by Material Number R930050353 and code 08356265723500B / A-VBSO-SE-CCAP33PSE34SAE.",
+    path: "/en/products/hydraulic-components/rexroth-r930050353-single-counterbalance-valve/",
+    image:
+      "/images/products/general-products/rexroth-r930050353-single-counterbalance-valve/rexroth-r930050353-single-counterbalance-valve-thumbnail.webp",
+    imageAlt: "Rexroth R930050353 single counterbalance valve blocks with identification labels",
+    categorySlugs: ["industrial-machinery", "factory-spare-parts"]
+  },
+  {
     slug: "zs-60-tube-tapering-reducing-machine",
     title: "ZS-60 Tube Tapering and Reducing Machine",
     description:
