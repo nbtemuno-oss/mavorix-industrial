@@ -10,8 +10,16 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/data/site";
 import { breadcrumbSchema, faqSchema, JsonLd } from "@/lib/schema";
+import {
+  coldCutSawDescription,
+  coldCutSawPath,
+  coldCutSawSlug,
+  coldCutSawTitle,
+  ColdCutSawPage
+} from "./ColdCutSawPage";
 
 const productSlug = "zs-60-tube-tapering-reducing-machine";
+const coldCutSawRouteSlug = "jm-lq-355-14-inch-precision-cold-cut-saw";
 const productTitle = "ZS-60 Tube Tapering and Reducing Machine";
 const productPath = `/en/products/metalworking-equipment/${productSlug}/`;
 const metaDescription =
@@ -107,11 +115,42 @@ const faqs = [
 ];
 
 export function generateStaticParams() {
-  return [{ locale: "en", slug: productSlug }];
+  return [
+    { locale: "en", slug: productSlug },
+    { locale: "en", slug: coldCutSawRouteSlug }
+  ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
+  if (locale === "en" && slug === coldCutSawRouteSlug) {
+    const image = `/images/products/metalworking-equipment/${coldCutSawSlug}/${coldCutSawSlug}-main.webp`;
+    return {
+      title: "JM/LQ-355 14-Inch Precision Cold Cut Saw | MAVORIX",
+      description: coldCutSawDescription,
+      alternates: { canonical: `${site.url}${coldCutSawPath}` },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: { index: true, follow: true }
+      },
+      openGraph: {
+        title: coldCutSawTitle,
+        description: coldCutSawDescription,
+        url: `${site.url}${coldCutSawPath}`,
+        siteName: site.name,
+        locale: "en",
+        type: "website",
+        images: [{ url: image, width: 1400, height: 1400, alt: "JM/LQ-355 precision cold cut saw" }]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: coldCutSawTitle,
+        description: coldCutSawDescription,
+        images: [image]
+      }
+    };
+  }
   if (locale !== "en" || slug !== productSlug) return {};
 
   return {
@@ -143,6 +182,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function TubeTaperingMachinePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
+  if (locale === "en" && slug === coldCutSawRouteSlug) return <ColdCutSawPage />;
   if (locale !== "en" || slug !== productSlug) notFound();
 
   const mailtoHref = `mailto:${site.email}?subject=${encodeURIComponent("ZS-60 tube tapering machine quotation")}`;

@@ -1,0 +1,77 @@
+status: approved
+publish_status: published
+
+product_name: "KTC KPC3560RPSS Hydraulic Gear Pump"
+short_name: "KTC KPC3560RPSS Gear Pump"
+slug: "ktc-kpc3560-rpss-hydraulic-gear-pump"
+
+brand: "KTC"
+model: "KPC3560RPSS"
+part_type: "hydraulic_gear_pump"
+condition: "Three pump units shown; final condition confirmation required"
+compatibility_status: "manual_confirmation_required"
+image_content_editing: "manual_only"
+category: "hydraulic-components"
+categories:
+  - "industrial-machinery"
+  - "factory-spare-parts"
+
+confirmed_specs:
+  - label: "Brand Marking"
+    value: "KTC"
+    source: "image_confirmed"
+  - label: "Model"
+    value: "KPC3560RPSS"
+    source: "image_confirmed"
+  - label: "Product Type"
+    value: "Hydraulic gear pump"
+    source: "product_form_and_port_markings"
+  - label: "Port Markings"
+    value: "IN and OUT cast into pump body"
+    source: "image_confirmed"
+  - label: "Rotation Marking"
+    value: "Directional arrow cast into pump cover"
+    source: "image_confirmed"
+  - label: "Visible Quantity"
+    value: "Three units"
+    source: "image_confirmed"
+
+unconfirmed_fields:
+  - "Displacement"
+  - "Rated and maximum pressure"
+  - "Rated speed and maximum speed"
+  - "Shaft type and dimensions"
+  - "Port thread, size and orientation"
+  - "Mounting dimensions"
+  - "Rotation direction viewed from the shaft end"
+  - "Hydraulic fluid requirements"
+  - "Exact equipment compatibility"
+
+questions_for_user:
+  - "Please provide a straight-on close photo of the embossed model code for final pre-order matching."
+  - "Please confirm displacement, pressure, rotation, shaft, ports and mounting dimensions before ordering."
+
+images:
+  originals:
+    - "微信图片_20260825160612_350_4.jpg"
+  generated:
+    main: "/images/products/hydraulic-components/ktc-kpc3560-rpss-hydraulic-gear-pump/ktc-kpc3560-rpss-hydraulic-gear-pump-main.webp"
+    gallery: []
+    thumbnail: "/images/products/hydraulic-components/ktc-kpc3560-rpss-hydraulic-gear-pump/ktc-kpc3560-rpss-hydraulic-gear-pump-thumbnail.webp"
+
+seo:
+  title: "KTC KPC3560RPSS Hydraulic Gear Pump | MAVORIX"
+  meta_description: "Source a KTC KPC3560RPSS hydraulic gear pump with visible IN, OUT and rotation markings. Confirm displacement, shaft, ports and mounting before ordering."
+  primary_keyword: "KTC KPC3560RPSS hydraulic gear pump"
+  secondary_keywords:
+    - "KTC oil pump"
+    - "KPC3560RPSS gear pump"
+    - "industrial hydraulic gear pump replacement"
+    - "hydraulic pump sourcing China"
+
+publication:
+  route: "/en/products/hydraulic-components/ktc-kpc3560-rpss-hydraulic-gear-pump/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: false

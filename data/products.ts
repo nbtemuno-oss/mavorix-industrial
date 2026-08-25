@@ -172,5 +172,27 @@ export const publishedProducts: PublishedProduct[] = [
       "/images/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump-thumbnail.webp",
     imageAlt: "Rexroth AZPW-21-022RQRXXMB-S0593 external gear pump label and shaft view",
     categorySlugs: ["industrial-machinery", "factory-spare-parts"]
+  },
+  {
+    slug: "jm-lq-355-14-inch-precision-cold-cut-saw",
+    title: "JM/LQ-355 14-Inch Precision Cold Cut Saw",
+    description:
+      "JM/LQ-355 precision cold cut saw with 3500 W rating, 220 V / 50 Hz power marking and 355 x 25.4 mm blade specification.",
+    path: "/en/products/metalworking-equipment/jm-lq-355-14-inch-precision-cold-cut-saw/",
+    image:
+      "/images/products/metalworking-equipment/jm-lq-355-14-inch-precision-cold-cut-saw/jm-lq-355-14-inch-precision-cold-cut-saw-thumbnail.webp",
+    imageAlt: "JM/LQ-355 14-inch precision cold cut saw",
+    categorySlugs: ["industrial-machinery", "metal-parts"]
+  },
+  {
+    slug: "ktc-kpc3560-rpss-hydraulic-gear-pump",
+    title: "KTC KPC3560RPSS Hydraulic Gear Pump",
+    description:
+      "KTC KPC3560RPSS hydraulic gear pump with visible IN, OUT and rotation markings for model- and dimension-based replacement sourcing.",
+    path: "/en/products/hydraulic-components/ktc-kpc3560-rpss-hydraulic-gear-pump/",
+    image:
+      "/images/products/hydraulic-components/ktc-kpc3560-rpss-hydraulic-gear-pump/ktc-kpc3560-rpss-hydraulic-gear-pump-thumbnail.webp",
+    imageAlt: "Three KTC KPC3560RPSS hydraulic gear pumps with embossed markings",
+    categorySlugs: ["industrial-machinery", "factory-spare-parts"]
   }
 ];

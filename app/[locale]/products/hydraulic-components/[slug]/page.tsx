@@ -54,6 +54,107 @@ type HydraulicPumpData = {
   faqs: { q: string; a: string }[];
 };
 
+const ktcKpc3560RpssPump: HydraulicPumpData = {
+  slug: "ktc-kpc3560-rpss-hydraulic-gear-pump",
+  title: "KTC KPC3560RPSS Hydraulic Gear Pump",
+  path: "/en/products/hydraulic-components/ktc-kpc3560-rpss-hydraulic-gear-pump/",
+  badge: "Hydraulic Gear Pump",
+  brand: "KTC",
+  model: "KPC3560RPSS",
+  category: "Hydraulic Gear Pump",
+  metaDescription:
+    "Source a KTC KPC3560RPSS hydraulic gear pump with visible IN, OUT and rotation markings. Confirm displacement, shaft, ports and mounting before ordering.",
+  summary:
+    "KTC KPC3560RPSS hydraulic gear pumps shown as three matching units with IN, OUT and rotation markings. Displacement and all hydraulic interfaces require confirmation before replacement ordering.",
+  schemaDescription:
+    "KTC KPC3560RPSS hydraulic gear pump sourcing reference based on visible body markings and product form.",
+  images: [
+    {
+      src: "/images/products/hydraulic-components/ktc-kpc3560-rpss-hydraulic-gear-pump/ktc-kpc3560-rpss-hydraulic-gear-pump-main.webp",
+      alt: "Three KTC KPC3560RPSS hydraulic gear pumps with embossed model and port markings",
+      label: "Pump batch and markings"
+    }
+  ],
+  summarySpecs: [
+    ["Brand Marking", "KTC"],
+    ["Model", "KPC3560RPSS"],
+    ["Product Type", "Hydraulic gear pump"],
+    ["Visible Quantity", "Three units"],
+    ["Port Markings", "IN and OUT"],
+    ["Compatibility", "Complete code and dimensions require confirmation"]
+  ],
+  confirmedSpecs: [
+    ["Brand Marking", "KTC"],
+    ["Model", "KPC3560RPSS"],
+    ["Product Type", "Hydraulic gear pump"],
+    ["Visible Quantity", "Three units"],
+    ["Port Identification", "IN and OUT cast into the pump body"],
+    ["Rotation Reference", "Directional arrow cast into the pump cover"],
+    ["Body Construction", "Metal pump housing with four cover bolts"]
+  ],
+  overview: [
+    "The supplied photo shows three compact KTC pumps with the same general housing form. KTC and KPC3560RPSS are embossed into each cover, together with IN, OUT and a directional arrow.",
+    "For replacement sourcing, the complete code is only the starting point because displacement, shaft, port and rotation details still require confirmation. A straight-on model close-up and interface dimensions should be checked before supplier approval.",
+    "MAVORIX can coordinate model-photo review, supplier communication, dimensional follow-up, pre-shipment photos and consolidation with other hydraulic and factory spare parts."
+  ],
+  keyFeatures: [
+    "KTC brand marking visible",
+    "KPC3560RPSS model marking visible",
+    "IN and OUT port markings visible",
+    "Cast rotation-direction reference",
+    "Compact hydraulic gear-pump form",
+    "Three matching units shown in the supplied photo",
+    "Suitable for code-and-dimension-based sourcing review",
+    "Performance data requires supplier confirmation"
+  ],
+  applications: [
+    "Industrial hydraulic systems",
+    "Machine-tool hydraulic circuits",
+    "Factory machinery maintenance",
+    "Lubrication and oil-circulation systems where technically matched",
+    "Replacement-pump sourcing",
+    "Mixed MRO spare-parts consolidation"
+  ],
+  selectionNotice: [
+    "Do not order from housing appearance alone. Confirm the KPC3560RPSS code and compare the old pump's shaft, mounting and ports.",
+    "Confirm displacement, pressure, rated speed, rotation viewed from the shaft end, fluid, port threads and equipment duty before purchase. Final suitability should be reviewed by qualified technical personnel."
+  ],
+  orderingInfo: [
+    "Straight-on photo of the complete embossed model code",
+    "Old pump photos from every side",
+    "Required displacement",
+    "Rated and maximum pressure",
+    "Rotation direction viewed from the shaft end",
+    "Shaft type and dimensions",
+    "Port thread, size and orientation",
+    "Mounting-hole and pilot dimensions",
+    "Machine brand, model and hydraulic function",
+    "Required quantity and destination"
+  ],
+  faqs: [
+    {
+      q: "What KTC pump model is visible in the current photo?",
+      a: "The embossed model code is KPC3560RPSS. A straight-on close-up should still be included in the final pre-order comparison."
+    },
+    {
+      q: "Does the photo confirm pump displacement or pressure?",
+      a: "No. The current photo confirms visible brand, model-prefix, port and rotation markings only. Displacement, pressure and speed require the complete code or technical documentation."
+    },
+    {
+      q: "Can a similar-looking KTC gear pump be used as a replacement?",
+      a: "Not automatically. Similar housings can have different displacement, shaft, ports, mounting and rotation configurations."
+    },
+    {
+      q: "What should I send for a KTC gear pump quotation?",
+      a: "Send the complete embossed code, old-pump photos, displacement and pressure requirements, rotation, shaft and port details, mounting dimensions, equipment model, quantity and destination."
+    },
+    {
+      q: "Can MAVORIX consolidate these pumps with other hydraulic parts?",
+      a: "Yes. MAVORIX can coordinate approved pumps, valves, seals, sensors and other industrial spare parts in one China-side purchasing and export-packing workflow."
+    }
+  ]
+};
+
 const hydromaxPump: HydraulicPumpData = {
   slug: "hydromax-hgp-22a-f4-4r-tandem-gear-pump",
   title: "HYDROMAX HGP-22A-F4+4R Tandem Gear Pump",
@@ -769,6 +870,7 @@ export function generateStaticParams() {
     { locale: "en", slug: hydromaxPump.slug },
     { locale: "en", slug: rexrothAzpwPump.slug },
     { locale: "en", slug: rexrothA10vsoPump.slug },
+    { locale: "en", slug: ktcKpc3560RpssPump.slug },
     { locale: "en", slug: counterbalanceValveSlug }
   ];
 }
@@ -807,7 +909,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       }
     };
   }
-  const pump = [hydromaxPump, rexrothAzpwPump, rexrothA10vsoPump].find((item) => locale === "en" && item.slug === slug);
+  const pump = [hydromaxPump, rexrothAzpwPump, rexrothA10vsoPump, ktcKpc3560RpssPump].find((item) => locale === "en" && item.slug === slug);
   if (pump) {
     return {
       title: `${pump.title} | MAVORIX`,
@@ -1011,6 +1113,7 @@ export default async function RexrothDirectionalValvePage({ params }: { params: 
   if (locale === "en" && slug === hydromaxPump.slug) return <HydraulicPumpPage product={hydromaxPump} />;
   if (locale === "en" && slug === rexrothAzpwPump.slug) return <HydraulicPumpPage product={rexrothAzpwPump} />;
   if (locale === "en" && slug === rexrothA10vsoPump.slug) return <HydraulicPumpPage product={rexrothA10vsoPump} />;
+  if (locale === "en" && slug === ktcKpc3560RpssPump.slug) return <HydraulicPumpPage product={ktcKpc3560RpssPump} />;
   if (locale === "en" && slug === aryungSlug) return <AryungCoolantPumpPage />;
   if (locale === "en" && slug === daikinSlug) return <DaikinPistonPumpPage />;
   if (locale === "en" && slug === hytekSlug) return <HytekHydraulicPumpPage />;

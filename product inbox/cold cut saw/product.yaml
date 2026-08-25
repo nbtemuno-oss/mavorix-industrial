@@ -1,0 +1,84 @@
+status: approved
+publish_status: published
+
+product_name: "JM/LQ-355 14-Inch Precision Cold Cut Saw"
+short_name: "JM/LQ-355 Cold Cut Saw"
+slug: "jm-lq-355-14-inch-precision-cold-cut-saw"
+
+brand: "Unbranded / supplier to be confirmed"
+model: "JM/LQ-355"
+part_type: "precision_cold_cut_saw"
+condition: "New machine shown in supplied product image"
+compatibility_status: "manual_confirmation_required"
+image_content_editing: "manual_only"
+category: "metalworking-equipment"
+categories:
+  - "industrial-machinery"
+  - "metal-parts"
+
+confirmed_specs:
+  - label: "Model"
+    value: "JM/LQ-355"
+    source: "image_confirmed"
+  - label: "Machine Type"
+    value: "14-inch brushless variable-frequency precision cold cut saw"
+    source: "supplied_image_text"
+  - label: "Rated Power"
+    value: "3500 W"
+    source: "supplied_image_text"
+  - label: "Voltage"
+    value: "220 V"
+    source: "supplied_image_text"
+  - label: "Frequency"
+    value: "50 Hz"
+    source: "supplied_image_text"
+  - label: "Saw Blade Size"
+    value: "355 x 25.4 mm"
+    source: "supplied_image_text"
+  - label: "Net Weight"
+    value: "54 kg"
+    source: "supplied_image_text"
+  - label: "Packing Size"
+    value: "62 x 57 x 47 cm"
+    source: "supplied_image_text"
+  - label: "Installed Blade Marking"
+    value: "355-66T cold-cut blade"
+    source: "supplied_image_text"
+
+unconfirmed_fields:
+  - "Motor manufacturer and control configuration"
+  - "No-load blade speed and adjustable speed range"
+  - "Duty cycle and production output"
+  - "Included guarding and destination-market conformity documents"
+  - "Maximum cutting capacity for materials other than the profiles shown"
+  - "Plug type, phase and destination voltage compatibility"
+  - "Warranty and standard accessory scope"
+
+questions_for_user:
+  - "Please provide the material, profile shape, dimensions and cutting angle."
+  - "Please confirm site voltage, target output, cut-finish requirement and destination market."
+
+images:
+  originals:
+    - "微信图片_20260824160135_342_4.jpg"
+  generated:
+    main: "/images/products/metalworking-equipment/jm-lq-355-14-inch-precision-cold-cut-saw/jm-lq-355-14-inch-precision-cold-cut-saw-main.webp"
+    gallery: []
+    thumbnail: "/images/products/metalworking-equipment/jm-lq-355-14-inch-precision-cold-cut-saw/jm-lq-355-14-inch-precision-cold-cut-saw-thumbnail.webp"
+
+seo:
+  title: "JM/LQ-355 14-Inch Precision Cold Cut Saw | MAVORIX"
+  meta_description: "Source a JM/LQ-355 14-inch precision cold cut saw rated 3500 W at 220 V, with a 355 x 25.4 mm blade. Confirm material and cutting capacity."
+  primary_keyword: "JM/LQ-355 cold cut saw"
+  secondary_keywords:
+    - "14 inch precision cold saw"
+    - "355 mm metal cutting saw"
+    - "brushless variable frequency cold saw"
+    - "metal profile cold cut saw"
+
+publication:
+  route: "/en/products/metalworking-equipment/jm-lq-355-14-inch-precision-cold-cut-saw/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: false
