@@ -93,8 +93,10 @@ function sourceFilesFor(locale: string, path: string): string[] {
     return [
       ...common,
       "app/[locale]/products/metalworking-equipment/[slug]/page.tsx",
+      "app/[locale]/products/metalworking-equipment/[slug]/VerticalTurretMillingMachinePage.tsx",
       "data/products.ts",
-      "product inbox/pipe taper machine/product.yaml"
+      "product inbox/pipe taper machine/product.yaml",
+      "product inbox/HJY-4GT vertical turret milling machine/product.yaml"
     ];
   }
   if (path.startsWith("products/cutting-tools/")) {

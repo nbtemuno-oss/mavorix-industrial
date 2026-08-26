@@ -54,6 +54,17 @@ export const publishedProducts: PublishedProduct[] = [
     categorySlugs: ["industrial-machinery"]
   },
   {
+    slug: "hjy-4gt-vertical-turret-milling-machine",
+    title: "HJY-4GT Vertical Turret Milling Machine",
+    description:
+      "Knee-type vertical turret milling machine with a 1270 x 254 mm table, 700/380/400 mm travel, 80-5440 rpm spindle and configurable three-axis DRO.",
+    path: "/en/products/metalworking-equipment/hjy-4gt-vertical-turret-milling-machine/",
+    image:
+      "/images/products/general-products/hjy-4gt-vertical-turret-milling-machine/hjy-4gt-vertical-turret-milling-machine-main-bright.webp",
+    imageAlt: "HJY-4GT vertical turret milling machine on a clean white background",
+    categorySlugs: ["industrial-machinery", "metal-parts"]
+  },
+  {
     slug: "semi-automatic-tray-sealing-machine-2-4-cavity",
     title: "Semi-Automatic Tray Sealing Machine with 2- and 4-Cavity Molds",
     description:

@@ -17,6 +17,13 @@ import {
   coldCutSawTitle,
   ColdCutSawPage
 } from "./ColdCutSawPage";
+import {
+  verticalTurretMillingDescription,
+  verticalTurretMillingPath,
+  verticalTurretMillingSlug,
+  verticalTurretMillingTitle,
+  VerticalTurretMillingMachinePage
+} from "./VerticalTurretMillingMachinePage";
 
 const productSlug = "zs-60-tube-tapering-reducing-machine";
 const coldCutSawRouteSlug = "jm-lq-355-14-inch-precision-cold-cut-saw";
@@ -117,7 +124,8 @@ const faqs = [
 export function generateStaticParams() {
   return [
     { locale: "en", slug: productSlug },
-    { locale: "en", slug: coldCutSawRouteSlug }
+    { locale: "en", slug: coldCutSawRouteSlug },
+    { locale: "en", slug: verticalTurretMillingSlug }
   ];
 }
 
@@ -149,6 +157,25 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         description: coldCutSawDescription,
         images: [image]
       }
+    };
+  }
+  if (locale === "en" && slug === verticalTurretMillingSlug) {
+    const image = `/images/products/general-products/${verticalTurretMillingSlug}/${verticalTurretMillingSlug}-main-bright.webp`;
+    return {
+      title: "HJY-4GT Vertical Turret Milling Machine | MAVORIX",
+      description: verticalTurretMillingDescription,
+      alternates: { canonical: `${site.url}${verticalTurretMillingPath}` },
+      robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+      openGraph: {
+        title: verticalTurretMillingTitle,
+        description: verticalTurretMillingDescription,
+        url: `${site.url}${verticalTurretMillingPath}`,
+        siteName: site.name,
+        locale: "en",
+        type: "website",
+        images: [{ url: image, alt: "HJY-4GT vertical turret milling machine" }]
+      },
+      twitter: { card: "summary_large_image", title: verticalTurretMillingTitle, description: verticalTurretMillingDescription, images: [image] }
     };
   }
   if (locale !== "en" || slug !== productSlug) return {};
@@ -183,6 +210,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function TubeTaperingMachinePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   if (locale === "en" && slug === coldCutSawRouteSlug) return <ColdCutSawPage />;
+  if (locale === "en" && slug === verticalTurretMillingSlug) return <VerticalTurretMillingMachinePage />;
   if (locale !== "en" || slug !== productSlug) notFound();
 
   const mailtoHref = `mailto:${site.email}?subject=${encodeURIComponent("ZS-60 tube tapering machine quotation")}`;

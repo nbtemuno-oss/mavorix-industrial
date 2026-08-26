@@ -1,0 +1,120 @@
+status: approved
+publish_status: published
+
+product_name: "HJY-4GT Vertical Turret Milling Machine"
+short_name: "HJY-4GT Turret Milling Machine"
+slug: "hjy-4gt-vertical-turret-milling-machine"
+
+brand: "Unbranded / supplier to be confirmed"
+model: "HJY-4GT"
+part_number: ""
+material_number: ""
+part_type: "vertical_turret_milling_machine"
+condition: "New machine configuration; final supply scope requires quotation confirmation"
+compatibility_status: "configuration_confirmation_required"
+image_content_editing: "manual_only"
+category: "metalworking-equipment"
+categories:
+  - "industrial-machinery"
+  - "metal-parts"
+
+confirmed_specs:
+  - label: "Model"
+    value: "HJY-4GT"
+    source: "user_confirmed_model_name"
+  - label: "Machine Type"
+    value: "Vertical turret milling machine / knee-type milling machine"
+    source: "product_configuration_and_images"
+  - label: "Table Size"
+    value: "1270 x 254 mm"
+    source: "supplied_parameter_sheet"
+  - label: "X-Axis Travel"
+    value: "700 mm"
+    source: "supplied_parameter_sheet"
+  - label: "Y-Axis Travel"
+    value: "380 mm"
+    source: "supplied_parameter_sheet"
+  - label: "Z-Axis Knee Travel"
+    value: "400 mm"
+    source: "supplied_parameter_sheet"
+  - label: "Maximum Table Load"
+    value: "300 kg"
+    source: "supplied_parameter_sheet"
+  - label: "Spindle-to-Table Distance"
+    value: "480 mm"
+    source: "supplied_parameter_sheet"
+  - label: "Vertical Spindle Speed"
+    value: "80-5440 rpm, 16 steps"
+    source: "supplied_parameter_sheet"
+  - label: "Spindle Taper"
+    value: "R8 (NT30 option/reference shown)"
+    source: "supplied_parameter_sheet"
+  - label: "Vertical Spindle Motor"
+    value: "2.2 kW"
+    source: "supplied_parameter_sheet"
+  - label: "Head Tilting Angle"
+    value: "45 degrees left/right and 45 degrees front/back"
+    source: "supplied_parameter_sheet"
+  - label: "Overall Dimensions"
+    value: "Approximately 1700 x 1700 x 2100 mm"
+    source: "supplied_parameter_sheet"
+  - label: "Approximate Machine Weight"
+    value: "1250 kg"
+    source: "supplied_parameter_sheet"
+  - label: "Configured Equipment"
+    value: "Y-axis power feed, pneumatic tool change, Z-axis electric lift and 3-axis digital readout upgrade"
+    source: "supplied_order_list"
+
+unconfirmed_fields:
+  - "Site voltage, frequency, phase and electrical standard"
+  - "Quill travel and automatic quill-feed rates"
+  - "Ram travel, turret swivel range and spindle-to-column distance"
+  - "Table T-slot dimensions and leadscrew accuracy"
+  - "Positioning accuracy, repeatability and achievable machining tolerance"
+  - "Coolant system, lubrication specification and standard accessory list"
+  - "Digital readout and power-feed brands"
+  - "Pneumatic supply pressure for the tool-change system"
+  - "Destination-market conformity documents and guarding scope"
+  - "Warranty, commissioning and spare-parts scope"
+
+questions_for_user:
+  - "Confirm workpiece material, maximum dimensions, operations and required tolerances."
+  - "Confirm site power, preferred R8 or NT30 spindle, tooling, accessories, conformity documents and destination."
+
+images:
+  originals:
+    - "00-hjy-4gt-white-background-main.png"
+    - "01-hjy-4gt-vertical-turret-milling-machine.png"
+    - "02-hjy-4gt-workshop-machine.png"
+    - "03-hjy-4gt-machine-features.png"
+    - "04-hjy-4gt-technical-specifications.png"
+    - "05-hjy-4gt-configuration-list.png"
+  generated:
+    main: "/images/products/general-products/hjy-4gt-vertical-turret-milling-machine/hjy-4gt-vertical-turret-milling-machine-main-bright.webp"
+    gallery: []
+    thumbnail: "/images/products/general-products/hjy-4gt-vertical-turret-milling-machine/hjy-4gt-vertical-turret-milling-machine-main-bright.webp"
+
+seo:
+  title: "HJY-4GT Vertical Turret Milling Machine | MAVORIX"
+  meta_description: "Source HJY-4GT vertical turret milling machine with 1270 x 254 mm table, 700/380/400 mm travel, 80-5440 rpm spindle and R8/NT30 taper."
+  primary_keyword: "HJY-4GT vertical turret milling machine"
+  secondary_keywords:
+    - "vertical turret milling machine"
+    - "knee type milling machine"
+    - "manual vertical milling machine"
+    - "R8 turret mill"
+    - "3 axis DRO milling machine"
+    - "precision milling machine China"
+  long_tail_keywords:
+    - "HJY-4GT vertical turret milling machine with 3 axis DRO"
+    - "1270 x 254 mm table knee type milling machine"
+    - "R8 NT30 vertical milling machine 80-5440 rpm"
+    - "vertical turret mill with pneumatic tool change"
+    - "manual milling machine with Y axis power feed and Z axis lift"
+
+publication:
+  route: "/en/products/metalworking-equipment/hjy-4gt-vertical-turret-milling-machine/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

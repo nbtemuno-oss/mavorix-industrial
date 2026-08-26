@@ -327,5 +327,11 @@ export const blogImages: Record<string, PageImage> = {
     alt: "Copeland ZR61KC-TFD-522 scroll compressor sourced for a customer in Peru",
     width: 1200,
     height: 1600
+  },
+  "hjy-4gt-vertical-turret-milling-machine-sourcing-poland": {
+    src: "/images/blog/hjy-4gt-vertical-turret-milling-machine-sourcing-poland/hjy-4gt-machine-accessories-poland-case.webp",
+    alt: "HJY-4GT vertical turret milling machine and loose accessories checked for a customer order in Poland",
+    width: 870,
+    height: 1246
   }
 };
