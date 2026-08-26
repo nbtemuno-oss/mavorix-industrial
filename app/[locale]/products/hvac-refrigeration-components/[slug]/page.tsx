@@ -44,11 +44,11 @@ const products: CompressorProduct[] = [
     model: "CRNQ-050E-TFD-556",
     category: "HVAC Hermetic Reciprocating Compressor",
     summary:
-      "Copeland CRNQ-050E-TFD-556 hermetic reciprocating compressor with a 3-phase, thermally protected motor. The visible nameplate lists 380/420 V at 50 Hz and 380/460 V at 60 Hz. Refrigerant, system duty and physical interfaces must be confirmed before replacement ordering.",
+      "Copeland CRNQ-050E-TFD-556 is a three-phase hermetic reciprocating compressor for air-conditioning and suitable high-temperature refrigeration systems. It supports 50/60 Hz power supplies, with 380/420 V at 50 Hz and 380/460 V at 60 Hz. Confirm the refrigerant, operating duty and installation interfaces before ordering a replacement.",
     image: {
       src: "/images/products/general-products/copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor/copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor-main.webp",
-      alt: "Copeland CRNQ-050E-TFD-556 hermetic reciprocating compressor secured inside a fitted wooden case",
-      label: "Compressor, nameplate and wooden-case view"
+      alt: "Copeland CRNQ-050E-TFD-556 hermetic reciprocating compressor",
+      label: "CRNQ-050E-TFD-556 compressor"
     },
     summarySpecs: [
       ["Brand", "Copeland"],
@@ -67,23 +67,21 @@ const products: CompressorProduct[] = [
       ["Frequency", "50 / 60 Hz"],
       ["Voltage at 50 Hz", "380/420 V"],
       ["Voltage at 60 Hz", "380/460 V"],
-      ["LRA Marking", "65.0 A"],
-      ["Packing Shown", "Compressor secured in a fitted wooden case"]
+      ["Locked-Rotor Amps (LRA)", "65.0 A"]
     ],
     overview: [
-      "The supplied photo shows a complete black Copeland compressor secured upright in a fitted wooden case. The nameplate is readable and identifies the full model as CRNQ-050E-TFD-556. It also records a three-phase motor, thermal protection, dual-frequency voltage information and an LRA marking of 65.0 A.",
-      "Copeland CRNQ compressors are hermetic reciprocating units used in air-conditioning and suitable high-temperature refrigeration duties. A model-family description is useful for finding suppliers, but replacement selection must stay tied to the full suffix and the existing system rather than CRNQ-050E alone.",
-      "MAVORIX supports overseas buyers with model checking, supplier comparison, nameplate and packing photos, and consolidation with other HVAC, refrigeration and industrial spare parts."
+      "The Copeland CRNQ-050E-TFD-556 is a hermetic reciprocating compressor designed for air-conditioning and compatible high-temperature refrigeration duties. Its sealed construction combines the motor and compression mechanism in one housing, helping reduce external leakage points and simplifying installation in packaged HVAC equipment.",
+      "This TFD configuration uses a thermally protected three-phase motor and is rated for both 50 Hz and 60 Hz supplies. The electrical rating is 380/420 V at 50 Hz and 380/460 V at 60 Hz, with a locked-rotor current of 65.0 A.",
+      "For replacement projects, use the complete CRNQ-050E-TFD-556 model rather than CRNQ-050E alone. Refrigerant, lubricant, cooling duty, pipe connections, mounting dimensions and the original equipment specification all need to match the existing system."
     ],
     features: [
-      "Full CRNQ-050E-TFD-556 nameplate visible",
       "Hermetic reciprocating compressor construction",
-      "Thermally protected motor marking",
-      "Three-phase configuration",
-      "50 Hz and 60 Hz voltage information visible",
-      "Mounted on transport feet inside a fitted wooden case",
-      "Separate protected connection components visible",
-      "Suitable for exact-model HVAC replacement inquiries"
+      "Thermally protected three-phase motor",
+      "Dual-frequency 50/60 Hz electrical configuration",
+      "380/420 V operation at 50 Hz",
+      "380/460 V operation at 60 Hz",
+      "Sealed motor and compression assembly",
+      "Suitable for exact-model HVAC replacement projects"
     ],
     applications: [
       "Commercial air-conditioning systems",
@@ -110,10 +108,10 @@ const products: CompressorProduct[] = [
       "Quantity and destination"
     ],
     faqs: [
-      { q: "What type of compressor is the Copeland CRNQ-050E-TFD-556?", a: "It is a Copeland hermetic reciprocating compressor in the CRNQ family. The full model on the supplied nameplate is CRNQ-050E-TFD-556." },
-      { q: "What electrical information is visible on the nameplate?", a: "The nameplate shows three phase, 50/60 Hz, 380/420 V at 50 Hz, 380/460 V at 60 Hz and an LRA marking of 65.0 A." },
+      { q: "What type of compressor is the Copeland CRNQ-050E-TFD-556?", a: "It is a three-phase hermetic reciprocating compressor in the Copeland CRNQ family for air-conditioning and suitable high-temperature refrigeration duties." },
+      { q: "What are the CRNQ-050E-TFD-556 electrical specifications?", a: "The motor is thermally protected and rated for three-phase, 50/60 Hz operation: 380/420 V at 50 Hz and 380/460 V at 60 Hz. Locked-rotor current is 65.0 A." },
       { q: "Can CRNQ-050E alone confirm replacement compatibility?", a: "No. The complete suffix, refrigerant, electrical supply, cooling duty, connections, mounting and HVAC unit must be checked." },
-      { q: "Is cooling capacity confirmed by the current photo?", a: "No. Cooling capacity is not published here as a confirmed nameplate value. It must be checked at the buyer's actual operating conditions using controlled manufacturer data." },
+      { q: "What is the cooling capacity of CRNQ-050E-TFD-556?", a: "Cooling capacity depends on refrigerant and operating conditions. Confirm it at the required evaporating and condensing temperatures using controlled manufacturer performance data before selection." },
       { q: "Can MAVORIX arrange export packing for a compressor?", a: "MAVORIX can coordinate supplier-side photos, fitted wooden-case packing, accessory identification and consolidation after the buyer approves the exact compressor configuration." }
     ]
   },
@@ -151,22 +149,22 @@ const products: CompressorProduct[] = [
       ["Power Supply", "380-420 V, 50 Hz, 3 phase"],
       ["Published Reference Capacity", "49,700 Btu/h / 14.566 kW at stated rating conditions"],
       ["Published Reference Input", "4,430 W at stated rating conditions"],
-      ["Visible Connections", "Copper suction and discharge stubs with protective caps"]
+      ["Connections", "Copper suction and discharge stubs"]
     ],
     overview: [
-      "The supplied photo shows a complete Copeland Scroll compressor with the full ZR61KC-TFD-522 label, terminal cover, mounting feet and protected copper connections visible. The image is useful for confirming the model and the physical condition presented before packing.",
-      "Copeland's published ZR61KC-TFD model data identifies an R22 air-conditioning scroll compressor with a 5 HP motor and 380-420 V, 50 Hz, three-phase supply. The published 49,700 Btu/h capacity and 4,430 W input are rating-condition values, not guarantees for every installation.",
-      "MAVORIX can help overseas buyers keep the full model code consistent across quotations, compare supplier documents, collect pre-shipment evidence and coordinate packing with other HVAC or factory spare parts."
+      "The Copeland ZR61KC-TFD-522 is a 5 HP hermetic scroll compressor developed for R22 air-conditioning systems. Scroll compression provides a compact, low-vibration design for commercial HVAC equipment, packaged air conditioners and compatible chiller circuits.",
+      "Published ZR61KC-TFD reference data lists a 380-420 V, 50 Hz, three-phase motor, with 49,700 Btu/h cooling capacity and 4,430 W input at the stated rating conditions. Actual capacity and power draw will change with evaporating temperature, condensing temperature, superheat and system design.",
+      "Replacement selection should use the full ZR61KC-TFD-522 code. Confirm the refrigerant, electrical supply, operating envelope, suction and discharge connections, mounting footprint, oil requirements and original HVAC equipment specification before purchase."
     ],
     features: [
-      "Full ZR61KC-TFD-522 model label visible",
-      "Copeland Scroll branding visible",
       "Hermetic scroll-compressor construction",
-      "5 HP model-family reference",
-      "Three-phase 50 Hz model-family configuration",
-      "Terminal enclosure fitted",
-      "Copper connections protected with caps",
-      "Four-point mounting base visible"
+      "5 HP nominal motor rating",
+      "380-420 V, 50 Hz, three-phase configuration",
+      "R22 air-conditioning application reference",
+      "Compact sealed motor and scroll assembly",
+      "Integrated terminal enclosure",
+      "Copper suction and discharge connections",
+      "Four-point mounting base"
     ],
     applications: [
       "Commercial air-conditioning systems",

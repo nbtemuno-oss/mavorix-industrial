@@ -90,7 +90,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
           <IndustrialImage
             src={image.src}
             alt={image.alt}
-            className={isHydraulicValveSourcingCase ? "mx-auto mb-8 aspect-[9/16] w-full max-w-[680px]" : isStrappingMachineCase ? "mx-auto mb-8 aspect-[3/4] w-full max-w-[680px]" : isCountersunkScrewCase ? "mx-auto mb-8 aspect-[459/538] w-full max-w-[720px]" : isAirCompressorCase ? "mx-auto mb-8 aspect-[403/544] w-full max-w-[720px]" : isPipeTaperingCase ? "mx-auto mb-8 aspect-[531/626] w-full max-w-[720px]" : isUsedInjectionMoldCase || isBearingArgentinaCase ? "mx-auto mb-8 aspect-[3/4] w-full max-w-[720px]" : isCrnqPeruCase ? "mx-auto mb-8 aspect-[40/47] w-full max-w-[720px]" : isZr61kcPeruCase ? "mx-auto mb-8 aspect-[274/339] w-full max-w-[680px]" : isSourcingCase ? "mb-8 aspect-[16/9]" : "mb-8 min-h-[320px]"}
+            className={isHydraulicValveSourcingCase ? "mx-auto mb-8 aspect-[9/16] w-full max-w-[680px]" : isStrappingMachineCase ? "mx-auto mb-8 aspect-[3/4] w-full max-w-[680px]" : isCountersunkScrewCase ? "mx-auto mb-8 aspect-[459/538] w-full max-w-[720px]" : isAirCompressorCase ? "mx-auto mb-8 aspect-[403/544] w-full max-w-[720px]" : isPipeTaperingCase ? "mx-auto mb-8 aspect-[531/626] w-full max-w-[720px]" : isUsedInjectionMoldCase || isBearingArgentinaCase || isZr61kcPeruCase ? "mx-auto mb-8 aspect-[3/4] w-full max-w-[720px]" : isCrnqPeruCase ? "mx-auto mb-8 aspect-[40/47] w-full max-w-[720px]" : isSourcingCase ? "mb-8 aspect-[16/9]" : "mb-8 min-h-[320px]"}
             sizes={isHydraulicValveSourcingCase || isStrappingMachineCase || isCountersunkScrewCase || isAirCompressorCase || isPipeTaperingCase || isUsedInjectionMoldCase || isBearingArgentinaCase || isPeruCompressorCase ? "(min-width: 768px) 680px, 100vw" : isSourcingCase ? "(min-width: 1024px) 840px, 100vw" : "(min-width: 1024px) 760px, 100vw"}
             fit={isSourcingCase ? "contain" : "cover"}
             priority={isSourcingCase}
@@ -106,7 +106,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
           {isUsedInjectionMoldCase ? <p className="case-featured-caption">A mixed batch of used plastic injection molds wrapped and grouped in the workshop before export shipment.</p> : null}
           {isBearingArgentinaCase ? <p className="case-featured-caption">HRB 23220CA/W33 spherical roller bearings photographed during model and packing checks for Argentina.</p> : null}
           {isCrnqPeruCase ? <p className="case-featured-caption">Copeland CRNQ-050E-TFD-556 compressor secured upright inside its fitted wooden export case for Peru.</p> : null}
-          {isZr61kcPeruCase ? <p className="case-featured-caption">Copeland ZR61KC-TFD-522 compressor carton secured with multiple straps before dispatch to Peru.</p> : null}
+          {isZr61kcPeruCase ? <p className="case-featured-caption">Copeland ZR61KC-TFD-522 scroll compressor supplied for the Peru replacement order.</p> : null}
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
         {!isSourcingCase ? (

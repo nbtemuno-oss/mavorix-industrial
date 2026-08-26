@@ -46,7 +46,7 @@ const confirmedSpecs = [
   ["Control Input", "4-32VDC"],
   ["Product Type", "Solid State Relay"],
   ["Terminal Marking", "1 / 2 LOAD, 3+ / 4- INPUT"],
-  ["Visible Label Markings", "cRUus, CE, CCC and RoHS markings are visible on the product label."],
+  ["Label Marks", "cRUus, CE, CCC and RoHS marks are printed on the product label."],
   ["Condition", "New"]
 ];
 

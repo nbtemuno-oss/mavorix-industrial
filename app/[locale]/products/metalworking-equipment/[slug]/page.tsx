@@ -29,7 +29,7 @@ const imageBase = `/images/products/general-products/${productSlug}`;
 const productImages = [
   {
     src: `${imageBase}/${productSlug}-main.webp`,
-    alt: "ZS-60 tube tapering and reducing machine photographed in a metalworking equipment workshop",
+    alt: "ZS-60 steel tube tapering and reducing machine",
     label: "ZS-60 machine"
   }
 ];

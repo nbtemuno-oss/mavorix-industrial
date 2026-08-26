@@ -17,7 +17,7 @@ export const publishedProducts: PublishedProduct[] = [
     path: "/en/products/hvac-refrigeration-components/copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor/",
     image:
       "/images/products/general-products/copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor/copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor-thumbnail.webp",
-    imageAlt: "Copeland CRNQ-050E-TFD-556 compressor secured inside a fitted wooden case",
+    imageAlt: "Copeland CRNQ-050E-TFD-556 hermetic reciprocating compressor",
     categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "industrial-machinery"]
   },
   {
@@ -28,7 +28,7 @@ export const publishedProducts: PublishedProduct[] = [
     path: "/en/products/hvac-refrigeration-components/copeland-zr61kc-tfd-522-5hp-scroll-compressor/",
     image:
       "/images/products/general-products/copeland-zr61kc-tfd-522-5hp-scroll-compressor/copeland-zr61kc-tfd-522-5hp-scroll-compressor-thumbnail.webp",
-    imageAlt: "Copeland ZR61KC-TFD-522 scroll compressor with visible label and protected connections",
+    imageAlt: "Copeland ZR61KC-TFD-522 5 HP hermetic scroll compressor",
     categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "industrial-machinery"]
   },
   {
@@ -144,29 +144,29 @@ export const publishedProducts: PublishedProduct[] = [
     slug: "aryung-atp-216ha-vb-t-rotor-coolant-pump",
     title: "ARYUNG ATP-216HA(VB) T-Rotor Coolant Pump",
     description:
-      "T-rotor coolant pump, MFG No. 25060186, with visible ARYUNG label markings for industrial machinery spare parts sourcing.",
+      "ARYUNG ATP-216HA(VB) T-rotor coolant pump, MFG No. 25060186, for machine-tool and industrial coolant circulation.",
     path: "/en/products/hydraulic-components/aryung-atp-216ha-vb-t-rotor-coolant-pump/",
     image:
       "/images/products/hydraulic-components/aryung-atp-216ha-vb-t-rotor-coolant-pump/aryung-atp-216ha-vb-t-rotor-coolant-pump-thumbnail.webp",
-    imageAlt: "ARYUNG ATP-216HA(VB) T-rotor coolant pump label view",
+    imageAlt: "ARYUNG ATP-216HA(VB) T-rotor coolant pump",
     categorySlugs: ["industrial-machinery", "factory-spare-parts"]
   },
   {
     slug: "daikin-v38a3rx-95-piston-pump",
     title: "DAIKIN V38A3RX-95 Piston Pump",
     description:
-      "DAIKIN V38A3RX-95 piston pump, MFG No. YED00-2511-00070, with visible label markings for hydraulic spare parts sourcing.",
+      "DAIKIN V38A3RX-95 industrial hydraulic piston pump, MFG No. YED00-2511-00070, for replacement sourcing.",
     path: "/en/products/hydraulic-components/daikin-v38a3rx-95-piston-pump/",
     image:
       "/images/products/hydraulic-components/daikin-v38a3rx-95-piston-pump/daikin-v38a3rx-95-piston-pump-thumbnail.webp",
-    imageAlt: "DAIKIN V38A3RX-95 piston pump label view",
+    imageAlt: "DAIKIN V38A3RX-95 industrial hydraulic piston pump",
     categorySlugs: ["industrial-machinery", "factory-spare-parts"]
   },
   {
     slug: "hytek-hg0-08-01a-vpc-hydraulic-pump",
     title: "HYTEK HG0-08-01A-VPC Hydraulic Pump",
     description:
-      "HYTEK HG0-08-01A-VPC hydraulic pump with visible label, flange-mounted body and protected splined shaft for industrial spare parts sourcing.",
+      "HYTEK HG0-08-01A-VPC compact flange-mounted hydraulic pump with a splined drive shaft for industrial machinery.",
     path: "/en/products/hydraulic-components/hytek-hg0-08-01a-vpc-hydraulic-pump/",
     image:
       "/images/products/hydraulic-components/hytek-hg0-08-01a-vpc-hydraulic-pump/hytek-hg0-08-01a-vpc-hydraulic-pump-thumbnail.webp",
@@ -177,7 +177,7 @@ export const publishedProducts: PublishedProduct[] = [
     slug: "hydromax-hgp-22a-f4-4r-tandem-gear-pump",
     title: "HYDROMAX HGP-22A-F4+4R Tandem Gear Pump",
     description:
-      "HYDROMAX HGP-22A-F4+4R tandem gear pump with visible two-section body, flange mounting, keyed shaft and protected hydraulic ports.",
+      "HYDROMAX HGP-22A-F4+4R two-section tandem hydraulic gear pump with flange mounting and keyed drive shaft.",
     path: "/en/products/hydraulic-components/hydromax-hgp-22a-f4-4r-tandem-gear-pump/",
     image:
       "/images/products/hydraulic-components/hydromax-hgp-22a-f4-4r-tandem-gear-pump/hydromax-hgp-22a-f4-4r-tandem-gear-pump-thumbnail.webp",
@@ -188,7 +188,7 @@ export const publishedProducts: PublishedProduct[] = [
     slug: "rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump",
     title: "Rexroth AZPW-21-022RQRXXMB-S0593 External Gear Pump",
     description:
-      "Rexroth AZPW-21-022RQRXXMB-S0593 external gear pump, Material Number R983032286, with visible Made in India marking.",
+      "Rexroth AZPW-21-022RQRXXMB-S0593 external gear pump, Material Number R983032286, for mobile and industrial hydraulic systems.",
     path: "/en/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/",
     image:
       "/images/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump-thumbnail.webp",
@@ -210,7 +210,7 @@ export const publishedProducts: PublishedProduct[] = [
     slug: "ktc-kpc3560-rpss-hydraulic-gear-pump",
     title: "KTC KPC3560RPSS Hydraulic Gear Pump",
     description:
-      "KTC KPC3560RPSS hydraulic gear pump with visible IN, OUT and rotation markings for model- and dimension-based replacement sourcing.",
+      "KTC KPC3560RPSS compact hydraulic gear pump for model- and dimension-based industrial replacement sourcing.",
     path: "/en/products/hydraulic-components/ktc-kpc3560-rpss-hydraulic-gear-pump/",
     image:
       "/images/products/hydraulic-components/ktc-kpc3560-rpss-hydraulic-gear-pump/ktc-kpc3560-rpss-hydraulic-gear-pump-thumbnail.webp",

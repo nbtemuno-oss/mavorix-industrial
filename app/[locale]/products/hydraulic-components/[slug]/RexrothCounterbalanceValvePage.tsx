@@ -18,8 +18,8 @@ export const counterbalanceValveDescription =
 const images = [
   {
     src: "/images/products/general-products/rexroth-r930050353-single-counterbalance-valve/rexroth-r930050353-single-counterbalance-valve-main.webp",
-    alt: "Two Rexroth R930050353 single counterbalance valve blocks with labels, protected ports and wrapping visible",
-    label: "Valve and identification-label view"
+    alt: "Rexroth R930050353 A-VBSO single counterbalance valve",
+    label: "R930050353 counterbalance valve"
   }
 ];
 
@@ -39,8 +39,8 @@ const confirmedSpecs = [
   ["Product Code", "A-VBSO-SE-CCAP33PSE34SAE"],
   ["Product Type", "Single counterbalance valve"],
   ["Product Family", "Bosch Rexroth Oil Control / mobile hydraulics"],
-  ["Visible Quantity", "Two valve blocks in the supplied photo"],
-  ["Visible Protection", "Protective film and port fittings present"]
+  ["Valve Form", "Compact hydraulic valve block"],
+  ["Port Protection", "Protective port fittings supplied"]
 ];
 
 const applications = [
@@ -77,8 +77,8 @@ const faqs = [
     a: "Not automatically. Similar body shape does not establish the same internal function, settings, pilot ratio, port arrangement or installation interface."
   },
   {
-    q: "Are pressure and flow confirmed from the current photo?",
-    a: "No. This draft does not publish pressure, flow or pilot-ratio values because they are not confirmed by the supplied photo."
+    q: "What pressure, flow and pilot ratio apply to R930050353?",
+    a: "These values should be confirmed from controlled technical documentation for the complete code and the required hydraulic circuit before ordering."
   },
   {
     q: "Is MAVORIX an authorized Rexroth distributor?",
@@ -136,9 +136,8 @@ export function RexrothCounterbalanceValvePage() {
         <article className="space-y-12">
           <Section title="Product Overview">
             <p>
-              The label in the supplied photo clearly shows Rexroth Material Number R930050353. Independent product-code
-              cross-references connect that number to 08356265723500B and A-VBSO-SE-CCAP33PSE34SAE, described as a single
-              counterbalance valve in the Bosch Rexroth Oil Control range.
+              Rexroth Material Number R930050353 corresponds to type code 08356265723500B / A-VBSO-SE-CCAP33PSE34SAE, a compact
+              single counterbalance valve for compatible mobile and industrial hydraulic circuits.
             </p>
             <p>
               A counterbalance valve is generally used in a load-holding circuit to help prevent an actuator from running ahead of
@@ -146,8 +145,8 @@ export function RexrothCounterbalanceValvePage() {
               exact behavior of this code depends on its internal configuration, setting and circuit connection.
             </p>
             <p>
-              MAVORIX can help overseas buyers compare the complete identifier, obtain supplier documents, coordinate pre-shipment
-              photos and consolidate approved hydraulic parts with other factory spares.
+              Replacement selection should keep the material number and complete type code together. Pressure setting, flow, pilot
+              ratio, ports and circuit function must match the original valve and hydraulic schematic.
             </p>
           </Section>
 
@@ -164,14 +163,6 @@ export function RexrothCounterbalanceValvePage() {
               </tbody></table>
             </div>
           </section>
-
-          <Section title="What the Product Photo Shows">
-            <p>
-              The photo records two matching rectangular valve blocks. Both are wrapped in protective film, with Rexroth labels and
-              fitted port protection visible. This is useful for identifier and visible-condition checking, but it does not confirm
-              internal settings, pressure performance, flow, pilot ratio or compatibility with a specific machine.
-            </p>
-          </Section>
 
           <Section title="Typical Sourcing Applications">
             <ul className="grid gap-3 md:grid-cols-2">

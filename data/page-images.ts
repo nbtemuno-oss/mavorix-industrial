@@ -323,9 +323,9 @@ export const blogImages: Record<string, PageImage> = {
     height: 1504
   },
   "copeland-zr61kc-scroll-compressor-sourcing-peru": {
-    src: "/images/blog/copeland-zr61kc-scroll-compressor-sourcing-peru/copeland-zr61kc-compressor-packed-for-peru.webp",
-    alt: "Copeland ZR61KC-TFD-522 scroll compressor packed in a strapped carton for Peru",
-    width: 548,
-    height: 678
+    src: "/images/blog/copeland-zr61kc-scroll-compressor-sourcing-peru/copeland-zr61kc-tfd-522-model-check.webp",
+    alt: "Copeland ZR61KC-TFD-522 scroll compressor sourced for a customer in Peru",
+    width: 1200,
+    height: 1600
   }
 };

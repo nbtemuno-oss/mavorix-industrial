@@ -63,11 +63,11 @@ const ktcKpc3560RpssPump: HydraulicPumpData = {
   model: "KPC3560RPSS",
   category: "Hydraulic Gear Pump",
   metaDescription:
-    "Source a KTC KPC3560RPSS hydraulic gear pump with visible IN, OUT and rotation markings. Confirm displacement, shaft, ports and mounting before ordering.",
+    "Source a KTC KPC3560RPSS hydraulic gear pump for industrial equipment. Confirm displacement, rotation, shaft, ports and mounting before ordering.",
   summary:
-    "KTC KPC3560RPSS hydraulic gear pumps shown as three matching units with IN, OUT and rotation markings. Displacement and all hydraulic interfaces require confirmation before replacement ordering.",
+    "KTC KPC3560RPSS is a compact hydraulic gear pump for industrial oil-transfer and hydraulic circuits. Confirm displacement, pressure, rotation, shaft, ports and mounting before replacement ordering.",
   schemaDescription:
-    "KTC KPC3560RPSS hydraulic gear pump sourcing reference based on visible body markings and product form.",
+    "KTC KPC3560RPSS compact hydraulic gear pump for industrial machinery and replacement sourcing.",
   images: [
     {
       src: "/images/products/hydraulic-components/ktc-kpc3560-rpss-hydraulic-gear-pump/ktc-kpc3560-rpss-hydraulic-gear-pump-main.webp",
@@ -79,7 +79,6 @@ const ktcKpc3560RpssPump: HydraulicPumpData = {
     ["Brand Marking", "KTC"],
     ["Model", "KPC3560RPSS"],
     ["Product Type", "Hydraulic gear pump"],
-    ["Visible Quantity", "Three units"],
     ["Port Markings", "IN and OUT"],
     ["Compatibility", "Complete code and dimensions require confirmation"]
   ],
@@ -87,24 +86,22 @@ const ktcKpc3560RpssPump: HydraulicPumpData = {
     ["Brand Marking", "KTC"],
     ["Model", "KPC3560RPSS"],
     ["Product Type", "Hydraulic gear pump"],
-    ["Visible Quantity", "Three units"],
     ["Port Identification", "IN and OUT cast into the pump body"],
     ["Rotation Reference", "Directional arrow cast into the pump cover"],
     ["Body Construction", "Metal pump housing with four cover bolts"]
   ],
   overview: [
-    "The supplied photo shows three compact KTC pumps with the same general housing form. KTC and KPC3560RPSS are embossed into each cover, together with IN, OUT and a directional arrow.",
+    "The KTC KPC3560RPSS is a compact external gear pump intended to supply hydraulic oil in suitable industrial circuits. IN and OUT port identification and a rotation reference help installers orient the pump correctly during replacement.",
     "For replacement sourcing, the complete code is only the starting point because displacement, shaft, port and rotation details still require confirmation. A straight-on model close-up and interface dimensions should be checked before supplier approval.",
-    "MAVORIX can coordinate model-photo review, supplier communication, dimensional follow-up, pre-shipment photos and consolidation with other hydraulic and factory spare parts."
+    "It is commonly sourced for machinery maintenance, hydraulic power units and lubrication or oil-circulation duties where the required flow, pressure and installation interfaces are technically matched."
   ],
   keyFeatures: [
-    "KTC brand marking visible",
-    "KPC3560RPSS model marking visible",
-    "IN and OUT port markings visible",
+    "Compact external gear-pump design",
+    "KPC3560RPSS model reference",
+    "IN and OUT port identification",
     "Cast rotation-direction reference",
-    "Compact hydraulic gear-pump form",
-    "Three matching units shown in the supplied photo",
-    "Suitable for code-and-dimension-based sourcing review",
+    "Metal housing with four-bolt cover",
+    "Suitable for code-and-dimension-based replacement sourcing",
     "Performance data requires supplier confirmation"
   ],
   applications: [
@@ -133,12 +130,12 @@ const ktcKpc3560RpssPump: HydraulicPumpData = {
   ],
   faqs: [
     {
-      q: "What KTC pump model is visible in the current photo?",
-      a: "The embossed model code is KPC3560RPSS. A straight-on close-up should still be included in the final pre-order comparison."
+      q: "What type of pump is the KTC KPC3560RPSS?",
+      a: "It is a compact hydraulic gear pump. Confirm displacement, pressure, speed, rotation and installation interfaces for the intended circuit."
     },
     {
-      q: "Does the photo confirm pump displacement or pressure?",
-      a: "No. The current photo confirms visible brand, model-prefix, port and rotation markings only. Displacement, pressure and speed require the complete code or technical documentation."
+      q: "Are displacement and pressure confirmed for KPC3560RPSS?",
+      a: "Not from the model reference alone. Displacement, pressure and speed require complete technical documentation or written supplier confirmation."
     },
     {
       q: "Can a similar-looking KTC gear pump be used as a replacement?",
@@ -164,11 +161,11 @@ const hydromaxPump: HydraulicPumpData = {
   model: "HGP-22A-F4+4R",
   category: "Hydraulic Tandem Gear Pump",
   metaDescription:
-    "Source a HYDROMAX HGP-22A-F4+4R tandem gear pump with model-photo checking. Confirm displacement, rotation, shaft, ports and mounting before ordering.",
+    "Source a HYDROMAX HGP-22A-F4+4R tandem gear pump. Confirm both section displacements, rotation, shaft, ports and mounting before ordering.",
   summary:
-    "HYDROMAX HGP-22A-F4+4R tandem gear pump shown with a two-section body, flange mounting, keyed shaft and protected hydraulic ports. Section displacement, rotation, shaft, ports and mounting must be checked before replacement ordering.",
+    "HYDROMAX HGP-22A-F4+4R is a two-section tandem hydraulic gear pump with flange mounting and a keyed drive shaft. Confirm both section displacements, rotation, ports and mounting before replacement ordering.",
   schemaDescription:
-    "HYDROMAX HGP-22A-F4+4R tandem hydraulic gear pump sourcing reference based on visible model and product-form information.",
+    "HYDROMAX HGP-22A-F4+4R tandem hydraulic gear pump for industrial and mobile hydraulic systems.",
   images: [
     {
       src: "/images/products/hydraulic-components/hydromax-hgp-22a-f4-4r-tandem-gear-pump/hydromax-hgp-22a-f4-4r-tandem-gear-pump-main.webp",
@@ -180,31 +177,30 @@ const hydromaxPump: HydraulicPumpData = {
     ["Brand", "HYDROMAX"],
     ["Model", "HGP-22A-F4+4R"],
     ["Product Type", "Tandem gear pump"],
-    ["Visible Shaft", "Keyed shaft"],
+    ["Shaft Type", "Keyed shaft"],
     ["Compatibility", "Manual confirmation required before ordering"]
   ],
   confirmedSpecs: [
     ["Brand", "HYDROMAX"],
     ["Model", "HGP-22A-F4+4R"],
     ["Product Type", "Tandem gear pump"],
-    ["Visible Form", "Two-section pump body"],
+    ["Pump Arrangement", "Two-section tandem body"],
     ["Mounting Form", "Flange-mounted front section"],
-    ["Visible Shaft", "Keyed shaft"],
-    ["Visible Ports", "Multiple protected hydraulic ports"]
+    ["Shaft Type", "Keyed shaft"],
+    ["Ports", "Multiple hydraulic ports"]
   ],
   overview: [
-    "The visible body marking identifies this pump as HYDROMAX HGP-22A-F4+4R. The product photo shows the two connected pump sections expected from a tandem gear-pump arrangement, along with a front mounting flange, keyed drive shaft and protected hydraulic ports.",
+    "The HYDROMAX HGP-22A-F4+4R combines two gear-pump sections in one tandem assembly. This arrangement allows two hydraulic circuits or two flow requirements to be driven from a common shaft, depending on the machine design.",
     "For a replacement inquiry, the complete model is a useful starting point, but the old pump should still be compared section by section. Displacement, rotation, shaft, ports and mounting details can differ even when pumps have a similar body shape.",
-    "MAVORIX can help overseas industrial buyers organize model checking, supplier communication, pre-shipment photos and consolidation with other hydraulic and factory spare parts."
+    "Typical uses include industrial machinery, mobile equipment and replacement hydraulic power systems that require two pump sections. Both section specifications must be matched to the original circuit."
   ],
   keyFeatures: [
-    "HYDROMAX brand marking visible",
-    "HGP-22A-F4+4R model marking visible",
+    "HGP-22A-F4+4R tandem configuration",
     "Two-section tandem pump body",
     "Front flange mounting form",
-    "Keyed drive shaft visible",
-    "Hydraulic ports fitted with protective plugs",
-    "Suitable for label-and-dimension-based sourcing review",
+    "Keyed drive shaft",
+    "Multiple hydraulic ports for two pump sections",
+    "Suitable for model-and-dimension-based replacement sourcing",
     "Performance parameters require quotation-specific confirmation"
   ],
   applications: [
@@ -237,8 +233,8 @@ const hydromaxPump: HydraulicPumpData = {
       a: "It is a strong model reference, but the displacement of both sections, rotation, shaft, ports, mounting dimensions and machine application should also be confirmed."
     },
     {
-      q: "What information is confirmed from the current product photo?",
-      a: "The photo confirms the HYDROMAX brand, HGP-22A-F4+4R marking, two-section pump form, flange mounting, keyed shaft and protected hydraulic ports."
+      q: "What type of pump is the HYDROMAX HGP-22A-F4+4R?",
+      a: "It is a two-section tandem hydraulic gear pump with a flange-mounted front section and keyed drive shaft. Both section displacements and interfaces must be confirmed before ordering."
     },
     {
       q: "Can a similar-looking tandem pump be used as a replacement?",
@@ -267,14 +263,14 @@ const rexrothAzpwPump: HydraulicPumpData = {
   metaDescription:
     "Source a Rexroth AZPW-21-022RQRXXMB-S0593 external gear pump, MNR R983032286. Confirm the full code, shaft, ports and mounting before ordering.",
   summary:
-    "Rexroth AZPW-21-022RQRXXMB-S0593 external gear pump with visible Material Number R983032286 and Made in India marking. The complete code, shaft, ports, rotation and mounting should be checked before replacement ordering.",
+    "Rexroth AZPW-21-022RQRXXMB-S0593 external gear pump, Material Number R983032286, for mobile and industrial hydraulic systems. Check the complete code, shaft, ports, rotation and mounting before replacement ordering.",
   schemaDescription:
-    "Rexroth AZPW-21-022RQRXXMB-S0593 external hydraulic gear pump with visible Material Number R983032286 and Made in India marking.",
+    "Rexroth AZPW-21-022RQRXXMB-S0593 external hydraulic gear pump, Material Number R983032286.",
   images: [
     {
       src: "/images/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump-main.webp",
-      alt: "Rexroth AZPW-21-022RQRXXMB-S0593 external gear pumps with label, flange and protected shaft visible",
-      label: "Label and shaft view"
+      alt: "Rexroth AZPW-21-022RQRXXMB-S0593 external hydraulic gear pump",
+      label: "AZPW external gear pump"
     },
     {
       src: "/images/products/hydraulic-components/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump/rexroth-azpw-21-022rqrxxmb-s0593-external-gear-pump-gallery-02.webp",
@@ -297,21 +293,20 @@ const rexrothAzpwPump: HydraulicPumpData = {
     ["Product Type", "External gear pump"],
     ["Country Marking", "Made in India"],
     ["Mounting Form", "Flange-mounted pump body"],
-    ["Visible Protection", "Shaft and ports protected in supplier photos"]
+    ["Protection", "Shaft and ports supplied with protective covers"]
   ],
   overview: [
-    "The visible Rexroth label identifies model AZPW-21-022RQRXXMB-S0593 and Material Number R983032286. The same label includes a Made in India marking. One photo provides a close model-and-shaft view; the second records a larger batch arranged for checking.",
-    "Rexroth identifies its AZ range as external gear units, but a replacement should still be selected from the complete product code and the old pump's physical interfaces. Reading one code segment in isolation is not a substitute for checking the full configuration.",
-    "MAVORIX supports label comparison, supplier-side photo checking, quotation coordination and consolidation for industrial hydraulic spare-parts orders in China."
+    "The Rexroth AZPW-21-022RQRXXMB-S0593 is an external gear pump for mobile and industrial hydraulic circuits. Its compact positive-displacement design supplies a consistent oil flow when speed, pressure and fluid conditions remain within the approved operating range.",
+    "Material Number R983032286 and the complete AZPW configuration should stay together throughout quotation and replacement review. Shaft design, rotation, flange, port arrangement and displacement can differ within the same pump family.",
+    "Typical sourcing applications include machinery maintenance, hydraulic power supply and auxiliary circuits where the exact original pump specification must be matched."
   ],
   keyFeatures: [
-    "Rexroth label visible",
-    "Complete AZPW-21-022RQRXXMB-S0593 model visible",
-    "Material Number R983032286 visible",
-    "Made in India marking visible",
-    "External gear-pump form",
-    "Flange mounting and protected shaft visible",
-    "Batch photo available for quantity-checking context",
+    "External gear-pump construction",
+    "Complete AZPW-21-022RQRXXMB-S0593 configuration",
+    "Material Number R983032286",
+    "Flange-mounted compact housing",
+    "Protected drive shaft and hydraulic ports",
+    "Suitable for exact-code replacement sourcing",
     "Hydraulic and dimensional parameters require confirmation"
   ],
   applications: [
@@ -340,12 +335,12 @@ const rexrothAzpwPump: HydraulicPumpData = {
   ],
   faqs: [
     {
-      q: "What is the visible material number for this Rexroth AZPW pump?",
-      a: "The close label photo shows Material Number R983032286 together with model AZPW-21-022RQRXXMB-S0593."
+      q: "What is the material number for this Rexroth AZPW pump?",
+      a: "The material number is R983032286, paired with model AZPW-21-022RQRXXMB-S0593. Keep both references in the RFQ and purchase order."
     },
     {
-      q: "Does the current photo confirm the pump's pressure and displacement?",
-      a: "No. This page does not publish pressure or displacement as confirmed specifications. Use the complete code and manufacturer data, and confirm the actual application before ordering."
+      q: "What pressure and displacement apply to this AZPW pump?",
+      a: "Use the complete code and controlled manufacturer data to confirm pressure and displacement for the actual application before ordering."
     },
     {
       q: "Can another AZPW-21 pump replace this exact configuration?",
@@ -374,14 +369,14 @@ const rexrothA10vsoPump: HydraulicPumpData = {
   metaDescription:
     "Source Rexroth A10VSO 28 DFR1/31R-VPA12N00 variable axial piston pump, MNR R910916805. Verify the full label, shaft, ports and mounting.",
   summary:
-    "Rexroth A10VSO 28 DFR1 variable-displacement axial piston pump with full type code A A10VSO 28 DFR1/31R-VPA12N00 and Material Number R910916805 visible on the nameplate. Replacement selection should be based on the complete code and physical interfaces, not A10VSO 28 alone.",
+    "Rexroth A10VSO 28 DFR1 variable-displacement axial piston pump with complete type code A A10VSO 28 DFR1/31R-VPA12N00 and Material Number R910916805. Replacement selection should use the complete code and physical interfaces, not A10VSO 28 alone.",
   schemaDescription:
-    "Rexroth A10VSO 28 DFR1 variable axial piston pump sourcing reference based on visible type code A A10VSO 28 DFR1/31R-VPA12N00 and Material Number R910916805.",
+    "Rexroth A10VSO 28 DFR1 variable axial piston pump, type A A10VSO 28 DFR1/31R-VPA12N00, Material Number R910916805.",
   images: [
     {
       src: "/images/products/general-products/rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805/rexroth-a10vso-28-dfr1-variable-axial-piston-pump-r910916805-main.webp",
-      alt: "Rexroth A10VSO 28 DFR1 variable axial piston pump R910916805 with nameplate, shaft and protected ports visible",
-      label: "Pump and nameplate view"
+      alt: "Rexroth A10VSO 28 DFR1 variable axial piston pump R910916805",
+      label: "A10VSO 28 DFR1 pump"
     }
   ],
   summarySpecs: [
@@ -409,19 +404,19 @@ const rexrothA10vsoPump: HydraulicPumpData = {
     ["Country Marking", "Made in China"]
   ],
   overview: [
-    "The nameplate in the supplied photo identifies a Rexroth A10VSO series variable axial piston pump. The complete type code is A A10VSO 28 DFR1/31R-VPA12N00 and the visible Material Number is R910916805. These two references should stay together throughout an RFQ and replacement review.",
-    "A10VSO is an open-circuit, swashplate-type variable pump family used in industrial hydraulic systems. The size 28 marking identifies the nominal displacement class, while DFR1 identifies the control configuration. Those family descriptions help explain the product, but they do not replace configuration checking for the exact material number.",
-    "MAVORIX supports overseas buyers with label reading, quotation coordination, supplier-side product photos and consolidation of hydraulic pumps with valves, seals, sensors and other MRO parts."
+    "The Rexroth A A10VSO 28 DFR1/31R-VPA12N00 is an open-circuit, swashplate-type variable axial piston pump used in industrial hydraulic systems. It varies displacement to match system demand, making it suitable for hydraulic power units, machine tools, presses and production machinery.",
+    "The size 28 designation identifies the nominal displacement class, while DFR1 identifies the pressure and flow control configuration. Material Number R910916805 and the complete type code should stay together throughout an RFQ and replacement review.",
+    "Before purchase, compare the controller, rotation, shaft, flange, ports, installation dimensions and operating requirements with the original pump and approved hydraulic documentation."
   ],
   keyFeatures: [
-    "Rexroth nameplate visible in the supplied product photo",
-    "Complete A A10VSO 28 DFR1/31R-VPA12N00 type code visible",
-    "Material Number R910916805 visible",
+    "Open-circuit swashplate design",
+    "Complete A A10VSO 28 DFR1/31R-VPA12N00 type code",
+    "Material Number R910916805",
     "Variable-displacement axial piston pump design",
-    "Size 28 / 28 cm3 displacement marking",
+    "Size 28 nominal displacement class",
     "DFR1 controller configuration code",
-    "Clockwise rotation symbol on the nameplate",
-    "Shaft and hydraulic ports protected in the supplier photo"
+    "Clockwise rotation configuration",
+    "Designed for industrial hydraulic power systems"
   ],
   applications: [
     "Industrial hydraulic power units",
@@ -433,7 +428,7 @@ const rexrothA10vsoPump: HydraulicPumpData = {
   ],
   selectionNotice: [
     "Do not order from A10VSO 28 or DFR1 alone. Compare the complete type code, Material Number R910916805, rotation, shaft, flange, ports, controller and installation dimensions with the existing pump or an approved drawing.",
-    "The pressure and speed values shown on this page are transcribed from the photographed nameplate. Final system suitability, operating limits, hydraulic fluid requirements and commissioning should follow the applicable Rexroth technical documentation and qualified engineering review."
+    "Pressure and speed values on this page are identification references for this supplied configuration. Final system suitability, operating limits, hydraulic fluid requirements and commissioning should follow applicable Rexroth technical documentation and qualified engineering review."
   ],
   orderingInfo: [
     "Clear nameplate photo showing the complete type code",
@@ -449,8 +444,8 @@ const rexrothA10vsoPump: HydraulicPumpData = {
   ],
   faqs: [
     {
-      q: "What is the complete model of the photographed Rexroth A10VSO pump?",
-      a: "The visible nameplate reads A A10VSO 28 DFR1/31R-VPA12N00 with Material Number R910916805."
+      q: "What is the complete model of this Rexroth A10VSO pump?",
+      a: "The complete type code is A A10VSO 28 DFR1/31R-VPA12N00 with Material Number R910916805."
     },
     {
       q: "Is this a fixed-displacement pump?",
@@ -483,7 +478,7 @@ const hytekSummarySpecs = [
   ["Brand", "HYTEK"],
   ["Model", "HG0-08-01A-VPC"],
   ["Product Type", "Hydraulic Pump"],
-  ["Visible Form", "Flange-mounted pump body with protected splined shaft"],
+  ["Mounting Form", "Flange-mounted pump body"],
   ["Compatibility", "Manual confirmation required before ordering"]
 ];
 
@@ -491,18 +486,17 @@ const hytekConfirmedSpecs = [
   ["Brand", "HYTEK"],
   ["Model", "HG0-08-01A-VPC"],
   ["Product Type", "Hydraulic Pump"],
-  ["Visible Form", "Flange-mounted pump body"],
-  ["Visible Shaft", "Protected splined shaft visible"],
-  ["Label Position", "HYTEK label visible on pump body"]
+  ["Mounting Form", "Flange-mounted pump body"],
+  ["Shaft Type", "Splined shaft"],
+  ["Replacement Basis", "Complete model and interface confirmation"]
 ];
 
 const hytekKeyFeatures = [
-  "HYTEK brand label visible",
   "HG0-08-01A-VPC model reference provided",
-  "Hydraulic pump body visible",
-  "Flange-mounted front section visible",
-  "Protected splined shaft visible",
-  "Suitable for sourcing review based on label and product photos",
+  "Compact hydraulic pump construction",
+  "Flange-mounted front section",
+  "Splined drive shaft",
+  "Suitable for model-and-dimension-based replacement sourcing",
   "Pump parameters should be confirmed before ordering",
   "Useful for industrial hydraulic spare parts sourcing"
 ];
@@ -547,8 +541,8 @@ const hytekFaqs = [
     a: "It is a useful model reference, but buyers should also confirm pump type, displacement, pressure rating, flow, rotation direction, shaft, ports and mounting dimensions before ordering."
   },
   {
-    q: "What visible information is confirmed from the current photo?",
-    a: "The current photo shows a HYTEK label on a flange-mounted hydraulic pump body with a protected splined shaft. The model reference should be confirmed from a straight-on label photo before formal ordering."
+    q: "What type of pump is the HYTEK HG0-08-01A-VPC?",
+    a: "It is a compact flange-mounted hydraulic pump with a splined drive shaft. Confirm displacement, pressure, rotation, ports and mounting dimensions before replacement ordering."
   },
   {
     q: "Can a similar-looking hydraulic pump be used as a replacement?",
@@ -588,17 +582,15 @@ const daikinConfirmedSpecs = [
   ["Product Type", "Piston Pump"],
   ["Manufacturer Marking", "DAIKIN INDUSTRIES, LTD."],
   ["Country Marking", "Made in Japan"],
-  ["Visible Handling Note", "Case drain inlet warning label is visible on the pump body"]
+  ["Installation Note", "Case drain connection must follow the pump installation requirements"]
 ];
 
 const daikinKeyFeatures = [
-  "DAIKIN manufacturer label visible",
-  "V38A3RX-95 model marking visible",
-  "Piston pump product marking visible",
-  "MFG No. YED00-2511-00070 visible",
-  "Made in Japan marking visible",
-  "Case drain inlet warning label visible",
-  "Suitable for sourcing review based on clear label comparison",
+  "DAIKIN V38A3RX-95 piston-pump configuration",
+  "MFG No. YED00-2511-00070",
+  "Industrial hydraulic piston-pump design",
+  "Case-drain connection requirement",
+  "Suitable for complete-model replacement sourcing",
   "Hydraulic performance and mounting data should be confirmed before ordering"
 ];
 
@@ -643,8 +635,8 @@ const daikinFaqs = [
     a: "It is a useful model reference, but buyers should also confirm displacement, pressure rating, rotation direction, shaft specification, port details, mounting dimensions and equipment application before ordering."
   },
   {
-    q: "What visible information is confirmed from the current photo?",
-    a: "The visible label shows DAIKIN INDUSTRIES, LTD., Piston Pump, model V38A3RX-95, MFG No. YED00-2511-00070 and Made in Japan."
+    q: "What is the complete reference for this DAIKIN piston pump?",
+    a: "Use model V38A3RX-95 together with MFG No. YED00-2511-00070 when requesting a quotation or checking a replacement."
   },
   {
     q: "Can a similar-looking piston pump be used as a replacement?",
@@ -684,17 +676,16 @@ const aryungConfirmedSpecs = [
   ["Product Type", "T-Rotor Pump"],
   ["Application Marking", "Coolant"],
   ["Country Marking", "Made in Korea"],
-  ["Visible Direction Marking", "Rotation arrow and IN / OUT markings are visible on the pump label"]
+  ["Flow Direction", "IN / OUT identification with rotation reference"]
 ];
 
 const aryungKeyFeatures = [
-  "T-rotor pump marking visible on the product label",
-  "ARYUNG brand label visible",
-  "ATP-216HA(VB) type marking visible",
-  "MFG No. 25060186 visible",
-  "Coolant application marking visible",
-  "IN / OUT direction markings visible",
-  "Suitable for sourcing review based on clear label comparison",
+  "T-rotor coolant-pump construction",
+  "ATP-216HA(VB) type reference",
+  "MFG No. 25060186",
+  "Designed for coolant-circulation duty",
+  "IN / OUT flow identification",
+  "Suitable for exact-model replacement sourcing",
   "Additional electrical and performance data should be confirmed before ordering"
 ];
 
@@ -737,8 +728,8 @@ const aryungFaqs = [
     a: "It is a useful model reference, but buyers should also confirm voltage, power rating, flow, pressure, port size, mounting dimensions and machine application before ordering."
   },
   {
-    q: "What visible information is confirmed from the current photo?",
-    a: "The visible label shows ARYUNG, ATP-216HA(VB), MFG No. 25060186, T-Rotor Pump, Coolant, Made in Korea, and IN / OUT direction markings."
+    q: "What is the complete reference for this ARYUNG coolant pump?",
+    a: "Use type ATP-216HA(VB) together with MFG No. 25060186 when requesting a quotation or checking a replacement."
   },
   {
     q: "Can a similar-looking coolant pump be used as a replacement?",
@@ -782,7 +773,7 @@ const confirmedSpecs = [
   ["Material Number", "R900567512"],
   ["Product Type", "Solenoid-operated directional spool valve"],
   ["Maximum Pressure Marking", "350 bar"],
-  ["Visible Valve Symbol", "Hydraulic directional valve symbol visible on the label"],
+  ["Valve Symbol", "Directional spool symbol for the specified configuration"],
   ["Country Marking", "Made in China"]
 ];
 
@@ -792,7 +783,7 @@ const keyFeatures = [
   "Material No. R900567512",
   "350 bar maximum-pressure marking",
   "Hydraulic flow-direction control",
-  "Manual override components visible",
+  "Manual override components",
   "Suitable for replacement sourcing based on full-code comparison",
   "Designed for industrial hydraulic control applications"
 ];
@@ -845,11 +836,11 @@ const faqs = [
   },
   {
     q: "What does MNR R900567512 mean?",
-    a: "It is the visible Rexroth material number used to identify the specific product configuration. Buyers should verify both the complete model and material number."
+    a: "It is the Rexroth material number used to identify the specific product configuration. Buyers should verify both the complete model and material number."
   },
   {
-    q: "Is the coil voltage confirmed from the current photos?",
-    a: "The coil voltage should be verified from the actual coil label or manufacturer documentation. It is not shown as a confirmed specification on this page."
+    q: "What coil voltage is required for this valve?",
+    a: "Confirm the coil voltage from the complete valve and coil references or controlled manufacturer documentation before ordering."
   },
   {
     q: "Can MAVORIX source several Rexroth valve models in one shipment?",
@@ -956,7 +947,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       openGraph: {
         title: aryungTitle,
         description:
-          "ARYUNG ATP-216HA(VB) T-rotor coolant pump sourcing support based on visible label information.",
+          "ARYUNG ATP-216HA(VB) T-rotor coolant pump for machine-tool and industrial coolant circulation.",
         url: `${site.url}${aryungPath}`,
         siteName: site.name,
         locale: "en",
@@ -974,7 +965,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         card: "summary_large_image",
         title: aryungTitle,
         description:
-          "ARYUNG ATP-216HA(VB) T-rotor coolant pump sourcing support based on visible label information.",
+          "ARYUNG ATP-216HA(VB) T-rotor coolant pump for machine-tool and industrial coolant circulation.",
         images: [aryungImages[0].src]
       }
     };
@@ -998,7 +989,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       openGraph: {
         title: daikinTitle,
         description:
-          "DAIKIN V38A3RX-95 piston pump sourcing support based on visible label information.",
+          "DAIKIN V38A3RX-95 industrial hydraulic piston pump, MFG No. YED00-2511-00070.",
         url: `${site.url}${daikinPath}`,
         siteName: site.name,
         locale: "en",
@@ -1016,7 +1007,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         card: "summary_large_image",
         title: daikinTitle,
         description:
-          "DAIKIN V38A3RX-95 piston pump sourcing support based on visible label information.",
+          "DAIKIN V38A3RX-95 industrial hydraulic piston pump, MFG No. YED00-2511-00070.",
         images: [daikinImages[0].src]
       }
     };
@@ -1153,7 +1144,7 @@ export default async function RexrothDirectionalValvePage({ params }: { params: 
               </h1>
               <p className="mt-5 text-lg leading-8 text-slate-600">
                 Rexroth 4WE6D6X/OFEG24N9K4 solenoid-operated hydraulic directional control valve, Material No. R900567512, with a
-                visible maximum pressure marking of 350 bar. Buyers should verify the complete valve code, coil voltage, hydraulic
+                maximum pressure reference of 350 bar. Buyers should verify the complete valve code, coil voltage, hydraulic
                 symbol, connector and installation requirements before ordering a replacement.
               </p>
             </div>
@@ -1181,8 +1172,8 @@ export default async function RexrothDirectionalValvePage({ params }: { params: 
           <Section title="Product Overview">
             <p>
               The Rexroth 4WE6D6X/OFEG24N9K4 is a solenoid-operated directional spool valve used for controlling the start, stop
-              and direction of hydraulic fluid flow in industrial hydraulic systems. The visible product label identifies Material
-              No. R900567512 and a maximum pressure marking of 350 bar.
+              and direction of hydraulic fluid flow in industrial hydraulic systems. This configuration is identified by Material
+              No. R900567512 and carries a maximum pressure reference of 350 bar.
             </p>
             <p>
               Directional control valves of this type are commonly used in hydraulic power units, industrial machinery, machine
@@ -1333,8 +1324,8 @@ function AryungCoolantPumpPage() {
                 {aryungTitle}
               </h1>
               <p className="mt-5 text-lg leading-8 text-slate-600">
-                ARYUNG ATP-216HA(VB) T-rotor coolant pump with visible MFG No. 25060186 and coolant application marking. Buyers
-                should confirm voltage, power, flow, pressure, port size and mounting details before ordering a replacement.
+                ARYUNG ATP-216HA(VB) T-rotor coolant pump, MFG No. 25060186, for machine-tool and industrial coolant circulation.
+                Confirm voltage, power, flow, pressure, port size and mounting details before ordering a replacement.
               </p>
             </div>
 
@@ -1360,16 +1351,17 @@ function AryungCoolantPumpPage() {
         <article className="space-y-12">
           <Section title="Product Overview">
             <p>
-              The ARYUNG ATP-216HA(VB) is shown on the product label as a T-rotor pump for coolant use. The visible label also
-              shows MFG No. 25060186, IN / OUT markings and a country marking of Made in Korea.
+              The ARYUNG ATP-216HA(VB) is a T-rotor pump designed for coolant circulation in machine tools and compatible industrial
+              equipment. Its compact configuration supports coolant delivery where the electrical supply, flow, pressure and pipe
+              connections match the machine requirements.
             </p>
             <p>
               For machine-tool and industrial machinery maintenance, coolant pump replacement should be checked using the complete
               pump label and installation details. A similar pump body or series name is not enough to confirm interchangeability.
             </p>
             <p>
-              MAVORIX can help overseas buyers organize label checking, supplier communication, photo confirmation and spare-parts
-              consolidation for pumps and related industrial components.
+              Use type ATP-216HA(VB) and MFG No. 25060186 together during quotation review. Confirm voltage, motor power, rated flow,
+              pressure, port size and mounting dimensions against the original installation.
             </p>
           </Section>
 
@@ -1474,7 +1466,7 @@ function aryungProductSchema() {
     category: "T-Rotor Coolant Pump",
     image: aryungImages.map((image) => `${site.url}${image.src}`),
     description:
-      "ARYUNG ATP-216HA(VB) T-rotor coolant pump with visible MFG No. 25060186 and coolant application marking."
+      "ARYUNG ATP-216HA(VB) T-rotor coolant pump, MFG No. 25060186, for machine-tool and industrial coolant circulation."
   };
 }
 
@@ -1512,9 +1504,8 @@ function DaikinPistonPumpPage() {
                 {daikinTitle}
               </h1>
               <p className="mt-5 text-lg leading-8 text-slate-600">
-                DAIKIN V38A3RX-95 piston pump with visible DAIKIN INDUSTRIES, LTD. label, MFG No. YED00-2511-00070 and Made in
-                Japan marking. Buyers should confirm displacement, pressure rating, shaft, ports, mounting and hydraulic system
-                requirements before ordering a replacement.
+                DAIKIN V38A3RX-95 industrial hydraulic piston pump, MFG No. YED00-2511-00070, for compatible machine tools and
+                hydraulic power systems. Confirm displacement, pressure, rotation, shaft, ports and mounting before ordering a replacement.
               </p>
             </div>
 
@@ -1540,16 +1531,16 @@ function DaikinPistonPumpPage() {
         <article className="space-y-12">
           <Section title="Product Overview">
             <p>
-              The DAIKIN V38A3RX-95 is identified on the visible product label as a piston pump. The label also shows DAIKIN
-              INDUSTRIES, LTD., MFG No. YED00-2511-00070 and a Made in Japan marking.
+              The DAIKIN V38A3RX-95 is an industrial hydraulic piston pump used in compatible machine tools, hydraulic power units
+              and production equipment. Use model V38A3RX-95 together with MFG No. YED00-2511-00070 during replacement sourcing.
             </p>
             <p>
               Hydraulic piston pump replacement should be checked using the complete model label and system details. A similar pump
               body or partial model code is not enough to confirm interchangeability.
             </p>
             <p>
-              MAVORIX can help overseas buyers organize label checking, supplier communication, photo confirmation and spare-parts
-              consolidation for hydraulic pumps and related industrial components.
+              Confirm displacement, pressure, rotation, shaft, case-drain arrangement, ports and mounting dimensions against the
+              original pump and machine hydraulic circuit before purchase.
             </p>
           </Section>
 
@@ -1674,9 +1665,8 @@ function HytekHydraulicPumpPage() {
                 {hytekTitle}
               </h1>
               <p className="mt-5 text-lg leading-8 text-slate-600">
-                HYTEK HG0-08-01A-VPC hydraulic pump shown with visible HYTEK label, flange-mounted pump body and protected splined
-                shaft. Buyers should confirm the exact label code, pump type, displacement, pressure, shaft, ports and mounting
-                dimensions before ordering a replacement.
+                HYTEK HG0-08-01A-VPC compact hydraulic pump with flange mounting and a splined drive shaft for industrial machinery.
+                Confirm pump type, displacement, pressure, rotation, ports and mounting dimensions before ordering a replacement.
               </p>
             </div>
 
@@ -1702,17 +1692,17 @@ function HytekHydraulicPumpPage() {
         <article className="space-y-12">
           <Section title="Product Overview">
             <p>
-              The HYTEK HG0-08-01A-VPC hydraulic pump is prepared as a sourcing reference page for buyers who need industrial
-              hydraulic spare parts support. The current product photo shows the HYTEK label, pump housing, front flange and protected
-              splined shaft.
+              The HYTEK HG0-08-01A-VPC is a compact flange-mounted hydraulic pump used as a replacement component in compatible
+              industrial machinery and hydraulic power systems. Its splined drive shaft and installation interfaces must match the
+              original pump.
             </p>
             <p>
               Hydraulic pump replacement should be checked with a clear straight-on label photo and the old pump application details.
               Partial model strings or similar-looking housings are not enough to confirm interchangeability.
             </p>
             <p>
-              MAVORIX can help overseas buyers organize label checking, supplier communication, photo confirmation and consolidated
-              export support for hydraulic pumps and related industrial components.
+              Confirm displacement, pressure, flow, rotation, shaft dimensions, port arrangement and mounting dimensions before
+              approving a replacement. The complete model should remain consistent across the inquiry, quotation and purchase order.
             </p>
           </Section>
 
@@ -1973,7 +1963,7 @@ function hytekProductSchema() {
     category: "Hydraulic Pump",
     image: hytekImages.map((image) => `${site.url}${image.src}`),
     description:
-      "HYTEK HG0-08-01A-VPC hydraulic pump sourcing reference with visible label, pump body and protected splined shaft."
+      "HYTEK HG0-08-01A-VPC compact flange-mounted hydraulic pump for industrial machinery replacement sourcing."
   };
 }
 
@@ -1991,7 +1981,7 @@ function daikinProductSchema() {
     category: "Hydraulic Piston Pump",
     image: daikinImages.map((image) => `${site.url}${image.src}`),
     description:
-      "DAIKIN V38A3RX-95 hydraulic piston pump with visible MFG No. YED00-2511-00070 and Made in Japan marking."
+      "DAIKIN V38A3RX-95 industrial hydraulic piston pump, MFG No. YED00-2511-00070."
   };
 }
 
