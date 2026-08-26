@@ -70,7 +70,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
       ? "Metal Parts Sourcing from China for Fasteners, Machining and Custom Components"
       : `${industry.title} Sourcing from China`;
   const heroDescription = isMroSupplies
-    ? "China sourcing support for industrial MRO supplies, factory spare parts, maintenance consumables, tools, pneumatic parts, hydraulic parts, electrical components, and mixed repair items from multiple suppliers."
+    ? "Industrial MRO supplier search and China sourcing support for U.S. and global factories buying spare parts, maintenance consumables, tools, pneumatic, hydraulic, and electrical items in mixed orders."
     : isMetalParts
       ? "Supplier search and order coordination for stainless steel screws, bolts, CNC machined parts, stamped parts, gears, spacers, brackets, and drawing-based metal components from China."
     : industry.description;
@@ -130,8 +130,8 @@ const industryMetadata: Record<string, { title: string; description: string }> =
     description: "Source metal parts from China with supplier checks, drawing review, quotation comparison, inspection coordination, and shipment consolidation for fasteners, CNC machined parts, stamped parts, gears, and custom hardware."
   },
   "mro-supplies": {
-    title: "Industrial MRO Suppliers in China | MRO Supplies & Spare Parts | MAVORIX",
-    description: "Find industrial MRO suppliers in China for factory spare parts, consumables, tools, pneumatic, hydraulic, and electrical items. MAVORIX helps check suppliers, compare quotes, and consolidate mixed MRO orders."
+    title: "MRO Supplier China | Industrial Supplies & Parts | MAVORIX",
+    description: "Source industrial MRO supplies and spare parts from China. MAVORIX helps U.S. buyers compare suppliers, verify specifications, and consolidate mixed orders."
   },
   "packaging-industry": {
     title: "Packaging Machine Parts & MRO Sourcing from China | MAVORIX",
@@ -337,7 +337,7 @@ function MroSuppliesLandingContent() {
             Buyers searching for industrial MRO suppliers in China often face a practical problem: the order is not one simple product. It may contain many small items from several categories, and each item needs enough technical information to avoid wrong replacements. A bearing may require size, load, seal type, and brand reference. A pneumatic valve may require voltage, port size, pressure, coil type, and mounting. A belt may require length, profile, width, and working environment.
           </p>
           <p>
-            MAVORIX INDUSTRIAL helps overseas factories and distributors organize MRO sourcing from China with supplier search, quotation comparison, supplier verification, quality coordination, and shipment consolidation. We do not claim to manufacture these products. Our role is to help buyers reduce sourcing risk, clarify technical details, compare realistic options, and coordinate export-side execution when mixed factory maintenance supplies come from multiple Chinese suppliers.
+            MAVORIX INDUSTRIAL helps U.S. and other overseas factories, distributors, and procurement teams organize MRO sourcing from China with supplier search, quotation comparison, supplier verification, quality coordination, and shipment consolidation. We do not claim to manufacture these products. Our role is to help buyers reduce sourcing risk, clarify technical details, compare realistic options, and coordinate export-side execution when mixed factory maintenance supplies come from multiple Chinese suppliers.
           </p>
         </div>
       </section>
@@ -358,11 +358,19 @@ function MroSuppliesLandingContent() {
         "Use supplier verification and pre-shipment photo checks when the order includes many small but critical maintenance items"
       ]} />
       <ListBlock title="Typical Buyers" items={[
-        "Factories that need mixed maintenance supplies and replacement parts from China",
-        "MRO distributors and importers building repeat sourcing channels for factory customers",
+        "U.S. and global factories that need mixed maintenance supplies and replacement parts from China",
+        "Industrial MRO distributors and importers building repeat sourcing channels for factory customers",
         "Maintenance teams that have photos, nameplates, or samples but incomplete part numbers",
         "Procurement managers comparing China MRO suppliers before payment",
         "Industrial buyers consolidating small orders from several suppliers into one shipment"
+      ]} />
+      <ListBlock title="What U.S. MRO Buyers Should Send" items={[
+        "Item names, quantities, model or part numbers, brands, clear photos, nameplates, drawings, and old samples where available",
+        "Dimensions, materials, voltage, frequency, pressure, thread, mounting, tolerance, and working-condition details",
+        "Whether the request requires original branded parts, compatible replacements, Chinese alternatives, or custom-made components",
+        "Required standards, certificates, inspection points, labeling, manuals, and packing instructions for the U.S. destination",
+        "Delivery address or port, target lead time, shipment preference, and whether several supplier orders should be consolidated",
+        "Previous quotations, supplier links, purchasing records, or failure details that can help suppliers compare the correct item"
       ]} />
       <ListBlock title="MRO and Spare Parts Sourcing Examples" items={[
         "Bearings, belts, filters, fasteners, seals, hoses, fittings, lubricants, cutting items, and workshop consumables",

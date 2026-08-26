@@ -123,6 +123,10 @@ function SourcingOpportunitySection({
           <p className="mt-4 text-base leading-8 text-slate-600">
             Real product pages and buyer guides help overseas factories check models, supplier risk, packing details, and mixed MRO sourcing paths before sending an inquiry.
           </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link href="/en/industries/mro-supplies/" className="text-sm font-black text-signal hover:text-navy">Industrial MRO Supplies</Link>
+            <Link href="/en/services/mro-sourcing-from-china/" className="text-sm font-black text-signal hover:text-navy">MRO Sourcing from China</Link>
+          </div>
         </div>
         <div className="mt-10 space-y-12">
           <OpportunityGroup title="Recent Sourcing Examples" description="Case-style pages showing model checks, supplier coordination, packing review, and shipment preparation.">

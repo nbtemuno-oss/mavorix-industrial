@@ -40,12 +40,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const isMroSourcing = locale === "en" && service.slug === "mro-sourcing-from-china";
   const isSupplierVerification = locale === "en" && service.slug === "supplier-verification";
   const heroTitle = isMroSourcing
-    ? "MRO Sourcing from China for Industrial Spare Parts"
+    ? "MRO Sourcing from China for Mixed Industrial Orders"
     : isSupplierVerification
       ? "China Supplier Verification Before Payment or Production"
       : service.title;
   const heroDescription = isMroSourcing
-    ? "China-side MRO sourcing support for overseas factories, importers, and maintenance teams buying industrial MRO supplies, factory spare parts, tools, consumables, pneumatic parts, hydraulic parts, electrical components, and mixed repair items from several suppliers."
+    ? "China-side MRO sourcing support for U.S. and global factories buying spare parts, tools, consumables, pneumatic, hydraulic, and electrical items from multiple suppliers."
     : isSupplierVerification
       ? "Practical supplier checks for overseas buyers before paying Chinese manufacturers, trading companies, distributors, or MRO suppliers, including identity, quotation clarity, payment risk, technical answers, packing, and export capability."
     : `${service.description} Keywords: ${service.keywords.join(", ")}.`;
@@ -98,8 +98,8 @@ const serviceMetadata: Record<string, { title: string; description: string }> = 
     description: "China industrial sourcing partner for overseas buyers sourcing machinery, MRO supplies, factory spare parts, metal parts, OEM products, supplier verification, inspection, export packing, and shipment consolidation."
   },
   "mro-sourcing-from-china": {
-    title: "MRO Sourcing from China | Industrial MRO Suppliers & Spare Parts | MAVORIX",
-    description: "MAVORIX helps overseas factories source MRO supplies from China, find industrial MRO suppliers, identify spare parts, compare quotes, check supplier risk, and consolidate mixed orders."
+    title: "MRO Sourcing from China | Mixed Orders & Consolidation",
+    description: "MRO sourcing support for U.S. factories buying spare parts, consumables, and tools from China. Compare quotes, check suppliers, and consolidate mixed orders."
   },
   "supplier-verification": {
     title: "China Supplier Verification Service | Check Supplier Risk Before Payment | MAVORIX",
@@ -232,7 +232,7 @@ function MroSourcingExtra() {
             The sourcing challenge is that MRO orders are usually fragmented. A factory may need twenty small items from ten different suppliers, and each item may require a different model number, material, voltage, pressure rating, size, or installation detail. A normal marketplace search can produce many supplier names, but it does not automatically solve part identification, quotation comparison, supplier verification, quality checks, export packing, or shipment consolidation.
           </p>
           <p>
-            MAVORIX INDUSTRIAL helps overseas factories organize MRO requirements into a clearer sourcing path. We review item lists, photos, drawings, nameplates, part numbers, dimensions, quantities, and application notes before contacting suppliers. Then we help compare supplier communication, product fit, quotation details, lead time, packing notes, and consolidation options so buyers can reduce uncertainty before payment and before shipment.
+            MAVORIX INDUSTRIAL helps U.S. and other overseas factories organize MRO requirements into a clearer sourcing path. We review item lists, photos, drawings, nameplates, part numbers, dimensions, quantities, and application notes before contacting suppliers. Then we help compare supplier communication, product fit, quotation details, lead time, packing notes, and consolidation options so buyers can reduce uncertainty before payment and before shipment.
           </p>
         </div>
       </section>
@@ -260,6 +260,12 @@ function MroSourcingExtra() {
         "Whether exact OEM parts, compatible replacements, Chinese alternatives, or custom-made parts are acceptable",
         "Destination country, shipment preference, packing requirement, and whether consolidation is needed",
         "Any supplier links, previous quotations, sample information, or repeat order history already available"
+      ]} />
+      <ListBlock title="Details for U.S. MRO Orders" items={[
+        "Required U.S. standards, certifications, voltage and frequency, manuals, labels, and technical documents for buyer review",
+        "Destination address or port, preferred Incoterm, target delivery date, and whether courier, air, LCL, or FCL shipment is expected",
+        "Inspection criteria, acceptable replacement policy, sample approval needs, packing method, carton marks, and pallet requirements",
+        "Importer or maintenance-team confirmation of local compliance and final part compatibility before production or shipment"
       ]} />
       <ListBlock title="How MAVORIX Supports MRO Sourcing" items={[
         "Organize mixed MRO requirements into clear product groups before supplier search",
