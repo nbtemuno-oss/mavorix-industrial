@@ -10,6 +10,28 @@ export type PublishedProduct = {
 
 export const publishedProducts: PublishedProduct[] = [
   {
+    slug: "copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor",
+    title: "Copeland CRNQ-050E-TFD-556 Hermetic Reciprocating Compressor",
+    description:
+      "Copeland CRNQ-050E-TFD-556 three-phase hermetic reciprocating compressor for model-specific HVAC replacement sourcing.",
+    path: "/en/products/hvac-refrigeration-components/copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor/",
+    image:
+      "/images/products/general-products/copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor/copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor-thumbnail.webp",
+    imageAlt: "Copeland CRNQ-050E-TFD-556 compressor secured inside a fitted wooden case",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "industrial-machinery"]
+  },
+  {
+    slug: "copeland-zr61kc-tfd-522-5hp-scroll-compressor",
+    title: "Copeland ZR61KC-TFD-522 5 HP Scroll Compressor",
+    description:
+      "Copeland ZR61KC-TFD-522 5 HP three-phase scroll compressor for R22 air-conditioning replacement sourcing.",
+    path: "/en/products/hvac-refrigeration-components/copeland-zr61kc-tfd-522-5hp-scroll-compressor/",
+    image:
+      "/images/products/general-products/copeland-zr61kc-tfd-522-5hp-scroll-compressor/copeland-zr61kc-tfd-522-5hp-scroll-compressor-thumbnail.webp",
+    imageAlt: "Copeland ZR61KC-TFD-522 scroll compressor with visible label and protected connections",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "industrial-machinery"]
+  },
+  {
     slug: "rexroth-r930050353-single-counterbalance-valve",
     title: "Rexroth R930050353 A-VBSO Single Counterbalance Valve",
     description:

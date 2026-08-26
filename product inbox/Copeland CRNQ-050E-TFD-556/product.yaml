@@ -1,0 +1,91 @@
+status: approved
+publish_status: published
+
+product_name: "Copeland CRNQ-050E-TFD-556 Hermetic Reciprocating Compressor"
+short_name: "Copeland CRNQ-050E-TFD-556 Compressor"
+slug: "copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor"
+
+brand: "Copeland"
+model: "CRNQ-050E-TFD-556"
+part_number: ""
+material_number: ""
+part_type: "hermetic_reciprocating_compressor"
+condition: "Compressor photographed in a fitted wooden case; final condition and supply channel confirmation required"
+compatibility_status: "complete_model_and_system_confirmation_required"
+image_content_editing: "manual_only"
+category: "hvac-refrigeration-components"
+categories:
+  - "electrical-mechanical-parts"
+  - "factory-spare-parts"
+  - "industrial-machinery"
+
+confirmed_specs:
+  - label: "Brand"
+    value: "Copeland"
+    source: "image_confirmed"
+  - label: "Model"
+    value: "CRNQ-050E-TFD-556"
+    source: "image_confirmed"
+  - label: "Compressor Type"
+    value: "Hermetic reciprocating compressor"
+    source: "manufacturer_family_reference"
+  - label: "Motor Protection"
+    value: "Thermally protected"
+    source: "image_confirmed"
+  - label: "Phase"
+    value: "3 phase"
+    source: "image_confirmed"
+  - label: "50 Hz Voltage"
+    value: "380/420 V"
+    source: "image_confirmed"
+  - label: "60 Hz Voltage"
+    value: "380/460 V"
+    source: "image_confirmed"
+  - label: "LRA"
+    value: "65.0 A nameplate marking"
+    source: "image_confirmed"
+
+unconfirmed_fields:
+  - "Refrigerant and oil for the destination system"
+  - "Cooling capacity at the buyer's evaporating and condensing conditions"
+  - "Suction and discharge connection sizes for this bill of material"
+  - "Exact mounting dimensions and included accessories"
+  - "Manufacturing date and country of origin"
+  - "Authenticity and authorized distribution status"
+  - "Warranty, stock status and delivery time"
+
+questions_for_user:
+  - "Provide the old compressor nameplate and HVAC unit model before replacement selection."
+  - "Confirm refrigerant, voltage, phase, frequency, operating conditions, connections, quantity and destination."
+
+images:
+  originals:
+    - "微信图片_20260826132628_355_4.jpg"
+  generated:
+    main: "/images/products/general-products/copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor/copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor-main.webp"
+    thumbnail: "/images/products/general-products/copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor/copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor-thumbnail.webp"
+
+seo:
+  title: "Copeland CRNQ-050E-TFD-556 Compressor | MAVORIX"
+  meta_description: "Source Copeland CRNQ-050E-TFD-556 hermetic reciprocating compressor. Verify the full model, refrigerant, 3-phase voltage and HVAC application."
+  primary_keyword: "Copeland CRNQ-050E-TFD-556 compressor"
+  secondary_keywords:
+    - "CRNQ-050E-TFD-556"
+    - "Copeland reciprocating compressor"
+    - "Copeland hermetic compressor"
+    - "Copelaweld compressor"
+    - "3 phase HVAC compressor"
+    - "air conditioning compressor replacement"
+  long_tail_keywords:
+    - "source Copeland CRNQ-050E-TFD-556 compressor"
+    - "Copeland CRNQ-050E-TFD replacement compressor"
+    - "380 420V 3 phase reciprocating compressor"
+    - "Copeland hermetic HVAC compressor supplier China"
+    - "how to verify a Copeland compressor model before ordering"
+
+publication:
+  route: "/en/products/hvac-refrigeration-components/copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor/"
+  robots: "noindex, nofollow"
+  sitemap: false
+  category_index: false
+  deployment: false

@@ -309,5 +309,23 @@ export const blogImages: Record<string, PageImage> = {
     alt: "Batch of used plastic injection molds wrapped and grouped for export preparation in China",
     width: 1200,
     height: 1600
+  },
+  "hrb-23220ca-w33-bearing-sourcing-argentina": {
+    src: "/images/blog/hrb-23220ca-w33-bearing-sourcing-argentina/hrb-23220ca-w33-bearing-inspection-argentina.webp",
+    alt: "HRB 23220CA/W33 spherical roller bearing and boxes checked for an Argentina order",
+    width: 1200,
+    height: 1600
+  },
+  "copeland-crnq-050e-compressor-sourcing-peru": {
+    src: "/images/blog/copeland-crnq-050e-compressor-sourcing-peru/copeland-crnq-050e-tfd-556-wooden-case.webp",
+    alt: "Copeland CRNQ-050E-TFD-556 compressor secured inside a wooden case for Peru",
+    width: 1280,
+    height: 1504
+  },
+  "copeland-zr61kc-scroll-compressor-sourcing-peru": {
+    src: "/images/blog/copeland-zr61kc-scroll-compressor-sourcing-peru/copeland-zr61kc-compressor-packed-for-peru.webp",
+    alt: "Copeland ZR61KC-TFD-522 scroll compressor packed in a strapped carton for Peru",
+    width: 548,
+    height: 678
   }
 };

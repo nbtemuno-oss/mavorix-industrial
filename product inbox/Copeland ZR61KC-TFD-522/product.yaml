@@ -1,0 +1,94 @@
+status: approved
+publish_status: published
+
+product_name: "Copeland ZR61KC-TFD-522 5 HP Scroll Compressor"
+short_name: "Copeland ZR61KC-TFD-522 Scroll Compressor"
+slug: "copeland-zr61kc-tfd-522-5hp-scroll-compressor"
+
+brand: "Copeland"
+model: "ZR61KC-TFD-522"
+part_number: ""
+material_number: ""
+part_type: "air_conditioning_scroll_compressor"
+condition: "Complete compressor photographed before packing; final condition and supply channel confirmation required"
+compatibility_status: "complete_model_and_system_confirmation_required"
+image_content_editing: "manual_only"
+category: "hvac-refrigeration-components"
+categories:
+  - "electrical-mechanical-parts"
+  - "factory-spare-parts"
+  - "industrial-machinery"
+
+confirmed_specs:
+  - label: "Brand"
+    value: "Copeland Scroll"
+    source: "image_confirmed"
+  - label: "Model"
+    value: "ZR61KC-TFD-522"
+    source: "image_confirmed"
+  - label: "Compressor Type"
+    value: "Hermetic scroll compressor"
+    source: "image_and_manufacturer_reference"
+  - label: "Nominal Motor"
+    value: "5 HP"
+    source: "manufacturer_model_reference"
+  - label: "Refrigerant"
+    value: "R22 / HCFC application for the referenced ZR61KC-TFD model"
+    source: "manufacturer_model_reference"
+  - label: "Power Supply"
+    value: "380-420 V, 50 Hz, 3 phase"
+    source: "manufacturer_model_reference"
+  - label: "Reference Capacity"
+    value: "49,700 Btu/h (14.566 kW) at published rating conditions"
+    source: "manufacturer_model_reference"
+  - label: "Reference Input"
+    value: "4,430 W at published rating conditions"
+    source: "manufacturer_model_reference"
+  - label: "Visible Connections"
+    value: "Copper suction and discharge stubs with protective caps"
+    source: "image_confirmed"
+
+unconfirmed_fields:
+  - "Actual capacity at the buyer's evaporating and condensing conditions"
+  - "Oil type and charge in the supplied unit"
+  - "Suction and discharge sizes for final installation"
+  - "Exact replacement suitability for the buyer's HVAC unit"
+  - "Manufacturing date and country of origin"
+  - "Authenticity and authorized distribution status"
+  - "Warranty, stock status and delivery time"
+
+questions_for_user:
+  - "Provide the old compressor nameplate and HVAC unit model before replacement selection."
+  - "Confirm refrigerant, voltage, phase, frequency, operating conditions, connections, quantity and destination."
+
+images:
+  originals:
+    - "微信图片_20260826132453_354_4.jpg"
+  generated:
+    main: "/images/products/general-products/copeland-zr61kc-tfd-522-5hp-scroll-compressor/copeland-zr61kc-tfd-522-5hp-scroll-compressor-main.webp"
+    thumbnail: "/images/products/general-products/copeland-zr61kc-tfd-522-5hp-scroll-compressor/copeland-zr61kc-tfd-522-5hp-scroll-compressor-thumbnail.webp"
+
+seo:
+  title: "Copeland ZR61KC-TFD-522 Scroll Compressor | MAVORIX"
+  meta_description: "Source Copeland ZR61KC-TFD-522 5 HP R22 scroll compressor, 380-420 V 3-phase 50 Hz. Verify the full model and HVAC system before ordering."
+  primary_keyword: "Copeland ZR61KC-TFD-522 scroll compressor"
+  secondary_keywords:
+    - "ZR61KC-TFD-522"
+    - "Copeland ZR61KC compressor"
+    - "Copeland Scroll compressor 5 HP"
+    - "R22 scroll compressor"
+    - "380 420V three phase scroll compressor"
+    - "air conditioning compressor replacement"
+  long_tail_keywords:
+    - "source Copeland ZR61KC-TFD-522 scroll compressor"
+    - "Copeland ZR61KC-TFD-522 replacement compressor"
+    - "5 HP R22 scroll compressor 380 420V"
+    - "Copeland air conditioning compressor supplier China"
+    - "how to verify ZR61KC compressor compatibility"
+
+publication:
+  route: "/en/products/hvac-refrigeration-components/copeland-zr61kc-tfd-522-5hp-scroll-compressor/"
+  robots: "noindex, nofollow"
+  sitemap: false
+  category_index: false
+  deployment: false

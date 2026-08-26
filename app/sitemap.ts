@@ -56,6 +56,15 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/solid state relay 80A/product.yaml"
     ];
   }
+  if (path.startsWith("products/hvac-refrigeration-components/")) {
+    return [
+      ...common,
+      "app/[locale]/products/hvac-refrigeration-components/[slug]/page.tsx",
+      "data/products.ts",
+      "product inbox/Copeland CRNQ-050E-TFD-556/product.yaml",
+      "product inbox/Copeland ZR61KC-TFD-522/product.yaml"
+    ];
+  }
   if (path.startsWith("products/hydraulic-components/")) {
     return [
       ...common,
