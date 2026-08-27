@@ -333,5 +333,11 @@ export const blogImages: Record<string, PageImage> = {
     alt: "HJY-4GT vertical turret milling machine and loose accessories checked for a customer order in Poland",
     width: 870,
     height: 1246
+  },
+  "pof-shrink-film-full-container-sourcing-middle-east": {
+    src: "/images/blog/pof-shrink-film-full-container-sourcing-middle-east/pof-shrink-film-container-loading-middle-east.webp",
+    alt: "POF shrink film pallets secured in an export container with an inflatable dunnage bag for a Middle East order",
+    width: 1348,
+    height: 1598
   }
 };
