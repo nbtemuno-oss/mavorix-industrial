@@ -89,6 +89,19 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/heat cleaning furnance/product.yaml"
     ];
   }
+  if (path.startsWith("products/industrial-bearings/")) {
+    return [
+      ...common,
+      "app/[locale]/products/industrial-bearings/[slug]/page.tsx",
+      "data/products.ts",
+      "product inbox/SKF 51226 thrust ball bearing/product.yaml",
+      "product inbox/SKF 7307 BECBP angular contact ball bearing/product.yaml",
+      "product inbox/SKF NU 306 ECM cylindrical roller bearing/product.yaml",
+      "product inbox/IEF BCB-3572-2R-SU-CP precision bearing set/product.yaml",
+      "product inbox/FAG QJ219-N2-MPA four-point contact bearing/product.yaml",
+      "product inbox/SKF 6004-2Z deep groove ball bearing/product.yaml"
+    ];
+  }
   if (path.startsWith("products/metalworking-equipment/")) {
     return [
       ...common,

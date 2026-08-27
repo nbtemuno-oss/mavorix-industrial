@@ -1,0 +1,86 @@
+status: approved
+publish_status: published
+
+product_name: "SKF 7307 BECBP Single-Row Angular Contact Ball Bearing"
+short_name: "SKF 7307 BECBP Bearing"
+slug: "skf-7307-becbp-angular-contact-ball-bearing"
+
+brand: "SKF"
+model: "7307 BECBP"
+part_number: "7307 BECBP"
+part_type: "single_row_angular_contact_ball_bearing"
+condition: "New product; final supply condition and traceability documents to be confirmed with the quotation"
+compatibility_status: "complete_suffix_arrangement_and_clearance_confirmation_required"
+image_content_editing: "manual_only"
+category: "industrial-bearings"
+categories:
+  - "electrical-mechanical-parts"
+  - "factory-spare-parts"
+  - "mro-supplies"
+
+confirmed_specs:
+  - label: "Brand"
+    value: "SKF"
+    source: "image_confirmed"
+  - label: "Model"
+    value: "7307 BECBP"
+    source: "image_confirmed"
+  - label: "Bearing Type"
+    value: "Single-row angular contact ball bearing"
+    source: "manufacturer_reference"
+  - label: "Bore Diameter"
+    value: "35 mm"
+    source: "manufacturer_reference"
+  - label: "Outside Diameter"
+    value: "80 mm"
+    source: "manufacturer_reference"
+  - label: "Width"
+    value: "21 mm"
+    source: "manufacturer_reference"
+  - label: "Nominal Contact Angle"
+    value: "40 degrees"
+    source: "manufacturer_reference"
+  - label: "Cage"
+    value: "Non-metallic cage"
+    source: "manufacturer_reference"
+
+unconfirmed_fields:
+  - "Single-bearing or matched-set arrangement"
+  - "Required internal clearance or preload"
+  - "Load direction, speed, lubrication and temperature"
+  - "Current manufacturer traceability documents"
+  - "Stock status, lead time and warranty"
+
+questions_for_user:
+  - "Confirm the complete 7307 BECBP suffix and whether the bearing is used alone or in a matched set."
+  - "Provide load direction, speed, clearance or preload, quantity and destination."
+
+images:
+  originals:
+    - "微信图片_20260827124042_397_4.jpg"
+  generated:
+    main: "/images/products/general-products/skf-7307-becbp-angular-contact-ball-bearing/skf-7307-becbp-angular-contact-ball-bearing-main.webp"
+    thumbnail: "/images/products/general-products/skf-7307-becbp-angular-contact-ball-bearing/skf-7307-becbp-angular-contact-ball-bearing-thumbnail.webp"
+
+seo:
+  title: "SKF 7307 BECBP Angular Contact Bearing | MAVORIX"
+  meta_description: "Source SKF 7307 BECBP single-row angular contact ball bearing, 35 x 80 x 21 mm, for combined radial and axial load applications."
+  primary_keyword: "SKF 7307 BECBP angular contact ball bearing"
+  secondary_keywords:
+    - "7307 BECBP bearing"
+    - "SKF 7307 angular contact bearing"
+    - "35x80x21 angular contact bearing"
+    - "40 degree contact angle bearing"
+    - "industrial bearing supplier China"
+  long_tail_keywords:
+    - "source SKF 7307 BECBP bearing from China"
+    - "SKF 7307 BECBP 35 x 80 x 21 mm supplier"
+    - "single row angular contact bearing replacement"
+    - "7307 BECBP matched bearing selection"
+
+publication:
+  route: "/en/products/industrial-bearings/skf-7307-becbp-angular-contact-ball-bearing/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

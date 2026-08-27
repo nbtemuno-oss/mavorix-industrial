@@ -227,5 +227,71 @@ export const publishedProducts: PublishedProduct[] = [
       "/images/products/hydraulic-components/ktc-kpc3560-rpss-hydraulic-gear-pump/ktc-kpc3560-rpss-hydraulic-gear-pump-thumbnail.webp",
     imageAlt: "Three KTC KPC3560RPSS hydraulic gear pumps with embossed markings",
     categorySlugs: ["industrial-machinery", "factory-spare-parts"]
+  },
+  {
+    slug: "skf-51226-single-direction-thrust-ball-bearing",
+    title: "SKF 51226 Single-Direction Thrust Ball Bearing",
+    description:
+      "SKF 51226 separable thrust ball bearing, 130 x 190 x 45 mm, for one-direction axial-load applications and MRO replacement.",
+    path: "/en/products/industrial-bearings/skf-51226-single-direction-thrust-ball-bearing/",
+    image:
+      "/images/products/general-products/skf-51226-single-direction-thrust-ball-bearing/skf-51226-single-direction-thrust-ball-bearing-gallery-02.webp",
+    imageAlt: "SKF 51226 thrust ball bearing with shaft washer, housing washer and ball cage assembly",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "skf-7307-becbp-angular-contact-ball-bearing",
+    title: "SKF 7307 BECBP Single-Row Angular Contact Ball Bearing",
+    description:
+      "SKF 7307 BECBP 35 x 80 x 21 mm angular contact ball bearing with a 40-degree contact angle for combined-load arrangements.",
+    path: "/en/products/industrial-bearings/skf-7307-becbp-angular-contact-ball-bearing/",
+    image:
+      "/images/products/general-products/skf-7307-becbp-angular-contact-ball-bearing/skf-7307-becbp-angular-contact-ball-bearing-thumbnail.webp",
+    imageAlt: "SKF Explorer 7307 BECBP angular contact ball bearing with complete model labels",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "skf-nu-306-ecm-cylindrical-roller-bearing",
+    title: "SKF NU 306 ECM Single-Row Cylindrical Roller Bearing",
+    description:
+      "SKF NU 306 ECM 30 x 72 x 19 mm cylindrical roller bearing with NU non-locating design and machined brass cage.",
+    path: "/en/products/industrial-bearings/skf-nu-306-ecm-cylindrical-roller-bearing/",
+    image:
+      "/images/products/general-products/skf-nu-306-ecm-cylindrical-roller-bearing/skf-nu-306-ecm-cylindrical-roller-bearing-thumbnail.webp",
+    imageAlt: "SKF Explorer NU 306 ECM cylindrical roller bearing with machined brass cage",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "ief-bcb-3572-2r-su-cp-precision-bearing-set",
+    title: "IEF BCB-3572-2R-SU-CP Precision Bearing Set",
+    description:
+      "Exact-model IEF BCB-3572-2R-SU-CP precision bearing set for drawing- and interface-based replacement sourcing.",
+    path: "/en/products/industrial-bearings/ief-bcb-3572-2r-su-cp-precision-bearing-set/",
+    image:
+      "/images/products/general-products/ief-bcb-3572-2r-su-cp-precision-bearing-set/ief-bcb-3572-2r-su-cp-precision-bearing-set-thumbnail.webp",
+    imageAlt: "IEF BCB-3572-2R-SU-CP precision bearing packages with complete model labels",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "fag-qj219-n2-mpa-four-point-contact-ball-bearing",
+    title: "FAG QJ219-N2-MPA Four-Point Contact Ball Bearing",
+    description:
+      "FAG QJ219-N2-MPA 95 x 170 x 32 mm four-point contact bearing with split inner ring, N2 slots and brass cage.",
+    path: "/en/products/industrial-bearings/fag-qj219-n2-mpa-four-point-contact-ball-bearing/",
+    image:
+      "/images/products/general-products/fag-qj219-n2-mpa-four-point-contact-ball-bearing/fag-qj219-n2-mpa-four-point-contact-ball-bearing-thumbnail.webp",
+    imageAlt: "FAG QJ219-N2-MPA four-point contact bearing with model-labelled boxes",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "skf-6004-2z-shielded-deep-groove-ball-bearing",
+    title: "SKF 6004-2Z Shielded Deep Groove Ball Bearing",
+    description:
+      "SKF 6004-2Z 20 x 42 x 12 mm deep groove ball bearing with non-contact metal shields on both sides.",
+    path: "/en/products/industrial-bearings/skf-6004-2z-shielded-deep-groove-ball-bearing/",
+    image:
+      "/images/products/general-products/skf-6004-2z-shielded-deep-groove-ball-bearing/skf-6004-2z-shielded-deep-groove-ball-bearing-thumbnail.webp",
+    imageAlt: "SKF Explorer 6004-2Z deep groove ball bearing boxes with complete designation labels",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
   }
 ];

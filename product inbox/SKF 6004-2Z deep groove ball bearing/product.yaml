@@ -1,0 +1,86 @@
+status: approved
+publish_status: published
+
+product_name: "SKF 6004-2Z Shielded Deep Groove Ball Bearing"
+short_name: "SKF 6004-2Z Bearing"
+slug: "skf-6004-2z-shielded-deep-groove-ball-bearing"
+
+brand: "SKF"
+model: "6004-2Z"
+part_number: "6004-2Z"
+part_type: "shielded_deep_groove_ball_bearing"
+condition: "New product; final supply condition and traceability documents to be confirmed with the quotation"
+compatibility_status: "complete_suffix_clearance_and_operating_conditions_confirmation_required"
+image_content_editing: "manual_only"
+category: "industrial-bearings"
+categories:
+  - "electrical-mechanical-parts"
+  - "factory-spare-parts"
+  - "mro-supplies"
+
+confirmed_specs:
+  - label: "Brand"
+    value: "SKF"
+    source: "image_confirmed"
+  - label: "Model"
+    value: "6004-2Z"
+    source: "image_confirmed"
+  - label: "Bearing Type"
+    value: "Single-row deep groove ball bearing"
+    source: "manufacturer_reference"
+  - label: "Bore Diameter"
+    value: "20 mm"
+    source: "manufacturer_reference"
+  - label: "Outside Diameter"
+    value: "42 mm"
+    source: "manufacturer_reference"
+  - label: "Width"
+    value: "12 mm"
+    source: "manufacturer_reference"
+  - label: "Closure"
+    value: "Non-contact metal shield on both sides"
+    source: "manufacturer_reference"
+  - label: "Lubrication"
+    value: "Grease filled"
+    source: "manufacturer_reference"
+
+unconfirmed_fields:
+  - "Required radial clearance and precision class"
+  - "Radial and axial load, speed and operating temperature"
+  - "Fit and mounting arrangement"
+  - "Current manufacturer traceability documents"
+  - "Stock status, lead time and warranty"
+
+questions_for_user:
+  - "Confirm the complete 6004-2Z suffix and 20 x 42 x 12 mm dimensions."
+  - "Provide load, speed, clearance, quantity and destination."
+
+images:
+  originals:
+    - "微信图片_20260827123955_393_4.jpg"
+  generated:
+    main: "/images/products/general-products/skf-6004-2z-shielded-deep-groove-ball-bearing/skf-6004-2z-shielded-deep-groove-ball-bearing-main.webp"
+    thumbnail: "/images/products/general-products/skf-6004-2z-shielded-deep-groove-ball-bearing/skf-6004-2z-shielded-deep-groove-ball-bearing-thumbnail.webp"
+
+seo:
+  title: "SKF 6004-2Z Deep Groove Ball Bearing | MAVORIX"
+  meta_description: "Source SKF 6004-2Z shielded deep groove ball bearing, 20 x 42 x 12 mm, for electric motors, machinery and MRO replacement."
+  primary_keyword: "SKF 6004-2Z deep groove ball bearing"
+  secondary_keywords:
+    - "6004-2Z bearing"
+    - "SKF 6004 shielded bearing"
+    - "20x42x12 deep groove bearing"
+    - "double metal shield ball bearing"
+    - "industrial bearing supplier China"
+  long_tail_keywords:
+    - "source SKF 6004-2Z bearing from China"
+    - "SKF 6004-2Z 20 x 42 x 12 mm supplier"
+    - "double shielded deep groove ball bearing replacement"
+    - "6004-2Z bearing for electric motor and machinery"
+
+publication:
+  route: "/en/products/industrial-bearings/skf-6004-2z-shielded-deep-groove-ball-bearing/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

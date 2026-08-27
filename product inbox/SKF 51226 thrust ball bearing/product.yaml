@@ -1,0 +1,87 @@
+status: approved
+publish_status: published
+
+product_name: "SKF 51226 Single-Direction Thrust Ball Bearing"
+short_name: "SKF 51226 Thrust Bearing"
+slug: "skf-51226-single-direction-thrust-ball-bearing"
+
+brand: "SKF"
+model: "51226"
+part_number: "51226"
+part_type: "single_direction_thrust_ball_bearing"
+condition: "New product; final supply condition and traceability documents to be confirmed with the quotation"
+compatibility_status: "dimensions_load_direction_and_operating_conditions_confirmation_required"
+image_content_editing: "manual_only"
+category: "industrial-bearings"
+categories:
+  - "electrical-mechanical-parts"
+  - "factory-spare-parts"
+  - "mro-supplies"
+
+confirmed_specs:
+  - label: "Brand"
+    value: "SKF"
+    source: "image_confirmed"
+  - label: "Model"
+    value: "51226"
+    source: "image_confirmed"
+  - label: "Bearing Type"
+    value: "Single-direction thrust ball bearing"
+    source: "manufacturer_catalog_reference"
+  - label: "Bore Diameter"
+    value: "130 mm"
+    source: "manufacturer_catalog_reference"
+  - label: "Outside Diameter"
+    value: "190 mm"
+    source: "manufacturer_catalog_reference"
+  - label: "Height"
+    value: "45 mm"
+    source: "manufacturer_catalog_reference"
+  - label: "Dynamic Load Rating"
+    value: "186 kN"
+    source: "manufacturer_catalog_reference"
+  - label: "Static Load Rating"
+    value: "585 kN"
+    source: "manufacturer_catalog_reference"
+
+unconfirmed_fields:
+  - "Required axial load, speed, lubrication and operating temperature"
+  - "Shaft and housing seat tolerances"
+  - "Current manufacturer traceability documents"
+  - "Stock status, lead time and warranty"
+
+questions_for_user:
+  - "Confirm the old bearing designation and 130 x 190 x 45 mm dimensions."
+  - "Provide axial load direction, speed, lubrication, quantity and destination."
+
+images:
+  originals:
+    - "微信图片_20260827124117_398_4.jpg"
+    - "微信图片_20260827124120_399_4.jpg"
+    - "微信图片_20260827124124_400_4.jpg"
+  generated:
+    main: "/images/products/general-products/skf-51226-single-direction-thrust-ball-bearing/skf-51226-single-direction-thrust-ball-bearing-main.webp"
+    thumbnail: "/images/products/general-products/skf-51226-single-direction-thrust-ball-bearing/skf-51226-single-direction-thrust-ball-bearing-thumbnail.webp"
+
+seo:
+  title: "SKF 51226 Thrust Ball Bearing 130x190x45 | MAVORIX"
+  meta_description: "Source SKF 51226 single-direction thrust ball bearing, 130 x 190 x 45 mm, for axial-load machinery and MRO replacement requirements."
+  primary_keyword: "SKF 51226 thrust ball bearing"
+  secondary_keywords:
+    - "SKF 51226 bearing"
+    - "51226 thrust bearing"
+    - "130x190x45 thrust ball bearing"
+    - "single direction thrust bearing"
+    - "industrial bearing sourcing China"
+  long_tail_keywords:
+    - "source SKF 51226 thrust ball bearing from China"
+    - "SKF 51226 130 x 190 x 45 mm bearing supplier"
+    - "single direction thrust bearing for axial load"
+    - "SKF 51226 replacement bearing sourcing"
+
+publication:
+  route: "/en/products/industrial-bearings/skf-51226-single-direction-thrust-ball-bearing/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

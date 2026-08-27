@@ -1,0 +1,75 @@
+status: approved
+publish_status: published
+
+product_name: "IEF BCB-3572-2R-SU-CP Precision Bearing Set"
+short_name: "IEF BCB-3572-2R-SU-CP"
+slug: "ief-bcb-3572-2r-su-cp-precision-bearing-set"
+
+brand: "IEF"
+model: "BCB-3572-2R-SU-CP"
+part_number: "BCB-3572-2R-SU-CP"
+part_type: "precision_bearing_set"
+condition: "New packaged product; exact bearing construction and technical data require manufacturer documentation"
+compatibility_status: "manual_confirmation_required"
+image_content_editing: "manual_only"
+category: "industrial-bearings"
+categories:
+  - "electrical-mechanical-parts"
+  - "factory-spare-parts"
+  - "mro-supplies"
+
+confirmed_specs:
+  - label: "Brand Marking"
+    value: "IEF"
+    source: "image_confirmed"
+  - label: "Complete Model"
+    value: "BCB-3572-2R-SU-CP"
+    source: "image_confirmed"
+  - label: "Product Form"
+    value: "Precision bearing set"
+    source: "image_confirmed"
+  - label: "Country Marking"
+    value: "Made in Japan"
+    source: "image_confirmed"
+
+unconfirmed_fields:
+  - "Exact bearing type and internal arrangement"
+  - "Bore, outside diameter and overall width"
+  - "Precision class, preload and contact angle"
+  - "Load ratings, speed limit and lubrication"
+  - "Manufacturer identity behind the IEF marking and current technical datasheet"
+  - "Stock status, lead time and warranty"
+
+questions_for_user:
+  - "Provide the old bearing marking and installation drawing before replacement selection."
+  - "Confirm shaft diameter, housing bore, assembled width, preload requirement, quantity and destination."
+
+images:
+  originals:
+    - "微信图片_20260827124023_395_4.jpg"
+  generated:
+    main: "/images/products/general-products/ief-bcb-3572-2r-su-cp-precision-bearing-set/ief-bcb-3572-2r-su-cp-precision-bearing-set-main.webp"
+    thumbnail: "/images/products/general-products/ief-bcb-3572-2r-su-cp-precision-bearing-set/ief-bcb-3572-2r-su-cp-precision-bearing-set-thumbnail.webp"
+
+seo:
+  title: "IEF BCB-3572-2R-SU-CP Precision Bearing | MAVORIX"
+  meta_description: "Source IEF BCB-3572-2R-SU-CP precision bearing set by complete model. Confirm dimensions, arrangement and preload before replacement ordering."
+  primary_keyword: "IEF BCB-3572-2R-SU-CP bearing"
+  secondary_keywords:
+    - "BCB-3572-2R-SU-CP"
+    - "IEF precision bearing"
+    - "Japan precision bearing set"
+    - "industrial bearing replacement"
+    - "MRO bearing sourcing China"
+  long_tail_keywords:
+    - "source IEF BCB-3572-2R-SU-CP bearing"
+    - "BCB-3572-2R-SU-CP replacement bearing supplier"
+    - "how to identify an IEF precision bearing set"
+    - "precision bearing sourcing with model verification"
+
+publication:
+  route: "/en/products/industrial-bearings/ief-bcb-3572-2r-su-cp-precision-bearing-set/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

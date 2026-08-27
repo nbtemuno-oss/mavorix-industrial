@@ -1,0 +1,89 @@
+status: approved
+publish_status: published
+
+product_name: "FAG QJ219-N2-MPA Four-Point Contact Ball Bearing"
+short_name: "FAG QJ219-N2-MPA Bearing"
+slug: "fag-qj219-n2-mpa-four-point-contact-ball-bearing"
+
+brand: "FAG"
+model: "QJ219-N2-MPA"
+part_number: "QJ219-N2-MPA"
+part_type: "four_point_contact_ball_bearing"
+condition: "New product; final supply condition and traceability documents to be confirmed with the quotation"
+compatibility_status: "complete_suffix_clearance_and_arrangement_confirmation_required"
+image_content_editing: "manual_only"
+category: "industrial-bearings"
+categories:
+  - "electrical-mechanical-parts"
+  - "factory-spare-parts"
+  - "mro-supplies"
+
+confirmed_specs:
+  - label: "Brand"
+    value: "FAG / Schaeffler"
+    source: "image_confirmed"
+  - label: "Model"
+    value: "QJ219-N2-MPA"
+    source: "image_confirmed"
+  - label: "Bearing Type"
+    value: "Four-point contact ball bearing"
+    source: "manufacturer_reference"
+  - label: "Bore Diameter"
+    value: "95 mm"
+    source: "manufacturer_reference"
+  - label: "Outside Diameter"
+    value: "170 mm"
+    source: "manufacturer_reference"
+  - label: "Width"
+    value: "32 mm"
+    source: "manufacturer_reference"
+  - label: "Dynamic Load Rating"
+    value: "190 kN"
+    source: "manufacturer_reference"
+  - label: "Static Load Rating"
+    value: "212 kN"
+    source: "manufacturer_reference"
+  - label: "Cage / Outer Ring"
+    value: "Machined brass cage; two locating slots"
+    source: "manufacturer_suffix_reference"
+
+unconfirmed_fields:
+  - "Required radial clearance and precision class"
+  - "Bidirectional axial load and radial load conditions"
+  - "Speed, lubrication and operating temperature"
+  - "Current manufacturer traceability documents"
+  - "Stock status, lead time and warranty"
+
+questions_for_user:
+  - "Confirm the full QJ219-N2-MPA suffix and 95 x 170 x 32 mm dimensions."
+  - "Provide load direction, speed, clearance, lubrication, quantity and destination."
+
+images:
+  originals:
+    - "微信图片_20260827124011_394_4.jpg"
+  generated:
+    main: "/images/products/general-products/fag-qj219-n2-mpa-four-point-contact-ball-bearing/fag-qj219-n2-mpa-four-point-contact-ball-bearing-main.webp"
+    thumbnail: "/images/products/general-products/fag-qj219-n2-mpa-four-point-contact-ball-bearing/fag-qj219-n2-mpa-four-point-contact-ball-bearing-thumbnail.webp"
+
+seo:
+  title: "FAG QJ219-N2-MPA Four-Point Bearing | MAVORIX"
+  meta_description: "Source FAG QJ219-N2-MPA four-point contact ball bearing, 95 x 170 x 32 mm, with N2 locating slots and machined brass cage."
+  primary_keyword: "FAG QJ219-N2-MPA four-point contact bearing"
+  secondary_keywords:
+    - "QJ219-N2-MPA bearing"
+    - "FAG QJ219 bearing"
+    - "95x170x32 four point bearing"
+    - "Schaeffler four-point contact bearing"
+    - "industrial bearing sourcing China"
+  long_tail_keywords:
+    - "source FAG QJ219-N2-MPA bearing from China"
+    - "QJ219-N2-MPA 95 x 170 x 32 mm supplier"
+    - "four-point contact bearing with brass cage"
+    - "FAG QJ219-N2-MPA replacement sourcing"
+
+publication:
+  route: "/en/products/industrial-bearings/fag-qj219-n2-mpa-four-point-contact-ball-bearing/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

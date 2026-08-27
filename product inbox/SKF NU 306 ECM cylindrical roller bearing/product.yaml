@@ -1,0 +1,86 @@
+status: approved
+publish_status: published
+
+product_name: "SKF NU 306 ECM Single-Row Cylindrical Roller Bearing"
+short_name: "SKF NU 306 ECM Bearing"
+slug: "skf-nu-306-ecm-cylindrical-roller-bearing"
+
+brand: "SKF"
+model: "NU 306 ECM"
+part_number: "NU 306 ECM"
+part_type: "single_row_cylindrical_roller_bearing"
+condition: "New product; final supply condition and traceability documents to be confirmed with the quotation"
+compatibility_status: "complete_suffix_load_and_axial_displacement_confirmation_required"
+image_content_editing: "manual_only"
+category: "industrial-bearings"
+categories:
+  - "electrical-mechanical-parts"
+  - "factory-spare-parts"
+  - "mro-supplies"
+
+confirmed_specs:
+  - label: "Brand"
+    value: "SKF"
+    source: "image_confirmed"
+  - label: "Model"
+    value: "NU 306 ECM"
+    source: "image_confirmed"
+  - label: "Bearing Type"
+    value: "Single-row cylindrical roller bearing, NU design"
+    source: "catalog_reference"
+  - label: "Bore Diameter"
+    value: "30 mm"
+    source: "catalog_reference"
+  - label: "Outside Diameter"
+    value: "72 mm"
+    source: "catalog_reference"
+  - label: "Width"
+    value: "19 mm"
+    source: "catalog_reference"
+  - label: "Dynamic Load Rating"
+    value: "58.5 kN"
+    source: "catalog_reference"
+  - label: "Cage"
+    value: "Machined brass cage"
+    source: "model_suffix_reference"
+
+unconfirmed_fields:
+  - "Required radial clearance and precision class"
+  - "Axial displacement requirement in the actual arrangement"
+  - "Radial load, speed, lubrication and operating temperature"
+  - "Current manufacturer traceability documents"
+  - "Stock status, lead time and warranty"
+
+questions_for_user:
+  - "Confirm the complete NU 306 ECM suffix and 30 x 72 x 19 mm dimensions."
+  - "Provide load, speed, clearance, lubrication, quantity and destination."
+
+images:
+  originals:
+    - "微信图片_20260827124036_396_4.jpg"
+  generated:
+    main: "/images/products/general-products/skf-nu-306-ecm-cylindrical-roller-bearing/skf-nu-306-ecm-cylindrical-roller-bearing-main.webp"
+    thumbnail: "/images/products/general-products/skf-nu-306-ecm-cylindrical-roller-bearing/skf-nu-306-ecm-cylindrical-roller-bearing-thumbnail.webp"
+
+seo:
+  title: "SKF NU 306 ECM Cylindrical Roller Bearing | MAVORIX"
+  meta_description: "Source SKF NU 306 ECM single-row cylindrical roller bearing, 30 x 72 x 19 mm, for high radial-load machinery and MRO replacement."
+  primary_keyword: "SKF NU 306 ECM cylindrical roller bearing"
+  secondary_keywords:
+    - "NU 306 ECM bearing"
+    - "SKF NU306 ECM"
+    - "30x72x19 cylindrical roller bearing"
+    - "NU design roller bearing"
+    - "industrial bearing sourcing China"
+  long_tail_keywords:
+    - "source SKF NU 306 ECM bearing from China"
+    - "SKF NU 306 ECM 30 x 72 x 19 mm supplier"
+    - "single row cylindrical roller bearing replacement"
+    - "NU 306 ECM machined brass cage bearing"
+
+publication:
+  route: "/en/products/industrial-bearings/skf-nu-306-ecm-cylindrical-roller-bearing/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true
