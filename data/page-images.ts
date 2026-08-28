@@ -244,6 +244,12 @@ export const blogImages: Record<string, PageImage> = {
     width: 1600,
     height: 900
   },
+  "how-to-source-industrial-bearings-from-china": {
+    src: "/images/products/general-products/skf-51226-single-direction-thrust-ball-bearing/skf-51226-single-direction-thrust-ball-bearing-gallery-02.webp",
+    alt: "Industrial thrust ball bearing with separable washers and ball cage assembly during model verification",
+    width: 1280,
+    height: 854
+  },
   "industrial-spare-parts-sourcing-for-balkan-eastern-european-manufacturers": {
     src: "/images/service-mro-sourcing.webp",
     alt: "MRO and industrial spare parts sourcing support for Balkan and Eastern European manufacturers",

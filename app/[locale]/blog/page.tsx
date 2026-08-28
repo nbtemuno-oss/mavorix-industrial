@@ -116,6 +116,7 @@ const blogGroups = [
     title: "Factory Spare Parts",
     description: "Guides for buyers identifying, sourcing, checking, and consolidating factory spare parts from Chinese suppliers.",
     slugs: [
+      "how-to-source-industrial-bearings-from-china",
       "factory-spare-parts-sourcing-from-china",
       "identify-industrial-spare-parts-without-part-number",
       "source-obsolete-discontinued-industrial-spare-parts",
