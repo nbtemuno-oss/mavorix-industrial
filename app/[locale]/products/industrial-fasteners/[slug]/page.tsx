@@ -239,13 +239,11 @@ export default async function CustomColdHeadedScrewsPage({ params }: { params: P
             <div className="grid gap-6 lg:grid-cols-2">
               <YouTubeProcessVideo
                 title="Cold Heading"
-                term="Cold heading /koʊld ˈhedɪŋ/"
                 description="Wire is cut and plastically formed between dies to create the screw blank, head and drive recess."
                 videoId="G7e-LxAIZEY"
               />
               <YouTubeProcessVideo
                 title="Thread Rolling"
-                term="Thread rolling /θred ˈroʊlɪŋ/"
                 description="The headed blank passes between rolling dies that form the external thread without cutting it away."
                 videoId="Yfrm8ASrlM4"
               />
@@ -336,8 +334,8 @@ function FeatureGrid({ items, muted = false }: { items: string[]; muted?: boolea
   return <ul className="grid gap-3 md:grid-cols-2">{items.map((item) => <li key={item} className={`${muted ? "bg-slate-50 ring-1 ring-slate-200" : "border border-slate-200 bg-white"} rounded-md p-4 text-sm font-semibold text-slate-700`}>{item}</li>)}</ul>;
 }
 
-function YouTubeProcessVideo({ title, term, description, videoId }: { title: string; term: string; description: string; videoId: string }) {
-  return <figure className="overflow-hidden rounded-lg border border-slate-200 bg-white"><iframe src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0`} title={`${title} screw manufacturing process video`} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" className="aspect-[9/16] max-h-[680px] w-full border-0 bg-black" /><figcaption className="space-y-2 p-5"><h3 className="text-xl font-black text-navy">{title}</h3><p className="font-bold text-signal">{term}</p><p className="text-sm leading-7 text-slate-600">{description}</p></figcaption></figure>;
+function YouTubeProcessVideo({ title, description, videoId }: { title: string; description: string; videoId: string }) {
+  return <figure className="overflow-hidden rounded-lg border border-slate-200 bg-white"><iframe src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0`} title={`${title} screw manufacturing process video`} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" className="aspect-[9/16] max-h-[680px] w-full border-0 bg-black" /><figcaption className="space-y-2 p-5"><h3 className="text-xl font-black text-navy">{title}</h3><p className="text-sm leading-7 text-slate-600">{description}</p></figcaption></figure>;
 }
 
 function LinkText({ href, children }: { href: string; children: React.ReactNode }) {
