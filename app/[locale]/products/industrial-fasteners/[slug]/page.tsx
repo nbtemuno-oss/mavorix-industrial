@@ -240,12 +240,12 @@ export default async function CustomColdHeadedScrewsPage({ params }: { params: P
               <YouTubeProcessVideo
                 title="Cold Heading"
                 description="Wire is cut and plastically formed between dies to create the screw blank, head and drive recess."
-                videoId="G7e-LxAIZEY"
+                videoId="2cxHB3XMcAI"
               />
               <YouTubeProcessVideo
                 title="Thread Rolling"
                 description="The headed blank passes between rolling dies that form the external thread without cutting it away."
-                videoId="Yfrm8ASrlM4"
+                videoId="ntVPU5rLde4"
               />
             </div>
           </Section>
