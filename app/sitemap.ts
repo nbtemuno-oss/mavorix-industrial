@@ -89,6 +89,14 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/heat cleaning furnance/product.yaml"
     ];
   }
+  if (path.startsWith("products/industrial-fasteners/")) {
+    return [
+      ...common,
+      "app/[locale]/products/industrial-fasteners/[slug]/page.tsx",
+      "data/products.ts",
+      "product inbox/custom cold-headed screws and fasteners/product.yaml"
+    ];
+  }
   if (path.startsWith("products/industrial-bearings/")) {
     return [
       ...common,

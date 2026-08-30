@@ -1,0 +1,109 @@
+status: approved
+publish_status: published
+
+product_name: "Custom Cold-Headed Screws and Fasteners"
+short_name: "Custom Cold-Headed Screws"
+slug: "custom-cold-headed-screws-and-fasteners"
+
+part_type: custom_cold_headed_screw_sourcing_capability
+equipment_category: industrial_fasteners
+compatibility_status: drawing_specific
+
+confirmed_specs:
+  - label: Page Type
+    value: "Custom screw and fastener sourcing capability"
+    source: user_provided
+  - label: Forming Process
+    value: "Cold heading followed by thread rolling"
+    source: visual_evidence
+  - label: Sourcing Basis
+    value: "Customer drawing, standard, physical sample or application requirement"
+    source: user_provided
+  - label: MAVORIX Role
+    value: "China-side sourcing and supplier coordination partner"
+    source: project_policy
+
+unconfirmed_fields:
+  - field: material
+    status: manual_confirmation_required
+    note: "Carbon steel, alloy steel and stainless steel options must be confirmed for each RFQ; the photographed material is not identified."
+  - field: dimensions
+    status: manual_confirmation_required
+    note: "Diameter, length, pitch, head dimensions and tolerances require a controlled drawing or standard."
+  - field: screw_type
+    status: manual_confirmation_required
+    note: "Machine-screw, self-tapping and thread-forming requirements must be defined in the RFQ."
+  - field: mechanical_properties
+    status: manual_confirmation_required
+    note: "Strength class, hardness, heat treatment and testing are quotation-specific."
+  - field: surface_finish
+    status: manual_confirmation_required
+    note: "Plating, passivation, coating and cosmetic requirements must be specified by the buyer."
+  - field: minimum_order_quantity
+    status: quotation_specific
+    note: "Minimum practical quantity depends on tooling, wire, forming sequence, finishing and inspection scope."
+
+internal_notes:
+  - "This is a sourcing capability page, not a fixed-SKU product page."
+  - "Do not identify the photographed material as stainless steel or carbon steel without documentary confirmation."
+  - "Do not infer dimensions, thread standard, strength class, coating or production capacity from the images."
+  - "MAVORIX must be described as a sourcing and supplier coordination partner, not the screw manufacturer."
+
+questions_for_user: []
+
+images:
+  featured:
+    source: "IMG20260825090213_副本.jpg"
+    output: "custom-cold-headed-screws-and-fasteners-finished-batch-main.webp"
+    alt: "Batch of cross-recessed screws after thread rolling in a fastener production workshop"
+  gallery:
+    - source: "IMG20260825085627_副本.jpg"
+      output: "custom-cold-headed-screw-blanks-gallery-02.webp"
+      alt: "Cross-recessed screw blanks collected after the cold-heading operation"
+    - source: "IMG20260825085810_副本.jpg"
+      output: "screw-cold-heading-machine-gallery-03.webp"
+      alt: "Cold-heading machine forming screw blanks from metal wire"
+    - source: "IMG20260825085826_副本.jpg"
+      output: "fastener-wire-feed-gallery-04.webp"
+      alt: "Coiled metal wire feeding a screw cold-heading production line"
+    - source: "IMG20260825085952_副本.jpg"
+      output: "cold-headed-cross-recessed-screw-blanks-gallery-05.webp"
+      alt: "Cold-headed cross-recessed screw blanks before thread rolling"
+
+image_content_editing: manual_only
+manual_image_review_required: false
+
+category:
+  - Custom Screws
+  - Cold-Headed Fasteners
+  - Drawing-Based Metal Parts
+
+seo:
+  title: "Custom Cold-Headed Screws & Fasteners | MAVORIX"
+  meta_description: "Source custom cold-headed screws and fasteners from China to drawings, standards or samples. MAVORIX coordinates supplier review, samples, thread rolling, inspection and export supply."
+  primary_keyword: "custom cold headed screws"
+  secondary_keywords:
+    - "custom screw manufacturer China"
+    - "custom fastener supplier China"
+    - "cold formed screws"
+    - "thread rolled screws"
+    - "OEM screws from drawings"
+    - "custom stainless steel screws"
+    - "custom carbon steel screws"
+    - "special fasteners China"
+  long_tail_keywords:
+    - "custom cold headed screws made to drawing"
+    - "custom screw and fastener sourcing from China"
+    - "cold heading and thread rolling screw supplier"
+    - "OEM stainless steel screws made to print"
+    - "custom carbon steel fasteners from sample"
+    - "China supplier for non standard screws"
+    - "custom head and drive screws manufacturer China"
+    - "bulk custom screws for industrial assembly"
+
+publication:
+  route: "/en/products/industrial-fasteners/custom-cold-headed-screws-and-fasteners/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

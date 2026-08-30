@@ -10,6 +10,17 @@ export type PublishedProduct = {
 
 export const publishedProducts: PublishedProduct[] = [
   {
+    slug: "custom-cold-headed-screws-and-fasteners",
+    title: "Custom Cold-Headed Screws and Fasteners",
+    description:
+      "Drawing- and sample-based sourcing for custom cold-headed screws with controlled head, drive, thread, material, finish and inspection requirements.",
+    path: "/en/products/industrial-fasteners/custom-cold-headed-screws-and-fasteners/",
+    image:
+      "/images/products/general-products/custom-cold-headed-screws-and-fasteners/custom-cold-headed-screws-and-fasteners-thumbnail.webp",
+    imageAlt: "Batch of cross-recessed screws after cold heading and thread rolling",
+    categorySlugs: ["metal-parts"]
+  },
+  {
     slug: "copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor",
     title: "Copeland CRNQ-050E-TFD-556 Hermetic Reciprocating Compressor",
     description:

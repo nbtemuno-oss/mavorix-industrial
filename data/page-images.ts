@@ -280,6 +280,12 @@ export const blogImages: Record<string, PageImage> = {
     width: 1400,
     height: 1050
   },
+  "how-screws-are-made-cold-heading-thread-rolling": {
+    src: "/images/products/general-products/custom-cold-headed-screws-and-fasteners/custom-cold-headed-screws-and-fasteners-finished-batch-main.webp",
+    alt: "Finished cross-recessed screws after cold heading and thread rolling",
+    width: 1200,
+    height: 1000
+  },
   "rexroth-dbds6p1x-315-pressure-relief-valve-sourcing": {
     src: "/images/blog/rexroth-dbds6p1x-315-pressure-relief-valve-sourcing/rexroth-dbds6p1x-315-pressure-relief-valves-packed.webp",
     alt: "Full carton of Rexroth DBDS6P1X/315 pressure relief valves purchased for a customer and packed for shipment",
