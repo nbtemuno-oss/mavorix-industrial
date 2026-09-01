@@ -12,6 +12,7 @@ import { site } from "@/data/site";
 import { breadcrumbSchema, faqSchema, JsonLd } from "@/lib/schema";
 
 type BearingProduct = {
+  localOnly?: boolean;
   slug: string;
   title: string;
   seoTitle: string;
@@ -31,8 +32,6 @@ type BearingProduct = {
   ordering: string[];
   faqs: { q: string; a: string }[];
 };
-
-const isPublished = true;
 
 const products: BearingProduct[] = [
   {
@@ -170,20 +169,179 @@ const products: BearingProduct[] = [
   }
 ];
 
+type LocalBearingInput = Pick<BearingProduct, "slug" | "title" | "seoTitle" | "description" | "badge" | "brand" | "model" | "category"> & {
+  designationNote: string;
+  applications: string[];
+  features: string[];
+  selection: string;
+};
+
+function localBearingProduct(input: LocalBearingInput): BearingProduct {
+  const imageBase = `/images/products/general-products/${input.slug}/${input.slug}-main.webp`;
+  return {
+    localOnly: false,
+    ...input,
+    summary: `${input.title} is identified by its complete designation. For replacement work, use the full marking rather than the basic bearing number alone, then confirm the machine arrangement and operating conditions before purchase.`,
+    images: [{ src: imageBase, alt: `${input.title} with complete model marking`, label: `${input.model} bearing and model marking` }],
+    summarySpecs: [["Brand", input.brand], ["Complete designation", input.model], ["Bearing design", input.badge], ["Selection basis", "Complete designation and application check"]],
+    confirmedSpecs: [["Brand marking", input.brand], ["Complete designation", input.model], ["Bearing design", input.category], ["Visible product reference", "Complete model marking"], ["Technical selection", "Confirm against current manufacturer data and machine requirements"]],
+    overview: [
+      input.designationNote,
+      "Bearing replacement is more than matching the bore, outside diameter and width. Internal clearance, cage design, sealing, pairing, fits, lubrication, load direction and speed can all affect whether a similar-looking bearing is suitable in service.",
+      "MAVORIX can coordinate exact-model sourcing, supplier comparison and document requests in China. Final bearing approval should remain with the buyer's engineer or qualified maintenance team."
+    ],
+    features: input.features,
+    applications: input.applications,
+    selection: [input.selection, "Confirm the complete suffix, old bearing marking, machine position, dimensions, load, speed, temperature, lubrication and mounting arrangement before releasing an order."],
+    ordering: [`Complete designation: ${input.model}`, "Clear photos of the old bearing and package labels", "Machine brand, model and bearing position", "Bore, outside diameter and width confirmation", "Load direction, speed and operating temperature", "Lubrication and sealing requirement", "Quantity and destination"],
+    faqs: [
+      { q: `What should be supplied when requesting ${input.model}?`, a: `Send the complete ${input.model} marking, old bearing photos, machine position, dimensions, duty conditions, quantity and destination.` },
+      { q: `Can another bearing with a similar base number replace ${input.model}?`, a: "Not automatically. Full suffixes can identify a different internal design, clearance, accuracy, seal, cage or arrangement. Confirm interchangeability before purchase." },
+      { q: "Can MAVORIX help verify a replacement bearing?", a: "Yes. We can coordinate supplier comparison using the complete designation, buyer-provided measurements and available technical documents. Final technical approval remains with the buyer." }
+    ]
+  };
+}
+
+const localProducts: BearingProduct[] = [
+  localBearingProduct({
+    slug: "nsk-3304btng-yrln5-double-row-angular-contact-ball-bearing",
+    title: "NSK 3304BTNG YRLN5 Double-Row Angular Contact Ball Bearing",
+    seoTitle: "NSK 3304BTNG YRLN5 Bearing | MAVORIX",
+    description: "Source NSK 3304BTNG YRLN5 double-row angular contact ball bearing by complete designation for industrial replacement and MRO requirements.",
+    badge: "Double-Row Angular Contact Ball Bearing", brand: "NSK", model: "3304BTNG YRLN5", category: "Double-row angular contact ball bearing",
+    designationNote: "NSK 3304BTNG YRLN5 is a double-row angular contact ball-bearing designation. This design is typically selected where combined radial and axial loads must be handled in a compact bearing position.",
+    features: ["Double-row angular contact design", "Complete NSK 3304BTNG YRLN5 designation", "Combined-load bearing category", "Exact-model MRO sourcing"],
+    applications: ["Industrial gear drives", "Pumps and compressors", "Conveying equipment", "General machinery maintenance"],
+    selection: "Check the complete YRLN5 suffix and the axial-load arrangement. A double-row angular contact bearing is not automatically interchangeable with two separate single-row bearings."
+  }),
+  localBearingProduct({
+    slug: "skf-6211-2z-va965-high-temperature-deep-groove-ball-bearing",
+    title: "SKF 6211-2Z/VA965 High-Temperature Deep Groove Ball Bearing",
+    seoTitle: "SKF 6211-2Z/VA965 High Temperature Bearing | MAVORIX",
+    description: "Source SKF 6211-2Z/VA965 high-temperature deep groove ball bearing by complete suffix for industrial heat-process and MRO replacement requirements.",
+    badge: "High-Temperature Deep Groove Ball Bearing", brand: "SKF", model: "6211-2Z/VA965", category: "High-temperature deep groove ball bearing",
+    designationNote: "SKF 6211-2Z/VA965 is a deep groove ball bearing marked with a high-temperature suffix. The complete designation matters because high-temperature bearing variants can differ from standard 6211 configurations in lubricant, internal design and operating limitations.",
+    features: ["Deep groove ball-bearing design", "SKF 6211-2Z/VA965 complete designation", "High-temperature variant", "Exact-suffix replacement approach"],
+    applications: ["Ovens and heat-treatment auxiliaries", "Drying and conveying equipment", "Industrial fans", "Heat-process machinery maintenance"],
+    selection: "Do not substitute a standard 6211-2Z for the VA965 version without reviewing temperature, speed, lubricant and service-life requirements."
+  }),
+  localBearingProduct({
+    slug: "nsk-6206zzcm-ns7s-deep-groove-ball-bearing",
+    title: "NSK 6206ZZCM NS7S Deep Groove Ball Bearing",
+    seoTitle: "NSK 6206ZZCM NS7S Bearing | MAVORIX",
+    description: "Source NSK 6206ZZCM NS7S deep groove ball bearing by complete designation for industrial machinery replacement and mixed MRO bearing lists.",
+    badge: "Deep Groove Ball Bearing", brand: "NSK", model: "6206ZZCM NS7S", category: "Deep groove ball bearing",
+    designationNote: "NSK 6206ZZCM NS7S is a deep groove ball-bearing designation. Its compact, general-purpose bearing design is used in many rotating machines, but the complete suffix must be retained when replacing an installed unit.",
+    features: ["Single-row deep groove design", "NSK 6206ZZCM NS7S complete designation", "Radial-load bearing category", "MRO list consolidation support"],
+    applications: ["Electric motors", "Pumps", "Fans and blowers", "General industrial machinery"],
+    selection: "Check the closure, internal clearance, lubrication and mounting fits rather than ordering from the 6206 base number alone."
+  }),
+  localBearingProduct({
+    slug: "nsk-22212eae4c3-spherical-roller-bearing",
+    title: "NSK 22212EAE4C3 Spherical Roller Bearing",
+    seoTitle: "NSK 22212EAE4C3 Spherical Roller Bearing | MAVORIX",
+    description: "Source NSK 22212EAE4C3 spherical roller bearing, 60 x 110 x 28 mm, with C3 internal clearance for industrial machinery replacement.",
+    badge: "Spherical Roller Bearing", brand: "NSK", model: "22212EAE4C3", category: "Spherical roller bearing",
+    designationNote: "NSK 22212EAE4C3 is a spherical roller bearing with 60 mm bore, 110 mm outside diameter and 28 mm width. The C3 suffix identifies a greater-than-normal radial internal clearance, which must suit the actual shaft fit, temperature and duty.",
+    features: ["Spherical roller design", "60 x 110 x 28 mm principal dimensions", "C3 radial internal clearance", "Suitable for misalignment-tolerant bearing arrangements"],
+    applications: ["Gearboxes", "Conveyors", "Industrial fans", "Process equipment and heavy-duty machinery"],
+    selection: "Confirm that C3 clearance is required. Clearance changes after fitting and at operating temperature, so a standard-clearance version is not an automatic replacement."
+  }),
+  localBearingProduct({
+    slug: "nsk-7026ctynsulp4-precision-angular-contact-ball-bearing",
+    title: "NSK 7026CTYNSULP4 Precision Angular Contact Ball Bearing",
+    seoTitle: "NSK 7026CTYNSULP4 Precision Bearing | MAVORIX",
+    description: "Source NSK 7026CTYNSULP4 precision angular contact ball bearing by complete designation for machine-tool and precision equipment replacement.",
+    badge: "Precision Angular Contact Ball Bearing", brand: "NSK", model: "7026CTYNSULP4", category: "Precision angular contact ball bearing",
+    designationNote: "NSK 7026CTYNSULP4 is a precision angular contact ball-bearing designation. Precision class, mounting arrangement and the full suffix are central to replacement selection in spindle and accuracy-sensitive machinery.",
+    features: ["Precision angular contact bearing category", "NSK 7026CTYNSULP4 complete designation", "P4 precision class marking", "Suitable for controlled replacement sourcing"],
+    applications: ["Machine-tool spindle arrangements", "Precision grinding equipment", "High-accuracy rotary assemblies", "Specialized industrial machinery"],
+    selection: "Confirm contact angle, pairing or preload requirement, precision class, arrangement and lubricant before replacing a precision angular contact bearing."
+  }),
+  localBearingProduct({
+    slug: "crbs608auu-thin-section-crossed-roller-bearing",
+    title: "CRBS608AUU Thin-Section Crossed Roller Bearing",
+    seoTitle: "CRBS608AUU Crossed Roller Bearing | MAVORIX",
+    description: "Source CRBS608AUU thin-section crossed roller bearing by complete designation for compact rotary, automation and precision positioning assemblies.",
+    badge: "Thin-Section Crossed Roller Bearing", brand: "Brand marking not confirmed", model: "CRBS608AUU", category: "Thin-section crossed roller bearing",
+    designationNote: "CRBS608AUU is a thin-section crossed roller bearing designation. Crossed roller geometry is commonly selected where a compact bearing position needs controlled rotational support and stiffness under combined loading.",
+    features: ["Thin-section crossed roller category", "CRBS608AUU complete designation", "Compact rotary-bearing format", "Exact-model sourcing approach"],
+    applications: ["Robotics and automation", "Rotary tables", "Inspection and positioning equipment", "Compact precision assemblies"],
+    selection: "Confirm the complete marking, installation dimensions, fixing method, preload condition and permissible moment load before ordering."
+  }),
+  localBearingProduct({
+    slug: "nachi-7205cydb-gl-p5-duplex-angular-contact-ball-bearing",
+    title: "NACHI 7205CYDB/GL P5 Duplex Angular Contact Ball Bearing",
+    seoTitle: "NACHI 7205CYDB/GL P5 Duplex Bearing | MAVORIX",
+    description: "Source NACHI 7205CYDB/GL P5 duplex angular contact ball bearing by complete designation for precision paired-bearing arrangements.",
+    badge: "Duplex Angular Contact Ball Bearing", brand: "NACHI", model: "7205CYDB/GL P5", category: "Duplex angular contact ball bearing",
+    designationNote: "NACHI 7205CYDB/GL P5 is a duplex angular contact ball-bearing designation. The DB marking indicates a paired arrangement, while the P5 accuracy marking makes the complete designation especially important for a replacement request.",
+    features: ["Duplex angular contact bearing category", "DB paired-arrangement marking", "P5 accuracy-class marking", "NACHI 7205CYDB/GL complete designation"],
+    applications: ["Machine-tool spindles", "Precision pumps", "High-speed rotary equipment", "Paired-bearing replacement work"],
+    selection: "Do not replace a DB matched pair with unrelated single bearings. Check pair orientation, preload or clearance, contact angle and accuracy class."
+  }),
+  localBearingProduct({
+    slug: "skf-nnu-4948-bk-spw33-double-row-cylindrical-roller-bearing",
+    title: "SKF NNU 4948 BK/SPW33 Double-Row Cylindrical Roller Bearing",
+    seoTitle: "SKF NNU 4948 BK/SPW33 Cylindrical Roller Bearing | MAVORIX",
+    description: "Source SKF NNU 4948 BK/SPW33 double-row cylindrical roller bearing by complete designation for machine-tool and high-radial-load equipment replacement.",
+    badge: "Double-Row Cylindrical Roller Bearing", brand: "SKF", model: "NNU 4948 BK/SPW33", category: "Double-row cylindrical roller bearing",
+    designationNote: "SKF NNU 4948 BK/SPW33 is a double-row cylindrical roller bearing designation. This bearing class is commonly used where radial stiffness and accuracy matter, and its suffixes must be checked alongside the existing machine arrangement.",
+    features: ["Double-row cylindrical roller design", "SKF NNU 4948 BK/SPW33 complete designation", "High-radial-stiffness bearing category", "Precision machine replacement support"],
+    applications: ["Machine-tool spindles", "Grinding machinery", "Rolling and processing equipment", "High-radial-load rotating assemblies"],
+    selection: "Confirm bore style, internal design, accuracy, clearance or preload, lubrication and spindle mounting requirements before selecting a replacement."
+  }),
+  localBearingProduct({
+    slug: "skf-6206-rs1-deep-groove-ball-bearing",
+    title: "SKF 6206-RS1 Deep Groove Ball Bearing",
+    seoTitle: "SKF 6206-RS1 Deep Groove Ball Bearing | MAVORIX",
+    description: "Source SKF 6206-RS1 deep groove ball bearing by complete designation for electric motors, pumps and general industrial MRO replacement.",
+    badge: "Deep Groove Ball Bearing", brand: "SKF", model: "6206-RS1", category: "Deep groove ball bearing",
+    designationNote: "SKF 6206-RS1 is a deep groove ball-bearing designation with an RS1 sealing suffix. Seal configuration influences friction, lubricant retention and contamination protection, so it should be matched to the original application.",
+    features: ["Single-row deep groove design", "SKF 6206-RS1 complete designation", "RS1 seal suffix", "General-purpose rotating-equipment bearing category"],
+    applications: ["Electric motors", "Pumps", "Fans", "Conveyors and general industrial machinery"],
+    selection: "Confirm whether the machine requires the RS1 seal configuration, a different closure, a particular internal clearance or a specific grease before ordering."
+  }),
+  localBearingProduct({
+    slug: "ief-6040-2rs-deep-groove-ball-bearing",
+    title: "IEF 6040-2RS Deep Groove Ball Bearing",
+    seoTitle: "IEF 6040-2RS Deep Groove Ball Bearing | MAVORIX",
+    description: "Source IEF 6040-2RS deep groove ball bearing by complete designation for industrial machinery replacement and special bearing sourcing.",
+    badge: "Deep Groove Ball Bearing", brand: "IEF", model: "6040-2RS", category: "Deep groove ball bearing",
+    designationNote: "IEF 6040-2RS is a deep groove ball-bearing designation marked IEF. The 2RS suffix is part of the complete procurement reference and should be checked with the original bearing, dimensions and sealing requirement.",
+    features: ["Deep groove ball-bearing category", "IEF 6040-2RS complete designation", "2RS sealing suffix", "Exact-model replacement sourcing"],
+    applications: ["Industrial machinery maintenance", "Rotating equipment", "Special bearing replacement", "Mixed MRO orders"],
+    selection: "Use the full marking and measured interfaces for replacement. Do not assume dimensions, internal clearance or seal material from a similar-looking bearing."
+  }),
+  localBearingProduct({
+    slug: "skf-24034-cc-w33-spherical-roller-bearing",
+    title: "SKF 24034 CC/W33 Spherical Roller Bearing",
+    seoTitle: "SKF 24034 CC/W33 Spherical Roller Bearing | MAVORIX",
+    description: "Source SKF 24034 CC/W33 spherical roller bearing, 170 x 260 x 90 mm, with W33 lubrication groove and holes for heavy-duty machinery replacement.",
+    badge: "Spherical Roller Bearing", brand: "SKF", model: "24034 CC/W33", category: "Spherical roller bearing",
+    designationNote: "SKF 24034 CC/W33 is a spherical roller bearing with 170 mm bore, 260 mm outside diameter and 90 mm width. The W33 suffix identifies a lubrication groove and holes in the outer ring, making the complete configuration important in heavy-duty service.",
+    features: ["Spherical roller bearing design", "170 x 260 x 90 mm principal dimensions", "CC internal design marking", "W33 lubrication groove and holes"],
+    applications: ["Heavy-duty gearboxes", "Material-handling equipment", "Industrial fans", "Process and bulk-handling machinery"],
+    selection: "Confirm the cylindrical-bore configuration, W33 lubrication arrangement, internal clearance, fits, alignment condition and duty before ordering."
+  })
+];
+
+const allProducts = [...products, ...localProducts];
+
 export function generateStaticParams() {
-  return products.map((product) => ({ locale: "en", slug: product.slug }));
+  return allProducts.map((product) => ({ locale: "en", slug: product.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const product = products.find((item) => locale === "en" && item.slug === slug);
+  const product = allProducts.find((item) => locale === "en" && item.slug === slug);
   if (!product) return {};
   const path = `/en/products/industrial-bearings/${product.slug}/`;
   return {
     title: product.seoTitle,
     description: product.description,
     alternates: { canonical: `${site.url}${path}` },
-    robots: { index: isPublished, follow: isPublished, googleBot: { index: isPublished, follow: isPublished } },
+    robots: { index: !product.localOnly, follow: !product.localOnly, googleBot: { index: !product.localOnly, follow: !product.localOnly } },
     openGraph: { title: product.title, description: product.description, url: `${site.url}${path}`, siteName: site.name, locale: "en", type: "website", images: [{ url: product.images[0].src, alt: product.images[0].alt }] },
     twitter: { card: "summary_large_image", title: product.title, description: product.description, images: [product.images[0].src] }
   };
@@ -191,7 +349,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function IndustrialBearingPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
-  const product = products.find((item) => locale === "en" && item.slug === slug);
+  const product = allProducts.find((item) => locale === "en" && item.slug === slug);
   if (!product) notFound();
   const path = `/en/products/industrial-bearings/${product.slug}/`;
   const mailtoHref = `mailto:${site.email}?subject=${encodeURIComponent(`${product.model} bearing inquiry`)}`;

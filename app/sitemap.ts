@@ -107,7 +107,18 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/SKF NU 306 ECM cylindrical roller bearing/product.yaml",
       "product inbox/IEF BCB-3572-2R-SU-CP precision bearing set/product.yaml",
       "product inbox/FAG QJ219-N2-MPA four-point contact bearing/product.yaml",
-      "product inbox/SKF 6004-2Z deep groove ball bearing/product.yaml"
+      "product inbox/SKF 6004-2Z deep groove ball bearing/product.yaml",
+      "product inbox/NSK 3304BTNG YRLN5 double-row angular contact bearing/product.yaml",
+      "product inbox/SKF 6211-2Z VA965 high-temperature deep groove ball bearing/product.yaml",
+      "product inbox/NSK 6206ZZCM NS7S deep groove ball bearing/product.yaml",
+      "product inbox/NSK 22212EAE4C3 spherical roller bearing/product.yaml",
+      "product inbox/NSK 7026CTYNSULP4 precision angular contact ball bearing/product.yaml",
+      "product inbox/CRBS608AUU thin-section crossed roller bearing/product.yaml",
+      "product inbox/NACHI 7205CYDB GL P5 duplex angular contact bearing/product.yaml",
+      "product inbox/SKF NNU 4948 BK SPW33 double-row cylindrical roller bearing/product.yaml",
+      "product inbox/SKF 6206-RS1 deep groove ball bearing/product.yaml",
+      "product inbox/IEF 6040-2RS deep groove ball bearing/product.yaml",
+      "product inbox/SKF 24034 CC W33 spherical roller bearing/product.yaml"
     ];
   }
   if (path.startsWith("products/metalworking-equipment/")) {

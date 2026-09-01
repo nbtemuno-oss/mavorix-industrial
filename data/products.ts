@@ -304,5 +304,104 @@ export const publishedProducts: PublishedProduct[] = [
       "/images/products/general-products/skf-6004-2z-shielded-deep-groove-ball-bearing/skf-6004-2z-shielded-deep-groove-ball-bearing-thumbnail.webp",
     imageAlt: "SKF Explorer 6004-2Z deep groove ball bearing boxes with complete designation labels",
     categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "nsk-3304btng-yrln5-double-row-angular-contact-ball-bearing",
+    title: "NSK 3304BTNG YRLN5 Double-Row Angular Contact Ball Bearing",
+    description: "NSK 3304BTNG YRLN5 double-row angular contact ball bearing for exact-model industrial replacement sourcing.",
+    path: "/en/products/industrial-bearings/nsk-3304btng-yrln5-double-row-angular-contact-ball-bearing/",
+    image: "/images/products/general-products/nsk-3304btng-yrln5-double-row-angular-contact-ball-bearing/nsk-3304btng-yrln5-double-row-angular-contact-ball-bearing-thumbnail.webp",
+    imageAlt: "NSK 3304BTNG YRLN5 double-row angular contact ball bearing packages",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "skf-6211-2z-va965-high-temperature-deep-groove-ball-bearing",
+    title: "SKF 6211-2Z/VA965 High-Temperature Deep Groove Ball Bearing",
+    description: "SKF 6211-2Z/VA965 high-temperature deep groove ball bearing for heat-process machinery and MRO replacement sourcing.",
+    path: "/en/products/industrial-bearings/skf-6211-2z-va965-high-temperature-deep-groove-ball-bearing/",
+    image: "/images/products/general-products/skf-6211-2z-va965-high-temperature-deep-groove-ball-bearing/skf-6211-2z-va965-high-temperature-deep-groove-ball-bearing-thumbnail.webp",
+    imageAlt: "SKF 6211-2Z VA965 high-temperature deep groove ball bearings",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "nsk-6206zzcm-ns7s-deep-groove-ball-bearing",
+    title: "NSK 6206ZZCM NS7S Deep Groove Ball Bearing",
+    description: "NSK 6206ZZCM NS7S deep groove ball bearing for industrial machinery replacement and MRO bearing-list sourcing.",
+    path: "/en/products/industrial-bearings/nsk-6206zzcm-ns7s-deep-groove-ball-bearing/",
+    image: "/images/products/general-products/nsk-6206zzcm-ns7s-deep-groove-ball-bearing/nsk-6206zzcm-ns7s-deep-groove-ball-bearing-thumbnail.webp",
+    imageAlt: "NSK 6206ZZCM NS7S deep groove ball bearings",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "nsk-22212eae4c3-spherical-roller-bearing",
+    title: "NSK 22212EAE4C3 Spherical Roller Bearing",
+    description: "NSK 22212EAE4C3 spherical roller bearing, 60 x 110 x 28 mm, for industrial machinery replacement sourcing.",
+    path: "/en/products/industrial-bearings/nsk-22212eae4c3-spherical-roller-bearing/",
+    image: "/images/products/general-products/nsk-22212eae4c3-spherical-roller-bearing/nsk-22212eae4c3-spherical-roller-bearing-thumbnail.webp",
+    imageAlt: "NSK 22212EAE4C3 spherical roller bearing and model-labelled boxes",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "nsk-7026ctynsulp4-precision-angular-contact-ball-bearing",
+    title: "NSK 7026CTYNSULP4 Precision Angular Contact Ball Bearing",
+    description: "NSK 7026CTYNSULP4 precision angular contact ball bearing for machine-tool and precision-equipment sourcing.",
+    path: "/en/products/industrial-bearings/nsk-7026ctynsulp4-precision-angular-contact-ball-bearing/",
+    image: "/images/products/general-products/nsk-7026ctynsulp4-precision-angular-contact-ball-bearing/nsk-7026ctynsulp4-precision-angular-contact-ball-bearing-thumbnail.webp",
+    imageAlt: "NSK 7026CTYNSULP4 precision angular contact ball bearing",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "crbs608auu-thin-section-crossed-roller-bearing",
+    title: "CRBS608AUU Thin-Section Crossed Roller Bearing",
+    description: "CRBS608AUU thin-section crossed roller bearing for compact rotary, automation and precision positioning applications.",
+    path: "/en/products/industrial-bearings/crbs608auu-thin-section-crossed-roller-bearing/",
+    image: "/images/products/general-products/crbs608auu-thin-section-crossed-roller-bearing/crbs608auu-thin-section-crossed-roller-bearing-thumbnail.webp",
+    imageAlt: "CRBS608AUU thin-section crossed roller bearing with complete marking",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "nachi-7205cydb-gl-p5-duplex-angular-contact-ball-bearing",
+    title: "NACHI 7205CYDB/GL P5 Duplex Angular Contact Ball Bearing",
+    description: "NACHI 7205CYDB/GL P5 duplex angular contact ball bearing for precision paired-bearing replacement sourcing.",
+    path: "/en/products/industrial-bearings/nachi-7205cydb-gl-p5-duplex-angular-contact-ball-bearing/",
+    image: "/images/products/general-products/nachi-7205cydb-gl-p5-duplex-angular-contact-ball-bearing/nachi-7205cydb-gl-p5-duplex-angular-contact-ball-bearing-thumbnail.webp",
+    imageAlt: "NACHI 7205CYDB GL P5 duplex angular contact bearing",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "skf-nnu-4948-bk-spw33-double-row-cylindrical-roller-bearing",
+    title: "SKF NNU 4948 BK/SPW33 Double-Row Cylindrical Roller Bearing",
+    description: "SKF NNU 4948 BK/SPW33 double-row cylindrical roller bearing for machine-tool and high-radial-load replacement sourcing.",
+    path: "/en/products/industrial-bearings/skf-nnu-4948-bk-spw33-double-row-cylindrical-roller-bearing/",
+    image: "/images/products/general-products/skf-nnu-4948-bk-spw33-double-row-cylindrical-roller-bearing/skf-nnu-4948-bk-spw33-double-row-cylindrical-roller-bearing-thumbnail.webp",
+    imageAlt: "SKF NNU 4948 BK SPW33 double-row cylindrical roller bearing",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "skf-6206-rs1-deep-groove-ball-bearing",
+    title: "SKF 6206-RS1 Deep Groove Ball Bearing",
+    description: "SKF 6206-RS1 deep groove ball bearing for electric motors, pumps and general industrial MRO replacement sourcing.",
+    path: "/en/products/industrial-bearings/skf-6206-rs1-deep-groove-ball-bearing/",
+    image: "/images/products/general-products/skf-6206-rs1-deep-groove-ball-bearing/skf-6206-rs1-deep-groove-ball-bearing-thumbnail.webp",
+    imageAlt: "SKF 6206-RS1 deep groove ball bearing and packaging",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "ief-6040-2rs-deep-groove-ball-bearing",
+    title: "IEF 6040-2RS Deep Groove Ball Bearing",
+    description: "IEF 6040-2RS deep groove ball bearing for industrial machinery replacement and special bearing sourcing.",
+    path: "/en/products/industrial-bearings/ief-6040-2rs-deep-groove-ball-bearing/",
+    image: "/images/products/general-products/ief-6040-2rs-deep-groove-ball-bearing/ief-6040-2rs-deep-groove-ball-bearing-thumbnail.webp",
+    imageAlt: "IEF 6040-2RS deep groove ball bearing identification label",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
+  },
+  {
+    slug: "skf-24034-cc-w33-spherical-roller-bearing",
+    title: "SKF 24034 CC/W33 Spherical Roller Bearing",
+    description: "SKF 24034 CC/W33 spherical roller bearing, 170 x 260 x 90 mm, for heavy-duty machinery replacement sourcing.",
+    path: "/en/products/industrial-bearings/skf-24034-cc-w33-spherical-roller-bearing/",
+    image: "/images/products/general-products/skf-24034-cc-w33-spherical-roller-bearing/skf-24034-cc-w33-spherical-roller-bearing-thumbnail.webp",
+    imageAlt: "SKF 24034 CC W33 spherical roller bearing",
+    categorySlugs: ["electrical-mechanical-parts", "factory-spare-parts", "mro-supplies"]
   }
 ];
