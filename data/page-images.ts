@@ -286,6 +286,24 @@ export const blogImages: Record<string, PageImage> = {
     width: 1200,
     height: 1000
   },
+  "machinery-factory-acceptance-test-china-checklist": {
+    src: "/images/products/general-products/hjy-4gt-vertical-turret-milling-machine/hjy-4gt-vertical-turret-milling-machine-gallery-02.webp",
+    alt: "Vertical turret milling machine in a workshop for factory acceptance test planning",
+    width: 824,
+    height: 1064
+  },
+  "bearing-cross-reference-guide-skf-fag-nsk-ntn": {
+    src: "/images/products/general-products/skf-51226-single-direction-thrust-ball-bearing/skf-51226-single-direction-thrust-ball-bearing-gallery-02.webp",
+    alt: "Industrial thrust bearing components arranged for designation and cross-reference checking",
+    width: 1280,
+    height: 854
+  },
+  "custom-screw-rfq-checklist-drawings-materials-finishes": {
+    src: "/images/products/general-products/custom-cold-headed-screws-and-fasteners/custom-cold-headed-screws-and-fasteners-finished-batch-main.webp",
+    alt: "Finished custom screws prepared for drawing, thread, material and finish review",
+    width: 1200,
+    height: 1000
+  },
   "rexroth-dbds6p1x-315-pressure-relief-valve-sourcing": {
     src: "/images/blog/rexroth-dbds6p1x-315-pressure-relief-valve-sourcing/rexroth-dbds6p1x-315-pressure-relief-valves-packed.webp",
     alt: "Full carton of Rexroth DBDS6P1X/315 pressure relief valves purchased for a customer and packed for shipment",
