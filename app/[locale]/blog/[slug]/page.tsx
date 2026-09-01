@@ -62,6 +62,8 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   const isPeruCompressorCase = isCrnqPeruCase || isZr61kcPeruCase;
   const isCustomCuttingToolsGuide = post.slug === "how-to-source-custom-cutting-tools-from-china";
   const isCustomScrewsGuide = post.slug === "how-screws-are-made-cold-heading-thread-rolling";
+  const isMachineryFatGuide = post.slug === "machinery-factory-acceptance-test-china-checklist";
+  const isBearingCrossReferenceGuide = post.slug === "bearing-cross-reference-guide-skf-fag-nsk-ntn";
   const isSourcingCase = isRexrothCase || isCeramicMediaCase || isLedFloodLightCase || isHydraulicValveSourcingCase || isStrappingMachineCase || isCountersunkScrewCase || isAirCompressorCase || isPipeTaperingCase || isUsedInjectionMoldCase || isBearingArgentinaCase || isPeruCompressorCase || isVerticalMillingPolandCase || isPofFilmMiddleEastCase;
   const body = isSourcingCase ? post.body.replace(/\n## FAQ\n[\s\S]*$/, "") : post.body;
   const html = markdownToHtml(body);
@@ -93,9 +95,9 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
           <IndustrialImage
             src={image.src}
             alt={image.alt}
-            className={isHydraulicValveSourcingCase ? "mx-auto mb-8 aspect-[9/16] w-full max-w-[680px]" : isStrappingMachineCase ? "mx-auto mb-8 aspect-[3/4] w-full max-w-[680px]" : isCountersunkScrewCase ? "mx-auto mb-8 aspect-[459/538] w-full max-w-[720px]" : isAirCompressorCase ? "mx-auto mb-8 aspect-[403/544] w-full max-w-[720px]" : isPipeTaperingCase ? "mx-auto mb-8 aspect-[531/626] w-full max-w-[720px]" : isUsedInjectionMoldCase || isBearingArgentinaCase || isZr61kcPeruCase ? "mx-auto mb-8 aspect-[3/4] w-full max-w-[720px]" : isCrnqPeruCase ? "mx-auto mb-8 aspect-[40/47] w-full max-w-[720px]" : isVerticalMillingPolandCase ? "mx-auto mb-8 aspect-[435/623] w-full max-w-[720px]" : isPofFilmMiddleEastCase ? "mx-auto mb-8 aspect-[674/799] w-full max-w-[720px]" : isSourcingCase ? "mb-8 aspect-[16/9]" : "mb-8 min-h-[320px]"}
+            className={isHydraulicValveSourcingCase ? "mx-auto mb-8 aspect-[9/16] w-full max-w-[680px]" : isStrappingMachineCase ? "mx-auto mb-8 aspect-[3/4] w-full max-w-[680px]" : isCountersunkScrewCase ? "mx-auto mb-8 aspect-[459/538] w-full max-w-[720px]" : isAirCompressorCase ? "mx-auto mb-8 aspect-[403/544] w-full max-w-[720px]" : isPipeTaperingCase ? "mx-auto mb-8 aspect-[531/626] w-full max-w-[720px]" : isUsedInjectionMoldCase || isBearingArgentinaCase || isZr61kcPeruCase ? "mx-auto mb-8 aspect-[3/4] w-full max-w-[720px]" : isCrnqPeruCase ? "mx-auto mb-8 aspect-[40/47] w-full max-w-[720px]" : isVerticalMillingPolandCase ? "mx-auto mb-8 aspect-[435/623] w-full max-w-[720px]" : isPofFilmMiddleEastCase ? "mx-auto mb-8 aspect-[674/799] w-full max-w-[720px]" : isMachineryFatGuide ? "mx-auto mb-8 aspect-[824/1064] w-full max-w-[620px]" : isBearingCrossReferenceGuide ? "mx-auto mb-8 aspect-[1280/854] w-full max-w-[760px]" : isSourcingCase ? "mb-8 aspect-[16/9]" : "mb-8 min-h-[320px]"}
             sizes={isHydraulicValveSourcingCase || isStrappingMachineCase || isCountersunkScrewCase || isAirCompressorCase || isPipeTaperingCase || isUsedInjectionMoldCase || isBearingArgentinaCase || isPeruCompressorCase || isVerticalMillingPolandCase || isPofFilmMiddleEastCase ? "(min-width: 768px) 680px, 100vw" : isSourcingCase ? "(min-width: 1024px) 840px, 100vw" : "(min-width: 1024px) 760px, 100vw"}
-            fit={isSourcingCase ? "contain" : "cover"}
+            fit={isSourcingCase || isMachineryFatGuide || isBearingCrossReferenceGuide ? "contain" : "cover"}
             priority={isSourcingCase}
           />
           {isRexrothCase ? <p className="case-featured-caption">Rexroth hydraulic valves arranged for model and quantity checking before consolidated packing.</p> : null}
