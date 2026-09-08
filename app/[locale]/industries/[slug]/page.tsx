@@ -489,6 +489,16 @@ function MetalPartsLandingContent() {
           </p>
         </div>
       </section>
+      <section className="border-y border-slate-200 py-9">
+        <p className="text-sm font-black uppercase text-signal">Precision Machining Direction</p>
+        <h2 className="mt-2 text-3xl font-black text-navy">CNC Parts for Robotics, UAV, New-Energy and Industrial Equipment Supply Chains</h2>
+        <p className="mt-4 leading-8 text-slate-600">
+          The existing metal-parts category now has a more focused path for drawing-based CNC milling and turning requirements. It covers housings, brackets, shafts, bushings, sleeves, threaded adapters, manifolds and other precision components used across robotics, unmanned equipment, electric mobility, energy systems and factory automation. These are application directions rather than claims about any photographed part. Material, tolerance, documentation and final suitability remain project-specific.
+        </p>
+        <Link href="/en/products/precision-machining/custom-cnc-machined-parts/" className="mt-5 inline-flex min-h-11 items-center rounded-md bg-navy px-5 py-3 text-sm font-bold text-white hover:bg-slate-800">
+          View Precision CNC Machining Capability
+        </Link>
+      </section>
       <ListBlock title="We Help Source" items={[
         "Stainless steel screws and bolts",
         "Threaded fasteners and set screws",
@@ -713,6 +723,8 @@ function IndustryRelatedGuides({ slug }: { slug: string }) {
       { href: "/en/blog/factory-consumables-and-mro-supplies-from-china/", label: "Guide: Factory Consumables and MRO Supplies" }
     ],
     "metal-parts": [
+      { href: "/en/blog/custom-cnc-machined-parts-china-drawing-tolerance-supplier-checklist/", label: "Guide: Custom CNC Machined Parts from China" },
+      { href: "/en/blog/custom-cnc-turned-parts-threaded-fittings-buying-guide/", label: "Guide: CNC Turned Parts and Threaded Fittings" },
       { href: "/en/blog/304-stainless-steel-countersunk-screw-inspection-serbia/", label: "Case: Stainless Steel Countersunk Screws" },
       { href: "/en/blog/compare-industrial-supplier-quotations-china/", label: "Guide: Compare Supplier Quotations" },
       { href: "/en/blog/how-to-consolidate-multiple-china-suppliers-into-one-shipment/", label: "Guide: Consolidate China Suppliers" }

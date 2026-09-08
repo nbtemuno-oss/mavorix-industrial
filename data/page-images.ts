@@ -304,6 +304,18 @@ export const blogImages: Record<string, PageImage> = {
     width: 1200,
     height: 1000
   },
+  "custom-cnc-machined-parts-china-drawing-tolerance-supplier-checklist": {
+    src: "/images/products/precision-machining/custom-cnc-machined-parts/custom-cnc-machined-complex-parts-main.webp",
+    alt: "Batch of custom CNC machined metal components with bores, ports and complex geometry",
+    width: 1200,
+    height: 675
+  },
+  "custom-cnc-turned-parts-threaded-fittings-buying-guide": {
+    src: "/images/products/precision-machining/custom-cnc-machined-parts/cnc-turned-threaded-parts-batch.webp",
+    alt: "Batch of custom CNC turned threaded fittings arranged in protective trays",
+    width: 1200,
+    height: 675
+  },
   "rexroth-dbds6p1x-315-pressure-relief-valve-sourcing": {
     src: "/images/blog/rexroth-dbds6p1x-315-pressure-relief-valve-sourcing/rexroth-dbds6p1x-315-pressure-relief-valves-packed.webp",
     alt: "Full carton of Rexroth DBDS6P1X/315 pressure relief valves purchased for a customer and packed for shipment",

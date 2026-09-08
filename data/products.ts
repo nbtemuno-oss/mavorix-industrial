@@ -10,6 +10,17 @@ export type PublishedProduct = {
 
 export const publishedProducts: PublishedProduct[] = [
   {
+    slug: "custom-cnc-machined-parts",
+    title: "Custom CNC Machined Parts Sourcing in China",
+    description:
+      "Drawing-based sourcing for custom CNC milled and turned parts, including prototypes, low-volume orders and repeat production.",
+    path: "/en/products/precision-machining/custom-cnc-machined-parts/",
+    image:
+      "/images/products/precision-machining/custom-cnc-machined-parts/custom-cnc-machined-complex-parts-main.webp",
+    imageAlt: "Batch of custom CNC machined metal components with bores, ports and complex external geometry",
+    categorySlugs: ["metal-parts"]
+  },
+  {
     slug: "custom-cold-headed-screws-and-fasteners",
     title: "Custom Cold-Headed Screws and Fasteners",
     description:
