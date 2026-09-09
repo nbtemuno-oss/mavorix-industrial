@@ -316,6 +316,12 @@ export const blogImages: Record<string, PageImage> = {
     width: 1200,
     height: 675
   },
+  "cnc-machined-parts-for-robotics-automation-buying-guide": {
+    src: "/images/products/precision-machining/custom-cnc-machined-parts/custom-cnc-machined-complex-parts-detail.webp",
+    alt: "Complex CNC machined metal components relevant to drawing-based robotics and automation sourcing",
+    width: 1200,
+    height: 675
+  },
   "rexroth-dbds6p1x-315-pressure-relief-valve-sourcing": {
     src: "/images/blog/rexroth-dbds6p1x-315-pressure-relief-valve-sourcing/rexroth-dbds6p1x-315-pressure-relief-valves-packed.webp",
     alt: "Full carton of Rexroth DBDS6P1X/315 pressure relief valves purchased for a customer and packed for shipment",

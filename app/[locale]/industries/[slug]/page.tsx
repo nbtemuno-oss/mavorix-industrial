@@ -723,6 +723,7 @@ function IndustryRelatedGuides({ slug }: { slug: string }) {
       { href: "/en/blog/factory-consumables-and-mro-supplies-from-china/", label: "Guide: Factory Consumables and MRO Supplies" }
     ],
     "metal-parts": [
+      { href: "/en/blog/cnc-machined-parts-for-robotics-automation-buying-guide/", label: "Guide: CNC Machined Parts for Robotics" },
       { href: "/en/blog/custom-cnc-machined-parts-china-drawing-tolerance-supplier-checklist/", label: "Guide: Custom CNC Machined Parts from China" },
       { href: "/en/blog/custom-cnc-turned-parts-threaded-fittings-buying-guide/", label: "Guide: CNC Turned Parts and Threaded Fittings" },
       { href: "/en/blog/304-stainless-steel-countersunk-screw-inspection-serbia/", label: "Case: Stainless Steel Countersunk Screws" },

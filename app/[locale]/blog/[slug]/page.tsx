@@ -66,7 +66,8 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   const isBearingCrossReferenceGuide = post.slug === "bearing-cross-reference-guide-skf-fag-nsk-ntn";
   const isCncMachiningGuide = post.slug === "custom-cnc-machined-parts-china-drawing-tolerance-supplier-checklist";
   const isCncTurningGuide = post.slug === "custom-cnc-turned-parts-threaded-fittings-buying-guide";
-  const isPrecisionMachiningGuide = isCncMachiningGuide || isCncTurningGuide;
+  const isRoboticsCncGuide = post.slug === "cnc-machined-parts-for-robotics-automation-buying-guide";
+  const isPrecisionMachiningGuide = isCncMachiningGuide || isCncTurningGuide || isRoboticsCncGuide;
   const isSourcingCase = isRexrothCase || isCeramicMediaCase || isLedFloodLightCase || isHydraulicValveSourcingCase || isStrappingMachineCase || isCountersunkScrewCase || isAirCompressorCase || isPipeTaperingCase || isUsedInjectionMoldCase || isBearingArgentinaCase || isPeruCompressorCase || isVerticalMillingPolandCase || isPofFilmMiddleEastCase;
   const body = isSourcingCase ? post.body.replace(/\n## FAQ\n[\s\S]*$/, "") : post.body;
   const html = markdownToHtml(body);
