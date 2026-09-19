@@ -34,7 +34,13 @@ export default async function CountryDetailPage({ params }: { params: Promise<{ 
   const { locale, slug } = await params;
   const country = countries.find((item) => item.slug === slug);
   if (!country) notFound();
-  const faqs = country.slug === "algeria" ? algeriaFaqs : buildCountryFaqs(country.title);
+  const faqs = country.slug === "algeria"
+    ? algeriaFaqs
+    : country.slug === "romania"
+      ? romaniaFaqs
+      : country.slug === "argentina"
+        ? argentinaFaqs
+        : buildCountryFaqs(country.title);
   return (
     <>
       <PageHero badge="Country" title={`China Industrial Sourcing for ${country.title} Buyers`} description={`We support buyers from ${country.title} with China sourcing coordination, supplier communication, quality control, and export support.`} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Countries", href: `/${locale}/countries/` }, { label: country.title, href: `/${locale}/countries/${country.slug}/` }]} />
@@ -47,6 +53,8 @@ export default async function CountryDetailPage({ params }: { params: Promise<{ 
           <ListBlock title="Common Risks When Sourcing from China" items={["Unverified supplier identity", "Unclear product specifications", "Quality inconsistency", "Weak communication after payment", "Packing and shipment coordination problems"]} />
           <Block title={`How MAVORIX INDUSTRIAL Helps Buyers from ${country.title}`} text="We review requirements, screen suppliers, compare quotations, clarify technical details, coordinate samples or trial orders, arrange quality checks, and follow up export communication from China." />
           {locale === "en" && country.slug === "algeria" ? <AlgeriaSourcingExtra /> : null}
+          {locale === "en" && country.slug === "romania" ? <RomaniaSourcingExtra /> : null}
+          {locale === "en" && country.slug === "argentina" ? <ArgentinaSourcingExtra /> : null}
           <Block title="Supplier Verification, Quality Control, and Export Coordination" text="Our support helps buyers reduce procurement uncertainty without making unrealistic promises about customs, local regulations, guaranteed delivery, or lowest price." />
           <Block title="Documents and Communication Support" text="We help coordinate supplier-side documents, packing information, product photos, specifications, and shipment communication. Buyers should confirm import requirements with their local customs or logistics partners." />
         </article>
@@ -68,8 +76,16 @@ export default async function CountryDetailPage({ params }: { params: Promise<{ 
 
 const countryMetadata: Record<string, { title: string; description: string }> = {
   "algeria": {
-    title: "China Industrial Sourcing for Algeria | Machinery, MRO & Spare Parts | MAVORIX",
-    description: "MAVORIX helps Algerian buyers source industrial products from China, including machinery, MRO supplies, spare parts, packaging equipment, agricultural equipment, and factory components."
+    title: "China Sourcing for Algeria | Machinery, MRO & Parts",
+    description: "China-side sourcing support for Algerian buyers purchasing machinery, MRO supplies, spare parts, packaging equipment, agricultural parts, and factory components."
+  },
+  "romania": {
+    title: "China Industrial Sourcing for Romania | Machinery & Parts",
+    description: "China-side sourcing support for Romanian buyers purchasing industrial machinery, packaging equipment, MRO supplies, OEM parts, and factory spare parts."
+  },
+  "argentina": {
+    title: "China Industrial Sourcing for Argentina | Bearings & Parts",
+    description: "China-side sourcing support for Argentine buyers purchasing industrial bearings, machinery parts, factory spare parts, MRO supplies, and replacement components."
   }
 };
 
@@ -139,6 +155,80 @@ function AlgeriaSourcingExtra() {
   );
 }
 
+function RomaniaSourcingExtra() {
+  return (
+    <>
+      <section>
+        <h2 className="text-3xl font-black text-navy">Industrial Sourcing Experience for Romania</h2>
+        <div className="mt-4 space-y-5 leading-8 text-slate-600">
+          <p>
+            Romanian factories, importers, and machinery buyers may need China-side support for production equipment, packaging machinery, replacement parts, OEM components, and mixed MRO orders. The useful starting point is a clear technical requirement rather than a general request for the lowest price.
+          </p>
+          <p>
+            MAVORIX has documented two Romania-bound machinery projects: an automatic PP strapping machine and a ZS-60 tube tapering machine. These cases show the practical work behind industrial sourcing, including specification review, supplier communication, workshop or warehouse checks, export packing, and shipment preparation.
+          </p>
+          <p>
+            We provide China-side sourcing and coordination. We do not claim a Romanian office and do not replace the buyer's engineering approval, importer responsibilities, or local customs advice.
+          </p>
+        </div>
+      </section>
+      <ListBlock title="What Romanian Buyers Should Send" items={[
+        "Machine or part description, required output, application, quantity, and target delivery schedule",
+        "Drawings, samples, model numbers, nameplates, electrical supply, dimensions, materials, and acceptance criteria",
+        "Current supplier links or quotations when comparison and supplier verification are required",
+        "Inspection scope, test-run requirements, accessories, spare-parts list, manuals, and packing expectations",
+        "Destination, preferred shipment method, and whether several supplier orders should be consolidated",
+        "Any EU-market documentation or compliance questions for supplier confirmation and buyer-side review"
+      ]} />
+      <RelatedLinks title="Romania Sourcing Cases and Services" links={[
+        { href: "/en/blog/automatic-strapping-machine-sourcing-romania-case/", label: "Automatic Strapping Machine Case" },
+        { href: "/en/blog/tube-tapering-machine-sourcing-romania/", label: "Tube Tapering Machine Case" },
+        { href: "/en/products/packaging-equipment/ms-505-high-speed-automatic-pp-strapping-machine/", label: "MS-505 Strapping Machine" },
+        { href: "/en/products/metalworking-equipment/zs-60-tube-tapering-reducing-machine/", label: "ZS-60 Tube Tapering Machine" },
+        { href: "/en/services/supplier-verification/", label: "Supplier Verification" },
+        { href: "/en/contact/", label: "Send Romania Inquiry" }
+      ]} />
+    </>
+  );
+}
+
+function ArgentinaSourcingExtra() {
+  return (
+    <>
+      <section>
+        <h2 className="text-3xl font-black text-navy">Industrial Bearings and Spare Parts Sourcing for Argentina</h2>
+        <div className="mt-4 space-y-5 leading-8 text-slate-600">
+          <p>
+            Argentine factories, distributors, and maintenance teams may source industrial bearings, hydraulic components, machinery parts, factory spare parts, and mixed MRO items from China. Exact model codes, suffixes, dimensions, application details, and packing requirements matter more than a generic product name.
+          </p>
+          <p>
+            MAVORIX has documented an Argentina-bound HRB 23220CA/W33 spherical roller bearing order. The case records model-marking checks, visible-condition review, protective packing, and the information buyers should prepare when comparing an exact bearing or an approved alternative.
+          </p>
+          <p>
+            MAVORIX is a China-side sourcing and supplier coordination partner. We do not claim an Argentina office, authorized-distributor status, guaranteed customs clearance, or universal compatibility for replacement parts.
+          </p>
+        </div>
+      </section>
+      <ListBlock title="What Argentine Buyers Should Prepare" items={[
+        "Complete bearing or spare-part model including prefixes, suffixes, clearance, cage, seal, precision, and lubrication details where relevant",
+        "Old-part and package-label photos, machine application, installed position, dimensions, quantity, and acceptable brand options",
+        "Whether the request requires an original brand, exact model, approved equivalent, aftermarket part, or drawing-based replacement",
+        "Inspection points such as model markings, dimensions, visible condition, packaging, quantity, and supplier documents",
+        "Destination, urgency, shipment preference, and whether bearings should be consolidated with other factory spare parts",
+        "Supplier links or quotations already received when identity, product evidence, or quotation scope needs review"
+      ]} />
+      <RelatedLinks title="Argentina Sourcing Case and Services" links={[
+        { href: "/en/blog/hrb-23220ca-w33-bearing-sourcing-argentina/", label: "HRB Bearing Sourcing Case" },
+        { href: "/en/blog/how-to-source-industrial-bearings-from-china/", label: "Industrial Bearing Buyer Guide" },
+        { href: "/en/industries/factory-spare-parts/", label: "Factory Spare Parts" },
+        { href: "/en/services/mro-sourcing-from-china/", label: "MRO Sourcing from China" },
+        { href: "/en/services/supplier-verification/", label: "Supplier Verification" },
+        { href: "/en/contact/", label: "Send Argentina Inquiry" }
+      ]} />
+    </>
+  );
+}
+
 const algeriaFaqs = [
   { q: "Can MAVORIX support industrial buyers from Algeria?", a: "Yes. We support Algerian buyers with China-side sourcing coordination, supplier communication, quotation comparison, quality coordination, and export-side follow-up." },
   { q: "What products can Algerian buyers source through MAVORIX?", a: "Typical categories include machinery, plastic industry equipment, MRO supplies, factory spare parts, packaging equipment, agricultural equipment parts, electrical and mechanical parts, metal parts, and OEM industrial components." },
@@ -146,6 +236,22 @@ const algeriaFaqs = [
   { q: "Can you help verify Chinese suppliers before payment?", a: "Yes. We can help review supplier identity, communication quality, quotation clarity, product evidence, and basic risk signals before buyers pay a deposit." },
   { q: "Can you guarantee customs clearance in Algeria?", a: "No. Buyers should confirm Algerian import requirements with local customs or logistics partners. We support supplier-side export communication and document coordination from China." },
   { q: "How should Algerian buyers send an inquiry?", a: "Send product details, quantities, photos, drawings, part numbers, destination, supplier links, and any quotation already received through the contact page or WhatsApp." }
+];
+
+const romaniaFaqs = [
+  { q: "Can MAVORIX support industrial sourcing for buyers in Romania?", a: "Yes. MAVORIX supports Romanian factories, importers, and machinery buyers with China-side supplier sourcing, quotation comparison, inspection coordination, packing follow-up, and export communication." },
+  { q: "What Romania-bound sourcing projects has MAVORIX documented?", a: "Published cases include an MS-505 automatic PP strapping machine and a ZS-60 tube tapering machine, with specification, checking, packing, and shipment-preparation records." },
+  { q: "Can you source packaging and metalworking machinery for Romania?", a: "Yes. Suitable supplier options can be reviewed when the buyer provides output requirements, drawings, electrical supply, configuration, inspection scope, packing needs, and destination details." },
+  { q: "Do you have an office in Romania?", a: "No local Romania office is claimed. MAVORIX provides China-side sourcing and supplier coordination." },
+  { q: "Can you guarantee EU compliance or Romanian customs clearance?", a: "No. MAVORIX can coordinate supplier documents and technical questions, but the buyer and local specialists should confirm applicable EU requirements, importer responsibilities, and customs procedures." }
+];
+
+const argentinaFaqs = [
+  { q: "Can MAVORIX support industrial buyers in Argentina?", a: "Yes. MAVORIX provides China-side sourcing support for industrial bearings, machinery parts, factory spare parts, hydraulic components, and mixed MRO requirements." },
+  { q: "What Argentina-bound sourcing experience has MAVORIX documented?", a: "MAVORIX has published an HRB 23220CA/W33 spherical roller bearing sourcing case covering model checks, visible condition, protective packing, and shipment preparation." },
+  { q: "What information is needed for an industrial bearing inquiry?", a: "Send the complete bearing designation, brand preference, quantity, old-part and package photos, machine application, dimensions where available, inspection scope, and destination." },
+  { q: "Is MAVORIX an authorized bearing distributor?", a: "MAVORIX is an independent sourcing and supplier coordination partner. Authorized-distributor status is not claimed unless it is documented for a specific supply channel." },
+  { q: "Do you have an office in Argentina or guarantee customs clearance?", a: "No Argentina office or customs guarantee is claimed. Buyers should confirm local import requirements with Argentine customs or logistics professionals." }
 ];
 
 function buildCountryFaqs(country: string) {

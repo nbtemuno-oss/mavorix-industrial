@@ -14,6 +14,7 @@ export const countries: Country[] = [
   { slug: "egypt", title: "Egypt", region: "North Africa", needs: ["industrial machinery", "agricultural parts", "MRO supplies"] },
   { slug: "uae", title: "UAE", region: "Middle East", needs: ["industrial equipment", "OEM products", "supplier consolidation"] },
   { slug: "colombia", title: "Colombia", region: "Latin America", needs: ["machinery parts", "industrial consumables", "factory supplies"] },
+  { slug: "argentina", title: "Argentina", region: "Latin America", needs: ["industrial bearings", "factory spare parts", "MRO supplies", "industrial machinery parts"] },
   { slug: "chile", title: "Chile", region: "Latin America", needs: ["industrial equipment", "metal parts", "maintenance supplies"] },
   { slug: "nigeria", title: "Nigeria", region: "West Africa", needs: ["machinery", "agricultural equipment parts", "factory spare parts"] },
   { slug: "south-africa", title: "South Africa", region: "Southern Africa", needs: ["MRO supplies", "industrial spare parts", "OEM components"] },

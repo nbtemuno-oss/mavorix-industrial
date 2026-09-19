@@ -73,7 +73,7 @@ export function serviceSchema(name: string, description: string, url: string) {
   };
 }
 
-export function articleSchema(input: { title: string; description: string; url: string; date: string; image?: string }) {
+export function articleSchema(input: { title: string; description: string; url: string; date: string; updatedDate?: string; image?: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -81,7 +81,7 @@ export function articleSchema(input: { title: string; description: string; url: 
     description: input.description,
     image: input.image,
     datePublished: input.date,
-    dateModified: input.date,
+    dateModified: input.updatedDate ?? input.date,
     author: { "@type": "Organization", name: site.name },
     publisher: { "@type": "Organization", name: site.name },
     mainEntityOfPage: input.url

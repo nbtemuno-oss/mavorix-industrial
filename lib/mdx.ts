@@ -7,6 +7,7 @@ export type BlogPost = {
   metaTitle?: string;
   description: string;
   date: string;
+  updatedDate?: string;
   draft: boolean;
   body: string;
   faqs: { q: string; a: string }[];
@@ -54,6 +55,7 @@ export function getBlogPost(slug: string): BlogPost {
     metaTitle: meta.metaTitle,
     description: meta.description,
     date: meta.date || "2025-01-15",
+    updatedDate: meta.updatedDate,
     draft: meta.draft === "true",
     body,
     faqs: extractFaqs(body)

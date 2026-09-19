@@ -73,6 +73,9 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   const html = markdownToHtml(body);
   const image = blogImages[post.slug] ?? pageImages.blog;
   const articleUrl = `${site.url}/${locale}/blog/${post.slug}/`;
+  const dateFormatter = new Intl.DateTimeFormat("en", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+  const publishedDate = dateFormatter.format(new Date(`${post.date}T00:00:00Z`));
+  const updatedDate = post.updatedDate ? dateFormatter.format(new Date(`${post.updatedDate}T00:00:00Z`)) : null;
   const breadcrumbItems = [
     { name: "Home", url: `${site.url}/${locale}/` },
     { name: "Blog", url: `${site.url}/${locale}/blog/` },
@@ -96,6 +99,11 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
       <Container className={isSourcingCase ? "py-14" : "grid gap-8 py-16 lg:grid-cols-[1fr_300px]"}>
         <article className={isSourcingCase ? "prose-industrial mx-auto min-w-0 max-w-[900px] rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10" : "prose-industrial min-w-0 rounded-lg border border-slate-200 bg-white p-6 shadow-sm md:p-10"}>
           {locale !== "en" ? <div className="mb-8 rounded-lg border border-orange-200 bg-orange-50 p-4 text-sm font-semibold text-orange-900">English version: this blog guide has not been fully translated into {locale.toUpperCase()} yet.</div> : null}
+          <div className="mb-6 flex flex-wrap gap-x-5 gap-y-2 border-b border-slate-200 pb-4 text-sm font-semibold text-slate-500">
+            <span>By MAVORIX INDUSTRIAL</span>
+            <time dateTime={post.date}>Published {publishedDate}</time>
+            {updatedDate ? <time dateTime={post.updatedDate}>Updated {updatedDate}</time> : null}
+          </div>
           <IndustrialImage
             src={image.src}
             alt={image.alt}
@@ -181,7 +189,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
           text={isCustomCuttingToolsGuide ? "Send the tool drawing, sample photos, workpiece drawing, machining details and required quantity. MAVORIX can help coordinate supplier evaluation and quotation in China." : isCustomScrewsGuide ? "Send the drawing or standard, material, finish, quantity, application and inspection requirements. MAVORIX can help coordinate supplier review, samples and quotation in China." : isPrecisionMachiningGuide ? "Send the current drawing revision, material, quantities, critical tolerances, finish, inspection scope and destination. MAVORIX can coordinate suitable China-side supplier review and quotation." : undefined}
         />
       )}
-      <JsonLd data={[breadcrumbSchema(breadcrumbItems), articleSchema({ title: post.title, description: post.description, date: post.date, url: articleUrl, image: `${site.url}${image.src}` }), faqSchema(post.faqs)]} />
+      <JsonLd data={[breadcrumbSchema(breadcrumbItems), articleSchema({ title: post.title, description: post.description, date: post.date, updatedDate: post.updatedDate, url: articleUrl, image: `${site.url}${image.src}` }), faqSchema(post.faqs)]} />
     </>
   );
 }

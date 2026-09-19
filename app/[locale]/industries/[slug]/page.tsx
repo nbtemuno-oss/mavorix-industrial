@@ -126,12 +126,12 @@ const industryMetadata: Record<string, { title: string; description: string }> =
     description: "MAVORIX supports plastic factories with sourcing injection molding machines, molds, auxiliary equipment, spare parts, and industrial supply chain solutions from China."
   },
   "metal-parts": {
-    title: "Metal Parts Sourcing from China | Fasteners, CNC & Custom Parts | MAVORIX",
-    description: "Source metal parts from China with supplier checks, drawing review, quotation comparison, inspection coordination, and shipment consolidation for fasteners, CNC machined parts, stamped parts, gears, and custom hardware."
+    title: "Metal Parts Sourcing China | CNC, Fasteners & Custom Parts",
+    description: "Source fasteners, CNC machined parts, stampings, gears, and custom metal hardware in China with supplier checks, drawing review, and inspection coordination."
   },
   "mro-supplies": {
-    title: "MRO Supplier China | Industrial Supplies & Parts | MAVORIX",
-    description: "Source industrial MRO supplies and spare parts from China. MAVORIX helps U.S. buyers compare suppliers, verify specifications, and consolidate mixed orders."
+    title: "Industrial MRO Supplies from China | Supplier Sourcing",
+    description: "Source industrial MRO supplies from China with category-based supplier search, specification checks, quotation comparison, and mixed-order consolidation support."
   },
   "packaging-industry": {
     title: "Packaging Machine Parts & MRO Sourcing from China | MAVORIX",
@@ -341,6 +341,23 @@ function MroSuppliesLandingContent() {
           </p>
         </div>
       </section>
+      <section className="rounded-lg border border-slate-200 bg-slate-50 p-6 md:p-8">
+        <h2 className="text-3xl font-black text-navy">Choose the Right MRO Sourcing Path</h2>
+        <p className="mt-4 leading-8 text-slate-600">
+          This industry page organizes the product categories buyers commonly include in an MRO list. Buyers who already have a mixed item list and need supplier comparison, technical follow-up, packing control, or consolidation should use the dedicated service page.
+        </p>
+        <div className="mt-6 grid gap-5 md:grid-cols-2">
+          <div className="rounded-md border border-slate-200 bg-white p-5">
+            <h3 className="text-lg font-black text-navy">Industrial MRO Supplies</h3>
+            <p className="mt-2 text-sm leading-6 text-slate-600">Use this page to review bearings, belts, filters, tools, consumables, hydraulic, pneumatic, electrical, and factory spare-part categories.</p>
+          </div>
+          <div className="rounded-md border border-slate-200 bg-white p-5">
+            <h3 className="text-lg font-black text-navy">MRO Sourcing Service</h3>
+            <p className="mt-2 text-sm leading-6 text-slate-600">Use the service page when you need MAVORIX to organize a mixed list, compare Chinese suppliers, coordinate checks, and consolidate approved items.</p>
+            <Link href="/en/services/mro-sourcing-from-china/" className="mt-3 inline-flex text-sm font-black text-signal hover:text-orange-700">View MRO Sourcing from China</Link>
+          </div>
+        </div>
+      </section>
       <ListBlock title="MRO Product Categories We Can Help Source" items={[
         "Industrial consumables, workshop supplies, tools, safety products, and factory maintenance items",
         "Maintenance parts including bearings, belts, chains, seals, filters, hoses, rollers, couplings, and fasteners",
@@ -522,6 +539,14 @@ function MetalPartsLandingContent() {
         "Current supplier quotation, rejected sample notes, or quality problems from previous orders if available",
         "Packing requirement, labeling requirement, destination country, and whether consolidation is needed",
         "Inspection points such as thread gauge, surface finish, dimension report, material certificate, or visual defect limits"
+      ]} />
+      <ListBlock title="How We Match Metal Parts Suppliers by Process" items={[
+        "CNC machining suppliers for drawing-controlled milled and turned parts, housings, shafts, sleeves, fittings, and low-volume precision components",
+        "Fastener and cold-forming suppliers for screws, bolts, threaded parts, special heads, non-standard materials, and repeat batch production",
+        "Stamping and sheet-metal suppliers for brackets, clips, covers, formed parts, progressive tooling, and fabricated assemblies",
+        "Gear and transmission-part suppliers for drawing-based gears, splines, shafts, heat treatment, grinding, and inspection requirements",
+        "General metal-component suppliers for spacers, standoffs, bushings, simple hardware, replacement parts, and mixed low-volume lists",
+        "Inspection-capable suppliers when buyers require dimensional reports, thread gauging, material documents, surface-finish checks, or controlled samples"
       ]} />
       <ListBlock title="Real Metal Parts Procurement Scenarios" items={[
         "A factory needs replacement stainless steel fasteners and spacers but only has old samples and rough dimensions",
