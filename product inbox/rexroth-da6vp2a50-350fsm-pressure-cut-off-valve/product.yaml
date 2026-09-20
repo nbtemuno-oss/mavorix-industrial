@@ -1,0 +1,60 @@
+status: approved
+publish_status: published
+product_name: "Rexroth DA6VP2A50/350FSM Pressure Cut-Off Valve"
+short_name: "Rexroth DA6VP2A50/350FSM"
+slug: "rexroth-da6vp2a50-350fsm-pressure-cut-off-valve"
+brand: "Rexroth"
+model: "DA6VP2A50/350FSM"
+material_number: "R901224247"
+part_type: "hydraulic_pressure_cut_off_valve"
+condition: "Final supply condition to be confirmed before ordering"
+compatibility_status: "complete_model_and_circuit_confirmation_required"
+image_content_editing: "manual_only"
+category: "hydraulic-components"
+categories:
+  - "industrial-machinery"
+  - "factory-spare-parts"
+confirmed_specs:
+  - label: "Brand"
+    value: "Rexroth"
+    source: "image_confirmed"
+  - label: "Material Number"
+    value: "R901224247"
+    source: "image_confirmed"
+  - label: "Model"
+    value: "DA6VP2A50/350FSM"
+    source: "image_confirmed"
+  - label: "Product Type"
+    value: "Pressure cut-off valve"
+    source: "manufacturer_catalog_reference"
+unconfirmed_fields:
+  - "Pressure setting and performance in the intended circuit"
+  - "Flow, ports and mounting interface"
+  - "Hydraulic schematic and system application"
+  - "Exact replacement suitability"
+  - "Authenticity, supply channel and warranty"
+questions_for_user:
+  - "Provide the old valve label, hydraulic schematic, machine model and all-side interface photos."
+  - "Confirm the required pressure setting, ports, circuit function, quantity and destination."
+images:
+  originals:
+    - "微信图片_20260909174256_488_4.jpg"
+    - "微信图片_20260909174257_489_4.jpg"
+seo:
+  title: "Rexroth DA6VP2A50/350FSM Pressure Cut-Off Valve | MAVORIX"
+  meta_description: "Source Rexroth DA6VP2A50/350FSM pressure cut-off valve, Material Number R901224247. Confirm the hydraulic circuit, setting, ports and interfaces before ordering."
+  primary_keyword: "Rexroth DA6VP2A50/350FSM pressure cut-off valve"
+  secondary_keywords:
+    - "R901224247 Rexroth valve"
+    - "Rexroth pressure cut-off valve"
+    - "hydraulic pressure valve replacement"
+  long_tail_keywords:
+    - "Rexroth R901224247 pressure cut-off valve supplier"
+    - "DA6VP2A50 350FSM replacement sourcing"
+    - "source Rexroth hydraulic pressure valve from China"
+publication:
+  route: "/en/products/hydraulic-components/rexroth-da6vp2a50-350fsm-pressure-cut-off-valve/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

@@ -1,0 +1,60 @@
+status: approved
+publish_status: published
+product_name: "Parker T7DS-E38-1R00-A1MW Vane Pump"
+short_name: "Parker T7DS-E38-1R00-A1MW"
+slug: "parker-t7ds-e38-1r00-a1mw-vane-pump"
+brand: "Parker Denison"
+model: "T7DS-E38-1R00-A1MW"
+part_number: "024-26368-0"
+part_type: "hydraulic_vane_pump"
+condition: "Final supply condition to be confirmed before ordering"
+compatibility_status: "complete_model_and_interface_confirmation_required"
+image_content_editing: "manual_only"
+category: "hydraulic-components"
+categories:
+  - "industrial-machinery"
+  - "factory-spare-parts"
+confirmed_specs:
+  - label: "Brand"
+    value: "Parker Denison Vane Technology"
+    source: "image_confirmed"
+  - label: "Model"
+    value: "T7DS-E38-1R00-A1MW"
+    source: "image_confirmed"
+  - label: "Code"
+    value: "024-26368-0"
+    source: "image_confirmed"
+  - label: "Product Type"
+    value: "Hydraulic vane pump"
+    source: "image_confirmed"
+unconfirmed_fields:
+  - "Displacement and pressure rating"
+  - "Rotation direction"
+  - "Shaft, ports and mounting dimensions"
+  - "Fluid, speed and system duty"
+  - "Exact replacement suitability"
+  - "Authenticity, supply channel and warranty"
+questions_for_user:
+  - "Provide the old pump label, equipment model and all-side interface photos."
+  - "Confirm displacement, pressure, rotation, shaft, ports, mounting dimensions, quantity and destination."
+images:
+  originals:
+    - "微信图片_20260920100214_511_4.jpg"
+seo:
+  title: "Parker T7DS-E38-1R00-A1MW Vane Pump | MAVORIX"
+  meta_description: "Source the Parker T7DS-E38-1R00-A1MW hydraulic vane pump, code 024-26368-0, for industrial replacement after model and interface confirmation."
+  primary_keyword: "Parker T7DS-E38-1R00-A1MW vane pump"
+  secondary_keywords:
+    - "Parker Denison T7DS vane pump"
+    - "T7DS-E38-1R00-A1MW replacement"
+    - "Parker hydraulic vane pump supplier"
+  long_tail_keywords:
+    - "Parker T7DS-E38-1R00-A1MW vane pump replacement"
+    - "source Parker Denison T7DS hydraulic vane pump"
+    - "Parker vane pump code 024-26368-0 supplier"
+publication:
+  route: "/en/products/hydraulic-components/parker-t7ds-e38-1r00-a1mw-vane-pump/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

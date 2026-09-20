@@ -78,7 +78,12 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/Rexroth pump AZPW-21-022RQRXXMB-S0593/product.yaml",
       "product inbox/rexroth pump A a10vs0/product.yaml",
       "product inbox/rexroth valve manifold/product.yaml",
-      "app/[locale]/products/hydraulic-components/[slug]/RexrothCounterbalanceValvePage.tsx"
+      "product inbox/daikin-hydraulic-piston-pump/product.yaml",
+      "product inbox/sumitomo-qt23-5f-z-internal-gear-pump/product.yaml",
+      "product inbox/parker-t7ds-e38-1r00-a1mw-vane-pump/product.yaml",
+      "product inbox/rexroth-da6vp2a50-350fsm-pressure-cut-off-valve/product.yaml",
+      "app/[locale]/products/hydraulic-components/[slug]/RexrothCounterbalanceValvePage.tsx",
+      "app/[locale]/products/hydraulic-components/[slug]/RexrothDa6vpPressureCutOffValvePage.tsx"
     ];
   }
   if (path.startsWith("products/industrial-cleaning-equipment/")) {

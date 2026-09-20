@@ -1,0 +1,59 @@
+status: approved
+publish_status: published
+product_name: "SUMITOMO QT23-5F-Z Internal Gear Pump"
+short_name: "SUMITOMO QT23-5F-Z"
+slug: "sumitomo-qt23-5f-z-internal-gear-pump"
+brand: "SUMITOMO"
+model: "QT23-5F-Z"
+part_type: "internal_gear_pump"
+condition: "Final supply condition to be confirmed before ordering"
+compatibility_status: "complete_model_and_interface_confirmation_required"
+image_content_editing: "manual_only"
+category: "hydraulic-components"
+categories:
+  - "industrial-machinery"
+  - "factory-spare-parts"
+confirmed_specs:
+  - label: "Brand"
+    value: "SUMITOMO"
+    source: "image_confirmed"
+  - label: "Model"
+    value: "QT23-5F-Z"
+    source: "image_confirmed"
+  - label: "Product Type"
+    value: "Internal gear pump"
+    source: "image_confirmed"
+  - label: "Serial Number"
+    value: "26851226"
+    source: "image_confirmed"
+unconfirmed_fields:
+  - "Displacement and pressure rating"
+  - "Rotation direction"
+  - "Shaft, ports and mounting dimensions"
+  - "Fluid, speed and system duty"
+  - "Exact replacement suitability"
+  - "Authenticity, supply channel and warranty"
+questions_for_user:
+  - "Provide the old pump label, equipment model and all-side interface photos."
+  - "Confirm displacement, pressure, rotation, shaft, ports, mounting dimensions, quantity and destination."
+images:
+  originals:
+    - "微信图片_20260920100207_510_4.jpg"
+seo:
+  title: "SUMITOMO QT23-5F-Z Internal Gear Pump | MAVORIX"
+  meta_description: "Source the SUMITOMO QT23-5F-Z internal gear pump for industrial hydraulic replacement. Confirm displacement, rotation, shaft, ports and mounting before ordering."
+  primary_keyword: "SUMITOMO QT23-5F-Z internal gear pump"
+  secondary_keywords:
+    - "SUMITOMO internal gear pump"
+    - "QT23-5F-Z pump replacement"
+    - "hydraulic internal gear pump supplier"
+  long_tail_keywords:
+    - "SUMITOMO QT23-5F-Z internal gear pump replacement"
+    - "source QT23-5F-Z hydraulic pump from China"
+    - "SUMITOMO internal gear pump spare parts supplier"
+publication:
+  route: "/en/products/hydraulic-components/sumitomo-qt23-5f-z-internal-gear-pump/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

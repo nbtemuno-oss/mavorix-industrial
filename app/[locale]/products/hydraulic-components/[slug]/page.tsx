@@ -17,6 +17,13 @@ import {
   counterbalanceValveTitle,
   RexrothCounterbalanceValvePage
 } from "./RexrothCounterbalanceValvePage";
+import {
+  rexrothDa6vpDescription,
+  rexrothDa6vpPath,
+  rexrothDa6vpSlug,
+  rexrothDa6vpTitle,
+  RexrothDa6vpPressureCutOffValvePage
+} from "./RexrothDa6vpPressureCutOffValvePage";
 
 const productSlug = "rexroth-4we6d6x-ofeg24n9k4-directional-control-valve";
 const productTitle = "Rexroth 4WE6D6X/OFEG24N9K4 Directional Control Valve";
@@ -149,6 +156,208 @@ const ktcKpc3560RpssPump: HydraulicPumpData = {
       q: "Can MAVORIX consolidate these pumps with other hydraulic parts?",
       a: "Yes. MAVORIX can coordinate approved pumps, valves, seals, sensors and other industrial spare parts in one China-side purchasing and export-packing workflow."
     }
+  ]
+};
+
+const daikinGenericPump: HydraulicPumpData = {
+  slug: "daikin-hydraulic-piston-pump",
+  title: "DAIKIN Hydraulic Piston Pump",
+  path: "/en/products/hydraulic-components/daikin-hydraulic-piston-pump/",
+  badge: "Hydraulic Piston Pump",
+  brand: "DAIKIN",
+  model: "Full model code to be confirmed",
+  category: "Hydraulic Piston Pump",
+  metaDescription:
+    "Source DAIKIN hydraulic piston pumps for industrial replacement. Confirm the complete model, displacement, control type, shaft, ports and mounting before ordering.",
+  summary:
+    "DAIKIN hydraulic piston pumps are specified by a complete model code and installation details. Match displacement, control type, rotation, shaft, ports and mounting to the original pump before replacement ordering.",
+  schemaDescription:
+    "DAIKIN hydraulic piston pump sourcing for model- and interface-based industrial replacement.",
+  images: [
+    {
+      src: "/images/products/general-products/daikin-hydraulic-piston-pump/daikin-hydraulic-piston-pump-main.webp",
+      alt: "DAIKIN hydraulic piston pump with drive shaft and mounting flange",
+      label: "DAIKIN piston pump"
+    },
+    {
+      src: "/images/products/general-products/daikin-hydraulic-piston-pump/daikin-hydraulic-piston-pump-gallery-02.webp",
+      alt: "DAIKIN hydraulic piston pump side view",
+      label: "Pump side view"
+    }
+  ],
+  summarySpecs: [
+    ["Brand", "DAIKIN"],
+    ["Product Type", "Hydraulic piston pump"],
+    ["Model", "Complete code to be confirmed"],
+    ["Compatibility", "Complete model and interfaces require confirmation"]
+  ],
+  confirmedSpecs: [
+    ["Brand", "DAIKIN"],
+    ["Product Type", "Hydraulic piston pump"],
+    ["Model", "Full model code to be confirmed"],
+    ["Selection Basis", "Model code, displacement, control type and interfaces"]
+  ],
+  overview: [
+    "A DAIKIN hydraulic piston pump supplies oil flow for compatible industrial hydraulic systems. The pump family includes different displacements, control arrangements and mounting configurations, so a generic product name alone is not enough for replacement selection.",
+    "For a reliable quotation, use the complete nameplate code with the original pump's displacement, pressure, rotation, shaft, ports and mounting dimensions. This keeps the sourcing discussion tied to the working machine rather than to external appearance.",
+    "Typical requests come from hydraulic power-unit maintenance, machine tools, presses, plastic processing equipment and other machinery where the original pump reference is available."
+  ],
+  keyFeatures: [
+    "Hydraulic piston-pump product family",
+    "DAIKIN brand reference",
+    "Model- and interface-based replacement sourcing",
+    "Full nameplate code required for final selection",
+    "Shaft, port and mounting comparison support",
+    "Supplier quotation and export coordination"
+  ],
+  applications: [
+    "Hydraulic power units",
+    "Machine tools",
+    "Presses and forming equipment",
+    "Plastic processing machinery",
+    "Industrial machinery maintenance",
+    "Factory spare-parts consolidation"
+  ],
+  selectionNotice: [
+    "Do not order a replacement from the product family or housing shape alone. DAIKIN piston pumps can differ in displacement, control, rotation, shaft, ports and mounting.",
+    "Confirm the complete model code, operating pressure, fluid, rated speed and equipment application with qualified hydraulic personnel before purchase."
+  ],
+  orderingInfo: [
+    "Clear complete nameplate photo",
+    "Old pump photos from every side",
+    "Required displacement and pressure",
+    "Control type and rotation direction",
+    "Shaft type and dimensions",
+    "Port thread, size and orientation",
+    "Mounting-hole and pilot dimensions",
+    "Machine brand, model and hydraulic function",
+    "Required quantity and destination"
+  ],
+  faqs: [
+    {
+      q: "Can a DAIKIN piston pump be identified from a product photo alone?",
+      a: "No. A clear complete nameplate is needed to identify the exact configuration. The product family contains multiple displacement, control and interface variants."
+    },
+    {
+      q: "What details are needed for a DAIKIN hydraulic pump quotation?",
+      a: "Send the complete model code, old-pump photos, displacement, pressure, rotation, shaft, ports, mounting dimensions, equipment model, quantity and destination."
+    },
+    {
+      q: "Can MAVORIX help source a DAIKIN piston-pump replacement?",
+      a: "MAVORIX can coordinate model checking, supplier comparison and export handling after the buyer confirms the required configuration."
+    }
+  ]
+};
+
+const sumitomoQt23Pump: HydraulicPumpData = {
+  slug: "sumitomo-qt23-5f-z-internal-gear-pump",
+  title: "SUMITOMO QT23-5F-Z Internal Gear Pump",
+  path: "/en/products/hydraulic-components/sumitomo-qt23-5f-z-internal-gear-pump/",
+  badge: "Internal Gear Pump",
+  brand: "SUMITOMO",
+  model: "QT23-5F-Z",
+  category: "Internal Gear Pump",
+  metaDescription:
+    "Source the SUMITOMO QT23-5F-Z internal gear pump for industrial hydraulic replacement. Confirm displacement, rotation, shaft, ports and mounting before ordering.",
+  summary:
+    "SUMITOMO QT23-5F-Z is an internal gear pump for industrial hydraulic applications. Confirm displacement, pressure, rotation, shaft, ports and mounting against the original pump before replacement ordering.",
+  schemaDescription:
+    "SUMITOMO QT23-5F-Z internal gear pump for exact-model industrial hydraulic replacement sourcing.",
+  images: [{
+    src: "/images/products/general-products/sumitomo-qt23-5f-z-internal-gear-pump/sumitomo-qt23-5f-z-internal-gear-pump-main.webp",
+    alt: "SUMITOMO QT23-5F-Z internal gear pump with identification plate",
+    label: "QT23-5F-Z pump"
+  }],
+  summarySpecs: [
+    ["Brand", "SUMITOMO"],
+    ["Model", "QT23-5F-Z"],
+    ["Product Type", "Internal gear pump"],
+    ["Compatibility", "Displacement and interfaces require confirmation"]
+  ],
+  confirmedSpecs: [
+    ["Brand", "SUMITOMO"],
+    ["Model", "QT23-5F-Z"],
+    ["Product Type", "Internal gear pump"],
+    ["Serial Number", "26851226"],
+    ["Selection Basis", "Complete model, hydraulic duty and interfaces"]
+  ],
+  overview: [
+    "The SUMITOMO QT23-5F-Z is an internal gear pump identified by its complete model reference. It should be matched to the original machine's hydraulic requirements rather than selected only by its mounting shape.",
+    "In replacement work, confirm displacement, rated pressure, rotation, shaft, ports and mounting dimensions. These details determine whether the pump will connect and operate correctly in the original circuit.",
+    "It is relevant to industrial hydraulic equipment, maintenance spares and consolidated MRO orders where the buyer can provide the original pump reference."
+  ],
+  keyFeatures: [
+    "QT23-5F-Z exact model reference",
+    "Internal gear-pump construction",
+    "SUMITOMO brand marking",
+    "Model- and interface-based replacement sourcing",
+    "Hydraulic-duty confirmation before order release",
+    "Supplier and export coordination"
+  ],
+  applications: ["Industrial hydraulic systems", "Hydraulic power units", "Machine tools", "Factory maintenance", "Replacement pump sourcing", "MRO consolidation"],
+  selectionNotice: [
+    "Match the QT23-5F-Z model with the original pump's displacement, pressure, rotation, shaft, ports and mounting dimensions.",
+    "Final hydraulic suitability must be reviewed against the equipment circuit and operating conditions before purchase."
+  ],
+  orderingInfo: ["Complete old-pump label", "All-side pump photos", "Required displacement and pressure", "Rotation direction", "Shaft and port details", "Mounting dimensions", "Machine model", "Quantity and destination"],
+  faqs: [
+    { q: "What pump model is QT23-5F-Z?", a: "QT23-5F-Z is the complete SUMITOMO internal gear pump model reference. Confirm hydraulic duty and interfaces before selecting a replacement." },
+    { q: "Can a similar SUMITOMO pump replace QT23-5F-Z?", a: "Not automatically. Displacement, rotation, shaft, ports, mounting and pressure requirements must match." },
+    { q: "What information is needed for a quotation?", a: "Provide the complete model, old-pump photos, system requirements, interface details, quantity and destination." }
+  ]
+};
+
+const parkerT7dsPump: HydraulicPumpData = {
+  slug: "parker-t7ds-e38-1r00-a1mw-vane-pump",
+  title: "Parker T7DS-E38-1R00-A1MW Vane Pump",
+  path: "/en/products/hydraulic-components/parker-t7ds-e38-1r00-a1mw-vane-pump/",
+  badge: "Hydraulic Vane Pump",
+  brand: "Parker Denison",
+  model: "T7DS-E38-1R00-A1MW",
+  materialNumber: "024-26368-0",
+  category: "Hydraulic Vane Pump",
+  metaDescription:
+    "Source the Parker T7DS-E38-1R00-A1MW hydraulic vane pump, code 024-26368-0, for industrial replacement after model and interface confirmation.",
+  summary:
+    "Parker T7DS-E38-1R00-A1MW is a hydraulic vane pump identified by code 024-26368-0. Confirm the complete model, rotation, shaft, ports and mounting against the original pump before replacement ordering.",
+  schemaDescription:
+    "Parker T7DS-E38-1R00-A1MW hydraulic vane pump for exact-model industrial replacement sourcing.",
+  images: [{
+    src: "/images/products/general-products/parker-t7ds-e38-1r00-a1mw-vane-pump/parker-t7ds-e38-1r00-a1mw-vane-pump-main.webp",
+    alt: "Parker T7DS-E38-1R00-A1MW hydraulic vane pump with model label",
+    label: "T7DS model label"
+  }],
+  summarySpecs: [
+    ["Brand", "Parker Denison"],
+    ["Model", "T7DS-E38-1R00-A1MW"],
+    ["Code", "024-26368-0"],
+    ["Product Type", "Hydraulic vane pump"],
+    ["Compatibility", "Complete code and interfaces require confirmation"]
+  ],
+  confirmedSpecs: [
+    ["Brand", "Parker Denison Vane Technology"],
+    ["Model", "T7DS-E38-1R00-A1MW"],
+    ["Code", "024-26368-0"],
+    ["Product Type", "Hydraulic vane pump"],
+    ["Country Marking", "Made in France"],
+    ["Selection Basis", "Complete code, hydraulic duty and interfaces"]
+  ],
+  overview: [
+    "Parker T7DS-E38-1R00-A1MW is a model-specific hydraulic vane pump for suitable industrial hydraulic systems. The full T7DS code and the accompanying code 024-26368-0 should be retained throughout the sourcing process.",
+    "Replacement selection should include the original pump's displacement, pressure, rotation, shaft, ports and mounting layout. Those details are more important than an external comparison between pump housings.",
+    "This approach is useful for machinery maintenance teams and buyers managing exact-model hydraulic pump requirements across several suppliers."
+  ],
+  keyFeatures: ["T7DS-E38-1R00-A1MW model reference", "Code 024-26368-0", "Hydraulic vane-pump design", "Parker Denison brand marking", "Model- and interface-based replacement sourcing", "Supplier and export coordination"],
+  applications: ["Industrial hydraulic systems", "Hydraulic power units", "Machine tools", "Production machinery", "Factory maintenance", "MRO spare-parts sourcing"],
+  selectionNotice: [
+    "Do not substitute a similar T7-series pump without checking the full model, displacement, rotation, shaft, ports and mounting interface.",
+    "Confirm the hydraulic circuit, fluid, pressure and operating-speed requirements with qualified personnel before purchase."
+  ],
+  orderingInfo: ["Complete T7DS label", "Code 024-26368-0", "Old pump photos from every side", "Required displacement and pressure", "Rotation direction", "Shaft, ports and mounting dimensions", "Machine model", "Quantity and destination"],
+  faqs: [
+    { q: "What is Parker T7DS-E38-1R00-A1MW?", a: "It is a hydraulic vane pump identified by the complete model T7DS-E38-1R00-A1MW and code 024-26368-0." },
+    { q: "Can any T7DS pump replace this model?", a: "No. The complete code, hydraulic duty, rotation, shaft, ports and mounting interface need to be checked." },
+    { q: "What should I provide for sourcing?", a: "Send the complete old-pump label, equipment model, all-side photos, interface requirements, quantity and destination." }
   ]
 };
 
@@ -862,7 +1071,11 @@ export function generateStaticParams() {
     { locale: "en", slug: rexrothAzpwPump.slug },
     { locale: "en", slug: rexrothA10vsoPump.slug },
     { locale: "en", slug: ktcKpc3560RpssPump.slug },
-    { locale: "en", slug: counterbalanceValveSlug }
+    { locale: "en", slug: counterbalanceValveSlug },
+    { locale: "en", slug: rexrothDa6vpSlug },
+    { locale: "en", slug: daikinGenericPump.slug },
+    { locale: "en", slug: sumitomoQt23Pump.slug },
+    { locale: "en", slug: parkerT7dsPump.slug }
   ];
 }
 
@@ -900,7 +1113,41 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       }
     };
   }
-  const pump = [hydromaxPump, rexrothAzpwPump, rexrothA10vsoPump, ktcKpc3560RpssPump].find((item) => locale === "en" && item.slug === slug);
+  if (locale === "en" && slug === rexrothDa6vpSlug) {
+    return {
+      title: `${rexrothDa6vpTitle} | MAVORIX`,
+      description: rexrothDa6vpDescription,
+      alternates: { canonical: `${site.url}${rexrothDa6vpPath}` },
+      robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+      openGraph: {
+        title: rexrothDa6vpTitle,
+        description: rexrothDa6vpDescription,
+        url: `${site.url}${rexrothDa6vpPath}`,
+        siteName: site.name,
+        locale: "en",
+        type: "website",
+        images: [{
+          url: "/images/products/general-products/rexroth-da6vp2a50-350fsm-pressure-cut-off-valve/rexroth-da6vp2a50-350fsm-pressure-cut-off-valve-main.webp",
+          alt: "Rexroth DA6VP2A50/350FSM pressure cut-off valve identification plate"
+        }]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: rexrothDa6vpTitle,
+        description: rexrothDa6vpDescription,
+        images: ["/images/products/general-products/rexroth-da6vp2a50-350fsm-pressure-cut-off-valve/rexroth-da6vp2a50-350fsm-pressure-cut-off-valve-main.webp"]
+      }
+    };
+  }
+  const pump = [
+    hydromaxPump,
+    rexrothAzpwPump,
+    rexrothA10vsoPump,
+    ktcKpc3560RpssPump,
+    daikinGenericPump,
+    sumitomoQt23Pump,
+    parkerT7dsPump
+  ].find((item) => locale === "en" && item.slug === slug);
   if (pump) {
     return {
       title: `${pump.title} | MAVORIX`,
@@ -1101,10 +1348,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function RexrothDirectionalValvePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   if (locale === "en" && slug === counterbalanceValveSlug) return <RexrothCounterbalanceValvePage />;
+  if (locale === "en" && slug === rexrothDa6vpSlug) return <RexrothDa6vpPressureCutOffValvePage />;
   if (locale === "en" && slug === hydromaxPump.slug) return <HydraulicPumpPage product={hydromaxPump} />;
   if (locale === "en" && slug === rexrothAzpwPump.slug) return <HydraulicPumpPage product={rexrothAzpwPump} />;
   if (locale === "en" && slug === rexrothA10vsoPump.slug) return <HydraulicPumpPage product={rexrothA10vsoPump} />;
   if (locale === "en" && slug === ktcKpc3560RpssPump.slug) return <HydraulicPumpPage product={ktcKpc3560RpssPump} />;
+  if (locale === "en" && slug === daikinGenericPump.slug) return <HydraulicPumpPage product={daikinGenericPump} />;
+  if (locale === "en" && slug === sumitomoQt23Pump.slug) return <HydraulicPumpPage product={sumitomoQt23Pump} />;
+  if (locale === "en" && slug === parkerT7dsPump.slug) return <HydraulicPumpPage product={parkerT7dsPump} />;
   if (locale === "en" && slug === aryungSlug) return <AryungCoolantPumpPage />;
   if (locale === "en" && slug === daikinSlug) return <DaikinPistonPumpPage />;
   if (locale === "en" && slug === hytekSlug) return <HytekHydraulicPumpPage />;

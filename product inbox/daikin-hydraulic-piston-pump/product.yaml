@@ -1,0 +1,55 @@
+status: approved
+publish_status: published
+product_name: "DAIKIN Hydraulic Piston Pump"
+short_name: "DAIKIN Hydraulic Piston Pump"
+slug: "daikin-hydraulic-piston-pump"
+brand: "DAIKIN"
+model: "Full model code to be confirmed"
+part_type: "hydraulic_piston_pump"
+condition: "Final supply condition to be confirmed before ordering"
+compatibility_status: "complete_model_and_interface_confirmation_required"
+image_content_editing: "manual_only"
+category: "hydraulic-components"
+categories:
+  - "industrial-machinery"
+  - "factory-spare-parts"
+confirmed_specs:
+  - label: "Brand"
+    value: "DAIKIN"
+    source: "image_confirmed"
+  - label: "Product Type"
+    value: "Hydraulic piston pump"
+    source: "image_confirmed"
+unconfirmed_fields:
+  - "Complete DAIKIN model code"
+  - "Displacement and pressure rating"
+  - "Control type"
+  - "Rotation direction"
+  - "Shaft, ports and mounting dimensions"
+  - "Exact replacement suitability"
+  - "Authenticity, supply channel and warranty"
+questions_for_user:
+  - "Provide a clear nameplate photo and the old pump's complete model code."
+  - "Confirm displacement, pressure, shaft, ports, mounting dimensions, quantity and destination."
+images:
+  originals:
+    - "微信图片_20260920100149_508_4.jpg"
+    - "微信图片_20260920100153_509_4.jpg"
+seo:
+  title: "DAIKIN Hydraulic Piston Pump Replacement Sourcing | MAVORIX"
+  meta_description: "Source DAIKIN hydraulic piston pumps for industrial replacement. Confirm the complete model, displacement, control type, shaft, ports and mounting before ordering."
+  primary_keyword: "DAIKIN hydraulic piston pump"
+  secondary_keywords:
+    - "DAIKIN piston pump replacement"
+    - "DAIKIN hydraulic pump supplier"
+    - "industrial hydraulic piston pump sourcing"
+  long_tail_keywords:
+    - "DAIKIN hydraulic piston pump replacement supplier"
+    - "source DAIKIN piston pump from China"
+    - "DAIKIN hydraulic pump model identification"
+publication:
+  route: "/en/products/hydraulic-components/daikin-hydraulic-piston-pump/"
+  robots: "index, follow"
+  sitemap: true
+  category_index: true
+  deployment: true

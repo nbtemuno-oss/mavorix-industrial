@@ -65,6 +65,50 @@ export const publishedProducts: PublishedProduct[] = [
     categorySlugs: ["industrial-machinery", "factory-spare-parts"]
   },
   {
+    slug: "daikin-hydraulic-piston-pump",
+    title: "DAIKIN Hydraulic Piston Pump",
+    description:
+      "DAIKIN hydraulic piston pump sourcing for industrial replacement after complete model, displacement, control type, shaft, ports and mounting confirmation.",
+    path: "/en/products/hydraulic-components/daikin-hydraulic-piston-pump/",
+    image:
+      "/images/products/general-products/daikin-hydraulic-piston-pump/daikin-hydraulic-piston-pump-thumbnail.webp",
+    imageAlt: "DAIKIN hydraulic piston pump with drive shaft and mounting flange",
+    categorySlugs: ["industrial-machinery", "factory-spare-parts"]
+  },
+  {
+    slug: "sumitomo-qt23-5f-z-internal-gear-pump",
+    title: "SUMITOMO QT23-5F-Z Internal Gear Pump",
+    description:
+      "SUMITOMO QT23-5F-Z internal gear pump for model- and interface-based industrial hydraulic replacement sourcing.",
+    path: "/en/products/hydraulic-components/sumitomo-qt23-5f-z-internal-gear-pump/",
+    image:
+      "/images/products/general-products/sumitomo-qt23-5f-z-internal-gear-pump/sumitomo-qt23-5f-z-internal-gear-pump-thumbnail.webp",
+    imageAlt: "SUMITOMO QT23-5F-Z internal gear pump with identification plate",
+    categorySlugs: ["industrial-machinery", "factory-spare-parts"]
+  },
+  {
+    slug: "parker-t7ds-e38-1r00-a1mw-vane-pump",
+    title: "Parker T7DS-E38-1R00-A1MW Vane Pump",
+    description:
+      "Parker T7DS-E38-1R00-A1MW hydraulic vane pump, code 024-26368-0, for exact-model industrial replacement sourcing.",
+    path: "/en/products/hydraulic-components/parker-t7ds-e38-1r00-a1mw-vane-pump/",
+    image:
+      "/images/products/general-products/parker-t7ds-e38-1r00-a1mw-vane-pump/parker-t7ds-e38-1r00-a1mw-vane-pump-thumbnail.webp",
+    imageAlt: "Parker T7DS-E38-1R00-A1MW hydraulic vane pump with model label",
+    categorySlugs: ["industrial-machinery", "factory-spare-parts"]
+  },
+  {
+    slug: "rexroth-da6vp2a50-350fsm-pressure-cut-off-valve",
+    title: "Rexroth DA6VP2A50/350FSM Pressure Cut-Off Valve",
+    description:
+      "Rexroth DA6VP2A50/350FSM pressure cut-off valve, Material Number R901224247, for model- and circuit-based industrial replacement sourcing.",
+    path: "/en/products/hydraulic-components/rexroth-da6vp2a50-350fsm-pressure-cut-off-valve/",
+    image:
+      "/images/products/general-products/rexroth-da6vp2a50-350fsm-pressure-cut-off-valve/rexroth-da6vp2a50-350fsm-pressure-cut-off-valve-thumbnail.webp",
+    imageAlt: "Rexroth DA6VP2A50/350FSM pressure cut-off valve identification plate",
+    categorySlugs: ["industrial-machinery", "factory-spare-parts"]
+  },
+  {
     slug: "zs-60-tube-tapering-reducing-machine",
     title: "ZS-60 Tube Tapering and Reducing Machine",
     description:
