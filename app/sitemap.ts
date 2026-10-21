@@ -94,6 +94,14 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/heat cleaning furnance/product.yaml"
     ];
   }
+  if (path === "products/industrial-fasteners/custom-steel-spacers") {
+    return [
+      ...common,
+      "app/[locale]/products/industrial-fasteners/custom-steel-spacers/page.tsx",
+      "data/products.ts",
+      "public/images/products/general-products/custom-steel-spacers"
+    ];
+  }
   if (path.startsWith("products/industrial-fasteners/")) {
     return [
       ...common,

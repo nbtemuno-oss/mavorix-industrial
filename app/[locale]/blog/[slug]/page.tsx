@@ -59,6 +59,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   const isZr61kcPeruCase = post.slug === "copeland-zr61kc-scroll-compressor-sourcing-peru";
   const isVerticalMillingPolandCase = post.slug === "hjy-4gt-vertical-turret-milling-machine-sourcing-poland";
   const isPofFilmMiddleEastCase = post.slug === "pof-shrink-film-full-container-sourcing-middle-east";
+  const isSpacerScrewSerbiaCase = post.slug === "steel-spacers-countersunk-screws-shipment-serbia";
   const isPeruCompressorCase = isCrnqPeruCase || isZr61kcPeruCase;
   const isCustomCuttingToolsGuide = post.slug === "how-to-source-custom-cutting-tools-from-china";
   const isCustomScrewsGuide = post.slug === "how-screws-are-made-cold-heading-thread-rolling";
@@ -68,7 +69,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   const isCncTurningGuide = post.slug === "custom-cnc-turned-parts-threaded-fittings-buying-guide";
   const isRoboticsCncGuide = post.slug === "cnc-machined-parts-for-robotics-automation-buying-guide";
   const isPrecisionMachiningGuide = isCncMachiningGuide || isCncTurningGuide || isRoboticsCncGuide;
-  const isSourcingCase = isRexrothCase || isCeramicMediaCase || isLedFloodLightCase || isHydraulicValveSourcingCase || isStrappingMachineCase || isCountersunkScrewCase || isAirCompressorCase || isPipeTaperingCase || isUsedInjectionMoldCase || isBearingArgentinaCase || isPeruCompressorCase || isVerticalMillingPolandCase || isPofFilmMiddleEastCase;
+  const isSourcingCase = isRexrothCase || isCeramicMediaCase || isLedFloodLightCase || isHydraulicValveSourcingCase || isStrappingMachineCase || isCountersunkScrewCase || isAirCompressorCase || isPipeTaperingCase || isUsedInjectionMoldCase || isBearingArgentinaCase || isPeruCompressorCase || isVerticalMillingPolandCase || isPofFilmMiddleEastCase || isSpacerScrewSerbiaCase;
   const body = isSourcingCase ? post.body.replace(/\n## FAQ\n[\s\S]*$/, "") : post.body;
   const html = markdownToHtml(body);
   const image = blogImages[post.slug] ?? pageImages.blog;
@@ -101,7 +102,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
           {locale !== "en" ? <div className="mb-8 rounded-lg border border-orange-200 bg-orange-50 p-4 text-sm font-semibold text-orange-900">English version: this blog guide has not been fully translated into {locale.toUpperCase()} yet.</div> : null}
           <div className="mb-6 flex flex-wrap gap-x-5 gap-y-2 border-b border-slate-200 pb-4 text-sm font-semibold text-slate-500">
             <span>By MAVORIX INDUSTRIAL</span>
-            <time dateTime={post.date}>Published {publishedDate}</time>
+            {!post.draft ? <time dateTime={post.date}>Published {publishedDate}</time> : null}
             {updatedDate ? <time dateTime={post.updatedDate}>Updated {updatedDate}</time> : null}
           </div>
           <IndustrialImage
@@ -126,6 +127,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
           {isZr61kcPeruCase ? <p className="case-featured-caption">Copeland ZR61KC-TFD-522 scroll compressor supplied for the Peru replacement order.</p> : null}
           {isVerticalMillingPolandCase ? <p className="case-featured-caption">The complete HJY-4GT and its loose accessories recorded together before export packing for the Poland order.</p> : null}
           {isPofFilmMiddleEastCase ? <p className="case-featured-caption">Carton-packed POF shrink film pallets secured with an inflatable dunnage bag before the Middle East container shipment.</p> : null}
+          {isSpacerScrewSerbiaCase ? <p className="case-featured-caption">Cartons of steel spacers and countersunk screws grouped on export pallets before container loading for Serbia.</p> : null}
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
         {!isSourcingCase ? (
@@ -148,7 +150,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
             <Container>
               <div className="mx-auto max-w-[900px] rounded-lg bg-navy p-7 text-white shadow-industrial md:p-10">
                 <h2 className="text-2xl font-black leading-tight md:text-3xl">
-                  {isLedFloodLightCase ? "Planning an Industrial LED Flood Light Order?" : isCeramicMediaCase ? "Need Ceramic Tumbling Media for a New or Existing Finishing Process?" : isStrappingMachineCase ? "Planning an Automatic Strapping Machine Order?" : isCountersunkScrewCase ? "Need Stainless Steel Screws or Mixed Fasteners from China?" : isAirCompressorCase ? "Planning a Complete Industrial Air Compressor System?" : isPipeTaperingCase ? "Need a Tube Tapering Machine for a Specific Part?" : isUsedInjectionMoldCase ? "Looking for Used Injection Molds or Existing Tooling?" : isBearingArgentinaCase ? "Need an Industrial Bearing or Mixed Bearing List?" : isPeruCompressorCase ? "Need an Exact-Model HVAC Compressor?" : isVerticalMillingPolandCase ? "Need a Vertical Turret Milling Machine for Your Workshop?" : isPofFilmMiddleEastCase ? "Need POF Shrink Film Rolls from China?" : "Have a Hydraulic Valve or Mixed Spare-Parts List to Source?"}
+                  {isSpacerScrewSerbiaCase ? "Need Steel Spacers or Countersunk Screws to a Drawing?" : isLedFloodLightCase ? "Planning an Industrial LED Flood Light Order?" : isCeramicMediaCase ? "Need Ceramic Tumbling Media for a New or Existing Finishing Process?" : isStrappingMachineCase ? "Planning an Automatic Strapping Machine Order?" : isCountersunkScrewCase ? "Need Stainless Steel Screws or Mixed Fasteners from China?" : isAirCompressorCase ? "Planning a Complete Industrial Air Compressor System?" : isPipeTaperingCase ? "Need a Tube Tapering Machine for a Specific Part?" : isUsedInjectionMoldCase ? "Looking for Used Injection Molds or Existing Tooling?" : isBearingArgentinaCase ? "Need an Industrial Bearing or Mixed Bearing List?" : isPeruCompressorCase ? "Need an Exact-Model HVAC Compressor?" : isVerticalMillingPolandCase ? "Need a Vertical Turret Milling Machine for Your Workshop?" : isPofFilmMiddleEastCase ? "Need POF Shrink Film Rolls from China?" : "Have a Hydraulic Valve or Mixed Spare-Parts List to Source?"}
                 </h2>
                 <p className="mt-4 max-w-3xl leading-8 text-slate-300">
                   {isLedFloodLightCase
@@ -173,11 +175,13 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
                     ? "Send the workpiece drawing, material, machining operations, tolerances, tooling preference, site power and destination. MAVORIX can help compare machine configurations, coordinate agreed checks and follow export packing."
                     : isPofFilmMiddleEastCase
                     ? "Send the film format, width, thickness, roll length, core size, application, shrink equipment, quantity, packing and destination. MAVORIX can help compare suppliers, coordinate samples and follow export packing."
+                    : isSpacerScrewSerbiaCase
+                    ? "Send the spacer drawing, screw dimensions, material and finish requirements, quantities, packing instructions and destination. MAVORIX can help coordinate China-side sourcing, specification clarification and shipment preparation."
                     : "Send the complete model codes, material numbers, label photos and required quantities. MAVORIX can help organize China-side supplier sourcing, model checking and consolidated packing."}
                 </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                  <Button href={`/${locale}/contact/`}>{isLedFloodLightCase ? "Send Your Lighting Requirement" : isCeramicMediaCase ? "Send Your Requirement" : isStrappingMachineCase ? "Send Package Details" : isCountersunkScrewCase ? "Send Your Screw List" : isAirCompressorCase ? "Send Your Air Requirement" : isPipeTaperingCase ? "Send Your Tube Drawing" : isUsedInjectionMoldCase ? "Send Your Mold Requirement" : isBearingArgentinaCase ? "Send Your Bearing List" : isPeruCompressorCase ? "Send Your Compressor Label" : isVerticalMillingPolandCase ? "Send Your Workpiece Drawing" : isPofFilmMiddleEastCase ? "Send Your Film Specification" : "Send Your Parts List"}</Button>
-                  <Button href={site.whatsappUrl} variant="secondary">{isLedFloodLightCase ? "Discuss the Project" : isCeramicMediaCase ? "Discuss a Bulk Order" : isStrappingMachineCase ? "Discuss the Machine" : isCountersunkScrewCase ? "Discuss the Fasteners" : isAirCompressorCase ? "Discuss the System" : isPipeTaperingCase ? "Discuss the Machine" : isUsedInjectionMoldCase ? "Discuss the Molds" : isBearingArgentinaCase ? "Discuss the Bearings" : isPeruCompressorCase ? "Discuss the Compressor" : isVerticalMillingPolandCase ? "Discuss the Milling Machine" : isPofFilmMiddleEastCase ? "Discuss a Bulk Film Order" : "Discuss Your Requirement"}</Button>
+                  <Button href={`/${locale}/contact/`}>{isSpacerScrewSerbiaCase ? "Send Your Drawing and Quantity" : isLedFloodLightCase ? "Send Your Lighting Requirement" : isCeramicMediaCase ? "Send Your Requirement" : isStrappingMachineCase ? "Send Package Details" : isCountersunkScrewCase ? "Send Your Screw List" : isAirCompressorCase ? "Send Your Air Requirement" : isPipeTaperingCase ? "Send Your Tube Drawing" : isUsedInjectionMoldCase ? "Send Your Mold Requirement" : isBearingArgentinaCase ? "Send Your Bearing List" : isPeruCompressorCase ? "Send Your Compressor Label" : isVerticalMillingPolandCase ? "Send Your Workpiece Drawing" : isPofFilmMiddleEastCase ? "Send Your Film Specification" : "Send Your Parts List"}</Button>
+                  <Button href={site.whatsappUrl} variant="secondary">{isSpacerScrewSerbiaCase ? "Discuss Fastener Sourcing" : isLedFloodLightCase ? "Discuss the Project" : isCeramicMediaCase ? "Discuss a Bulk Order" : isStrappingMachineCase ? "Discuss the Machine" : isCountersunkScrewCase ? "Discuss the Fasteners" : isAirCompressorCase ? "Discuss the System" : isPipeTaperingCase ? "Discuss the Machine" : isUsedInjectionMoldCase ? "Discuss the Molds" : isBearingArgentinaCase ? "Discuss the Bearings" : isPeruCompressorCase ? "Discuss the Compressor" : isVerticalMillingPolandCase ? "Discuss the Milling Machine" : isPofFilmMiddleEastCase ? "Discuss a Bulk Film Order" : "Discuss Your Requirement"}</Button>
                 </div>
               </div>
             </Container>

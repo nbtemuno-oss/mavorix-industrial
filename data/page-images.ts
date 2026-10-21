@@ -340,6 +340,12 @@ export const blogImages: Record<string, PageImage> = {
     width: 918,
     height: 1076
   },
+  "steel-spacers-countersunk-screws-shipment-serbia": {
+    src: "/images/blog/custom-steel-spacers-countersunk-screw-shipment-serbia/palletized-spacer-screw-cartons-serbia.webp",
+    alt: "Palletized cartons of steel spacers and countersunk screws prepared for container shipment to Serbia",
+    width: 1800,
+    height: 1153
+  },
   "22kw-rotary-screw-air-compressor-system-uae": {
     src: "/images/blog/22kw-rotary-screw-air-compressor-system-uae/complete-air-compressor-system-loaded-for-uae.webp",
     alt: "Complete XPS22/8 compressed air system loaded into a shipping container for the UAE",

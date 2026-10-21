@@ -32,6 +32,17 @@ export const publishedProducts: PublishedProduct[] = [
     categorySlugs: ["metal-parts"]
   },
   {
+    slug: "custom-steel-spacers",
+    title: "Custom Steel Spacers and M5 x 90 Countersunk Screws",
+    description:
+      "Drawing-based sourcing for custom steel distance spacers and M5 x 90 countersunk screws with a specified 55 mm rolled-thread section.",
+    path: "/en/products/industrial-fasteners/custom-steel-spacers/",
+    image:
+      "/images/products/general-products/custom-steel-spacers/custom-steel-spacers-labeled-batch.webp",
+    imageAlt: "Short steel spacer components grouped in labeled inner bags",
+    categorySlugs: ["metal-parts"]
+  },
+  {
     slug: "copeland-crnq-050e-tfd-556-hermetic-reciprocating-compressor",
     title: "Copeland CRNQ-050E-TFD-556 Hermetic Reciprocating Compressor",
     description:
