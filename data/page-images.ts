@@ -340,6 +340,12 @@ export const blogImages: Record<string, PageImage> = {
     width: 918,
     height: 1076
   },
+  "stamped-door-lock-gears-carbonitriding-inspection": {
+    src: "/images/blog/stamped-door-lock-gears-carbonitriding-inspection/spcc-stamped-door-lock-gears-factory-samples.webp",
+    alt: "Finished SPCC stamped door lock drive gears sampled at the factory after carbonitriding, blackening and oiling",
+    width: 1200,
+    height: 1601
+  },
   "steel-spacers-countersunk-screws-shipment-serbia": {
     src: "/images/blog/custom-steel-spacers-countersunk-screw-shipment-serbia/palletized-spacer-screw-cartons-serbia.webp",
     alt: "Palletized cartons of steel spacers and countersunk screws prepared for container shipment to Serbia",
