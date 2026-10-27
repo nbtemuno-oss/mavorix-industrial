@@ -162,6 +162,14 @@ function sourceFilesFor(locale: string, path: string): string[] {
       "product inbox/box sealing machine/product.yaml"
     ];
   }
+  if (path.startsWith("products/metal-stamping/")) {
+    return [
+      ...common,
+      "app/[locale]/products/metal-stamping/[slug]/page.tsx",
+      "data/products.ts",
+      "public/images/products/metal-stamping/custom-stamped-metal-parts"
+    ];
+  }
   if (path.startsWith("products/precision-machining/")) {
     return [
       ...common,

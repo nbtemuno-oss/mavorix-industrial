@@ -340,6 +340,12 @@ export const blogImages: Record<string, PageImage> = {
     width: 918,
     height: 1076
   },
+  "precision-stamped-parts-factory-inspection-china": {
+    src: "/images/products/metal-stamping/custom-stamped-metal-parts/custom-stamped-formed-metal-part.webp",
+    alt: "Formed metal component with mounting holes and a slot reviewed during a factory visit",
+    width: 1440,
+    height: 1080
+  },
   "stamped-door-lock-gears-carbonitriding-inspection": {
     src: "/images/blog/stamped-door-lock-gears-carbonitriding-inspection/spcc-stamped-door-lock-gears-factory-samples.webp",
     alt: "Finished SPCC stamped door lock drive gears sampled at the factory after carbonitriding, blackening and oiling",

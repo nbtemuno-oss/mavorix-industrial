@@ -10,6 +10,17 @@ export type PublishedProduct = {
 
 export const publishedProducts: PublishedProduct[] = [
   {
+    slug: "custom-stamped-metal-parts",
+    title: "Custom Metal Stamping Parts & Assemblies",
+    description:
+      "Drawing-based sourcing for custom stamped brackets, mounting plates, levers and metal assemblies, with finishing and inspection coordination in China.",
+    path: "/en/products/metal-stamping/custom-stamped-metal-parts/",
+    image:
+      "/images/products/metal-stamping/custom-stamped-metal-parts/custom-stamped-metal-part-main.webp",
+    imageAlt: "Complete formed metal part with mounting holes and a slot on a worktable",
+    categorySlugs: ["metal-parts"]
+  },
+  {
     slug: "custom-cnc-machined-parts",
     title: "Custom CNC Machined Parts Sourcing in China",
     description:
