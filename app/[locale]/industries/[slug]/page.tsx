@@ -381,7 +381,16 @@ function MroSuppliesLandingContent() {
         "Procurement managers comparing China MRO suppliers before payment",
         "Industrial buyers consolidating small orders from several suppliers into one shipment"
       ]} />
-      <ListBlock title="What U.S. MRO Buyers Should Send" items={[
+      <ListBlock title="MRO Specifications to Confirm by Product Category" items={[
+        "Bearings and belts: full designation and suffix, bore or belt profile, dimensions, clearance or load requirements, operating temperature, and quantity",
+        "Hydraulic and pneumatic parts: complete model code, pressure and flow, port size and thread standard, mounting dimensions, seal material, and working medium",
+        "Electrical parts: supply voltage and frequency, AC or DC, current rating, signal type, connector or terminal arrangement, and installation dimensions",
+        "Filters and consumables: dimensions, filtration rating or material specification, working medium, equipment reference, pack size, and replenishment quantity",
+        "Custom wear parts: drawing revision or measured sample, material and hardness, critical fit dimensions, surface treatment, and sample approval requirements",
+        "Branded replacements: exact brand and full part number, required sourcing documentation, and whether alternatives may be proposed for buyer approval"
+      ]} />
+      <Block title="Original Parts and Proposed Alternatives" text="Tell us which items must match an exact brand and model and which may use an alternative. Similar appearance does not establish interchangeability. Proposed substitutes should identify differences in dimensions, ratings, materials, connections, and documentation for your maintenance team's review before ordering. Availability, minimum order quantities, and lead times are confirmed with suppliers for each inquiry." />
+      <ListBlock title="What MRO Buyers Should Send" items={[
         "Item names, quantities, model or part numbers, brands, clear photos, nameplates, drawings, and old samples where available",
         "Dimensions, materials, voltage, frequency, pressure, thread, mounting, tolerance, and working-condition details",
         "Whether the request requires original branded parts, compatible replacements, Chinese alternatives, or custom-made components",
@@ -557,14 +566,20 @@ function MetalPartsLandingContent() {
         "A distributor wants repeat supply records for fasteners, stamped parts, machined parts, and small custom metal components"
       ]} />
       <ListBlock title="Metal Parts Sourcing Process" items={[
-        "Requirement clarification",
-        "Supplier search and matching",
-        "Quotation comparison",
-        "Sample or drawing confirmation",
-        "Quality inspection",
-        "Export packaging",
-        "Shipment consolidation",
-        "Delivery coordination"
+        "Confirm the drawing revision, material grade, critical dimensions, quantity, finish, and acceptance criteria before supplier search",
+        "Match machining, cold-heading, stamping, or fabrication suppliers to the part geometry and expected batch size",
+        "Compare unit price alongside tooling or setup charges, sample costs, MOQ, material assumptions, finish, inspection scope, and lead time",
+        "Record supplier exceptions to the drawing and obtain buyer approval of samples or technical changes before batch production",
+        "Agree inspection scope before ordering: critical dimensions, thread gauges, material documents, finish, sampling quantity, and reporting format",
+        "Follow up nonconforming findings with the supplier and buyer before shipment release; inspection scope does not imply every part is tested",
+        "Confirm corrosion protection, thread and surface protection, part identification, carton quantities, and consolidation requirements",
+        "Keep approved drawings, sample references, and quotation revisions available for repeat-order confirmation"
+      ]} />
+      <Block title="Comparing Metal Parts Quotes on the Same Basis" text="A lower unit price may exclude tooling, heat treatment, plating, material documentation, or dimensional reports. Ask suppliers to identify these costs separately and state any drawing deviations. For repeat orders, confirm tooling ownership and storage terms, expected reorder quantities, and whether a new sample is needed after a material or process change. MAVORIX coordinates these questions with suppliers so the buyer can compare the same scope." />
+      <RelatedLinks title="Send a Drawing or Metal Parts Inquiry" links={[
+        { href: "/en/contact/", label: "Send Drawings, Quantity and Inspection Requirements" },
+        { href: "/en/services/quality-inspection/", label: "Discuss Inspection Coordination" },
+        { href: "/en/services/mro-sourcing-from-china/", label: "Combine Metal Parts with an MRO Order" }
       ]} />
       <ListBlock title="Risks in Metal Part Sourcing" items={[
         "Wrong material specification or unclear stainless steel grade",

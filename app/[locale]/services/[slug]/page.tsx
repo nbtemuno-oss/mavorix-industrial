@@ -283,6 +283,21 @@ function MroSourcingExtra() {
         "Plan whether items should ship by courier, air, LCL, FCL, or consolidated mixed shipment based on urgency and order value",
         "Review risk points before payment, including unclear specifications, vague lead times, weak packing notes, and mismatched supplier claims"
       ]} />
+      <ListBlock title="How a Mixed MRO Inquiry Moves from List to Shipment" items={[
+        "Inquiry review: assign each item a reference number and record quantity, unit of measure, full model code, photos, required delivery date, and missing specifications",
+        "Supplier comparison: record quoted brand and model, technical exceptions, MOQ, pack size, unit price, quotation validity, lead time, and delivery terms against the same item reference",
+        "Buyer confirmation: flag substitutes, unavailable items, split deliveries, and unresolved technical questions for approval before an order is placed",
+        "Order follow-up: track supplier confirmations and expected readiness dates; discuss separate shipment for urgent items when waiting for the full list would delay maintenance",
+        "Pre-shipment review: coordinate the agreed quantity checks, label and model checks, photos, and any specified measurements or tests; share discrepancies for resolution",
+        "Consolidation: match supplier cartons to the approved item list, confirm packing and shipment documents, and retain part references for future reorders"
+      ]} />
+      <Block title="Agree the Inspection Scope Before Ordering" text="A photo of a nameplate can help check a model code, but it does not establish internal condition, material grade, authenticity, or performance. Tell us which items need dimensional checks, material documents, functional testing, or specialist inspection so availability and cost can be discussed before purchase. Final replacement suitability should be reviewed by the buyer's technical team using the supplier's confirmed specifications." />
+      <Block title="Prepare Your MRO Request for Quotation" text="Send an item list with one line per part, including your item reference, full model or drawing number, quantity and unit, required brand or alternative policy, and destination. Attach matching photos or drawings using the same references. Mark urgent items separately and include required inspection documents and packing instructions. If some details are missing, identify them so they can be clarified before suppliers quote." />
+      <RelatedLinks title="Start a Mixed MRO Sourcing Request" links={[
+        { href: "/en/contact/", label: "Send Your MRO Item List" },
+        { href: "/en/industries/mro-supplies/", label: "Check Specifications by MRO Category" },
+        { href: "/en/industries/metal-parts/", label: "Prepare Drawing-Based Metal Parts" }
+      ]} />
       <ListBlock title="Typical MRO Buyer Scenarios" items={[
         "A factory maintenance team needs many small spare parts but does not know which Chinese suppliers can handle mixed MRO lists",
         "An importer wants to build repeat sourcing channels for industrial MRO suppliers in China",
