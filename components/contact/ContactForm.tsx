@@ -18,6 +18,10 @@ type ContactFormProps = {
   copy: ContactFormCopy;
   locale: string;
   whatsappUrl: string;
+  initialValues?: Partial<Record<(typeof contactFieldKeys)[number], string>>;
+  requiredFields?: (typeof contactFieldKeys)[number][];
+  requirementRequired?: boolean;
+  messagePlaceholder?: string;
 };
 
 function fieldName(label: string) {
@@ -30,7 +34,7 @@ function inputName(label: string, index: number) {
   return contactFieldKeys[index] || fieldName(label);
 }
 
-export function ContactForm({ copy, locale, whatsappUrl }: ContactFormProps) {
+export function ContactForm({ copy, locale, whatsappUrl, initialValues, requiredFields = [], requirementRequired = false, messagePlaceholder }: ContactFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const successMessage = copy.successMessage || "Thank you. Your inquiry has been submitted. We will reply as soon as possible.";
   const errorMessage = copy.errorMessage || "Sorry, the inquiry could not be sent. Please contact us by email or WhatsApp.";
@@ -79,17 +83,17 @@ export function ContactForm({ copy, locale, whatsappUrl }: ContactFormProps) {
     <form onSubmit={handleSubmit} className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
       <div className="grid gap-4 md:grid-cols-2">
         {copy.fields.map((label, index) => (
-          <label key={label} className="text-sm font-bold text-slate-700">{label}<input name={inputName(label, index)} className="mt-2 h-12 w-full rounded-md border border-slate-300 px-3 outline-none focus:border-signal" /></label>
+          <label key={label} className="text-sm font-bold text-slate-700">{label}<input name={inputName(label, index)} type={contactFieldKeys[index] === "email" ? "email" : "text"} required={requiredFields.includes(contactFieldKeys[index])} defaultValue={initialValues?.[contactFieldKeys[index]]} className="mt-2 h-12 w-full rounded-md border border-slate-300 px-3 outline-none focus:border-signal" /></label>
         ))}
-        <label className="text-sm font-bold text-slate-700 md:col-span-2">{copy.requirement}<input name="requirement" className="mt-2 h-12 w-full rounded-md border border-slate-300 px-3 outline-none focus:border-signal" /></label>
-        <label className="text-sm font-bold text-slate-700 md:col-span-2">{copy.message}<textarea name="message" rows={6} className="mt-2 w-full rounded-md border border-slate-300 px-3 py-3 outline-none focus:border-signal" /></label>
+        <label className="text-sm font-bold text-slate-700 md:col-span-2">{copy.requirement}<input name="requirement" required={requirementRequired} className="mt-2 h-12 w-full rounded-md border border-slate-300 px-3 outline-none focus:border-signal" /></label>
+        <label className="text-sm font-bold text-slate-700 md:col-span-2">{copy.message}<textarea name="message" rows={6} placeholder={messagePlaceholder} className="mt-2 w-full rounded-md border border-slate-300 px-3 py-3 outline-none focus:border-signal" /></label>
       </div>
       <div className="mt-6 flex flex-wrap gap-3">
         <button type="submit" disabled={status === "submitting"} className="min-h-11 rounded-md bg-signal px-5 py-3 text-sm font-black text-white hover:bg-orange-600 disabled:cursor-not-allowed disabled:bg-orange-300">{copy.submit}</button>
         <Button href={whatsappUrl} variant="dark"><MessageCircle className="mr-2" size={17} /> {copy.whatsapp}</Button>
       </div>
-      {status === "success" ? <p className="mt-4 text-sm font-bold text-emerald-700">{successMessage}</p> : null}
-      {status === "error" ? <p className="mt-4 text-sm font-bold text-red-700">{errorMessage}</p> : null}
+      {status === "success" ? <p role="status" className="mt-4 text-sm font-bold text-emerald-700">{successMessage}</p> : null}
+      {status === "error" ? <p role="alert" className="mt-4 text-sm font-bold text-red-700">{errorMessage}</p> : null}
     </form>
   );
 }

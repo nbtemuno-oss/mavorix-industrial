@@ -5,17 +5,19 @@ type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "dark";
   className?: string;
+  native?: boolean;
 };
 
-export function Button({ href, children, variant = "primary", className = "" }: ButtonProps) {
+export function Button({ href, children, variant = "primary", className = "", native = false }: ButtonProps) {
   const styles = {
     primary: "bg-signal text-white hover:bg-orange-600",
     secondary: "bg-white text-navy ring-1 ring-slate-200 hover:bg-slate-50",
     dark: "bg-navy text-white hover:bg-slate-800"
   };
+  const ButtonLink = native ? "a" : Link;
   return (
-    <Link href={href} className={`inline-flex min-h-11 items-center justify-center rounded-md px-5 py-3 text-sm font-bold transition ${styles[variant]} ${className}`}>
+    <ButtonLink href={href} className={`inline-flex min-h-11 items-center justify-center rounded-md px-5 py-3 text-sm font-bold transition ${styles[variant]} ${className}`}>
       {children}
-    </Link>
+    </ButtonLink>
   );
 }

@@ -3,6 +3,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, statSync } from "node:fs";
 import { countries } from "@/data/countries";
 import { industries } from "@/data/industries";
+import { japaneseCustomParts } from "@/data/japanese-custom-parts";
 import { publishedProducts } from "@/data/products";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
@@ -217,5 +218,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       )
   );
 
-  return [...enUrls, ...localeUrls];
+  const landingUrls: MetadataRoute.Sitemap = japaneseCustomParts.published ? [{
+    url: `${site.url}${japaneseCustomParts.path}`,
+    lastModified: getLastModified(["app/ja/layout.tsx", "app/ja/custom-parts/page.tsx", "data/japanese-custom-parts.ts"]),
+    changeFrequency: "monthly",
+    priority: 0.85
+  }] : [];
+
+  return [...enUrls, ...localeUrls, ...landingUrls];
 }
