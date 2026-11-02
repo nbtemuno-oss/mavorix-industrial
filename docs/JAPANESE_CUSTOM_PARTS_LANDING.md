@@ -14,10 +14,10 @@ The page targets drawing-based B2B special screws and fasteners, machined parts,
 
 The primary CTA scrolls to a Japanese inquiry form using the existing `/api/contact/` endpoint. Stable field keys and `locale: ja` are preserved in the notification. Drawings are shared through a link in the message or attached to email; the page does not imply an attachment upload service. Contact information is read from `data/site.ts`.
 
-Local UI and endpoint validation can be checked without sending a message. Production mail delivery and advertising conversion measurement require separate verification before launching ads; this change does not install a Google tag or create an Ads conversion action.
+Local UI and endpoint validation can be checked without sending a message. Since 2026-11-02 the Japanese layout loads the Google Ads tag for `AW-18507960360`. The form emits `MAVORIX | JA | RFQ Submitted` (`7NqrCMeDybAdEKigpPlE`) only after `/api/contact/` returns success. Failed requests, page visits, CTA clicks and other language forms do not emit this event. Each accepted submission uses a random transaction ID; no inquiry fields are included. Enhanced conversions and advertising personalization signals are disabled. Blocked analytics must not prevent an inquiry from succeeding.
 
 ## Review and future launch
 
-The approved page has `japaneseCustomParts.published` enabled and is included in the sitemap and language navigation. Only explicitly reviewed Japanese routes are exposed. Production mail delivery and conversion measurement remain separate pre-advertising checks. No English page is declared as its hreflang equivalent because an equivalent English landing page has not been authored.
+The approved page has `japaneseCustomParts.published` enabled and is included in the sitemap and language navigation. Only explicitly reviewed Japanese routes are exposed. Google Ads attribution still needs a genuine ad click followed by a successful inquiry; do not submit fake leads to test production conversions. No English page is declared as its hreflang equivalent because an equivalent English landing page has not been authored.
 
 Suggested future Search ad groups: `特殊ねじ・特注締結部品`, `図面製作・切削加工部品`, and `金属プレス部品`. Each group should use drawing-based buying intent, with commodity retail, jobs/training and equipment-sales searches excluded as appropriate. Establish valid drawing/quantity inquiries and quotable projects as the useful outcomes before expanding spend.

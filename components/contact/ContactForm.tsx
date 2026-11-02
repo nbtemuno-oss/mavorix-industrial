@@ -1,8 +1,9 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { trackJapaneseRfq } from "@/lib/google-ads";
 
 type ContactFormCopy = {
   fields: string[];
@@ -36,11 +37,14 @@ function inputName(label: string, index: number) {
 
 export function ContactForm({ copy, locale, whatsappUrl, initialValues, requiredFields = [], requirementRequired = false, messagePlaceholder }: ContactFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const submitting = useRef(false);
   const successMessage = copy.successMessage || "Thank you. Your inquiry has been submitted. We will reply as soon as possible.";
   const errorMessage = copy.errorMessage || "Sorry, the inquiry could not be sent. Please contact us by email or WhatsApp.";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (submitting.current) return;
+    submitting.current = true;
     const form = event.currentTarget;
     setStatus("submitting");
 
@@ -70,12 +74,15 @@ export function ContactForm({ copy, locale, whatsappUrl, initialValues, required
       if (response.ok) {
         form.reset();
         setStatus("success");
+        trackJapaneseRfq({ locale, ok: response.ok });
         return;
       }
 
       setStatus("error");
     } catch {
       setStatus("error");
+    } finally {
+      submitting.current = false;
     }
   }
 
