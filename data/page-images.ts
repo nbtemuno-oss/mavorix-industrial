@@ -340,6 +340,18 @@ export const blogImages: Record<string, PageImage> = {
     width: 918,
     height: 1076
   },
+  "custom-metal-stamping-rfq-checklist": {
+    src: "/images/products/metal-stamping/custom-stamped-metal-parts/custom-stamped-metal-part-main.webp",
+    alt: "Complete formed metal component with a slot, mounting holes and bent features",
+    width: 1440,
+    height: 1160
+  },
+  "custom-precision-shafts-buying-guide": {
+    src: "/images/blog/custom-precision-shafts-buying-guide/precision-shaft-rfq-features.webp",
+    alt: "Original stepped-shaft schematic identifying functional fits, geometric requirements and final surface condition",
+    width: 1200,
+    height: 800
+  },
   "precision-stamped-parts-factory-inspection-china": {
     src: "/images/products/metal-stamping/custom-stamped-metal-parts/custom-stamped-formed-metal-part.webp",
     alt: "Formed metal component with mounting holes and a slot reviewed during a factory visit",
