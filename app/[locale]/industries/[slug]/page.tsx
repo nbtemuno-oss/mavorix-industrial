@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { ProcurementPaths } from "@/components/sections/ProcurementPaths";
+import { procurementPaths } from "@/data/procurement-paths";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -94,6 +96,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
           {locale === "en" && industry.slug === "agricultural-equipment" ? <AgriculturalEquipmentIntro /> : null}
           {locale === "en" && industry.slug === "mro-supplies" ? <MroSuppliesLandingContent /> : null}
           {locale === "en" && industry.slug === "packaging-industry" ? <PackagingIndustryLandingContent /> : null}
+          {locale === "en" && procurementPaths.some((path) => path.landing === `/en/industries/${slug}/`) ? <ProcurementPaths topic={procurementPaths.find((path) => path.landing === `/en/industries/${slug}/`)!.id} currentPath={`/en/industries/${slug}/`} /> : null}
           {locale === "en" && (industry.slug === "plastic-industry" || industry.slug === "metal-parts" || industry.slug === "electrical-mechanical-parts" || industry.slug === "industrial-machinery" || industry.slug === "agricultural-equipment" || industry.slug === "factory-spare-parts" || industry.slug === "packaging-industry") ? null : <IndustrialImage src={industry.image} alt={`${industry.title} sourcing from China`} className="min-h-[360px]" />}
           {locale === "en" ? <PublishedProductCards industrySlug={industry.slug} /> : null}
           <Block title="Industry-Focused Introduction" text={`MAVORIX INDUSTRIAL helps overseas buyers source, verify, and coordinate Chinese suppliers for ${industry.title.toLowerCase()} products. We do not claim to manufacture every item; our role is procurement support and supplier coordination.`} />
@@ -130,12 +133,12 @@ const industryMetadata: Record<string, { title: string; description: string }> =
     description: "Source fasteners, CNC machined parts, stampings, gears, and custom metal hardware in China with supplier checks, drawing review, and inspection coordination."
   },
   "mro-supplies": {
-    title: "Industrial MRO Supplies from China | Supplier Sourcing",
+    title: "Industrial MRO Supplies & Procurement from China",
     description: "Source industrial MRO supplies from China with category-based supplier search, specification checks, quotation comparison, and mixed-order consolidation support."
   },
   "packaging-industry": {
-    title: "Packaging Machine Parts & MRO Sourcing from China | MAVORIX",
-    description: "MAVORIX supports sourcing of packaging machines, conveyor parts, filling parts, sealing equipment, packaging machine spares, and MRO supplies from China."
+    title: "Packaging Machinery Spare Parts Sourcing from China",
+    description: "Source conveyor, filling, sealing and packaging machine spare parts from China. Compare specifications, suppliers and packing for mixed replacement orders."
   }
 };
 

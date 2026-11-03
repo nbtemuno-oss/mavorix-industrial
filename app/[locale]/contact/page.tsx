@@ -43,7 +43,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <PageHero badge={copy.badge} title={copy.title} description={copy.description} breadcrumbs={[{ label: t(locale).nav.home, href: `/${locale}/` }, { label: t(locale).nav.contact, href: `/${locale}/contact/` }]} cta={false} />
       {locale === "en" ? <ContactIntro /> : null}
       <Container className="grid gap-8 py-16 lg:grid-cols-[1.1fr_.9fr]">
-        <ContactForm copy={copy} locale={locale} whatsappUrl={site.whatsappUrl} />
+        <ContactForm copy={copy} locale={locale} whatsappUrl={site.whatsappUrl} requiredFields={["name", "email"]} requirementRequired />
         <aside className="overflow-hidden rounded-lg bg-navy text-white">
           <IndustrialImage src={pageImages.contact.src} alt={pageImages.contact.alt} className="h-72 rounded-none" sizes="(min-width: 1024px) 40vw, 100vw" />
           <div className="p-7">

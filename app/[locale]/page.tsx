@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ProcurementPaths } from "@/components/sections/ProcurementPaths";
 import Link from "next/link";
 import { BlogCard } from "@/components/cards/BlogCard";
 import { CountryCard } from "@/components/cards/CountryCard";
@@ -58,6 +59,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   return (
     <>
       <Hero locale={locale} />
+      {locale === "en" ? <Container><ProcurementPaths /></Container> : null}
       <section className="bg-white py-8">
         <Container className="grid gap-3 md:grid-cols-5">
           {copy.home.strip.map((item) => (

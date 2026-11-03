@@ -1,6 +1,7 @@
 "use client";
 
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
+import { procurementPaths } from "@/data/procurement-paths";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { trackJapaneseRfq } from "@/lib/google-ads";
@@ -38,6 +39,17 @@ function inputName(label: string, index: number) {
 export function ContactForm({ copy, locale, whatsappUrl, initialValues, requiredFields = [], requirementRequired = false, messagePlaceholder }: ContactFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const submitting = useRef(false);
+  const requirementInput = useRef<HTMLInputElement>(null);
+  const [topicChecklist, setTopicChecklist] = useState("");
+  useEffect(() => {
+    if (locale !== "en") return;
+    const topic = new URLSearchParams(window.location.search).get("topic");
+    const path = procurementPaths.find((item) => item.id === topic);
+    if (path && requirementInput.current && !requirementInput.current.value) {
+      requirementInput.current.value = path.requirement;
+      setTopicChecklist(path.checklist);
+    }
+  }, [locale]);
   const successMessage = copy.successMessage || "Thank you. Your inquiry has been submitted. We will reply as soon as possible.";
   const errorMessage = copy.errorMessage || "Sorry, the inquiry could not be sent. Please contact us by email or WhatsApp.";
 
@@ -87,12 +99,13 @@ export function ContactForm({ copy, locale, whatsappUrl, initialValues, required
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+    <form id="inquiry" onSubmit={handleSubmit} className="scroll-mt-28 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+      {topicChecklist ? <p className="mb-5 text-sm leading-7 text-slate-600">{topicChecklist}</p> : null}
       <div className="grid gap-4 md:grid-cols-2">
         {copy.fields.map((label, index) => (
           <label key={label} className="text-sm font-bold text-slate-700">{label}<input name={inputName(label, index)} type={contactFieldKeys[index] === "email" ? "email" : "text"} required={requiredFields.includes(contactFieldKeys[index])} defaultValue={initialValues?.[contactFieldKeys[index]]} className="mt-2 h-12 w-full rounded-md border border-slate-300 px-3 outline-none focus:border-signal" /></label>
         ))}
-        <label className="text-sm font-bold text-slate-700 md:col-span-2">{copy.requirement}<input name="requirement" required={requirementRequired} className="mt-2 h-12 w-full rounded-md border border-slate-300 px-3 outline-none focus:border-signal" /></label>
+        <label className="text-sm font-bold text-slate-700 md:col-span-2">{copy.requirement}<input ref={requirementInput} name="requirement" required={requirementRequired} className="mt-2 h-12 w-full rounded-md border border-slate-300 px-3 outline-none focus:border-signal" /></label>
         <label className="text-sm font-bold text-slate-700 md:col-span-2">{copy.message}<textarea name="message" rows={6} placeholder={messagePlaceholder} className="mt-2 w-full rounded-md border border-slate-300 px-3 py-3 outline-none focus:border-signal" /></label>
       </div>
       <div className="mt-6 flex flex-wrap gap-3">

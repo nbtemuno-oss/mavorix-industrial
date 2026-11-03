@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ProcurementPaths } from "@/components/sections/ProcurementPaths";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CTASection } from "@/components/sections/CTASection";
@@ -64,6 +65,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <ListBlock title="What We Can Support" items={["Requirement review and supplier matching", "Technical communication and document exchange", "Quotation and sample coordination", "Quality and packing follow-up", "Export coordination and long-term sourcing support"]} />
             {locale === "en" && service.slug === "china-industrial-sourcing" ? <IndustrialSourcingExtra /> : null}
             {locale === "en" && service.slug === "mro-sourcing-from-china" ? <MroSourcingExtra /> : null}
+            {locale === "en" && service.slug === "mro-sourcing-from-china" ? <ProcurementPaths topic="mro" currentPath="/en/services/mro-sourcing-from-china/" /> : null}
             {locale === "en" && service.slug === "supplier-verification" ? <SupplierVerificationExtra /> : null}
             {locale === "en" ? <ServiceRelatedGuides slug={service.slug} /> : null}
             <Block title="Quality and Risk Control" text="We focus on reducing uncertainty before and during the order. This includes supplier verification, clear specifications, inspection coordination, photo or video checks, packing communication, and practical issue follow-up." />
@@ -98,8 +100,8 @@ const serviceMetadata: Record<string, { title: string; description: string }> = 
     description: "China industrial sourcing partner for overseas buyers sourcing machinery, MRO supplies, factory spare parts, metal parts, OEM products, supplier verification, inspection, export packing, and shipment consolidation."
   },
   "mro-sourcing-from-china": {
-    title: "MRO Sourcing from China | Mixed Orders & Consolidation",
-    description: "MRO sourcing support for U.S. factories buying spare parts, consumables, and tools from China. Compare quotes, check suppliers, and consolidate mixed orders."
+    title: "China MRO Sourcing Agent | Supplier Checks & Mixed Orders",
+    description: "Organize mixed MRO procurement from China with supplier checks, quotation comparison, inspection coordination and consolidated shipment planning. Send your list."
   },
   "supplier-verification": {
     title: "China Supplier Verification Service | Check Supplier Risk Before Payment | MAVORIX",

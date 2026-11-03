@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { MobileInquiryBar } from "@/components/contact/MobileInquiryBar";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { site } from "@/data/site";
@@ -19,6 +20,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
       <Header locale={locale} />
       <main>{children}</main>
       <Footer locale={locale} />
+      {locale === "en" ? <MobileInquiryBar /> : null}
       <JsonLd data={[organizationSchema(), websiteSchema()]} />
     </div>
   );

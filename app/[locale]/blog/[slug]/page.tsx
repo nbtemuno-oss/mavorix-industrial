@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { ProcurementPaths } from "@/components/sections/ProcurementPaths";
+import { getProcurementPath } from "@/data/procurement-paths";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CTASection } from "@/components/sections/CTASection";
@@ -78,6 +80,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
   const isSourcingCase = isRexrothCase || isCeramicMediaCase || isLedFloodLightCase || isHydraulicValveSourcingCase || isStrappingMachineCase || isCountersunkScrewCase || isAirCompressorCase || isPipeTaperingCase || isUsedInjectionMoldCase || isBearingArgentinaCase || isPeruCompressorCase || isVerticalMillingPolandCase || isPofFilmMiddleEastCase || isSpacerScrewSerbiaCase || isStampingInspectionCase;
   const body = isSourcingCase ? post.body.replace(/\n## FAQ\n[\s\S]*$/, "") : post.body;
   const html = markdownToHtml(body);
+  const procurementPath = locale === "en" ? getProcurementPath(slug) : undefined;
   const image = blogImages[post.slug] ?? pageImages.blog;
   const articleUrl = `${site.url}/${locale}/blog/${post.slug}/`;
   const dateFormatter = new Intl.DateTimeFormat("en", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
@@ -138,6 +141,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
           {isFormedPartInspectionCase ? <p className="case-featured-caption">A formed metal component reviewed during a factory visit, with holes, slots and bent features that affect assembly fit.</p> : null}
           {isPrecisionShaftGuide ? <p className="case-featured-caption">Illustrative shaft features for an RFQ discussion, not a production drawing or a photograph of a supplied shaft.</p> : null}
           <div dangerouslySetInnerHTML={{ __html: html }} />
+          {procurementPath ? <ProcurementPaths topic={procurementPath.id} currentPath={`/en/blog/${slug}/`} /> : null}
         </article>
         {!isSourcingCase ? (
           <aside className="h-fit rounded-lg border border-slate-200 bg-white p-6 shadow-sm">

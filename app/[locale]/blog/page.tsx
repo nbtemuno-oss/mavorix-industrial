@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ProcurementPaths } from "@/components/sections/ProcurementPaths";
 import Link from "next/link";
 import { BlogCard } from "@/components/cards/BlogCard";
 import { CTASection } from "@/components/sections/CTASection";
@@ -32,6 +33,7 @@ export default function BlogPage() {
     <>
       <PageHero badge="Blog" title="China Industrial Sourcing Blog and Procurement Guides" description="Practical guides for China industrial sourcing, supplier verification, machinery purchasing, spare parts, MRO, shipment consolidation, and procurement risk." breadcrumbs={[{ label: "Home", href: "/en/" }, { label: "Blog", href: "/en/blog/" }]} />
       <section className="bg-white py-16">
+        <Container><ProcurementPaths /></Container>
         <Container className="grid gap-8 lg:grid-cols-[1fr_420px] lg:items-center">
           <div>
             <div className="max-w-5xl space-y-5 text-base leading-8 text-slate-600">
