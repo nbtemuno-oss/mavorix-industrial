@@ -79,7 +79,7 @@ MAVORIX helps packaging equipment buyers clarify spare part details and avoid we
 
 For mixed packaging MRO orders, we can also help coordinate consolidation when parts come from several Chinese suppliers. This can be useful for buyers who need conveyor parts, filling parts, sealing parts, sensors, bearings, pneumatic parts and packaging supplies in one purchasing cycle.
 
-Relevant internal resources include [Supplier Verification](/en/services/supplier-verification/), [Quality Inspection](/en/services/quality-inspection/), [Packaging Machine Spare Parts Sourcing from China](/en/blog/packaging-machine-spare-parts-sourcing-china/), and [Contact MAVORIX](/en/contact/).
+For help with supplier checks or an order, see [Supplier Verification](/en/services/supplier-verification/), [Quality Inspection](/en/services/quality-inspection/), [Packaging Machine Spare Parts Sourcing from China](/en/blog/packaging-machine-spare-parts-sourcing-china/), and [Contact MAVORIX](/en/contact/).
 
 ## FAQ
 

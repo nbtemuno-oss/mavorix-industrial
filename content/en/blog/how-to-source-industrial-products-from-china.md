@@ -24,7 +24,7 @@ For OEM parts, spare parts, and technical components, samples or small trial ord
 
 Before shipment, confirm packing, labeling, photos, inspection requirements, export documents, and shipping timing. For multi-supplier orders, consolidation planning should start early.
 
-## Useful internal resources
+## Related services and guides
 
 Learn more about [China industrial sourcing](/en/services/china-industrial-sourcing/), [supplier verification](/en/services/supplier-verification/), and [quality inspection](/en/services/quality-inspection/). To start a project, visit the [contact page](/en/contact/).
 

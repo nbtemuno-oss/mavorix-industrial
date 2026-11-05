@@ -29,11 +29,11 @@ The best starting point is a clear purchasing file with photos, drawings, models
 
 ## How MAVORIX Industrial can support the sourcing process
 
-MAVORIX Industrial is positioned as a China industrial sourcing and procurement support partner for overseas factories, industrial buyers, procurement managers, distributors, and small or medium manufacturers. The support is practical: requirement review, supplier search, quotation comparison, supplier communication, inspection coordination, export packing follow-up, and shipment consolidation when several suppliers are involved.
+We help buyers in China sourcing projects check suppliers, compare quotations, and agree on inspection and packing requirements. For orders with several suppliers, we can also coordinate deliveries for consolidation.
 
 This does not replace the buyer's own technical decision. Instead, it helps organize the China-side sourcing work so the buyer can make a clearer purchasing decision with fewer unknowns.
 
-## Internal resources for the next step
+## Related services and guides
 
 Useful related pages include [country sourcing pages](/en/countries/), [China industrial sourcing](/en/services/china-industrial-sourcing/), [contact MAVORIX Industrial](/en/contact/).
 
@@ -45,7 +45,7 @@ Useful related pages include [country sourcing pages](/en/countries/), [China in
 - Is inspection or photo confirmation needed before shipment?
 - If several suppliers are involved, should delivery and consolidation be coordinated early?
 
-## Soft next step
+## Send us your requirements
 
 If you are comparing suppliers or organizing an industrial sourcing request from China, you can send product details, photos, drawings, supplier links, quantities, and destination country to MAVORIX Industrial through the [contact page](/en/contact/). The team can review the practical sourcing path and help clarify the next steps.
 

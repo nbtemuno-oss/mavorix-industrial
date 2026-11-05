@@ -123,7 +123,7 @@ For China-side checks before shipment, buyers can use [quality inspection suppor
 - A good RFQ reduces wrong-part risk before suppliers quote.
 - For mixed maintenance items, [MRO sourcing from China](/en/services/mro-sourcing-from-china/) can support small and repeated orders.
 
-## Soft next step
+## Send us your requirements
 
 Send machine brand/model, part photos, nameplate, old part number, dimensions, quantity and destination country to MAVORIX INDUSTRIAL through the [contact page](/en/contact/). We can help review the sourcing path, compare supplier options and coordinate the next steps from China.
 

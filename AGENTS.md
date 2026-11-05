@@ -95,6 +95,7 @@ There is currently no separate automated test script in `package.json`.
 - Use local data files and Markdown content for page expansion.
 - Do not add a database, CMS, or backend unless explicitly requested.
 - Do not claim MAVORIX manufactures every product; describe the role as sourcing, verification, comparison, coordination, quality follow-up, export support, and consolidation.
+- Write public copy for procurement customers, including page introductions, navigation, footers, and article templates. Keep SEO, AI visibility, keyword targeting, and editorial notes out of public copy. Describe what buyers can order, what information to send, and what MAVORIX can verify or coordinate.
 
 ## Existing Features That Must Be Preserved
 

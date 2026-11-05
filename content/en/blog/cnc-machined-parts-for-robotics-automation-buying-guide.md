@@ -18,7 +18,7 @@ Robotics companies do not buy “precision” as an abstract idea. They buy a br
 That distinction matters when sourcing CNC machined parts for robotics and automation. A supplier may have capable machines and still quote the wrong process if the drawing does not show which features control motion, alignment or assembly. The best starting point is therefore not a long list of machines. It is a clear description of what the part must do.
 
 <div class="case-summary">
-  <div><strong>Primary Search Intent</strong><span>CNC machined parts for robotics</span></div>
+  <div><strong>Parts covered</strong><span>CNC machined parts for robotics</span></div>
   <div><strong>Typical Parts</strong><span>Brackets, housings, shafts, plates, mounts and interfaces</span></div>
   <div><strong>Buyer Stage</strong><span>Prototype, pilot batch and repeat production</span></div>
   <div><strong>MAVORIX Role</strong><span>Supplier sourcing, drawing coordination, inspection follow-up and export support</span></div>

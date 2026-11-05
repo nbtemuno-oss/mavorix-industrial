@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default function CountriesPage() {
   return (
     <>
-      <PageHero badge="Countries" title="China Industrial Sourcing for Global Buyers" description="Country-focused sourcing pages for overseas industrial buyers who need supplier verification, quality coordination, and export support from China." breadcrumbs={[{ label: "Home", href: "/en/" }, { label: "Countries", href: "/en/countries/" }]} />
+      <PageHero badge="Countries" title="China Industrial Sourcing for Global Buyers" description="We help industrial buyers compare suppliers in China, arrange inspection, and prepare orders for shipment." breadcrumbs={[{ label: "Home", href: "/en/" }, { label: "Countries", href: "/en/countries/" }]} />
       <section className="bg-white py-16">
         <Container className="grid gap-8 lg:grid-cols-[1fr_420px] lg:items-center">
           <div className="max-w-5xl space-y-5 text-base leading-8 text-slate-600">
@@ -39,7 +39,7 @@ export default function CountriesPage() {
               MAVORIX INDUSTRIAL supports country-specific sourcing requests by reviewing the buyer's product details, destination country, application, quantity, and supplier information if already available. We help search and compare Chinese suppliers, check supplier communication and capability signals, coordinate technical questions, arrange quality inspection requirements, and follow export packing or consolidation when several suppliers are involved.
             </p>
             <p>
-              These country pages do not claim local offices or guaranteed customs outcomes. They are built to help buyers from the Balkan region, Latin America, Middle East, Africa, Europe, and other markets understand how China-side sourcing support can be adapted to real purchasing needs such as plastic factories, industrial spare parts, MRO supplies, machinery, packaging, and agricultural equipment.
+              Tell us where the order is going, when you need it, and whether it involves several suppliers. We can coordinate packing, supplier deliveries, and export documents in China.
             </p>
           </div>
           <IndustrialImage src={pageImages.countries.src} alt={pageImages.countries.alt} className="aspect-video" sizes="(min-width: 1024px) 420px, 100vw" fit="contain" />
@@ -101,7 +101,7 @@ const countrySupport = [
 ];
 
 const countryFaqs = [
-  { q: "Does MAVORIX have offices in every listed country?", a: "No. MAVORIX provides China-side sourcing and supplier coordination support. Country pages describe buyer markets we can support, not local office claims." },
+  { q: "Does MAVORIX have offices in every listed country?", a: "No. Our team works from China and coordinates directly with suppliers there." },
   { q: "Can you help buyers from the Balkan region, Latin America, Middle East, Africa, and Europe?", a: "Yes. We can support industrial buyers from these regions with supplier search, verification, quotation comparison, quality coordination, export packing follow-up, and consolidation support from China." },
   { q: "Why does destination country matter for sourcing?", a: "Destination country affects shipping route, packing expectations, documentation needs, product standards, after-sales requirements, and how buyers compare supplier risk." },
   { q: "Can you help with plastic factory equipment or spare parts for my country?", a: "Yes. We can review plastic industry requirements such as machines, molds, auxiliary equipment, spare parts, consumables, and packaging materials." },

@@ -84,7 +84,7 @@ const faqs = [
   },
   {
     q: "Does the machine support MAP or vacuum packaging?",
-    a: "MAP, vacuum and skin-pack functions are not confirmed in the supplied files. This page describes heat sealing with roll-fed lidding film only. Any gas-flush or vacuum requirement must be stated separately and verified with the supplier."
+    a: "This configuration heat-seals trays with roll-fed lidding film. If you need modified-atmosphere, vacuum, or skin packaging, specify it when requesting a quote so we can check available configurations with the supplier."
   },
   {
     q: "What should I send for a tray sealer quotation?",

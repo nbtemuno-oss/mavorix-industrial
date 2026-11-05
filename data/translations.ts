@@ -57,20 +57,20 @@ export const coreCopy: Record<Locale, {
   en: {
     dir: "ltr",
     nav: { home: "Home", industrial: "Industrial Sourcing", services: "Services", industries: "Industries", countries: "Countries", blog: "Blog", contact: "Contact", whatsapp: "WhatsApp" },
-    footerIntro: "Your Industrial Sourcing Partner in China. China industrial sourcing, OEM, MRO, supplier verification, quality coordination, and export support.",
+    footerIntro: "We help industrial buyers source custom machined parts, MRO supplies, and replacement parts from China.",
     footerColumns: { services: "Services", industries: "Industries", countries: "Countries", contact: "Contact", whatsapp: "WhatsApp Inquiry", contactPage: "Contact Page" },
     hero: {
-      eyebrow: "China Industrial Sourcing Partner",
-      h1: "Your Industrial Sourcing Partner in China",
-      subtitle: "MAVORIX INDUSTRIAL helps overseas industrial buyers source reliable machinery, OEM products, MRO supplies, spare parts, and industrial equipment from China with supplier verification, quality control, export support, and supply chain coordination.",
-      primary: "Send Inquiry",
+      eyebrow: "Ningbo Manufacturing Network + Industrial Sourcing",
+      h1: "Custom Precision Components & Industrial Sourcing from China",
+      subtitle: "MAVORIX coordinates selected Chinese manufacturing partners for drawing-based CNC components, precision shafts, pneumatic and vacuum manifolds, plus MRO and multi-supplier industrial sourcing.",
+      primary: "Send a Drawing for RFQ",
       whatsapp: "Contact on WhatsApp",
-      services: "Explore Sourcing Services",
-      trust: ["Supplier verification", "Technical coordination", "Export execution"]
+      services: "Submit a Sourcing List",
+      trust: ["Drawing-based RFQ", "Quality coordination", "Consolidated export"]
     },
     home: {
-      metaTitle: "MAVORIX INDUSTRIAL | Industrial Sourcing Partner in China",
-      metaDescription: "MAVORIX INDUSTRIAL helps overseas industrial buyers source reliable machinery, OEM products, MRO supplies, spare parts, and industrial equipment from China with supplier verification, quality control, and export support.",
+      metaTitle: "Precision Components & Industrial Sourcing China | MAVORIX",
+      metaDescription: "Source custom CNC components, precision shafts, pneumatic manifolds, MRO supplies, and industrial parts from China with technical, quality, and export coordination.",
       strip: ["Supplier Verification", "Quality Control", "OEM Coordination", "MRO Sourcing", "Export Support"],
       sourceTitle: "What We Source",
       sourceText: "Focused industrial sourcing support for practical B2B procurement needs, not an everything-for-everyone marketplace.",
@@ -83,17 +83,18 @@ export const coreCopy: Record<Locale, {
         { title: "Packaging and Factory Supplies", text: "Packaging machinery parts, conveyors, sealing parts, filling parts, and factory consumables." }
       ],
       moreTitle: "More Than Finding Suppliers",
-      moreText: "AI, Google, and marketplaces can help buyers find supplier names. Industrial procurement needs more than search results: verification, technical communication, quotation comparison, sample coordination, quality inspection, export documents, consolidation, and long-term follow-up.",
+      moreText: "We check suppliers, compare quotations against your specifications, and coordinate samples, inspection, and shipping.",
       servicesTitle: "Core Services",
-      servicesText: "Each service page is structured for Google SEO, AI answer engines, and practical buyer evaluation.",
+      servicesText: "Get help comparing suppliers, checking parts before shipment, or combining orders from several suppliers.",
       industriesTitle: "Industries We Support",
       industriesText: "We help buyers source, verify, and coordinate suppliers for industrial products from China.",
       processTitle: "Why MAVORIX INDUSTRIAL",
       processText: "Our background in industrial machinery and export operations helps us understand technical sourcing requirements better than general trading companies.",
       faqTitle: "FAQ",
       faqs: [
-        { q: "Are you a trading company or sourcing agent?", a: "MAVORIX INDUSTRIAL is a China-based industrial sourcing partner. We help overseas buyers identify, verify, coordinate, and follow up with suitable suppliers." },
-        { q: "What industrial products can you help source?", a: "We focus on machinery, OEM parts, MRO supplies, industrial spare parts, agricultural equipment parts, packaging machinery parts, metal parts, and factory maintenance products." },
+        { q: "Can MAVORIX support custom parts made from drawings?", a: "Yes. We coordinate drawing review, technical clarification, suitable manufacturing partners, production follow-up, inspection requirements, packing, and export preparation for selected custom CNC and mechanical components." },
+        { q: "Does MAVORIX own the factories that make every component?", a: "We work with manufacturing partners in China. We match your drawing to a suitable supplier and coordinate samples, inspection, and export packing." },
+        { q: "What industrial products can you help source?", a: "We focus on custom CNC components, precision shafts, pneumatic and vacuum manifolds, machinery, MRO supplies, industrial spare parts, and mixed supplier orders." },
         { q: "Can you verify Chinese suppliers?", a: "Yes. We can help screen supplier identity, communication quality, production capability signals, quotation clarity, and order execution risk." },
         { q: "How can I send an inquiry?", a: "Use the contact form, email michael@mavorixindustrial.com, or send a WhatsApp message to +8613967842747." }
       ]

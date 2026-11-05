@@ -91,7 +91,7 @@ This support is especially useful when buyers need more than a single supplier l
 - Sample approval requirement
 - Expected repeat order demand
 
-## Internal Resources for Tool and MRO Buyers
+## Related services and guides
 
 If your tool order is part of a wider maintenance program, these internal pages may help with the next step:
 

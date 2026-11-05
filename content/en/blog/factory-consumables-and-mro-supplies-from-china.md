@@ -21,7 +21,7 @@ For overseas maintenance teams, the main challenge is not only price. The buyer 
 
 A structured MRO request should separate urgent replacement parts from routine consumables. Urgent items need faster confirmation of model numbers, photos, dimensions, and supplier stock. Routine items can often be grouped for better communication and shipment planning.
 
-MAVORIX is not presented as the manufacturer or stockholding wholesaler for every item. Our role is to help buyers organize requirements, compare suitable Chinese suppliers, verify quotation details, and coordinate approved orders before export.
+Send your maintenance list and quantities. We can group the items, compare supplier quotations, and coordinate approved orders for export.
 
 ## What wholesale can mean for a mixed MRO order
 
@@ -65,7 +65,7 @@ For a mixed list, add columns for buyer item code, supplier, quoted model, repla
 
 ## How MAVORIX Industrial can support the sourcing process
 
-MAVORIX Industrial is positioned as a China industrial sourcing and procurement support partner for overseas factories, industrial buyers, procurement managers, distributors, and small or medium manufacturers. The support is practical: requirement review, supplier search, quotation comparison, supplier communication, inspection coordination, export packing follow-up, and shipment consolidation when several suppliers are involved.
+We help buyers in China sourcing projects check suppliers, compare quotations, and agree on inspection and packing requirements. For orders with several suppliers, we can also coordinate deliveries for consolidation.
 
 This does not replace the buyer's own technical decision. Instead, it helps organize the China-side sourcing work so the buyer can make a clearer purchasing decision with fewer unknowns.
 
@@ -75,7 +75,7 @@ Wholesale MRO orders become difficult when suppliers use inconsistent labels or 
 
 At consolidation, compare the supplier delivery note with the master item list, record shortages or visible damage, keep model labels connected to the correct buyer code, and confirm the final packing list before export. Shipment method should be selected from the actual urgency, volume, weight, product restrictions, and destination requirements rather than assuming every mixed order should move by container.
 
-## Internal resources for the next step
+## Related services and guides
 
 Useful related pages include [industrial MRO supplies](/en/industries/mro-supplies/), [MRO sourcing from China](/en/services/mro-sourcing-from-china/), [industrial spare parts sourcing](/en/services/industrial-spare-parts-sourcing/), [supplier verification](/en/services/supplier-verification/), [container consolidation](/en/services/container-consolidation/), and [contact MAVORIX Industrial](/en/contact/).
 
@@ -87,7 +87,7 @@ Useful related pages include [industrial MRO supplies](/en/industries/mro-suppli
 - Is inspection or photo confirmation needed before shipment?
 - If several suppliers are involved, should delivery and consolidation be coordinated early?
 
-## Soft next step
+## Send us your requirements
 
 If you are comparing suppliers or organizing an industrial sourcing request from China, you can send product details, photos, drawings, supplier links, quantities, and destination country to MAVORIX Industrial through the [contact page](/en/contact/). The team can review the practical sourcing path and help clarify the next steps.
 

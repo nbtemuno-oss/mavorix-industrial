@@ -18,7 +18,7 @@ Manufacturers in Serbia, Romania, Bulgaria, Croatia, Slovenia, Bosnia and Herzeg
 
 The opportunity is real, but spare parts sourcing should be handled carefully. A buyer may need an old machine part, a compatible replacement, a small MRO list, or several items from different suppliers. The challenge is not only finding a price. The buyer needs the right specification, reliable supplier communication, suitable packing, and clear coordination before payment and before shipment.
 
-MAVORIX INDUSTRIAL supports overseas buyers as a China-side industrial sourcing, supplier verification, MRO, spare parts, quality coordination, export support, and consolidation partner. It does not claim local offices in Eastern Europe and does not claim to manufacture every product.
+We work with suppliers in China to help factories in the region source spare parts, compare quotes, and consolidate shipments.
 
 ## Why manufacturers buy spare parts from China
 
@@ -117,7 +117,7 @@ Send photos from several angles, machine nameplates, installed-position photos, 
 Often yes, depending on item clarity, supplier availability, urgency, and shipment plan. Grouping the list clearly can make supplier communication and consolidation more practical.
 
 ### FAQ: Does MAVORIX have local offices in the Balkans or Eastern Europe?
-No. MAVORIX is positioned as a China-side sourcing and procurement support partner for overseas buyers. It does not claim local offices or guaranteed customs outcomes.
+Our team works from China. We coordinate supplier packing and export documents, and your local broker can advise on import requirements.
 
 ### FAQ: Can MAVORIX guarantee the spare part will fit?
 No. MAVORIX can help organize supplier comparison and specification confirmation, but final technical suitability should be confirmed by the buyer, machine owner, maintenance team, or qualified engineer.

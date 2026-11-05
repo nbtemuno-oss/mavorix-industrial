@@ -24,7 +24,7 @@ Define inspection and testing points before production. For machinery, this may 
 
 Confirm packing dimensions, gross weight, loading plan, documents, shipping term, and delivery timing. Export coordination problems can create delays even when the product is ready.
 
-## Useful internal resources
+## Related services and guides
 
 Review [China industrial sourcing](/en/services/china-industrial-sourcing/), [quality inspection](/en/services/quality-inspection/), and [export support](/en/services/export-support/).
 

@@ -18,7 +18,7 @@ Custom CNC turned parts often look simple because most of the geometry follows a
 This guide covers the information overseas buyers should define when sourcing precision turned parts from China, including threaded adapters, shafts, pins, bushings, sleeves, spacers and other rotational components.
 
 <div class="case-summary">
-  <div><strong>Primary Search Intent</strong><span>Custom CNC turned parts</span></div>
+  <div><strong>Parts covered</strong><span>Custom CNC turned parts</span></div>
   <div><strong>Typical Components</strong><span>Threaded fittings, shafts, pins, bushings, sleeves and adapters</span></div>
   <div><strong>Production Route</strong><span>Prototype, batch turning and repeat supply</span></div>
   <div><strong>Key Controls</strong><span>Threads, concentricity, sealing features, burrs and batch traceability</span></div>

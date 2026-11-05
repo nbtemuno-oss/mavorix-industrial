@@ -24,7 +24,7 @@ When many small items come from different suppliers, consolidation can reduce co
 
 For factory maintenance parts, repeat supply can matter more than one-time price. Keep supplier records, item photos, part numbers, and inspection notes for future orders.
 
-## Useful internal resources
+## Related services and guides
 
 See [MRO sourcing from China](/en/services/mro-sourcing-from-china/), [industrial spare parts sourcing](/en/services/industrial-spare-parts-sourcing/), and [container consolidation](/en/services/container-consolidation/).
 

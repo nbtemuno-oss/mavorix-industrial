@@ -24,7 +24,7 @@ Before payment, confirm proforma invoice details, company name, bank account con
 
 For higher-risk orders, staged payment, samples, trial orders, and pre-shipment inspection can reduce exposure. The inspection checklist should match the product, not a generic template.
 
-## Useful internal resources
+## Related services and guides
 
 Review our [supplier verification service](/en/services/supplier-verification/), [quality inspection support](/en/services/quality-inspection/), and [contact page](/en/contact/).
 

@@ -94,7 +94,7 @@ Before shipment or final payment, buyers should define what acceptance means. Th
 
 Acceptance should also identify who approves samples and what evidence is enough for shipment. Some buyers need only configuration photos and packing checks, while others need a mold trial, sample dimensions, video of automatic running, or inspection against a written checklist. The requirement should be realistic for the product and order value, and it should be agreed before the supplier finishes production.
 
-## Soft next step
+## Send us your requirements
 
 If you are preparing an injection molding equipment procurement checklist, send product drawings, material, part weight, expected output, mold information, machine quotations, auxiliary equipment list, required quantity, and destination country to MAVORIX INDUSTRIAL through the [contact page](/en/contact/).
 

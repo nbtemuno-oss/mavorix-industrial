@@ -103,7 +103,7 @@ Use [quality inspection](/en/services/quality-inspection/) when the product need
 
 For spare parts and consumables, also check future availability through [industrial spare parts sourcing](/en/services/industrial-spare-parts-sourcing/). A low initial price is less useful if replacement parts cannot be identified or supplied later.
 
-## Soft next step
+## Send us your requirements
 
 If you are comparing several Chinese supplier quotations, send the quotations, product details, drawings, photos, model numbers, target quantity, destination country, and any questions to MAVORIX INDUSTRIAL through the [contact page](/en/contact/). The team can help organize a technical and commercial comparison before you choose a supplier.
 

@@ -93,7 +93,7 @@ Working directly with suppliers can be efficient when the item is simple and the
 
 MAVORIX supports [industrial spare parts sourcing](/en/services/industrial-spare-parts-sourcing/), MRO supplier search, quotation comparison, supplier communication, product photo checking, shipment coordination, and export-side follow-up. The goal is not to replace the buyer's technical decision. The goal is to make supplier search, comparison, and China-side coordination more controlled.
 
-## Useful internal resources
+## Related services and guides
 
 For more related guidance, see [Industrial MRO Supplies](/en/industries/mro-supplies/), [MRO Sourcing from China](/en/services/mro-sourcing-from-china/), [Factory Spare Parts](/en/industries/factory-spare-parts/), and [Industrial Spare Parts Sourcing](/en/services/industrial-spare-parts-sourcing/).
 

@@ -91,7 +91,7 @@ function renderArticle(item) {
     ],
     "Country Market Guides": [
       "Factories in the Balkans and Southeast Europe often buy industrial products from China for practical reasons: spare parts availability, mixed MRO requirements, packaging machinery parts, agricultural equipment parts, and cost comparison. The challenge is keeping supplier communication clear across distance, language, and technical assumptions.",
-      "A buyer in Serbia, North Macedonia, Romania, Bulgaria, or nearby markets may need a China-side contact to compare suppliers, review quotations, check packing details, and coordinate mixed orders. MAVORIX Industrial does not claim local customs control or guaranteed import outcomes; the role is supplier-side sourcing and procurement support from China.",
+      "A buyer in Serbia, North Macedonia, Romania, Bulgaria, or nearby markets may need a China-side contact to compare suppliers, review quotations, check packing details, and coordinate mixed orders. MAVORIX Industrial coordinates directly with suppliers in China, including packing and dispatch.",
       "The best starting point is a clear purchasing file with photos, drawings, models, quantities, destination country, and any target standards. This helps avoid vague supplier replies and makes quotation comparison more useful."
     ],
     "Injection Molding Support": [
@@ -144,11 +144,11 @@ ${paragraphs[2]}
 
 ## How MAVORIX Industrial can support the sourcing process
 
-MAVORIX Industrial is positioned as a China industrial sourcing and procurement support partner for overseas factories, industrial buyers, procurement managers, distributors, and small or medium manufacturers. The support is practical: requirement review, supplier search, quotation comparison, supplier communication, inspection coordination, export packing follow-up, and shipment consolidation when several suppliers are involved.
+We help buyers in China sourcing projects check suppliers, compare quotations, and agree on inspection and packing requirements. For orders with several suppliers, we can also coordinate deliveries for consolidation.
 
 This does not replace the buyer's own technical decision. Instead, it helps organize the China-side sourcing work so the buyer can make a clearer purchasing decision with fewer unknowns.
 
-## Internal resources for the next step
+## Related services and guides
 
 Useful related pages include ${linkSentence(links)}.
 
@@ -160,7 +160,7 @@ Useful related pages include ${linkSentence(links)}.
 - Is inspection or photo confirmation needed before shipment?
 - If several suppliers are involved, should delivery and consolidation be coordinated early?
 
-## Soft next step
+## Send us your requirements
 
 If you are comparing suppliers or organizing an industrial sourcing request from China, you can send product details, photos, drawings, supplier links, quantities, and destination country to MAVORIX Industrial through the [contact page](/en/contact/). The team can review the practical sourcing path and help clarify the next steps.
 

@@ -58,10 +58,10 @@ export function Header({ locale, landing }: { locale: string; landing?: LandingH
           />
           <span className="sr-only">{site.name}</span>
         </NavigationLink>
-        <nav className={landing ? "hidden items-center xl:flex" : "hidden items-center gap-1 lg:flex"}>
+        <nav className="hidden items-center xl:flex">
           {nav.map((item) => (
             <div key={item.label} className="group relative">
-              <NavigationLink href={navHref(item.href)} className={`rounded-md ${landing ? "px-2.5" : "px-3"} py-2 text-sm font-bold text-slate-700 hover:bg-slate-100 hover:text-navy`}>
+              <NavigationLink href={navHref(item.href)} className="rounded-md px-2.5 py-2 text-sm font-bold text-slate-700 hover:bg-slate-100 hover:text-navy">
                 {item.label}
               </NavigationLink>
               {"children" in item && item.children ? (
@@ -76,7 +76,7 @@ export function Header({ locale, landing }: { locale: string; landing?: LandingH
             </div>
           ))}
         </nav>
-        <div className={landing ? "hidden items-center gap-2 xl:flex" : "hidden items-center gap-2 lg:flex"}>
+        <div className="hidden items-center gap-2 xl:flex">
           <div className="group relative">
             <button type="button" aria-label={landing?.languageLabel} className="inline-flex h-11 items-center gap-2 rounded-md border border-slate-200 px-3 text-sm font-bold text-slate-700">
               <Globe2 size={16} /> {locale.toUpperCase()}
@@ -89,13 +89,10 @@ export function Header({ locale, landing }: { locale: string; landing?: LandingH
               ))}
             </div>
           </div>
-          {landing ? <NavigationLink href={contactHref} className="inline-flex h-11 items-center gap-2 rounded-md bg-signal px-4 text-sm font-black text-white hover:bg-orange-600">
+          <NavigationLink href={contactHref} className="inline-flex h-11 items-center gap-2 rounded-md bg-signal px-4 text-sm font-black text-white hover:bg-orange-600">
             <FileUp size={17} /> {contactLabel}
-          </NavigationLink> : <Link href={site.whatsappUrl} className="inline-flex h-11 items-center gap-2 rounded-md bg-signal px-4 text-sm font-black text-white hover:bg-orange-600">
-            <MessageCircle size={17} /> {copy.nav.whatsapp}
-          </Link>}
+          </NavigationLink>
         </div>
-        {landing ? (
         <div className="flex items-center gap-2 xl:hidden">
           <NavigationLink href={contactHref} className={`inline-flex h-10 items-center rounded-md bg-signal px-3 text-sm font-bold text-white${landing ? " shrink-0 whitespace-nowrap" : ""}`}>
             {landing?.mobileContactLabel ?? contactLabel}
@@ -128,11 +125,6 @@ export function Header({ locale, landing }: { locale: string; landing?: LandingH
             </div>
           </MenuRoot>
         </div>
-        ) : (
-          <Link href={`/${locale}/contact/`} className="inline-flex h-11 items-center rounded-md bg-navy px-4 text-sm font-bold text-white lg:hidden">
-            {copy.nav.contact}
-          </Link>
-        )}
       </Container>
     </header>
   );

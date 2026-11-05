@@ -24,7 +24,7 @@ OEM orders can fail when suppliers change material, process, or tolerance withou
 
 Confirm lead time, inspection timing, packing, labeling, export documents, and shipment coordination before production finishes.
 
-## Useful internal resources
+## Related services and guides
 
 Learn about [OEM manufacturing support](/en/services/oem-manufacturing-support/), [supplier verification](/en/services/supplier-verification/), and [quality inspection](/en/services/quality-inspection/).
 

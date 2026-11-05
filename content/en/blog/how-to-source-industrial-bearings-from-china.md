@@ -45,7 +45,7 @@ When the old bearing is still available, send clear photos of the ring marking a
 
 These categories should not be blended together. If the maintenance team requests SKF or FAG, a lower-priced unbranded substitute is not an equivalent quotation unless the buyer has explicitly asked for alternatives and has the technical information needed to evaluate them.
 
-MAVORIX is not presented as an authorized distributor for the brands mentioned on this site. Our role is to help buyers organize the inquiry, compare supply options, coordinate checks and consolidate approved items in China. For critical branded bearings, the buyer should define the required distribution channel and authenticity evidence before placing the order.
+We source bearings through suppliers in China and can help compare quotes, coordinate checks, and consolidate approved orders. For critical branded bearings, the buyer should define the required distribution channel and authenticity evidence before placing the order.
 
 ## What to include in an industrial bearing RFQ
 

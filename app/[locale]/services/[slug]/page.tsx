@@ -49,7 +49,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     ? "China-side MRO sourcing support for U.S. and global factories buying spare parts, tools, consumables, pneumatic, hydraulic, and electrical items from multiple suppliers."
     : isSupplierVerification
       ? "Practical supplier checks for overseas buyers before paying Chinese manufacturers, trading companies, distributors, or MRO suppliers, including identity, quotation clarity, payment risk, technical answers, packing, and export capability."
-    : `${service.description} Keywords: ${service.keywords.join(", ")}.`;
+    : service.description;
   return (
     <>
       <PageHero badge="Service" title={heroTitle} description={heroDescription} breadcrumbs={[{ label: "Home", href: `/${locale}/` }, { label: "Services", href: `/${locale}/services/` }, { label: service.title, href: `/${locale}/services/${service.slug}/` }]} />
@@ -119,7 +119,7 @@ function IndustrialSourcingExtra() {
         "A project buyer needs machines, spare parts, packing materials, and MRO supplies consolidated before export.",
         "An OEM buyer has drawings and needs supplier comparison, sample coordination, tolerance clarification, and production follow-up."
       ]} />
-      <ListBlock title="High-Intent Buyer Scenarios" items={[
+      <ListBlock title="When to Ask for Sourcing Support" items={[
         "A buyer already found three Chinese suppliers online but needs help comparing quotation details and execution risk",
         "A factory wants to source MRO supplies, spare parts, and metal components together instead of managing separate suppliers",
         "A distributor needs China-side support for repeat industrial parts sourcing and supplier records",

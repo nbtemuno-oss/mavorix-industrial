@@ -18,7 +18,7 @@ Buying custom CNC machined parts is not the same as choosing a finished catalog 
 This guide explains how overseas OEM buyers can organize a custom CNC machining RFQ in China, compare suppliers on the same basis and move from prototype to repeat production without losing control of the drawing.
 
 <div class="case-summary">
-  <div><strong>Primary Search Intent</strong><span>Custom CNC machined parts from China</span></div>
+  <div><strong>Parts covered</strong><span>Custom CNC machined parts from China</span></div>
   <div><strong>Processes</strong><span>CNC milling, turning and suitable secondary operations</span></div>
   <div><strong>Buyer Stage</strong><span>Prototype, low-volume and repeat production</span></div>
   <div><strong>MAVORIX Role</strong><span>Supplier sourcing, technical coordination, inspection follow-up and export support</span></div>

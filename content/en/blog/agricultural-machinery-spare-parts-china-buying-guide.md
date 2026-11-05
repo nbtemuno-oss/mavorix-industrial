@@ -164,7 +164,7 @@ Agricultural spare parts orders often overlap with other industrial sourcing nee
 - Visually similar parts may still differ in spline, shaft, seal, material, pressure or mounting.
 - A structured RFQ reduces wrong-part risk for agricultural spare parts sourcing.
 
-## Soft next step
+## Send us your requirements
 
 Send machine model, engine model where relevant, part number, photos, dimensions, quantity and destination country through the [contact page](/en/contact/). MAVORIX INDUSTRIAL can help review the sourcing path, compare suppliers and coordinate the next steps from China.
 
