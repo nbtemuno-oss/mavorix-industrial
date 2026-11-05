@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { ProcurementPaths } from "@/components/sections/ProcurementPaths";
-import Link from "next/link";
 import { BlogCard } from "@/components/cards/BlogCard";
 import { CTASection } from "@/components/sections/CTASection";
 import { PageHero } from "@/components/sections/PageHero";
@@ -73,15 +72,6 @@ export default function BlogPage() {
         <Container>
           <h2 className="text-3xl font-black text-navy">All Blog Posts</h2>
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{posts.map((post) => <BlogCard key={post.slug} post={post} />)}</div>
-          <div className="mt-10 rounded-lg border border-slate-200 bg-slate-50 p-8">
-            <h2 className="text-2xl font-black text-navy">Need Help Checking a Supplier or Quotation?</h2>
-            <p className="mt-3 max-w-3xl leading-8 text-slate-600">Send the supplier name, product details, quotation, photos, drawings, quantity, and destination country. MAVORIX can help review practical risk points before you move forward.</p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Button href="/en/contact/">Contact MAVORIX</Button>
-              <Button href="/en/services/" variant="secondary">View Services</Button>
-              <Link href="/en/industries/plastic-industry/" className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-bold text-navy ring-1 ring-slate-200 transition hover:bg-slate-50">Plastic Factory Sourcing</Link>
-            </div>
-          </div>
         </Container>
       </section>
       <CTASection title="Need Help Checking a Supplier or Quotation?" text="Send your supplier link, quotation, product details, drawings, photos, and destination country. We will review the practical sourcing path and next steps." />

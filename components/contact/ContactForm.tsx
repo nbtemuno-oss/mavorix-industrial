@@ -1,7 +1,8 @@
 "use client";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
-import { procurementPaths } from "@/data/procurement-paths";
+import { inquiryRequests, procurementPaths } from "@/data/procurement-paths";
+import { site } from "@/data/site";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { trackJapaneseRfq } from "@/lib/google-ads";
@@ -41,14 +42,20 @@ export function ContactForm({ copy, locale, whatsappUrl, initialValues, required
   const submitting = useRef(false);
   const requirementInput = useRef<HTMLInputElement>(null);
   const [topicChecklist, setTopicChecklist] = useState("");
+  const [showAttachmentEmail, setShowAttachmentEmail] = useState(false);
   useEffect(() => {
     if (locale !== "en") return;
-    const topic = new URLSearchParams(window.location.search).get("topic");
-    const path = procurementPaths.find((item) => item.id === topic);
-    if (path && requirementInput.current && !requirementInput.current.value) {
+    const params = new URLSearchParams(window.location.search);
+    const topic = procurementPaths.find((item) => item.id === params.get("topic"));
+    const request = Object.entries(inquiryRequests).find(([key]) => key === params.get("request"))?.[1];
+    const path = topic ?? request;
+    if (!path) return;
+    if (requirementInput.current && !requirementInput.current.value) {
+      requirementInput.current.defaultValue = path.requirement;
       requirementInput.current.value = path.requirement;
-      setTopicChecklist(path.checklist);
     }
+    setTopicChecklist(path.checklist);
+    setShowAttachmentEmail(!topic && Boolean(request));
   }, [locale]);
   const successMessage = copy.successMessage || "Thank you. Your inquiry has been submitted. We will reply as soon as possible.";
   const errorMessage = copy.errorMessage || "Sorry, the inquiry could not be sent. Please contact us by email or WhatsApp.";
@@ -100,7 +107,14 @@ export function ContactForm({ copy, locale, whatsappUrl, initialValues, required
 
   return (
     <form id="inquiry" onSubmit={handleSubmit} className="scroll-mt-28 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-      {topicChecklist ? <p className="mb-5 text-sm leading-7 text-slate-600">{topicChecklist}</p> : null}
+      {topicChecklist ? (
+        <div className="mb-5 text-sm leading-7 text-slate-600">
+          <p>{topicChecklist}</p>
+          {showAttachmentEmail ? (
+            <p className="mt-2">Send drawings, spreadsheets, or photos by <a href={`mailto:${site.email}`} className="font-bold text-navy underline">email</a>.</p>
+          ) : null}
+        </div>
+      ) : null}
       <div className="grid gap-4 md:grid-cols-2">
         {copy.fields.map((label, index) => (
           <label key={label} className="text-sm font-bold text-slate-700">{label}<input name={inputName(label, index)} type={contactFieldKeys[index] === "email" ? "email" : "text"} required={requiredFields.includes(contactFieldKeys[index])} defaultValue={initialValues?.[contactFieldKeys[index]]} className="mt-2 h-12 w-full rounded-md border border-slate-300 px-3 outline-none focus:border-signal" /></label>

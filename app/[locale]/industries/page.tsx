@@ -9,7 +9,6 @@ import { Container } from "@/components/ui/Container";
 import { IndustrialImage } from "@/components/ui/IndustrialImage";
 import { industries } from "@/data/industries";
 import { pageImages } from "@/data/page-images";
-import { services } from "@/data/services";
 import { faqSchema, JsonLd } from "@/lib/schema";
 import { seo } from "@/lib/seo";
 
@@ -55,18 +54,17 @@ export default function IndustriesPage() {
       <GridSection title="Common Products We Help Source" items={commonProducts} />
       <section className="bg-slate-50 py-16">
         <Container>
-          <h2 className="text-3xl font-black text-navy">Related Industry and Service Links</h2>
+          <h2 className="text-3xl font-black text-navy">Choose Support for Your Purchase</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {industries.map((industry) => (
-              <Link key={industry.slug} href={`/en/industries/${industry.slug}/`} className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm hover:shadow-industrial">
-                <h3 className="font-black text-navy">{industry.title}</h3>
-                <p className="mt-2 text-sm leading-7 text-slate-600">{industry.description}</p>
+            {purchaseTasks.map((task) => (
+              <Link key={task.href} href={task.href} className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm hover:shadow-industrial">
+                <h3 className="font-black text-navy">{task.title}</h3>
+                <p className="mt-2 text-sm leading-7 text-slate-600">{task.text}</p>
               </Link>
             ))}
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            {services.slice(0, 5).map((service) => <Button key={service.slug} href={`/en/services/${service.slug}/`} variant="secondary">{service.shortTitle}</Button>)}
-            <Button href="/en/contact/">Contact MAVORIX</Button>
+            <Button href="/en/services/" variant="secondary">View All Services</Button>
           </div>
         </Container>
       </section>
@@ -76,6 +74,15 @@ export default function IndustriesPage() {
     </>
   );
 }
+
+const purchaseTasks = [
+  { title: "Source custom parts from drawings", text: "Clarify materials and tolerances, compare suppliers, and coordinate samples.", href: "/en/services/oem-manufacturing-support/" },
+  { title: "Source a mixed MRO list", text: "Check model numbers and quantities, compare quotes, and plan mixed orders.", href: "/en/services/mro-sourcing-from-china/" },
+  { title: "Identify a replacement part", text: "Use a part number, nameplate, or dimensions to check sourcing options.", href: "/en/services/industrial-spare-parts-sourcing/" },
+  { title: "Check a supplier before payment", text: "Review the supplier's identity, quotation, and evidence of capability.", href: "/en/services/supplier-verification/" },
+  { title: "Arrange pre-shipment inspection", text: "Agree on what to check and how to record findings before dispatch.", href: "/en/services/quality-inspection/" },
+  { title: "Combine orders from several suppliers", text: "Coordinate warehouse deliveries, packing details, and loading.", href: "/en/services/container-consolidation/" }
+];
 
 const supportItems = [
   "Clarify drawings, photos, model numbers, application, quantity, and target market before supplier search",

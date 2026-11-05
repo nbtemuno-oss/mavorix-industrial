@@ -3,7 +3,6 @@ import { ProcurementPaths } from "@/components/sections/ProcurementPaths";
 import Link from "next/link";
 import { ArrowRight, Boxes, ClipboardList, Cog, FileText, Gauge, Network, ScanLine, ShieldCheck, Truck, Wrench } from "lucide-react";
 import { BlogCard } from "@/components/cards/BlogCard";
-import { CountryCard } from "@/components/cards/CountryCard";
 import { CTASection } from "@/components/sections/CTASection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { FeatureGrid } from "@/components/sections/FeatureGrid";
@@ -11,8 +10,8 @@ import { Hero } from "@/components/sections/Hero";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { Container } from "@/components/ui/Container";
 import { IndustrialImage } from "@/components/ui/IndustrialImage";
-import { countries } from "@/data/countries";
 import { pageImages } from "@/data/page-images";
+import { inquiryRequestHref } from "@/data/procurement-paths";
 import { publishedProducts } from "@/data/products";
 import { t } from "@/data/translations";
 import { getAllBlogPosts } from "@/lib/mdx";
@@ -35,8 +34,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const copy = t(locale);
   const allPosts = getAllBlogPosts();
   const sourcingExamples = pickBlogPosts(allPosts, [
+    "stamped-door-lock-gears-carbonitriding-inspection",
     "bosch-rexroth-hydraulic-valves-sourcing-consolidation-case",
-    "rexroth-dbds6p1x-315-pressure-relief-valve-sourcing",
     "automatic-strapping-machine-sourcing-romania-case"
   ]);
   const buyerGuides = pickBlogPosts(allPosts, [
@@ -59,15 +58,22 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <>
           <CapabilityStrip />
           <RequirementPaths />
+          <Section title="Sourcing and Inspection Case Studies" text="See how we checked stamped steel parts, matched hydraulic valve model numbers, and prepared a strapping machine for export.">
+            <div className="grid gap-5 md:grid-cols-3">
+              {sourcingExamples.map((post) => <BlogCard key={post.slug} post={post} />)}
+            </div>
+          </Section>
           <CustomManufacturingSection />
           <GrowthIndustriesSection />
           <DeliveryProcessSection />
           <QualityFrameworkSection />
           <SourcingMroSection />
           <Container><ProcurementPaths /></Container>
-          <SourcingOpportunitySection examples={sourcingExamples} products={recentProducts} guides={buyerGuides} />
+          <SourcingOpportunitySection products={recentProducts} guides={buyerGuides} />
           <Section title="Markets We Serve" text="We help buyers source from China and coordinate inspection, export packing, and shipments to their destination.">
-            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">{countries.map((country) => <CountryCard key={country.slug} country={country} locale={locale} />)}</div>
+            <Link href="/en/countries/" className="inline-flex items-center gap-2 text-sm font-black text-navy hover:text-signal">
+              View sourcing support by country <ArrowRight size={16} />
+            </Link>
           </Section>
           <FAQSection faqs={copy.home.faqs} title={copy.home.faqTitle} />
           <DualPathCta />
@@ -106,9 +112,9 @@ function CapabilityStrip() {
 
 function RequirementPaths() {
   const paths = [
-    { icon: FileText, title: "Send a Drawing", text: "For custom CNC parts, shafts, manifolds, and mechanical components.", href: "/en/contact/?request=drawing", action: "Start drawing RFQ" },
-    { icon: ClipboardList, title: "Send a BOM or Sourcing List", text: "For mixed MRO items, spare parts, and multi-supplier orders.", href: "/en/contact/?request=sourcing", action: "Submit sourcing list" },
-    { icon: ScanLine, title: "Send a Part Number or Nameplate", text: "For replacement components when a drawing is not available.", href: "/en/contact/?request=replacement", action: "Request a model check" }
+    { icon: FileText, title: "Send a Drawing", text: "For custom CNC parts, shafts, manifolds, and mechanical components.", href: inquiryRequestHref("drawing"), action: "Start drawing RFQ" },
+    { icon: ClipboardList, title: "Send a BOM or Sourcing List", text: "For mixed MRO items, spare parts, and multi-supplier orders.", href: inquiryRequestHref("sourcing"), action: "Submit sourcing list" },
+    { icon: ScanLine, title: "Send a Part Number or Nameplate", text: "For replacement components when a drawing is not available.", href: inquiryRequestHref("replacement"), action: "Request a model check" }
   ];
   return (
     <section className="bg-slate-50 py-16">
@@ -259,8 +265,8 @@ function DualPathCta() {
   return (
     <section className="bg-slate-100 py-20">
       <Container className="grid gap-8 lg:grid-cols-2">
-        <div className="rounded-lg bg-navy p-8 text-white md:p-10"><FileText className="text-mint" size={30} /><h2 className="mt-5 text-2xl font-black">Have a drawing or custom component?</h2><p className="mt-3 leading-7 text-slate-300">Send the drawing, quantity, material, tolerance, finish, and destination for an initial RFQ review.</p><Link href="/en/contact/?request=drawing" className="mt-7 inline-flex min-h-11 items-center rounded-md bg-signal px-5 text-sm font-black text-white hover:bg-orange-600">Send a Drawing<ArrowRight className="ml-2" size={16} /></Link></div>
-        <div className="rounded-lg border border-slate-200 bg-white p-8 md:p-10"><ClipboardList className="text-signal" size={30} /><h2 className="mt-5 text-2xl font-black text-navy">Have an MRO or supplier list?</h2><p className="mt-3 leading-7 text-slate-600">Send the BOM, photos, model numbers, supplier links, quantities, and required delivery timing.</p><Link href="/en/contact/?request=sourcing" className="mt-7 inline-flex min-h-11 items-center rounded-md bg-navy px-5 text-sm font-black text-white hover:bg-slate-800">Submit a Sourcing List<ArrowRight className="ml-2" size={16} /></Link></div>
+        <div className="rounded-lg bg-navy p-8 text-white md:p-10"><FileText className="text-mint" size={30} /><h2 className="mt-5 text-2xl font-black">Have a drawing or custom component?</h2><p className="mt-3 leading-7 text-slate-300">Send the drawing, quantity, material, tolerance, finish, and destination for an initial RFQ review.</p><Link href={inquiryRequestHref("drawing")} className="mt-7 inline-flex min-h-11 items-center rounded-md bg-signal px-5 text-sm font-black text-white hover:bg-orange-600">Send a Drawing<ArrowRight className="ml-2" size={16} /></Link></div>
+        <div className="rounded-lg border border-slate-200 bg-white p-8 md:p-10"><ClipboardList className="text-signal" size={30} /><h2 className="mt-5 text-2xl font-black text-navy">Have an MRO or supplier list?</h2><p className="mt-3 leading-7 text-slate-600">Send the BOM, photos, model numbers, supplier links, quantities, and required delivery timing.</p><Link href={inquiryRequestHref("sourcing")} className="mt-7 inline-flex min-h-11 items-center rounded-md bg-navy px-5 text-sm font-black text-white hover:bg-slate-800">Submit a Sourcing List<ArrowRight className="ml-2" size={16} /></Link></div>
       </Container>
     </section>
   );
@@ -275,11 +281,9 @@ function pickProducts(slugs: string[]) {
 }
 
 function SourcingOpportunitySection({
-  examples,
   products,
   guides
 }: {
-  examples: ReturnType<typeof getAllBlogPosts>;
   products: typeof publishedProducts;
   guides: ReturnType<typeof getAllBlogPosts>;
 }) {
@@ -287,9 +291,9 @@ function SourcingOpportunitySection({
     <section className="bg-slate-50 py-16">
       <Container>
         <div className="max-w-4xl">
-          <h2 className="text-3xl font-black text-navy md:text-4xl">Sourcing Projects and Buyer Guides</h2>
+          <h2 className="text-3xl font-black text-navy md:text-4xl">Product References and Buying Guides</h2>
           <p className="mt-4 text-base leading-8 text-slate-600">
-            See how we checked valve models, reviewed machine packing, and prepared orders for export. Use the guides to prepare a drawing or parts list for your own inquiry.
+            Check model information and prepare the drawings, specifications, or parts list you need for a quotation.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             <Link href="/en/industries/mro-supplies/" className="text-sm font-black text-signal hover:text-navy">Industrial MRO Supplies</Link>
@@ -297,11 +301,6 @@ function SourcingOpportunitySection({
           </div>
         </div>
         <div className="mt-10 space-y-12">
-          <OpportunityGroup title="Recent Sourcing Examples" description="Recent orders for hydraulic valves and packaging machinery.">
-            <div className="grid gap-5 md:grid-cols-3">
-              {examples.map((post) => <BlogCard key={post.slug} post={post} />)}
-            </div>
-          </OpportunityGroup>
           <OpportunityGroup title="Parts and Equipment" description="Check model numbers, specifications, and what to send for a quotation.">
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {products.map((product) => <ProductLinkCard key={product.slug} product={product} />)}

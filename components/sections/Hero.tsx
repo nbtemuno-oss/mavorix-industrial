@@ -5,11 +5,12 @@ import { t } from "@/data/translations";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { pageImages } from "@/data/page-images";
+import { inquiryRequestHref } from "@/data/procurement-paths";
 
 export function Hero({ locale }: { locale: string }) {
   const copy = t(locale);
-  const drawingHref = locale === "en" ? "/en/contact/?request=drawing" : `/${locale}/contact/`;
-  const sourcingHref = locale === "en" ? "/en/contact/?request=sourcing" : `/${locale}/industrial-sourcing/`;
+  const drawingHref = locale === "en" ? inquiryRequestHref("drawing") : `/${locale}/contact/`;
+  const sourcingHref = locale === "en" ? inquiryRequestHref("sourcing") : `/${locale}/industrial-sourcing/`;
   return (
     <section className="relative isolate overflow-hidden bg-navy text-white">
       <Image

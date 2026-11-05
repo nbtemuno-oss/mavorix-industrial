@@ -64,3 +64,22 @@ export function getProcurementPath(slug: string, category?: string) {
 export function procurementInquiryHref(id: string) {
   return `/en/contact/?topic=${encodeURIComponent(id)}#inquiry`;
 }
+
+export const inquiryRequests = {
+  drawing: {
+    requirement: "Custom parts made to drawing",
+    checklist: "Include the drawing revision, material, critical dimensions and tolerances, finish, quantity, and delivery date. If you do not have a drawing, share the dimensions and describe how the part is used."
+  },
+  sourcing: {
+    requirement: "MRO parts list or sourcing request",
+    checklist: "Include the item list, full model numbers, quantities, acceptable alternatives, and destination."
+  },
+  replacement: {
+    requirement: "Replacement part identification",
+    checklist: "Include the equipment brand and model, the full part number or nameplate details, dimensions, and quantity."
+  }
+};
+
+export function inquiryRequestHref(request: keyof typeof inquiryRequests) {
+  return `/en/contact/?request=${request}#inquiry`;
+}
