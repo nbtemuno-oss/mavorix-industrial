@@ -27,7 +27,10 @@ For a drawing-based component, the part name is only the beginning. The supplier
 
 A shaft carrying a bearing and a coupling, for example, needs those interfaces defined separately. The bearing journal may have one size and surface requirement, while the coupling seat has another. The distance between shoulders can also matter to the assembly, even when the overall length is relatively forgiving.
 
-This functional view is a useful starting point for [custom CNC machined parts sourcing](/en/products/precision-machining/custom-cnc-machined-parts/). It helps the supplier discuss the features that drive the work, rather than treating the shaft as a cylinder with a collection of added operations.
+<figure class="case-image case-image-wide">
+  <img src="/images/blog/custom-precision-shafts-buying-guide/precision-shaft-rfq-features.webp" alt="Stepped shaft diagram identifying fits, geometric requirements and surface finish" width="1200" height="800" loading="lazy" decoding="async" />
+  <figcaption>A stepped shaft drawing gives the supplier a reference for the fits, running surfaces and shoulders that matter in the assembly.</figcaption>
+</figure>
 
 ## Bearing fits begin with the mating component
 
@@ -137,7 +140,7 @@ A useful supplier response explains the proposed route and identifies any assump
 
 MAVORIX supports overseas buyers with China-side sourcing and supplier coordination for drawing-based machined components. For a shaft inquiry, that work can include reviewing the supply scope with potential suppliers, coordinating technical questions, comparing offers and following samples and agreed inspection requirements.
 
-The [CNC machining capability page](/en/products/precision-machining/custom-cnc-machined-parts/) explains the wider sourcing scope. Where the order involves an identified bearing, the [bearing cross-reference guide](/en/blog/bearing-cross-reference-guide-skf-fag-nsk-ntn/) can help organize the part information, while the assembly design remains the basis for selecting the shaft fit. [Quality inspection coordination](/en/services/quality-inspection/) can then be arranged around the agreed characteristics and records.
+See our [custom precision shaft sourcing](/en/products/precision-machining/custom-precision-shafts/) for the types of parts we can review and what to include with your drawing. Where the order involves an identified bearing, the [bearing cross-reference guide](/en/blog/bearing-cross-reference-guide-skf-fag-nsk-ntn/) can help organize the part information, while the assembly design remains the basis for selecting the shaft fit. [Quality inspection coordination](/en/services/quality-inspection/) can then be arranged around the agreed characteristics and records.
 
 A [shaft inquiry](/en/contact/) can start with the current drawing, material and quantities, together with the intended treatment and delivery condition. Those details provide a practical basis for discussing feasibility and obtaining a comparable quotation.
 

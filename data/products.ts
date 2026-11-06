@@ -1,3 +1,5 @@
+import { precisionShaftImage, precisionShaftPath } from "@/data/precision-shafts";
+
 export type PublishedProduct = {
   slug: string;
   title: string;
@@ -29,6 +31,16 @@ export const publishedProducts: PublishedProduct[] = [
     image:
       "/images/products/precision-machining/custom-cnc-machined-parts/custom-cnc-machined-complex-parts-main.webp",
     imageAlt: "Batch of custom CNC machined metal components with bores, ports and complex external geometry",
+    categorySlugs: ["metal-parts"]
+  },
+  {
+    slug: "custom-precision-shafts",
+    title: "Custom Precision Shafts Made to Drawing",
+    description:
+      "Source stepped, keyed and splined shafts for machinery and automation, with machining, finishing and inspection agreed from your drawing.",
+    path: precisionShaftPath,
+    image: precisionShaftImage.src,
+    imageAlt: precisionShaftImage.alt,
     categorySlugs: ["metal-parts"]
   },
   {

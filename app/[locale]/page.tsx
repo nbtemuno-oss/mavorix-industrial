@@ -11,6 +11,7 @@ import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { Container } from "@/components/ui/Container";
 import { IndustrialImage } from "@/components/ui/IndustrialImage";
 import { pageImages } from "@/data/page-images";
+import { precisionShaftImage, precisionShaftPath } from "@/data/precision-shafts";
 import { inquiryRequestHref } from "@/data/procurement-paths";
 import { publishedProducts } from "@/data/products";
 import { t } from "@/data/translations";
@@ -142,7 +143,6 @@ function RequirementPaths() {
 function CustomManufacturingSection() {
   const capabilities = [
     { id: "cnc-components", title: "CNC Machined Components", text: "Drawing-based milled and turned parts for industrial assemblies, fixtures, automation equipment, and replacement applications." },
-    { id: "precision-shafts", title: "Precision Shafts", text: "Custom shafts, pins, rollers, and rotational components coordinated to drawing, material, tolerance, and surface requirements." },
     { id: "pneumatic-manifolds", title: "Pneumatic & Vacuum Manifolds", text: "Machined distribution blocks and manifolds for pneumatic, vacuum, fluid-routing, and automation systems." },
     { id: "custom-mechanical-parts", title: "Custom Mechanical Parts", text: "Low-to-medium-volume mechanical components requiring supplier matching, technical clarification, and inspection follow-up." }
   ];
@@ -169,6 +169,22 @@ function CustomManufacturingSection() {
             <span>Machined part examples</span><span className="text-navy group-hover:text-signal">Custom CNC machined parts</span>
           </div>
         </Link>
+      </Container>
+      <Container>
+        <div id="precision-shafts" className="mt-12 grid scroll-mt-28 items-center gap-6 border-t border-slate-200 pt-8 sm:grid-cols-[200px_minmax(0,1fr)] sm:gap-10">
+          <Link href={precisionShaftPath} className="mx-auto block w-full max-w-[200px] sm:mx-0">
+            <IndustrialImage {...precisionShaftImage} className="aspect-[9/16]" sizes="200px" fit="contain" />
+          </Link>
+          <div>
+            <h3 className="text-2xl font-black text-navy">Precision Shafts</h3>
+            <p className="mt-3 max-w-xl leading-7 text-slate-600">
+              We source stepped, keyed and splined shafts made to drawing for machinery and automation. Send us the bearing fits, material and quantities, and we can review machining, grinding and inspection with suitable suppliers.
+            </p>
+            <Link href={precisionShaftPath} className="mt-4 inline-flex items-center gap-2 text-sm font-black text-signal hover:text-navy">
+              Explore custom precision shafts <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
       </Container>
     </section>
   );

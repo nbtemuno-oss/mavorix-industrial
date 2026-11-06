@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { precisionShaftPath } from "@/data/precision-shafts";
 import { site } from "@/data/site";
 import { breadcrumbSchema, faqSchema, JsonLd, serviceSchema } from "@/lib/schema";
 
@@ -19,14 +20,16 @@ const metaDescription =
 
 const productImages = [
   {
+    src: "/images/products/precision-machining/custom-cnc-machined-parts/cnc-milled-and-turned-components.webp",
+    alt: "Machined shafts, flanges, sleeves and blocks laid out together",
+    label: "Milled and turned components",
+    width: 1323,
+    height: 1600
+  },
+  {
     src: "/images/products/precision-machining/custom-cnc-machined-parts/custom-cnc-machined-complex-parts-main.webp",
     alt: "Batch of custom CNC machined metal components with bores, ports and complex external geometry",
     label: "Complex machined components"
-  },
-  {
-    src: "/images/products/precision-machining/custom-cnc-machined-parts/custom-cnc-machined-complex-parts-detail.webp",
-    alt: "Finished CNC machined components arranged for visual review",
-    label: "Finished component batch"
   },
   {
     src: "/images/products/precision-machining/custom-cnc-machined-parts/cnc-turned-threaded-parts-batch.webp",
@@ -114,8 +117,8 @@ const faqs = [
     a: "MAVORIX can coordinate an agreed inspection scope, such as sample dimensions, thread gauging, surface review, material-document checks and supplier-provided dimensional reports. CMM or third-party inspection should be agreed before quotation when required."
   },
   {
-    q: "Do the parts shown belong to robotics, drones or EV equipment?",
-    a: "The photos show real CNC machined parts, but their final customer application is not identified on this page. Robotics, UAV, new-energy and industrial equipment are relevant sourcing markets; each inquiry must be evaluated from its own drawing and technical requirements."
+    q: "Can you quote a shaft and its mating parts together?",
+    a: "Yes. Send the assembly drawing, part drawings and quantities for each item. Mark the features that need to fit together, such as a shaft journal and its bearing seat, so suppliers can price and check them as a set."
   }
 ];
 
@@ -139,7 +142,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: site.name,
       locale: "en",
       type: "website",
-      images: [{ url: productImages[0].src, width: 1200, height: 675, alt: productImages[0].alt }]
+      images: [{ url: productImages[0].src, width: productImages[0].width, height: productImages[0].height, alt: productImages[0].alt }]
     },
     twitter: { card: "summary_large_image", title: productTitle, description: metaDescription, images: [productImages[0].src] }
   };
@@ -198,15 +201,13 @@ export default async function CustomCncMachinedPartsPage({ params }: { params: P
             <p>
               MAVORIX helps overseas equipment manufacturers, engineering teams and industrial buyers organize this work with suitable Chinese suppliers. We can coordinate drawing review, supplier comparison, technical questions, samples and production follow-up while the selected factory remains responsible for manufacturing and the buyer remains responsible for final design approval.
             </p>
-            <p className="rounded-md border-l-4 border-signal bg-orange-50 p-5 font-semibold text-slate-700">
-              The photographs and videos show real machined-part batches. They do not establish a material grade, tolerance or end-use industry without the controlling customer drawing and order records.
-            </p>
           </Section>
 
           <Section title="Parts That Can Be Evaluated">
             <ul className="grid gap-3 md:grid-cols-2">
               {partFamilies.map((item) => <li key={item} className="rounded-md border border-slate-200 bg-white p-4 text-sm font-semibold text-slate-700">{item}</li>)}
             </ul>
+            <p>For stepped, keyed or splined shafts, see our <LinkText href={precisionShaftPath}>custom precision shaft sourcing</LinkText>.</p>
           </Section>
 
           <Section title="CNC Milling and Complex Metal Components">
@@ -238,10 +239,7 @@ export default async function CustomCncMachinedPartsPage({ params }: { params: P
             </p>
           </Section>
 
-          <Section title="Supply-Chain Applications Worth Building For">
-            <p>
-              Robotics, unmanned aerial equipment, electric mobility, energy systems and factory automation all use large numbers of upstream mechanical components. MAVORIX is not positioning itself as an aircraft, robot or vehicle manufacturer. The opportunity is narrower and more practical: help buyers source the brackets, shafts, housings, sleeves, interfaces and fixtures that sit inside those supply chains.
-            </p>
+          <Section title="Applications for CNC Machined Parts">
             <div className="grid gap-5 md:grid-cols-2">
               {applications.map((item) => <InfoPanel key={item.title} title={item.title}>{item.text}</InfoPanel>)}
             </div>

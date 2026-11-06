@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { IndustrialImage } from "@/components/ui/IndustrialImage";
 import { blogImages, pageImages } from "@/data/page-images";
+import { precisionShaftPath } from "@/data/precision-shafts";
 import { site } from "@/data/site";
 import { articleSchema, breadcrumbSchema, faqSchema, JsonLd } from "@/lib/schema";
 import { getBlogPost, getBlogSlugs, markdownToHtml } from "@/lib/mdx";
@@ -117,8 +118,8 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
           <IndustrialImage
             src={image.src}
             alt={image.alt}
-            className={isDrawingProcurementGuide ? "mb-8 aspect-[4/3]" : isFormedPartInspectionCase ? "mb-8 aspect-[4/3]" : isStampedLockGearCase ? "mx-auto mb-8 aspect-[1200/1601] w-full max-w-[680px]" : isHydraulicValveSourcingCase ? "mx-auto mb-8 aspect-[9/16] w-full max-w-[680px]" : isStrappingMachineCase ? "mx-auto mb-8 aspect-[3/4] w-full max-w-[680px]" : isCountersunkScrewCase ? "mx-auto mb-8 aspect-[459/538] w-full max-w-[720px]" : isAirCompressorCase ? "mx-auto mb-8 aspect-[403/544] w-full max-w-[720px]" : isPipeTaperingCase ? "mx-auto mb-8 aspect-[531/626] w-full max-w-[720px]" : isUsedInjectionMoldCase || isBearingArgentinaCase || isZr61kcPeruCase ? "mx-auto mb-8 aspect-[3/4] w-full max-w-[720px]" : isCrnqPeruCase ? "mx-auto mb-8 aspect-[40/47] w-full max-w-[720px]" : isVerticalMillingPolandCase ? "mx-auto mb-8 aspect-[435/623] w-full max-w-[720px]" : isPofFilmMiddleEastCase ? "mx-auto mb-8 aspect-[674/799] w-full max-w-[720px]" : isMachineryFatGuide ? "mx-auto mb-8 aspect-[824/1064] w-full max-w-[620px]" : isBearingCrossReferenceGuide ? "mx-auto mb-8 aspect-[1280/854] w-full max-w-[760px]" : isSourcingCase ? "mb-8 aspect-[16/9]" : "mb-8 min-h-[320px]"}
-            sizes={isStampingInspectionCase || isHydraulicValveSourcingCase || isStrappingMachineCase || isCountersunkScrewCase || isAirCompressorCase || isPipeTaperingCase || isUsedInjectionMoldCase || isBearingArgentinaCase || isPeruCompressorCase || isVerticalMillingPolandCase || isPofFilmMiddleEastCase ? "(min-width: 768px) 680px, 100vw" : isSourcingCase ? "(min-width: 1024px) 840px, 100vw" : "(min-width: 1024px) 760px, 100vw"}
+            className={isPrecisionShaftGuide ? "mx-auto mb-8 aspect-[9/16] w-full max-w-[420px]" : isStampingRfqGuide || isFormedPartInspectionCase ? "mb-8 aspect-[4/3]" : isStampedLockGearCase ? "mx-auto mb-8 aspect-[1200/1601] w-full max-w-[680px]" : isHydraulicValveSourcingCase ? "mx-auto mb-8 aspect-[9/16] w-full max-w-[680px]" : isStrappingMachineCase ? "mx-auto mb-8 aspect-[3/4] w-full max-w-[680px]" : isCountersunkScrewCase ? "mx-auto mb-8 aspect-[459/538] w-full max-w-[720px]" : isAirCompressorCase ? "mx-auto mb-8 aspect-[403/544] w-full max-w-[720px]" : isPipeTaperingCase ? "mx-auto mb-8 aspect-[531/626] w-full max-w-[720px]" : isUsedInjectionMoldCase || isBearingArgentinaCase || isZr61kcPeruCase ? "mx-auto mb-8 aspect-[3/4] w-full max-w-[720px]" : isCrnqPeruCase ? "mx-auto mb-8 aspect-[40/47] w-full max-w-[720px]" : isVerticalMillingPolandCase ? "mx-auto mb-8 aspect-[435/623] w-full max-w-[720px]" : isPofFilmMiddleEastCase ? "mx-auto mb-8 aspect-[674/799] w-full max-w-[720px]" : isMachineryFatGuide ? "mx-auto mb-8 aspect-[824/1064] w-full max-w-[620px]" : isBearingCrossReferenceGuide ? "mx-auto mb-8 aspect-[1280/854] w-full max-w-[760px]" : isSourcingCase ? "mb-8 aspect-[16/9]" : "mb-8 min-h-[320px]"}
+            sizes={isPrecisionShaftGuide ? "(min-width: 480px) 420px, 100vw" : isStampingInspectionCase || isHydraulicValveSourcingCase || isStrappingMachineCase || isCountersunkScrewCase || isAirCompressorCase || isPipeTaperingCase || isUsedInjectionMoldCase || isBearingArgentinaCase || isPeruCompressorCase || isVerticalMillingPolandCase || isPofFilmMiddleEastCase ? "(min-width: 768px) 680px, 100vw" : isSourcingCase ? "(min-width: 1024px) 840px, 100vw" : "(min-width: 1024px) 760px, 100vw"}
             fit={isSourcingCase || isMachineryFatGuide || isBearingCrossReferenceGuide || isDrawingProcurementGuide ? "contain" : "cover"}
             priority={isSourcingCase || isDrawingProcurementGuide}
           />
@@ -139,7 +140,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
           {isSpacerScrewSerbiaCase ? <p className="case-featured-caption">Cartons of steel spacers and countersunk screws grouped on export pallets before container loading for Serbia.</p> : null}
           {isStampedLockGearCase ? <p className="case-featured-caption">SPCC door lock drive gears sampled at the factory after carbonitriding, blackening and rust-preventive oil immersion.</p> : null}
           {isFormedPartInspectionCase ? <p className="case-featured-caption">A formed metal component reviewed during a factory visit, with holes, slots and bent features that affect assembly fit.</p> : null}
-          {isPrecisionShaftGuide ? <p className="case-featured-caption">Illustrative shaft features for an RFQ discussion, not a production drawing or a photograph of a supplied shaft.</p> : null}
+          {isPrecisionShaftGuide ? <p className="case-featured-caption">Stepped shafts with machined shoulders and slotted ends.</p> : null}
           <div dangerouslySetInnerHTML={{ __html: html }} />
           {procurementPath ? <ProcurementPaths topic={procurementPath.id} currentPath={`/en/blog/${slug}/`} /> : null}
         </article>
@@ -149,7 +150,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ loc
             <div className="mt-4 space-y-3 text-sm font-semibold text-slate-600">
               <Link href={`/${locale}/services/china-industrial-sourcing/`} className="block hover:text-signal">China Industrial Sourcing</Link>
               {isStampingRfqGuide ? <Link href="/en/products/metal-stamping/custom-stamped-metal-parts/" className="block hover:text-signal">Custom Metal Stamping Parts</Link> : null}
-              {isPrecisionShaftGuide ? <Link href="/en/products/precision-machining/custom-cnc-machined-parts/" className="block hover:text-signal">Custom CNC Machined Parts</Link> : null}
+              {isPrecisionShaftGuide ? <Link href={precisionShaftPath} className="block hover:text-signal">Custom Precision Shafts</Link> : null}
               {isCustomCuttingToolsGuide ? <Link href={`/${locale}/products/cutting-tools/custom-cutting-tools/`} className="block hover:text-signal">Custom Cutting Tools</Link> : null}
               {isCustomScrewsGuide ? <Link href={`/${locale}/products/industrial-fasteners/custom-cold-headed-screws-and-fasteners/`} className="block hover:text-signal">Custom Screws and Fasteners</Link> : null}
               <Link href={`/${locale}/services/supplier-verification/`} className="block hover:text-signal">Supplier Verification</Link>

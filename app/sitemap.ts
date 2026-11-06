@@ -172,6 +172,14 @@ function sourceFilesFor(locale: string, path: string): string[] {
     ];
   }
   if (path.startsWith("products/precision-machining/")) {
+    if (path === "products/precision-machining/custom-precision-shafts") {
+      return [
+        ...common,
+        "app/[locale]/products/precision-machining/custom-precision-shafts/page.tsx",
+        "data/precision-shafts.ts",
+        "public/images/products/precision-machining/custom-precision-shafts"
+      ];
+    }
     return [
       ...common,
       "app/[locale]/products/precision-machining/[slug]/page.tsx",

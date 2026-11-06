@@ -1,3 +1,5 @@
+import { precisionShaftPath } from "@/data/precision-shafts";
+
 export const mainNav = [
   {
     label: "Manufacturing",
@@ -5,7 +7,7 @@ export const mainNav = [
     children: [
       { label: "Custom Manufacturing", href: "/en/#custom-manufacturing" },
       { label: "CNC Machined Components", href: "/en/products/precision-machining/custom-cnc-machined-parts/" },
-      { label: "Precision Shafts", href: "/en/#precision-shafts" },
+      { label: "Precision Shafts", href: precisionShaftPath },
       { label: "Pneumatic & Vacuum Manifolds", href: "/en/#pneumatic-manifolds" }
     ]
   },
