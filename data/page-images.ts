@@ -138,6 +138,12 @@ export const pageImages = {
 } satisfies Record<string, PageImage>;
 
 export const blogImages: Record<string, PageImage> = {
+  "china-industrial-equipment-shipment-consolidation-case": {
+    src: "/images/blog/china-industrial-equipment-shipment-consolidation-case/mavorix-mixed-industrial-container-load.webp",
+    alt: "Industrial equipment in wooden cases loaded with cartons of goods for a consolidated shipment",
+    width: 1200,
+    height: 1600
+  },
   "china-oem-manufacturing-guide": {
     src: "/images/service-oem-manufacturing.webp",
     alt: "OEM manufacturing sourcing coordination with drawings, samples and supplier comparison",
