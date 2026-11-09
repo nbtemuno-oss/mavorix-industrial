@@ -1,4 +1,5 @@
 import { precisionShaftImage } from "@/data/precision-shafts";
+import { machiningExamples } from "@/data/machining-examples";
 
 export type PageImage = {
   src: string;
@@ -138,6 +139,7 @@ export const pageImages = {
 } satisfies Record<string, PageImage>;
 
 export const blogImages: Record<string, PageImage> = {
+  "custom-machined-bushings-sleeves-buying-guide": machiningExamples.flangedSleeves,
   "china-industrial-equipment-shipment-consolidation-case": {
     src: "/images/blog/china-industrial-equipment-shipment-consolidation-case/mavorix-mixed-industrial-container-load.webp",
     alt: "Industrial equipment in wooden cases loaded with cartons of goods for a consolidated shipment",

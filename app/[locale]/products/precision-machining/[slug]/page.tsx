@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/Badge";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { IndustrialImage } from "@/components/ui/IndustrialImage";
+import { machiningExamples } from "@/data/machining-examples";
 import { precisionShaftPath } from "@/data/precision-shafts";
 import { site } from "@/data/site";
 import { breadcrumbSchema, faqSchema, JsonLd, serviceSchema } from "@/lib/schema";
@@ -18,19 +20,17 @@ const productPath = `/en/products/precision-machining/${productSlug}/`;
 const metaDescription =
   "Custom CNC machined parts sourcing in China for overseas OEM buyers, covering milling, turning, prototypes, batch production, drawing review and inspection coordination.";
 
+const productMainImage = {
+  src: "/images/products/precision-machining/custom-cnc-machined-parts/cnc-milled-and-turned-components.webp",
+  alt: "Machined shafts, flanges, sleeves and blocks laid out together",
+  label: "Milled and turned components",
+  width: 1323,
+  height: 1600
+};
+
 const productImages = [
-  {
-    src: "/images/products/precision-machining/custom-cnc-machined-parts/cnc-milled-and-turned-components.webp",
-    alt: "Machined shafts, flanges, sleeves and blocks laid out together",
-    label: "Milled and turned components",
-    width: 1323,
-    height: 1600
-  },
-  {
-    src: "/images/products/precision-machining/custom-cnc-machined-parts/custom-cnc-machined-complex-parts-main.webp",
-    alt: "Batch of custom CNC machined metal components with bores, ports and complex external geometry",
-    label: "Complex machined components"
-  },
+  productMainImage,
+  machiningExamples.milledFlats,
   {
     src: "/images/products/precision-machining/custom-cnc-machined-parts/cnc-turned-threaded-parts-batch.webp",
     alt: "Batch of custom CNC turned threaded fittings in divided trays",
@@ -142,9 +142,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: site.name,
       locale: "en",
       type: "website",
-      images: [{ url: productImages[0].src, width: productImages[0].width, height: productImages[0].height, alt: productImages[0].alt }]
+      images: [{ url: productMainImage.src, width: productMainImage.width, height: productMainImage.height, alt: productMainImage.alt }]
     },
-    twitter: { card: "summary_large_image", title: productTitle, description: metaDescription, images: [productImages[0].src] }
+    twitter: { card: "summary_large_image", title: productTitle, description: metaDescription, images: [productMainImage.src] }
   };
 }
 
@@ -211,9 +211,15 @@ export default async function CustomCncMachinedPartsPage({ params }: { params: P
           </Section>
 
           <Section title="CNC Milling and Complex Metal Components">
-            <p>
-              Parts with pockets, intersecting bores, ports, mounting faces and features on several sides may require more than one setup or a multi-axis machining route. The important RFQ questions are access, datum strategy, wall thickness, burr control and which relationships must remain accurate after the part is repositioned.
-            </p>
+            <div className="grid items-start gap-8 md:grid-cols-[minmax(0,1fr)_300px]">
+              <div className="space-y-5">
+                <p>
+                  Parts with pockets, intersecting bores, ports, mounting faces and features on several sides may require more than one setup or a multi-axis machining route. The important RFQ questions are access, datum strategy, wall thickness, burr control and which relationships must remain accurate after the part is repositioned.
+                </p>
+                <p>A part with both a cylindrical seat and a mounting face needs those features related to the same drawing references. Include any hole positions, flat orientation and thread details that affect assembly, so the supplier can quote the complete part.</p>
+              </div>
+              <PartFigure image={machiningExamples.threadedBodies} caption="Machined bodies with bores, external threads and mounting faces." />
+            </div>
             <YouTubeVideo videoId="Tlklm5IDT5Y" title="Custom CNC machined metal components" description="Finished parts with machined bores, ports and complex geometry. Exact material, dimensions and tolerances are controlled by the customer drawing." />
             <p>
               For a prototype, the priority may be confirming fit and design intent. For repeat production, stable fixtures, drawing revision control, inspection frequency and treatment of nonconforming parts become just as important as the first sample.
@@ -221,10 +227,27 @@ export default async function CustomCncMachinedPartsPage({ params }: { params: P
           </Section>
 
           <Section title="CNC Turning and Threaded Components">
-            <p>
-              CNC turning is suited to rotational features such as outside diameters, bores, shoulders, grooves and threads. Parts with a hex body, cross hole or milled flat may combine turning with a secondary milling operation or live-tool machining. Thread designation alone is not enough: the drawing should identify the standard, pitch, class or tolerance, thread length, relief and any sealing geometry.
-            </p>
+            <div className="grid items-start gap-8 md:grid-cols-[minmax(0,1fr)_300px]">
+              <div className="space-y-5">
+                <p>
+                  CNC turning is suited to rotational features such as outside diameters, bores, shoulders, grooves and threads. Parts with a hex body, cross hole or milled flat may combine turning with a secondary milling operation or live-tool machining. Thread designation alone is not enough: the drawing should identify the standard, pitch, class or tolerance, thread length, relief and any sealing geometry.
+                </p>
+                <p>For a threaded pin or shouldered shaft, specify the shoulder diameter and length separately from the thread. If the shoulder locates another part, its fit and the thread runout clearance need to suit that assembly.</p>
+              </div>
+              <PartFigure image={machiningExamples.threadedPins} caption="Shouldered pins with threaded ends and grooves." />
+            </div>
             <YouTubeVideo videoId="ybAWxFEPMeA" title="Custom CNC turned threaded fittings" description="A repeat batch of threaded parts together with sample review and machining footage. Thread standard, material and acceptance criteria must be confirmed before production." />
+          </Section>
+
+          <Section title="Custom Machined Bushings and Sleeves">
+            <div className="grid items-start gap-8 md:grid-cols-[minmax(0,1fr)_300px]">
+              <div className="space-y-5">
+                <p>Bushings and sleeves can locate a shaft, provide a replaceable contact surface or set the spacing between other parts. The bore, outside diameter and end faces each need to suit their mating components. For a flanged sleeve, include the flange thickness, locating face and any corner clearance.</p>
+                <p>Send the material grade, drawing revision and quantities, together with the intended shaft and housing fits. We can ask suppliers to quote the required machining, finish and inspection in the condition in which the part will be delivered.</p>
+                <p>Our <LinkText href="/en/blog/custom-machined-bushings-sleeves-buying-guide/">bushing and sleeve buying guide</LinkText> explains what to specify before requesting a quotation.</p>
+              </div>
+              <PartFigure image={machiningExamples.flangedSleeves} caption="Stepped sleeves with internal bores and locating flanges." />
+            </div>
           </Section>
 
           <Section title="Materials and Finishes">
@@ -294,6 +317,15 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 function InfoPanel({ title, children }: { title: string; children: React.ReactNode }) {
   return <div className="rounded-lg border border-slate-200 bg-white p-6"><h3 className="text-xl font-black text-navy">{title}</h3><p className="mt-3 text-sm leading-7 text-slate-600">{children}</p></div>;
+}
+
+function PartFigure({ image, caption }: { image: { src: string; alt: string }; caption: string }) {
+  return (
+    <figure className="mx-auto w-full max-w-[360px]">
+      <IndustrialImage {...image} className="aspect-[3/4]" sizes="(min-width: 768px) 300px, 100vw" fit="contain" />
+      <figcaption className="mt-3 text-sm leading-6 text-slate-500">{caption}</figcaption>
+    </figure>
+  );
 }
 
 function YouTubeVideo({ videoId, title, description }: { videoId: string; title: string; description: string }) {

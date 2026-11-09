@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/Badge";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { IndustrialImage } from "@/components/ui/IndustrialImage";
+import { machiningExamples } from "@/data/machining-examples";
 import { precisionShaftGuidePath, precisionShaftImage, precisionShaftPath } from "@/data/precision-shafts";
 import { inquiryRequestHref } from "@/data/procurement-paths";
 import { site } from "@/data/site";
@@ -106,6 +108,20 @@ export default async function PrecisionShaftPage({ params }: { params: Promise<{
           <dl className="mt-5 divide-y divide-slate-200 border-y border-slate-200">
             {shaftTypes.map(({ name, detail }) => <Spec key={name} label={name}>{detail}</Spec>)}
           </dl>
+        </section>
+        <section className="space-y-5">
+          <h2 className="text-3xl font-black text-navy">Cross Holes, Flats and Threaded Ends</h2>
+          <p className="max-w-3xl leading-8 text-slate-600">A cross hole, flat or threaded end often determines how a shaft connects to the rest of a mechanism. Include the hole size and position, the orientation of any flats, and the thread callout and usable length. These details help suppliers plan the secondary operations and check the finished interfaces.</p>
+          <div className="grid max-w-3xl gap-8 sm:grid-cols-2">
+            <figure className="mx-auto w-full max-w-[360px]">
+              <IndustrialImage {...machiningExamples.crossDrilledShafts} className="aspect-[3/4]" sizes="(min-width: 640px) 360px, 100vw" fit="contain" />
+              <figcaption className="mt-3 text-sm leading-6 text-slate-500">Stepped shafts with cross holes, grooves and milled flats.</figcaption>
+            </figure>
+            <figure className="mx-auto w-full max-w-[360px]">
+              <IndustrialImage {...machiningExamples.threadedPins} className="aspect-[3/4]" sizes="(min-width: 640px) 360px, 100vw" fit="contain" />
+              <figcaption className="mt-3 text-sm leading-6 text-slate-500">Shouldered pins with threaded ends and end grooves.</figcaption>
+            </figure>
+          </div>
         </section>
         <section className="max-w-3xl space-y-4 leading-8 text-slate-600">
           <h2 className="text-3xl font-black text-navy">Bearing Fits, Machining and Finish</h2>
